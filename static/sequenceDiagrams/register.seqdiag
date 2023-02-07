@@ -1,0 +1,16 @@
+Title: Registering
+
+participant User
+participant Chain
+participant Validator_1
+participant Validator_2
+
+
+# Registering
+User -> User: does CKG
+User -> Chain: Informs chain of registration
+User -> Chain: Gets information about validators from chain
+User -> Validator_1: Sends keys (encrypted to Validator_1) 
+Validator_1 -> Chain: Confirms User info with Chain
+User -> Validator_2: Sends keys (encrypted to Validator_2)
+Validator_2 -> Chain: Confirms User info with Chain
