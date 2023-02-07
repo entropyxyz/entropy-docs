@@ -1,6 +1,6 @@
 # ThresholdServer
 
-- This package contains a class which includes all functions necessary for talking to the entropy threhsold server
+- This package contains a class which includes all functions necessary for talking to the entropy threshold server
 
 ## Examples
 

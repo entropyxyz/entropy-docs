@@ -30,11 +30,7 @@ const entropy = await Entropy.setup(privateKey, chainEndpoint)
   // this assumes keys are already generated
   // this is still not implemented (WASM things)
   const entropyKeyShares = []
-  // to be deprecated
-  const serverStashKeys = []
-  // to be deprecated
-  const urls = []
-  const result = await entropy.register(entropyKeyShares, serverStashKeys, urls)
+  const result = await entropy.register(entropyKeyShares)
   ```
 
 - Sign
@@ -54,9 +50,7 @@ const entropy = await Entropy.setup(privateKey, chainEndpoint)
     data: ethers.utils.hexlify(ethers.utils.toUtf8Bytes("Created On Entropy")),
   };
 
-  // to be deprecated
-  const urls = [];
-  const result = await entropy.sign(tx, 10, urls);
+  const result = await entropy.sign(tx, 10);
 
   // take sig return and use ethers to serialize the tx and signature
   const signed_tx = await ethers.utils.serializeTransaction(tx, signature);
