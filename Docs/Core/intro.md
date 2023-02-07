@@ -25,3 +25,5 @@ core has two different binaries that run
 ## Free Txs
 
 ## Key Resharing 
+
+## Encryption and authentication for nodes
