@@ -55,16 +55,8 @@ The easiest way to explain a Threshold Signature Scheme (TSS) is to start with a
 A $t$-of-$n$ multisignature is a way for $t$ (**t**hreshold) participants out of $n$ possible participants to construct a valid signature. 
 Each participant signs a message with their private key. A trusted centralized coordinator verifies that the $t$ signatures are valid. In blockchain contexts, the central coordinator is typically spelled "smart contract." 
 
-```mermaid
-flowchart TB
-A(user 1)
-B(user 2)
-C(user 3)
-D[trusted coordinator]
-A -->|"sign(m)"| D
-C -->|"sign(m)"| D
-D -.- E{{"return ok or invalid signature"}}
-```
+![Signing Flow](/img/flow-diagram.png)
+
 *2-of-3 Multisignature*.
 
 Similarly, a $t$-of-$n$ TSS is a way for $t$ participants out of $n$ possible participants to construct a valid signature, but **without a centrally trusted coordinator.**
