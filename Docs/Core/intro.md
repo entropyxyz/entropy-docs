@@ -9,3 +9,5 @@ core has two different binaries that run
 - Threshold server
   - Based on [Rocket](https://rocket.rs/)
 
+
+![birdsEye](/img/birdsEye.png)
