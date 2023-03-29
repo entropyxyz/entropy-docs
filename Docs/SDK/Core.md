@@ -14,7 +14,7 @@
 
 ```js
 const privateKey =
-  '0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a'
+  "0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a'
 const chainEndPoint = 'ws://127.0.0.1:9944'
 
 const entropy = await Entropy.setup(privateKey, chainEndpoint)
@@ -29,8 +29,8 @@ const entropy = await Entropy.setup(privateKey, chainEndpoint)
   ```js
   // this assumes keys are already generated
   // this is still not implemented (WASM things)
-  const entropyKeyShares = []
-  const result = await entropy.register(entropyKeyShares)
+  const entropyKeyShares = [];
+  const result = await entropy.register(entropyKeyShares);
   ```
 
 - Sign
@@ -55,7 +55,7 @@ const entropy = await Entropy.setup(privateKey, chainEndpoint)
   // take sig return and use ethers to serialize the tx and signature
   const signed_tx = await ethers.utils.serializeTransaction(tx, signature);
 
-   // send tx off to etherum
+   // send tx off to ethereum
    try {
     const tx_send = await provider.sendTransaction(signed_tx);
     console.log("transaction sent successfully", { tx_send });
