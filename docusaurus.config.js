@@ -1,17 +1,19 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Entropy Core',
-  tagline: 'Documentation for Entropy core',
+  title: 'Entropy Documentation',
+  tagline: "Documentation for Entropy's Core and SDK packages",
   favicon: 'img/favicon.ico',
+  organizationName: 'entropyxyz', // Usually your GitHub org/user name.
 
   // Set the production url of your site here
-  url: 'https://entropy.xyz',
+  // Production URL for the moment while still in alpha
+  url: 'https://entropy-docs.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -36,8 +38,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/entropyxyz/entropy-core/docs',
+          editUrl: 'https://github.com/entropyxyz/entropy-core/docs',
         },
       }),
     ],
@@ -70,7 +71,7 @@ const config = {
             items: [
               {
                 label: 'Core',
-                to: '/Core/intro',
+                to: 'docs/Core/intro',
               },
             ],
           },
@@ -112,6 +113,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config
