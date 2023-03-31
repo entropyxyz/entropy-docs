@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Entropy is a decentralized custodial service.
 
-# Entrosplainer
+## Entrosplainer
 
 This is a draft post aiming to explain Entropy at a high level.
 
@@ -71,7 +71,7 @@ Threshold Signatures eliminate the requirement for a trusted coordinator, and ar
 
 ![Threshold Signing Flow](/sequenceDiagrams/thresholdSigning.svg)
 
-_2-of-3 Threshold Signature Scheme_
+### _2-of-3 Threshold Signature Scheme_
 
 In the Entropy scheme, most key shares are custodied by nodes on the Entropy Network, while the user holds onto one or more key shares.
 
