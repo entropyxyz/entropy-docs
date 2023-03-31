@@ -29,8 +29,8 @@ const entropy = await Entropy.setup(privateKey, chainEndpoint)
   ```js
   // this assumes keys are already generated
   // this is still not implemented (WASM things)
-  const entropyKeyShares = [];
-  const result = await entropy.register(entropyKeyShares);
+  const entropyKeyShares = []
+  const result = await entropy.register(entropyKeyShares)
   ```
 
 - Sign

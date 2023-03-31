@@ -2,6 +2,6 @@
 sidebar_position: 8
 ---
 
-# Constraints 
+# Constraints
 
 // TODO for Jake
