@@ -12,7 +12,8 @@ const config = {
   organizationName: 'entropyxyz', // Usually your GitHub org/user name.
 
   // Set the production url of your site here
-  url: 'https://entropy-docs-hoqbp1usm-entropyxyz.vercel.app',
+  // Production URL for the moment while still in alpha
+  url: 'https://entropy-docs.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
