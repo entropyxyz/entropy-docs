@@ -1,6 +1,6 @@
 # Core
 
-- This package contains the Entropy class which encapsulates all other classes and adds functions for interacting with the Entropy network.
+- This package contains the `Entropy` class which encapsulates all other classes and adds functions for interacting with the Entropy network.
 
 ## Classes
 
