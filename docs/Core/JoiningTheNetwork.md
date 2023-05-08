@@ -16,3 +16,9 @@ sidebar_position: 4
 - Threshold Server Account: Account for sending info to the chain
 
 ![Joining The Network Flow](/sequenceDiagrams/joiningTheNetwork.svg)
+
+From pegs notes
+- A new validator runs both an Entropy chain node and threshold server.
+- New validator registers with the chain (how?), and the chain is assigns it to a signing 'subgroup' // JA a mix of substrate stuff then the extra stuff below see https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#:~:text=You%20can%20go%20to%20the,will%20become%20an%20active%20validator.
+- Once a new validator knows which subgroup it has joined, it asks current validators in that group for the key shares.
+- Once all shares have been received, informs the chain that it has successfully synced. 
