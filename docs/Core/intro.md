@@ -7,8 +7,7 @@ sidebar_position: 1
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) has two different binaries that run:
 
 - The Entropy blockchain, built with [Substrate](https://docs.substrate.io/)
-- The [Threshold server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server)
-  - Has an HTTP API based on [Rocket](https://rocket.rs/)
+- The [Threshold server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) which has an HTTP API based on [Rocket](https://rocket.rs/)
 
 ![birdsEye](/img/birdsEye.png)
 
