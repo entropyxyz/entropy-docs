@@ -14,6 +14,8 @@ sidebar_position: 1
 
 ## The Entropy chain
 
+The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold server nodes need to have consensus on. For example, we need to have agreement of which validators belong to which signing subgroups, and which subgroups will participate in signing a particular message.
+
 General functionality from Substrate / Polkadot:
 - Uses the [BABE](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html) consensus (Blind Assignment for Blockchain Extension). A brief description of BABE:
   - Time is divided into 'epochs' which consist of a series of 'slots' for each block that will be published. 
@@ -36,7 +38,7 @@ Custom functionality specific to Entropy:
 
 ## The Threshold Server 
 
-This is the part which carries out the threshold signing protocol, together with other instances of the threshold server.
+This is the part which carries out the threshold signing protocol, together with other instances of the threshold server. This is used for private information where consensus is not required. Since it deals with private data which must never be exposed publicly on-chain, it is distributed as a separate binary.
 
 It has the following features: 
 - The 'signing client' which performs the threshold signing protocol.
