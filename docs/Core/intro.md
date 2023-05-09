@@ -4,10 +4,12 @@ sidebar_position: 1
 
 # Intro
 
-[`entropy-core`](https://github.com/entropyxyz/entropy-core) has two different binaries that run:
+[`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the entropy network. It has two different binaries, both of which are run by each validator node:
 
 - The Entropy blockchain, built with [Substrate](https://docs.substrate.io/)
 - The [Threshold server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) which has an HTTP API based on [Rocket](https://rocket.rs/)
+
+If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](../SDK/intro).
 
 ![birdsEye](/img/birdsEye.png)
 
