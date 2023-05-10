@@ -13,4 +13,5 @@ sidebar_position: 1
 - 'Constraint modification account' - the account on the Entropy chain which may update the constraints for a particular user / organisation / entity.
 - 'Signing subgroup' or 'Partition' - a set of Threshold servers which all hold identical keyshares. The Entropy chain is responsible for assigning new Threshold Servers to a subgroup.
 - 'User' - here refers whoever is using the entropy network to sign transactions or messages. This may be an individual, organisation or some other entity.
+- 'Stash keys' - the Entropy chain account IDs for the threshold servers.
 - Be aware that the term 'transaction' can refer to both transactions submitted to the Entropy chain and transactions intended for signing by the Entropy network.
