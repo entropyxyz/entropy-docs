@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Intro
+# Entropy Validator Nodes
 
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the entropy network. It has two different binaries, both of which are run by each validator node:
 
@@ -34,10 +34,8 @@ Custom functionality specific to Entropy:
 - **Slashing pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/slashing) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_slashing/index.html) - used to penalise nodes if they 'misbehave' during the signing protocol. (Not yet implemented)
 - **Free transactions pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/free-tx) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_free_tx/index.html) - free transactions are also known as 'zaps'. 
 
-<!-- [discussion on terminology around zaps](https://github.com/entropyxyz/entropy-core/issues/202) -->
-<!-- [discussion on free tx distribution methods](https://github.com/entropyxyz/entropy-core/issues/203) -->
 
-## The Threshold Server 
+## The Threshold Server [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) [API](https://entropy-api-docs.vercel.app/entropy-core/server/index.html) 
 
 This is the part which carries out the threshold signing protocol, together with other instances of the threshold server. This is used for private information where consensus is not required. Since it deals with private data which must never be exposed publicly on-chain, it is distributed as a separate binary.
 

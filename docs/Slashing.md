@@ -1,7 +1,9 @@
 ---
-sidebar_position: 6
+sidebar_position: 9
 ---
 
-# Slashing
+# Slashing 
 
-coming soonish
+Slashing is how validator nodes are penalized for 'misbehaving' during the signing process.
+
+It is not yet implemented.

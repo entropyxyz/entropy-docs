@@ -2,13 +2,11 @@
 sidebar_position: 1
 ---
 
-# Entropy Intro
+# Entrosplainer
 
 Entropy is a decentralized custodial service.
 
-## Entrosplainer
-
-This is a draft post aiming to explain Entropy at a high level.
+This is a high level explanation of Entropy.
 
 **Entropy** is a Chain-Agnostic Decentralized Asset Custodian. Entropy is constructed from Proof of Stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) deploying a [Threshold Signature Scheme](https://en.wikipedia.org/wiki/Threshold_cryptosystem) to secure secret key shares, built with [Substrate](https://substrate.io/).
 
