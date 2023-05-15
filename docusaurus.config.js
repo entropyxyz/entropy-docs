@@ -40,7 +40,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/entropyxyz/entropy-core/docs',
+          editUrl: 'https://github.com/entropyxyz/entropy-docs',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -71,11 +71,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Core',
+            title: 'Intro',
             items: [
               {
-                label: 'Core',
-                to: 'docs/Core/intro',
+                label: 'Intro',
+                to: 'docs/Intro',
               },
             ],
           },
@@ -105,7 +105,7 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/entropyxyz/entropy-core',
+                href: 'https://github.com/entropyxyz',
               },
             ],
           },
