@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Threshold Signature Scheme
 
-- TSS Implementation used by Entropy: [src](https://github.com/entropyxyz/cggmp21) [API](https://entropy-api-docs.vercel.app/cggmp21/cggmp21/index.html)
+- The TSS Implementation used by Entropy is **Synedrion** [src](https://github.com/entropyxyz/synedrion) [API](https://entropy-api-docs.vercel.app/synedrion/synedrion/index.html)
 
 The threshold signature scheme used is the 2021 Canetti-Gennaro-Goldfeder-Makriyannis-Peled scheme from the paper ['UC Non-Interactive, Proactive, Threshold ECDSA with Identifiable Aborts'](https://eprint.iacr.org/2021/060).
 
@@ -36,8 +36,9 @@ Only the final round of the signing protocol requires knowledge of the message. 
 
 The paper proposes two different versions of the protocol with a different trade-off between number of communication rounds needed and the amount of computation require. Either 4 or 7 communication rounds are needed to sign a message, with the 7 round version requiring less computation. However, it is worth noting that the 4 round version's extra computation overhead is only in the case that signing fails. Entropy uses 4 rounds.
 
-<!-- UC security -->
-<!-- Proactive security -->
+### Proactive security
+
+The paper includes a [Universally Composable security](https://eprint.iacr.org/2000/067.pdf) analysis. The authors claim that 'proactive security' against an adaptive attacker is achieved. More specifically, an attacker who is able to completely control a threshold portion of nodes between two consecutive key-refresh phases is unable to compromise the scheme.
 
 ### Distributed key generation
 
@@ -45,9 +46,7 @@ Distributed key generation means parties can compute their key shares without ce
 
 ### Key re-sharing
 
-TODO
-
-<!-- ## Other details -->
+In order to allow nodes to join or leave the network, as well as to provide proactive security, key-shares can be periodically 'refreshed'. Without changing the secret key, new key shares are generated which are incompatible with the old ones. This can be achieved in 3 communication rounds.
 
 ### Paillier encryption as a commitment scheme
 
