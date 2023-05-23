@@ -8,7 +8,7 @@ sidebar_position: 10
 
 The threshold signature scheme used is the 2021 Canetti-Gennaro-Goldfeder-Makriyannis-Peled scheme from the paper ['UC Non-Interactive, Proactive, Threshold ECDSA with Identifiable Aborts'](https://eprint.iacr.org/2021/060).
 
-For a high level introduction to threshold signature schemes, see [this section of the introsplainer](Intro#hello-i-would-like-one-cryptography) - to summarize, they enable a group of parties to collectively compute a signature without any single party knowing the private key, and without requiring centralized coordination.
+For a high level introduction to threshold signature schemes, see [this section of the introsplainer](Intro#hello-i-would-like-one-cryptography) - to summarize, they enable a group of parties to collectively compute a signature without any single party knowing the private key, and requiring very little centralized coordination.
 
 Doing threshold signing with ECDSA is more complicated than with Schnorr-based signature schemes such as EdDSA, or with RSA. It has taken quite some years of research to come up with a scheme which has good security features whilst not requiring too many communication rounds between parties.
 <!-- because $s$ computation is linear with Schnorr (explain) -->
@@ -20,7 +20,7 @@ Doing threshold signing with ECDSA is more complicated than with Schnorr-based s
 <!-- s ← k−1 (H(M ) + r · sk) mod q -->
 <!-- return (r, s) -->
 
-Threshold schemes are commonly referred to as t of n, meaning t + 1 parties must participate in the protocol in order to sign a message. Entropy currently uses t-of-t, meaning rather than choosing a threshold, **all** parties are needed to sign a message. However, this isn't as dangerous as it might sound, since Entropy has 'signing subgroups' of nodes, of which all members hold identical keyshares. So even if a portion of Entropy nodes were to go offline, it would still be possible to sign messages.
+Threshold schemes are commonly referred to as $t$ of $n$, meaning $t$ parties must participate in the protocol in order to sign a message. Entropy currently uses $n$-of-$n$, meaning rather than choosing a threshold, **all** parties are needed to sign a message. However, this isn't as dangerous as it might sound, since Entropy has 'signing subgroups' of nodes, of which all members hold identical keyshares. So even if a portion of Entropy nodes were to go offline, it would still be possible to sign messages.
 
 ## Features of CGGMP21
 
@@ -34,17 +34,17 @@ Only the final round of the signing protocol requires knowledge of the message. 
 
 ### Few communication rounds
 
-The paper proposes two different versions of the protocol with a different trade-off between number of communication rounds needed and the amount of computation require. Either 4 or 7 communication rounds are needed to sign a message, with the 7 round version requiring less computation. However, it is worth noting that the 4 round version's extra computation overhead is only in the case that signing fails. Entropy uses 4 rounds.
+The paper proposes two different versions of the protocol with a different trade-off between number of communication rounds needed and the amount of computation require. Either 5 or 8 communication rounds are needed to sign a message, with the 8 round version requiring less computation. However, it is worth noting that the 5 round version's extra computation overhead is only in the case that signing fails. Entropy uses 5 rounds.
 
 ### Proactive security
 
-The paper includes a [Universally Composable security](https://eprint.iacr.org/2000/067.pdf) analysis. The authors claim that 'proactive security' against an adaptive attacker is achieved. More specifically, an attacker who is able to completely control a threshold portion of nodes between two consecutive key-refresh phases is unable to compromise the scheme.
+The paper includes a [Universally Composable security](https://eprint.iacr.org/2000/067.pdf) analysis. The authors claim that 'proactive security' against an adaptive attacker is achieved. More specifically, an attacker who is able to completely control up to $t - 1$ nodes between two consecutive key-refresh phases is unable to compromise the scheme.
 
 ### Distributed key generation
 
 Distributed key generation means parties can compute their key shares without central coordination and without any party having knowledge of the secret key. However, Entropy currently uses a centralized key generation, performed by the user. The user computes a set of shares on their own device and then sends those shares to Entropy threshold servers. This allows them to use existing key management techniques (such as backups using mnemonic codes, or hierarchical deterministic wallets) and essentially the user maintains ultimate control (as well as ultimate responsibility for protecting her key). However in the future we may switch to a distributed key generation in which the user participates.
 
-### Key re-sharing
+### Key refreshing
 
 In order to allow nodes to join or leave the network, as well as to provide proactive security, key-shares can be periodically 'refreshed'. Without changing the secret key, new key shares are generated which are incompatible with the old ones. This can be achieved in 3 communication rounds.
 
