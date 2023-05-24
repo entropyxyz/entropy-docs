@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Entrosplainer
 
 Entropy is a decentralized custodial service.

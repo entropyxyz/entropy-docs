@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Terminology
 
 - 'Entropy network' - the set of entropy 'validators'. 

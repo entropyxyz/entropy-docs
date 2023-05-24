@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Registering
 
 A user need to register in order to be able to use the Entropy network to sign messages.
