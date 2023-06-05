@@ -8,10 +8,11 @@ The committee requires one Validator from each signing group as well as the user
 
 - The SDK method which does this is [`Entropy.sign`](https://entropy-api-docs.vercel.app/entropy-js/classes/core.default.html#sign).
 
-
-The signing process has been recently updated and there are currently two versions implemented. The newer version allows the user to more directly interact with the threshold servers and is faster. 
+For details on how signatures are actually created, see [Threshold Signature Scheme](ThresholdSigningScheme).
 
 ## Original signing process
+
+The signing process has been recently updated and there are currently two versions implemented. The newer version allows the user to more directly interact with the threshold servers and is faster. 
 
 ![Signing Flow](/sequenceDiagrams/signing.svg)
 
