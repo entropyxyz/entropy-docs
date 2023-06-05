@@ -1,0 +1,18 @@
+Title: Signing-new
+
+participant User
+participant Chain
+participant Validator_1
+participant Validator_2
+
+# Signing Process
+
+User -> User: Creates tx for desiered chain
+User -> Validator_1: Passes full transaction through private means
+User -> Validator_2: Passes full transaction through private means
+Validator_1 -> Validator_1: Establishes whether they are\na member of the committee\nfor this transaction
+Validator_2 -> Validator_2: Establishes whether they are\na member of the committee\nfor this transaction
+Validator_1 -> Chain: Requiers Constraints pass\nand tx matches hash to sign
+Validator_2 -> Chain: Requiers Constraints pass and tx matches hash to sign
+Note right of Validator_2: The signing process now takes place
+User -> User: User now has\nsigned transaction\nthey can send
