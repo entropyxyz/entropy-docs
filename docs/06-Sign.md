@@ -8,11 +8,12 @@ The committee requires one Validator from each signing group as well as the user
 
 - The SDK method which does this is [`Entropy.sign`](https://entropy-api-docs.vercel.app/entropy-js/classes/core.default.html#sign).
 
-![Signing Flow](/sequenceDiagrams/signing.svg)
 
 The signing process has been recently updated and there are currently two versions implemented. The newer version allows the user to more directly interact with the threshold servers and is faster. 
 
 ## Original signing process
+
+![Signing Flow](/sequenceDiagrams/signing.svg)
 
 1. A user submits an Entropy transaction to the application chain containing their 'substrate address' (derived from their account), and the hash of the message/transaction they want to sign (the actual message is never revealed to the Entropy chain).
 1. The 'block proposer' selects a signing committee - and the IP addresses of all members of the committee are published in the next block. The signing committee generally consists of one validator from each 'signing group', plus the user. <!-- [Discussion on how signing committee is selected](https://github.com/entropyxyz/entropy-core/issues/211). -->
@@ -25,6 +26,8 @@ The signing process has been recently updated and there are currently two versio
 1. If the process is successful, the signature is returned to the user. Currently this requires the user to repeatedly poll POST `signer/signature` with the signature hash, until it successfully retrieves a signature.
 
 ## New signing process
+
+![Signing Flow New](/sequenceDiagrams/signing-new.svg)
 
 1. The user contacts all threshold servers in each signing group and makes a POST to `/user/sign_tx` with the message to be signed (encrypted for that node). The details of the signing groups were published on chain when the user [registered](Register).
 2. On receiving a message, each node determines whether it is a member of the 'signing committee' for that message. The signing committee is chosen deterministically from the message hash. So for a given message, all nodes can figure out who the signing committee is without communicating with each other. 
