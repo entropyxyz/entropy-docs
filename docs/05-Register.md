@@ -1,18 +1,16 @@
----
-sidebar_position: 4
----
-
 # Registering
 
 A user need to register in order to be able to use the Entropy network to sign messages.
 
 The SDK method for registering is [`Entropy.register`](https://entropy-api-docs.vercel.app/entropy-js/classes/core.default.html#register).
 
+## The registering process
+
 ![Register Flow](/sequenceDiagrams/register.svg)
 
 1. The user creates a set of shares by doing a [centralized key generation](https://entropy-api-docs.vercel.app/synedrion/synedrion/fn.make_key_shares.html). 
 1. The user registers with the Entropy chain by submitting a transaction with the 'constraint modification account', and initial constraints. 
-1. The user retrieves the details of all threshold servers from all relevant 'signing subgroups' from the chain (their public encryption keys and IPs).
+1. The user retrieves the details of all threshold servers from all relevant 'signing subgroups' from the chain (their public encryption keys and IP addresses).
 1. Each signing subgroup is assigned a share, and copies of that share are encrypted for each member of the subgroup them using the public key that member. Since the user generates the shares on one device locally, this is known as a centralized key generation. The threshold signature scheme used can also do distributed key generation - but this is not currently used. 
 1. The user send the encrypted shares to each Threshold Server by including them in a POST request to `/user/new` [src](https://github.com/entropyxyz/entropy-core/blob/master/crypto/server/src/user/api.rs) [API](https://entropy-api-docs.vercel.app/entropy-core/server/user/api/fn.new_user.html).
 1. On receiving a share, the Threshold Server checks the user info published on chain before storing it in it's [encrypted key-value store](https://entropy-api-docs.vercel.app/entropy-core/kvdb/index.html).  
