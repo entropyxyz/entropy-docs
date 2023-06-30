@@ -43,7 +43,7 @@ USE_SSH=true yarn deploy
 Not using SSH:
 
 ```sh
-GIT_USER=<Your GitHub username> yarn deploy
+GIT_USER=$GITHUB_USERNAME yarn deploy
 ```
 
 If you are using [GitHub Pages](https://pages.github.com/) for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
