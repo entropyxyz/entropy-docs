@@ -27,6 +27,8 @@
   A
 
 Entropy is a decentralized custodial service.
+> Entropy is a layer one chain for decentralized signing infrastructure.
+
 
 This is a high level explanation of Entropy.
 
@@ -101,10 +103,12 @@ Much like a multisignature, the Entropy network is a decentralized intermediary 
 
 Alice, a user or organization, wants to construct a transaction for 20 cryptoBux on chain X, from her Entropy-custodied account.
 
-- Alice uses the Entropy front end (or any other Entropy-integrated wallet) to sign a message containing the desired transaction with her Entropy private key, asking the Entropy network to validate the transaction and construct a signature.
-- The message is validated by the next Entropy block producer. If the transaction is valid, it gets included in the next block, and a signing party is selected from the Entropy nodes, who hold onto shares of Alice's private key.
-- Alice and the network execute a TSS, producing a valid signature.
-  - If the signature fails, the signers are able to prove the identity of the malicious co-signer. This proof can be published in the next block as a slashing-attestation for that node, and a new signing party may be selected.
+- Alice gets the list of threshold servers who have her key-shares from the entropy chain
+- Alice selects a signing committee from this list for the particular message she want to sign, based on it's hash.
+- Alice makes a request to each member of the signing committee containing the transaction or message she wants to sign, asking the Entropy network to validate the transaction and construct a signature.
+- Each of these threshold servers check that the constraints pass. **(this sentence needs changing - they get the chain to run the application on them and evaluate its output?)**
+- If successful, the threshold servers in the signing committee connect to each other and execute the threshold signing protocol, producing a valid signature.
+- If the signature fails, the signers are able to prove the identity of the malicious co-signer. This proof can be published in the next block as a slashing-attestation for that node, and a new signing party may be selected.
 - The Entropy front end asks Alice to confirm before submitting the transaction to chain X, at which point it is submitted as a normal transaction on chain X.
 
 The scope of the Entropy network is well-constrained: check validity, allow users to adjust the definition of validity, and construct signatures over valid messages.
