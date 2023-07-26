@@ -1,7 +1,7 @@
 
 # Threshold Signature Scheme
 
-- The TSS Implementation used by Entropy is **Synedrion** [src](https://github.com/entropyxyz/synedrion) [API](https://entropy-api-docs.vercel.app/synedrion/synedrion/index.html)
+- The TSS Implementation used by Entropy is **Synedrion** [src](https://github.com/entropyxyz/synedrion) [API](https://docs-api-synedrion.vercel.app/synedrion/index.html)
 
 The threshold signature scheme used is the 2021 Canetti-Gennaro-Goldfeder-Makriyannis-Peled scheme from the paper ['UC Non-Interactive, Proactive, Threshold ECDSA with Identifiable Aborts'](https://eprint.iacr.org/2021/060).
 
