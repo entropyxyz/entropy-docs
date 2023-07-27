@@ -1,5 +1,7 @@
 # Entrosplainer
 
+A high level explanation of Entropy.
+
 ### good words 50 words
 
 - Credibly neutral
@@ -27,9 +29,10 @@
 
 Entropy is a layer one chain for decentralized signing infrastructure.
 
-This is a high level explanation of Entropy.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
+
+These programs have three distinct access modes. 'Public' where anyone can submit request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
 
 ---
 
