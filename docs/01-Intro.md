@@ -24,15 +24,14 @@
 - governance
 - mixer as a service
 - account abstraction
-  A
 
-Entropy is a decentralized custodial service.
-> Entropy is a layer one chain for decentralized signing infrastructure.
-
+Entropy is a layer one chain for decentralized signing infrastructure.
 
 This is a high level explanation of Entropy.
 
-**Entropy** is a Chain-Agnostic Decentralized Asset Custodian. Entropy is constructed from Proof of Stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) deploying a [Threshold Signature Scheme](https://en.wikipedia.org/wiki/Threshold_cryptosystem) to secure secret key shares, built with [Substrate](https://substrate.io/).
+The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
+
+---
 
 There's a lot to unpack here. What's an Asset Custodian? Why would we need a chain, and how do we guarantee that it will be decentralized? How does this relate to a multisignature? What's the deal with the TSS? This post unpacks all that and more.
 
