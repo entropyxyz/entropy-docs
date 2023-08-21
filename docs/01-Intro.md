@@ -6,14 +6,13 @@ Entropy is a layer one chain for decentralized signing infrastructure.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
-These programs have three distinct access modes. 'Public' where anyone can submit request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
+These programs have three distinct access modes. 'Public' where anyone can submit a request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
 
-Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well a arbitrary data, and support for other signature schemes is planned.
+Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well as arbitrary data, and support for other signature schemes is planned.
 
-- app key / program key
-- custody as an initial use case
+The Entropy blockchain is used for storing the Programs associated with a set of key-shares, giving consensus about which validator nodes hold which keyshares, and provides a mechanism for excluding nodes which do not adhere to the signing protocol.
 
----
+An initial use case for entropy is a decentralized Asset Custodian, where the Program defines under what conditions funds or assets can be moved.  
 
 There's a lot to unpack here. What's an Asset Custodian? Why would we need a chain, and how do we guarantee that it will be decentralized? How does this relate to a multisignature? What's the deal with the TSS? This post unpacks all that and more.
 
@@ -62,9 +61,11 @@ The easiest way to explain a Threshold Signature Scheme (TSS) is to start with a
 A $t$-of-$n$ multisignature is a way for $t$ (**t**hreshold) participants out of $n$ possible participants to construct a valid signature.
 Each participant signs a message with their private key. A trusted centralized coordinator verifies that the $t$ signatures are valid. In blockchain contexts, the central coordinator is typically spelled "smart contract."
 
-![Signing Flow](/img/flow-diagram.png)
+<!-- ![Signing Flow](/img/flow-diagram.png) -->
+![Signing flow](/img/multisig-flow-dark.svg#gh-dark-mode-only)
+![Signing flow](/img/multisig-flow-light.svg#gh-light-mode-only)
 
-_2-of-3 Multisignature_.
+_2-of-3 Multisignature_
 
 Similarly, a $t$-of-$n$ TSS is a way for $t$ participants out of $n$ possible participants to construct a valid signature, but **without a centrally trusted coordinator.**
 
@@ -72,9 +73,11 @@ Participants in a TSS don't hold onto independent private keys. Before a signatu
 
 Threshold Signatures eliminate the requirement for a trusted coordinator, and are a powerful and flexible cryptographic primitive.
 
-![Threshold Signing Flow](/sequenceDiagrams/thresholdSigning.svg)
+<!-- ![Threshold Signing Flow](/sequenceDiagrams/thresholdSigning.svg) -->
+![Threshold Signing flow](/img/tss-sequence-dark.svg#gh-dark-mode-only)
+![Threshold Signing flow](/img/tss-sequence-light.svg#gh-light-mode-only)
 
-### _2-of-3 Threshold Signature Scheme_
+_2-of-3 Threshold Signature Scheme_
 
 In the Entropy scheme, most key shares are custodied by nodes on the Entropy Network, while the user holds onto one or more key shares.
 
@@ -105,6 +108,6 @@ So yeah. In this 'splainer we tried to unpack:
 - How Threshold Signature Schemes differ from multisignatures
 - How the Entropy Network will work, as a new kind of decentralized infrastructure for securing your funds
 
-Keep an eye out for our upcoming testnet release!
+Keep an eye out for our upcoming Devnet release!
 
 And we're hiring {put link to hiring page here}
