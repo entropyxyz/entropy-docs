@@ -2,37 +2,16 @@
 
 A high level explanation of Entropy.
 
-### good words 50 words
-
-- Credibly neutral
-- Platform where anyone can launch their own fireblocks / coinbase custody
-
-### Bad words
-
--
-
-### Use Cases
-
-- Decentralized 2FA
-- Decentralized certificate authority
-
-- Asset recovery
-- Intents
-- Arb Constraints
-- access control
-
-- tss as a service
-- key management
-- governance
-- mixer as a service
-- account abstraction
-
 Entropy is a layer one chain for decentralized signing infrastructure.
-
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
 These programs have three distinct access modes. 'Public' where anyone can submit request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
+
+Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well a arbitrary data, and support for other signature schemes is planned.
+
+- app key / program key
+- custody as an initial use case
 
 ---
 
