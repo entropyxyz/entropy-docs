@@ -4,7 +4,7 @@
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the Entropy network. It has two different binaries, both of which are run by each validator node:
 
 - The Entropy blockchain, built with [Substrate](https://docs.substrate.io/).
-- The [Threshold server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) which has an HTTP API based on [Rocket](https://rocket.rs/)
+- The [Threshold server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) which has an HTTP API based on [Axum](https://docs.rs/axum)
 
 If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](SDK).
 
@@ -28,7 +28,6 @@ The purpose of the Entropy blockchain is to have a 'single source of truth' for 
 ### Custom functionality specific to Entropy:
 
 - **Staking pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_staking_extension/index.html) - staking is extended to assign Threshold server endpoints to accounts, and allow these to be modified.
-- **Propagation pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/propagation/src/lib.rs) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_propagation/index.html) - whenever a block is finalised, an offchain worker sends all signature requests in that block to the threshold server via an HTTP request. These messages include details of the signing committee.
 - **Relayer pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/relayer/src/lib.rs) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_relayer/index.html) - allows the user to tell the chain they are  registering or signing, and the threshold server to confirm when the signing protocol is completed.  This uses substrate [events](https://docs.substrate.io/build/events-and-errors). 
 - **Slashing pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/slashing) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_slashing/index.html) - used to penalise nodes if they 'misbehave' during the signing protocol. (Not yet implemented)
 - **Free transactions pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/free-tx) [API](https://entropy-api-docs.vercel.app/entropy-core/pallet_free_tx/index.html) - free transactions are also known as 'zaps'. 
