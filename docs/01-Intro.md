@@ -6,7 +6,6 @@ Entropy is a layer one chain for decentralized signing infrastructure.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
-
 ![Program access modes](/img/public-private-permissioned-dark.svg#gh-dark-mode-only)
 ![Program access modes](/img/public-private-permissioned-light.svg#gh-light-mode-only)
 
@@ -14,11 +13,15 @@ _Program access modes_
 
 These programs have three distinct access modes. 'Public' where anyone can submit a request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
 
+Programs are defined in WebAssembly and stored on chain. They are mutable and may be updated by signing a transaction using the 'application key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
+
 Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well as arbitrary data, and support for other signature schemes is planned.
 
 The Entropy blockchain is used for storing the Programs associated with a set of key-shares, giving consensus about which validator nodes hold which keyshares, and provides a mechanism for excluding nodes which do not adhere to the signing protocol.
 
-An initial use case for entropy is a decentralized Asset Custodian, where the Program defines under what conditions funds or assets can be moved.  
+An initial use case for entropy is a decentralized Asset Custodian, where the Program defines under what conditions funds or assets can be moved. For assets belonging to an individual, this would use private access. An organisation, whose members change over time, would use permissioned access, and the program could be updated whenever the status of group members changes.
+
+Further use cases for Entropy programs include intent settlement and attestations.
 
 There's a lot to unpack here. What's an Asset Custodian? Why would we need a chain, and how do we guarantee that it will be decentralized? How does this relate to a multisignature? What's the deal with the TSS? This post unpacks all that and more.
 
@@ -50,7 +53,7 @@ But building our own chain requires us to consider _how_ we will achieve decentr
 
 ## But is it Decentralized AF?\*\*
 
-Smart contracts share security and decentralization properties with the underlying network. The most basic metric for decentralization is node count. At the time of writing (October 2022), there are about [13,500](https://www.nodewatch.io/) Ethereum nodes, and [13,000](https://bitnodes.io/nodes/) Bitcoin nodes. However, because each infrastructure provider is only minimally incentivized, the [Ethereum](https://www.statista.com/statistics/1334652/ethereum-eth-biggest-staking-pool-groups/) and [Bitcoin](https://blockchair.com/bitcoin/charts/hashrate-distribution) networks rely on pooled node operators. In recent events, [a particular smart contract](https://www.coindesk.com/layer2/2022/09/28/the-problem-tornado-cash-raises-about-base-layer-censorship-on-ethereum/) has been heavily censored on the Ethereum network, as pooled node operators refuse to include transactions involving the smart contract.
+Smart contracts share security and decentralization properties with the underlying network. The most basic metric for decentralization is node count. At the time of writing (August 2023), there are about [14,700](https://www.nodewatch.io/) Ethereum nodes, and [16,000](https://bitnodes.io/nodes/) Bitcoin nodes. However, because each infrastructure provider is only minimally incentivized, the [Ethereum](https://www.statista.com/statistics/1334652/ethereum-eth-biggest-staking-pool-groups/) and [Bitcoin](https://blockchair.com/bitcoin/charts/hashrate-distribution) networks rely on pooled node operators. In recent events, [a particular smart contract](https://www.coindesk.com/layer2/2022/09/28/the-problem-tornado-cash-raises-about-base-layer-censorship-on-ethereum/) has been heavily censored on the Ethereum network, as pooled node operators refuse to include transactions involving the smart contract.
 
 Application chains tend to have fewer nodes than general smart contract platforms. But there is an advantage in finding a middle ground: node operators actually run their own nodes. Decentralization is not a monolithic property; attempting to increase node count arbitrarily can ironically **decrease the decentralization** of a network. By finding a middle ground in node count, a network can avoid 3 node pools controlling over 50% of a network's resources.
 
@@ -65,6 +68,7 @@ We're going to shift attention now to how Entropy works.
 The easiest way to explain a Threshold Signature Scheme (TSS) is to start with a multisignature.
 
 A $t$-of-$n$ multisignature is a way for $t$ (**t**hreshold) participants out of $n$ possible participants to construct a valid signature.
+
 Each participant signs a message with their private key. A trusted centralized coordinator verifies that the $t$ signatures are valid. In blockchain contexts, the central coordinator is typically spelled "smart contract."
 
 <!-- ![Signing Flow](/img/flow-diagram.png) -->
@@ -93,7 +97,7 @@ Much like a multisignature, the Entropy network is a decentralized intermediary 
 
 Alice, a user or organization, wants to construct a transaction for 20 cryptoBux on chain X, from her Entropy-custodied account.
 
-- Alice gets the list of threshold servers who have her key-shares from the entropy chain
+- Alice gets the list of threshold servers who have her key-shares from the Entropy chain
 - Alice selects a signing committee from this list for the particular message she want to sign, based on it's hash.
 - Alice makes a request to each member of the signing committee containing the transaction or message she wants to sign, asking the Entropy network to validate the transaction and construct a signature.
 - Each of these threshold servers check that the constraints pass. **(this sentence needs changing - they get the chain to run the application on them and evaluate its output?)**
