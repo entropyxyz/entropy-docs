@@ -2,7 +2,7 @@
 sidebar_position: 12
 ---
 
-# Constraints
+# Programs
 
 - [API docs](https://entropy-api-docs.vercel.app/constraints/ec_constraints/index.html)
 

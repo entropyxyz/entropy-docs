@@ -40,7 +40,7 @@ This is the part which carries out the threshold signing protocol, together with
 It has the following features: 
 - The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server/src/signing_client) [API](https://entropy-api-docs.vercel.app/entropy-core/server/signing_client/index.html) which performs the threshold signing protocol.
 - An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://entropy-api-docs.vercel.app/entropy-core/kvdb/index.html) for key shares, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
-- Honours the [constraint-checking logic](Constraints) - upon which a decision is made as to whether to participate in signing a given message.
+- Executes [programs](Programs) - upon which a decision is made as to whether to participate in signing a given message.
 - An **HTTP API** for communication with users, with the entropy chain node, and with other threshold servers. 
 - An account for submitting transactions to the Entropy chain. 
 
