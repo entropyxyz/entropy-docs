@@ -6,20 +6,24 @@ Entropy is a layer one chain for decentralized signing infrastructure.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
-![Program access modes](/img/public-private-permissioned-dark.svg#gh-dark-mode-only)
-![Program access modes](/img/public-private-permissioned-light.svg#gh-light-mode-only)
+Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well as arbitrary data, and support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
+
+Entropy's 'programs' are defined in WebAssembly and stored on chain. They are mutable and may be updated by signing a transaction using the 'application key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
+![Program access modes](/img/public-private-permissioned-1-dark.svg#gh-dark-mode-only)&ensp;&ensp;
+
+![Program access modes](/img/public-private-permissioned-1-light.svg#gh-light-mode-only)&ensp;&ensp;
+![Program access modes](/img/public-private-permissioned-2-dark.svg#gh-dark-mode-only)&ensp;
+![Program access modes](/img/public-private-permissioned-2-light.svg#gh-light-mode-only)&ensp;
+![Program access modes](/img/public-private-permissioned-3-dark.svg#gh-dark-mode-only)
+![Program access modes](/img/public-private-permissioned-3-light.svg#gh-light-mode-only)
 
 _Program access modes_
 
-These programs have three distinct access modes. 'Public' where anyone can submit a request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
-
-Programs are defined in WebAssembly and stored on chain. They are mutable and may be updated by signing a transaction using the 'application key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
-
-Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well as arbitrary data, and support for other signature schemes is planned.
+Programs have three distinct access modes. 'Public' where anyone can submit a request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
 
 The Entropy blockchain is used for storing the Programs associated with a set of key-shares, giving consensus about which validator nodes hold which keyshares, and provides a mechanism for excluding nodes which do not adhere to the signing protocol.
 
-An initial use case for entropy is a decentralized Asset Custodian, where the Program defines under what conditions funds or assets can be moved. For assets belonging to an individual, this would use private access. An organisation, whose members change over time, would use permissioned access, and the program could be updated whenever the status of group members changes.
+An initial use case for entropy is a **decentralized asset custodian**, where the Program defines under what conditions funds or assets can be moved. For assets belonging to an individual, this would use private access. An organisation, whose members change over time, would use permissioned access, and the program could be updated whenever the status of group members changes.
 
 Further use cases for Entropy programs include intent settlement and attestations.
 
