@@ -95,13 +95,13 @@ Much like a multisignature, the Entropy network is a decentralized intermediary 
 
 ## Entropy in 3️⃣0️⃣ seconds 🕐️
 
-Alice, a user or organization, wants to construct a transaction for 20 cryptoBux on chain X, from her Entropy-custodied account.
+Alice, a user or organization, wants to construct a transaction for chain X, from her Entropy-managed account.
 
-- Alice gets the list of threshold servers who have her key-shares from the Entropy chain
-- Alice selects a signing committee from this list for the particular message she want to sign, based on it's hash.
-- Alice makes a request to each member of the signing committee containing the transaction or message she wants to sign, asking the Entropy network to validate the transaction and construct a signature.
-- Each of these threshold servers check that the constraints pass. **(this sentence needs changing - they get the chain to run the application on them and evaluate its output?)**
-- If successful, the threshold servers in the signing committee connect to each other and execute the threshold signing protocol, producing a valid signature.
+- Alice gets the list of threshold servers who have her key-shares from the Entropy chain.
+- A signing committee is selected from this list based on the hash of the particular message she want to sign.
+- Alice makes a request to each member of the signing committee containing the transaction or message she wants to sign, asking the Entropy network to consult the program and construct a signature.
+- Each of these threshold servers retrieve the latest version of the associated program from the Entropy chain and execute it with the message to be signed as input.
+- If the program returns success, the threshold servers in the signing committee connect to each other and execute the threshold signing protocol, producing a valid signature.
 - If the signature fails, the signers are able to prove the identity of the malicious co-signer. This proof can be published in the next block as a slashing-attestation for that node, and a new signing party may be selected.
 - The Entropy front end asks Alice to confirm before submitting the transaction to chain X, at which point it is submitted as a normal transaction on chain X.
 
@@ -113,10 +113,12 @@ Because Threshold Signature Schemes can be performed "off-chain" (from the persp
 
 So yeah. In this 'splainer we tried to unpack:
 
-- What an asset custodian should be able to do, and how it relates to a wallet or a multisignature
-- How application chains can achieve decentralization, despite smaller node pools
-- How Threshold Signature Schemes differ from multisignatures
-- How the Entropy Network will work, as a new kind of decentralized infrastructure for securing your funds
+- The distinction between the Entropy signing protocol and the application-level programs which determine what can be signed. 
+- The different access modes associated with these programs.
+- A decentralized asset custodian as an initial use-case, and how it relates to a wallet or a multisignature.
+- How application chains can achieve decentralization, despite smaller node pools.
+- How Threshold Signature Schemes differ from multisignatures.
+- How the Entropy Network will work, as a new kind of decentralized infrastructure for securing your funds.
 
 Keep an eye out for our upcoming Devnet release!
 
