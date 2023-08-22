@@ -2,8 +2,8 @@
 sidebar_position: 12
 ---
 
-# Constraints
+# Constraints (AKA Programs)
 
-- [API docs](https://entropy-api-docs.vercel.app/constraints/ec_constraints/index.html)
+- [API docs](https://docs-api-constraints.vercel.app/ec_constraints)
 
 // TODO for Jake
