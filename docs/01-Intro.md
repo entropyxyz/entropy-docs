@@ -25,7 +25,7 @@ The Entropy blockchain is used for storing the Programs associated with a set of
 
 An initial use case for entropy is a **decentralized asset custodian**, where the Program defines under what conditions funds or assets can be moved. For assets belonging to an individual, this would use private access. An organisation, whose members change over time, would use permissioned access, and the program could be updated whenever the status of group members changes.
 
-Further use cases for Entropy programs include intent settlement and attestations.
+Further use cases for Entropy programs include **intent settlement** and **attestations**.
 
 There's a lot to unpack here. What's an Asset Custodian? Why would we need a chain, and how do we guarantee that it will be decentralized? How does this relate to a multisignature? What's the deal with the TSS? This post unpacks all that and more.
 
@@ -44,12 +44,12 @@ Smart contract applications achieve decentralization by delegating the execution
 
 Smart contracts are very powerful primitives for building decentralized applications. But smart contracts are **limited** to the set of operations exposed by the smart contract infrastructure. Smart contracts typically cannot:
 
-- instruct nodes to construct calls outside the network (chain)
-- hold private state
-- cheaply perform computation-intensive operations that are often required by cryptography
-- automate recurring or scheduled computation
-- change or update rules for smart contract execution; upgradeable contracts solve this but create other problems
-- change properties of the underlying network (block times, transaction subsidy rules, privacy features, etc.)
+- Instruct nodes to construct calls outside the network (chain)
+- Hold private state
+- Cheaply perform computation-intensive operations that are often required by cryptography
+- Automate recurring or scheduled computation
+- Change or update rules for smart contract execution; upgradeable contracts solve this but create other problems
+- Change properties of the underlying network (block times, transaction subsidy rules, privacy features, etc.)
 
 The construction of a Chain-Agnostic Decentralized Asset Custodian relies on these features. Entropy would be impossible to construct on a smart contract platform.
 
