@@ -1,16 +1,16 @@
 # Entrosplainer
 
-A high level explanation of Entropy.
+A high level introductory explanation of Entropy.
 
 Entropy is a layer one chain for decentralized signing infrastructure.
 
-The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
+The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
 Entropy's threshold signature scheme uses ECDSA, with support for signing EVM and bitcoin transactions, as well as arbitrary data, and support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
 
-Entropy's 'programs' are defined in WebAssembly and stored on chain. They are mutable and may be updated by signing a transaction using the 'application key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
-![Program access modes](/img/public-private-permissioned-1-dark.svg#gh-dark-mode-only)&ensp;&ensp;
+Entropy's 'programs' are stored on chain as WebAssembly. They are mutable and may be updated by signing a transaction using the 'application key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
 
+![Program access modes](/img/public-private-permissioned-1-dark.svg#gh-dark-mode-only)&ensp;&ensp;
 ![Program access modes](/img/public-private-permissioned-1-light.svg#gh-light-mode-only)&ensp;&ensp;
 ![Program access modes](/img/public-private-permissioned-2-dark.svg#gh-dark-mode-only)&ensp;
 ![Program access modes](/img/public-private-permissioned-2-light.svg#gh-light-mode-only)&ensp;
@@ -21,7 +21,7 @@ _Program access modes_
 
 Programs have three distinct access modes. 'Public' where anyone can submit a request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
 
-The Entropy blockchain is used for storing the Programs associated with a set of key-shares, giving consensus about which validator nodes hold which keyshares, and provides a mechanism for excluding nodes which do not adhere to the signing protocol.
+The Entropy blockchain is used for consensus about which validator nodes hold which key-shares, provides a mechanism for excluding nodes which do not adhere to the signing protocol, and stores the programs associated with an account. Once a user is registered, signing a message with Entropy does not require submitting a transaction to the Entropy chain, meaning getting a signature is fast and costs nothing.
 
 An initial use case for entropy is a **decentralized asset custodian**, where the Program defines under what conditions funds or assets can be moved. For assets belonging to an individual, this would use private access. An organisation, whose members change over time, would use permissioned access, and the program could be updated whenever the status of group members changes.
 
@@ -93,7 +93,7 @@ Threshold Signatures eliminate the requirement for a trusted coordinator, and ar
 
 _2-of-3 Threshold Signature Scheme_
 
-In the Entropy scheme, most key shares are custodied by nodes on the Entropy Network, while the user holds onto one or more key shares.
+In the Entropy scheme, key shares are generally custodied by nodes on the Entropy Network, while with private access mode, the user holds onto one or more key shares.
 
 Much like a multisignature, the Entropy network is a decentralized intermediary between users and their funds. But, unlike a multisignature, Entropy can represent and custody funds sitting on any other blockchain, without complicated cross-chain communication. Here's how.
 
@@ -104,7 +104,7 @@ Alice, a user or organization, wants to construct a transaction for chain X, fro
 - Alice gets the list of threshold servers who have her key-shares from the Entropy chain.
 - A signing committee is selected from this list based on the hash of the particular message she want to sign.
 - Alice makes a request to each member of the signing committee containing the transaction or message she wants to sign, asking the Entropy network to consult the program and construct a signature.
-- Each of these threshold servers retrieve the latest version of the associated program from the Entropy chain and execute it with the message to be signed as input.
+- Each of these threshold servers retrieves the latest version of the associated program from the Entropy chain and executes it with the message to be signed as input.
 - If the program returns success, the threshold servers in the signing committee connect to each other and execute the threshold signing protocol, producing a valid signature.
 - If the signature fails, the signers are able to prove the identity of the malicious co-signer. This proof can be published in the next block as a slashing-attestation for that node, and a new signing party may be selected.
 - The Entropy front end asks Alice to confirm before submitting the transaction to chain X, at which point it is submitted as a normal transaction on chain X.
