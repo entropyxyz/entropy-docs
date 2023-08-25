@@ -59,7 +59,7 @@ Smart contracts share security and decentralization properties with the underlyi
 
 Application chains tend to have fewer nodes than general smart contract platforms. But there is an advantage in finding a middle ground: node operators actually run their own nodes. Decentralization is not a monolithic property; attempting to increase node count arbitrarily can ironically **decrease the decentralization** of a network. By finding a middle ground in node count, a network can avoid 3 node pools controlling over 50% of a network's resources.
 
-The Entropy network will be run by about one hundred independent validators. Besides decentralization, there are other reasons we would intentionally choose to keep the node count in this middle ground.
+The Entropy network will stay at a size which gives a variety of independent validators while maintaining signing performance. Besides decentralization, there are other reasons we would intentionally choose to keep the node count in this middle ground.
 
 Because Entropy's nodes hold onto shares of private user information (more on that in the next section), there are strong anti-incentives in allowing nodes to join and leave the network frequently. For these reasons, the number of nodes on the Entropy network needs to be high enough to guarantee decentralized service, but not so high as to misalign the incentives of Entropy validators against users.
 
