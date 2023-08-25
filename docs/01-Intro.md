@@ -68,7 +68,7 @@ _2-of-3 Multisignature_
 
 Similarly, a $t$-of-$n$ TSS is a way for $t$ participants out of $n$ possible participants to construct a valid signature, but **without a centrally trusted coordinator.**
 
-Participants in a TSS don't hold onto independent private keys. Before a signature can be constructed, a single private key is _split_ into $n$ secret key shares, either by a central dealer, or a Distributed Key Generation (DKG) step. DKGs have the advantage that every party contributes randomness to generate the private key, but _no party has knowledge of the shared private key_. A TSS scheme constructs valid signatures despite the fact that no party has knowledge of this shared private key.
+Participants in a TSS don't hold onto independent private keys. Before a signature can be constructed, a set of key-shares is generated. This is done either by a **Distributed Key Generation** (DKG) which all parties participate in, or by a **Centralized Key Generation** where a single party _splits_ a private key into shares and distributes them to the other parties. DKGs have the advantage that every party contributes randomness to generate the private key, but _no party has knowledge of the shared private key_. A TSS scheme constructs valid signatures despite the fact that no party has knowledge of this shared private key.
 
 Threshold Signatures eliminate the requirement for a trusted coordinator, and are a powerful and flexible cryptographic primitive.
 
