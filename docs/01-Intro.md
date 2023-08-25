@@ -1,6 +1,4 @@
-# Entrosplainer
-
-A high level introductory explanation of Entropy.
+# 'Entrosplainer'
 
 Entropy is a layer one chain for decentralized signing infrastructure.
 
