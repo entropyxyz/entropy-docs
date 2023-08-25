@@ -2,28 +2,15 @@
 
 Entropy is a layer one chain for decentralized signing infrastructure.
 
-The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
+The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined ['program'](Programs).
 
-Entropy's threshold signature scheme uses ECDSA, with support for signing EVM transactions, as well as arbitrary data, and support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
+Entropy's [threshold signature scheme](ThresholdSignatureScheme) uses ECDSA, with support for signing EVM transactions as well as arbitrary data, and support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
 
-Entropy's 'programs' are stored on chain as WebAssembly. They are mutable and may be updated by signing a transaction using the 'application key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
-
-![Program access modes](/img/public-private-permissioned-1-dark.svg#gh-dark-mode-only)&ensp;&ensp;
-![Program access modes](/img/public-private-permissioned-1-light.svg#gh-light-mode-only)&ensp;&ensp;
-![Program access modes](/img/public-private-permissioned-2-dark.svg#gh-dark-mode-only)&ensp;
-![Program access modes](/img/public-private-permissioned-2-light.svg#gh-light-mode-only)&ensp;
-![Program access modes](/img/public-private-permissioned-3-dark.svg#gh-dark-mode-only)
-![Program access modes](/img/public-private-permissioned-3-light.svg#gh-light-mode-only)
-
-_Program access modes_
-
-Programs have three distinct access modes. 'Public' where anyone can submit a request to sign a message, 'Private' where the user themselves holds a key-share and participates in the signing process, and 'Permissioned' where the program itself defines the logic as to who may submit a signature request.
+Entropy's [programs](Programs) are stored on chain as WebAssembly. They are mutable and may be updated by signing a transaction using the 'account key' which is defined during initial registration. There are plans for governance mechanisms for managing program updates as an organization, or issuing emergency fixes.
 
 The Entropy blockchain is used for consensus about which validator nodes hold which key-shares, provides a mechanism for excluding nodes which do not adhere to the signing protocol, and stores the programs associated with an account. Once a user is registered, signing a message with Entropy does not require submitting a transaction to the Entropy chain, meaning getting a signature is fast and costs nothing.
 
-An initial use case for entropy is a **decentralized asset custodian**, where the Program defines under what conditions funds or assets can be moved. For assets belonging to an individual, this would use private access. An organisation, whose members change over time, would use permissioned access, and the program could be updated whenever the status of group members changes.
-
-Further use cases for Entropy programs include **intent settlement** and **attestations**.
+An initial use case for entropy is a **decentralized asset custodian**, where the Program defines under what conditions funds or assets can be moved. Further use cases for Entropy programs include **intent settlement** and **attestations**.
 
 There's a lot to unpack here. What's an Asset Custodian? Why would we need a chain, and how do we guarantee that it will be decentralized? How does this relate to a multisignature? What's the deal with the TSS? This post unpacks all that and more.
 
@@ -124,4 +111,4 @@ So yeah. In this 'splainer we tried to unpack:
 
 Keep an eye out for our upcoming Devnet release!
 
-And we're hiring {put link to hiring page here}
+<!-- And we're hiring {put link to hiring page here} -->
