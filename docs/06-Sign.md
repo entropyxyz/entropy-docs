@@ -8,7 +8,7 @@ The committee requires one Validator from each signing group as well as the user
 
 - The SDK method which does this is [`Entropy.sign`](https://entropy-api-docs.vercel.app/entropy-js/classes/core.default.html#sign).
 
-For details on how signatures are actually created, see [Threshold Signature Scheme](ThresholdSigningScheme).
+For details on how signatures are actually created, see [Threshold Signature Scheme](ThresholdSignatureScheme).
 
 ## Signing process
 
