@@ -9,7 +9,7 @@ The SDK method for registering is [`Entropy.register`](https://entropy-api-docs.
 ![Register Flow](/sequenceDiagrams/register.svg)
 
 1. The user creates a set of shares by doing a [centralized key generation](https://docs-api-synedrion.vercel.app/synedrion/fn.make_key_shares.html). 
-1. The user registers with the Entropy chain by submitting a transaction with the 'Appication Key', and initial 'program'. 
+1. The user registers with the Entropy chain by submitting a transaction with the 'Account Key', and initial 'program'. 
 1. The user retrieves the details of all threshold servers from all relevant 'signing subgroups' from the chain (their public encryption keys and IP addresses).
 1. Each signing subgroup is assigned a share, and copies of that share are encrypted for each member of the subgroup them using the public key that member. Since the user generates the shares on one device locally, this is known as a centralized key generation. The threshold signature scheme used can also do distributed key generation - but this is not currently used. 
 1. The user send the encrypted shares to each Threshold Server by including them in a POST request to `/user/new` [src](https://github.com/entropyxyz/entropy-core/blob/master/crypto/server/src/user/api.rs) [API](https://docs-api-entropy-core.vercel.app/server/user/api/fn.new_user.html).
