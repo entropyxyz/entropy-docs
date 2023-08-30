@@ -29,9 +29,9 @@ Allows interaction with Entropy Threshold Servers over HTTP. This includes sendi
 
 Allows messages for the Threshold Servers to be encrypted and signed.
 
-## [`constraints`](https://entropy-api-docs.vercel.app/entropy-js/modules/constraints.html) class
+## [`Programs`](https://entropy-api-docs.vercel.app/entropy-js/modules/constraints.html) class
 
-This extends the `Substrate` class to allow interaction with the constraints system.
+This extends the `Substrate` class to allow uploading and updating programs.
 
 Currently, an 'access control list' is implemented, for EVM compatible blockchains. A list of addresses can be given which are either allowed or blocked.
 

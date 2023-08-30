@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2023-08-21T09:12:41.129Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="1QiruprtKHiXc56syxVe" version="21.6.8" type="device">
+  <diagram name="Page-1" id="MVUO56eXqKpAhezhZcp3">
+    <mxGraphModel dx="1071" dy="898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-1" value="Public" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="174" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-2" value="Private" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="460" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-3" value="Permissioned" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="744" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-22" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="120" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-24" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="200" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-25" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="280" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-26" value="All keyshares held by validator nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="308" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-28" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="406" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-29" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="486" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-30" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="566" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-31" value="&lt;div&gt;Keyshares held by validator&lt;/div&gt;&lt;div&gt;nodes as well as the user&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="431" y="303" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-32" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="690" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-33" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="770" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-34" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="850" y="230" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-36" value="&lt;div&gt;Anyone can submit a request&lt;/div&gt;&lt;div&gt;to sign a message&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="150" y="343" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-37" value="All keyshares held by validator nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="694" y="308" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-38" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="240" width="40" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-39" value="&lt;div&gt;The program itself defines the logic as to&lt;/div&gt;&lt;div&gt;who may submit a signature request&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="678" y="348" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oQIe6zk9vqxr4BpjPy98-40" value="Signing only possible with participation from the user" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="425" y="353" width="195" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
