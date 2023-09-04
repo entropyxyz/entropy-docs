@@ -1,23 +1,21 @@
 # Registering
 
-A user need to register in order to be able to use the Entropy network to sign messages.
+A user needs to register in order to be able to use the Entropy network to sign messages.
 
 The SDK method for registering is [`Entropy.register`](https://entropy-api-docs.vercel.app/entropy-js/classes/core.default.html#register).
 
 ## The registering process
 
+<!-- TODO update this sequence diagram -->
 ![Register Flow](/sequenceDiagrams/register.svg)
 
-1. The user creates a set of shares by doing a [centralized key generation](https://docs-api-synedrion.vercel.app/synedrion/fn.make_key_shares.html). 
-1. The user registers with the Entropy chain by submitting a transaction with the 'Account Key', and initial 'program'. 
-1. The user retrieves the details of all threshold servers from all relevant 'signing subgroups' from the chain (their public encryption keys and IP addresses).
-1. Each signing subgroup is assigned a share, and copies of that share are encrypted for each member of the subgroup them using the public key that member. Since the user generates the shares on one device locally, this is known as a centralized key generation. The threshold signature scheme used can also do distributed key generation - but this is not currently used. 
-1. The user send the encrypted shares to each Threshold Server by including them in a POST request to `/user/new` [src](https://github.com/entropyxyz/entropy-core/blob/master/crypto/server/src/user/api.rs) [API](https://docs-api-entropy-core.vercel.app/server/user/api/fn.new_user.html).
-1. On receiving a share, the Threshold Server checks the user info published on chain before storing it in it's [encrypted key-value store](https://docs-api-entropy-core.vercel.app/kvdb/index.html).  
-
-<!-- - The user sends all members of each subgroup a keyshare. -->
-<!-- - Each subgroup member contacts all other members of the subgroup to confirm they all have the same share. // JA Less interactive then this, one member of a subgroup sends a message to chain (may need a redisgn) -->
-<!-- - To test that the shares actually work - a test signature is created. //JA nahhhh cool idea tho -->
-<!--   - If the test signature is valid a transaction is submitted to the entropy chain that the registration was successful. // JA same -->
-<!--   - If the test signature is invalid but no misbehaving party was identified, the registration fails - the user is at fault. // JA same -->
-<!--   - If the test signature fails with an identified misbehaving party - proceed as with the usual signing proceedure: the misbehaving member is 'slashed' and another try is made with a new member of that signing subgroup. // JA same -->
+1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', initial 'program', and chosen key visibility mode. 
+1. The chain selects which nodes should perform a [distributed key generation (DKG)](https://docs-api-synedrion.vercel.app/synedrion/sessions/fn.make_keygen_and_aux_session.html) based on the current block number.
+1. As each block is finalized, the an off-chain worker makes an HTTP POST request to each selected threshold server with the signature request accounts of all users who have registered, as well as details of the other validator nodes in the signing subgroup. Specifically, the `/user/new` ([src](https://github.com/entropyxyz/entropy-core/blob/master/crypto/server/src/user/api.rs) [API](https://docs-api-entropy-core.vercel.app/server/user/api/fn.new_user.html)) endpoint is called with a [`OcwMessage`](https://docs-api-entropy-core.vercel.app/entropy_shared/types/struct.OcwMessage.html).
+1. All selected threshold servers:
+    1. Connect to each other over websocket and make a [noise handshake](https://noiseprotocol.org/noise.html) to establish an encrypted channel for protocol messages.
+    1. Perform a [DKG](https://docs-api-synedrion.vercel.app/synedrion/sessions/fn.make_keygen_and_aux_session.html) and store their [key-share](https://docs-api-synedrion.vercel.app/synedrion/struct.KeyShare.html) in their [encrypted key-value store](https://docs-api-entropy-core.vercel.app/kvdb/index.html).
+    1. Send the generated share to other members of their signing subgroup by POSTing to `/user/receive_key` ([src](https://github.com/entropyxyz/entropy-core/blob/13d7f3f5cce77cb63498f931503ee6d0d971f49e/crypto/server/src/user/api.rs#L224) [API](https://docs-api-entropy-core.vercel.app/server/user/api/fn.receive_key.html)).
+    1. They submit a transaction to the entropy chain to confirm the user has successfully registered.
+1. On receiving a key-share via `receive_key`, the threshold server will check with the chain that the sender is in the correct subgroup, and if so store the key-share in their key-value store.
+1. On receiving a confirmation transaction from all selected threshold server, the chain sets the user to a 'registered' state, making it possible to sign messages. 
