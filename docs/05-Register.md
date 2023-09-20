@@ -6,7 +6,6 @@ The SDK method for registering is [`Entropy.register`](https://entropy-api-docs.
 
 ## The registering process
 
-<!-- TODO update this sequence diagram -->
 ![Register Flow](/sequenceDiagrams/register.svg)
 
 1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', initial 'program', and chosen key visibility mode. 

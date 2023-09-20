@@ -41,8 +41,6 @@ The paper includes a [Universally Composable security](https://eprint.iacr.org/2
 
 Distributed key generation means parties can compute their key shares without central coordination and without any party having knowledge of the secret key.
 
-<!-- However, Entropy currently uses a centralized key generation, performed by the user. The user computes a set of shares on their own device and then sends those shares to Entropy threshold servers. This allows them to use existing key management techniques (such as backups using mnemonic codes, or hierarchical deterministic wallets) and essentially the user maintains ultimate control (as well as ultimate responsibility for protecting her key). However in the future we may switch to a distributed key generation in which the user participates. -->
-
 ### Key refreshing
 
 In order to allow nodes to join or leave the network, as well as to provide proactive security, key-shares can be periodically 'refreshed'. Without changing the secret key, new key shares are generated which are incompatible with the old ones. This can be achieved in 3 communication rounds.
