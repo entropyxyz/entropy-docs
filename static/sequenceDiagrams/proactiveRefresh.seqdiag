@@ -1,0 +1,11 @@
+Title: Proactive Refresh
+
+participant Entropy_Chain
+participant Validator_TSS
+
+
+# Proactive Refresh
+Entropy_Chain -> Validator_TSS: Tells selected validator to do Proactive Refresh (one validator in each subgroup)
+Validator_TSS -> Validator_TSS: Get partition of registered keys
+Validator_TSS -> Validator_TSS: Does Proactive Refresh with other selected validators 
+Validator_TSS -> Validator_TSS: Sends new keyshare to rest of members of subgroup and stores it 
