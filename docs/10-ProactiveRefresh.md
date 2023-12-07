@@ -2,15 +2,14 @@
 # Proactive Refresh
 
 - The concept here is that as validators enter and exit the network their key shares should become invalid
-- Every session the chain will inform the TSS servers that a proactive refresh is happening
-- The network (registered keys) will be partitioned as to not refresh the whole network and cause undo strain on the validators 
-- The selected validators (one in each subgroup) will refresh the partition of the network and send the new keyshares off to the rest of their subgroups
-- all old keys will now be invalid
-- An individual trigger will exist for private accouts where a keyshare is held by the user to forced a refresh by the user (not built yet)
+- Every [session](https://wiki.polkadot.network/docs/glossary#session) (2400 blocks, which is 4 hours) the chain will inform the TSS servers that a proactive refresh is happening.
+- The network (registered keys) will be partitioned as to not refresh the whole network and cause undo strain on the validators. 
+- One TSS server from each subgroup is selected deterministically using the current block number modulo the number of TSS servers in that subgroup, similar to the selection process for DKG when registering.
+- The selected TSS servers (one in each subgroup) will refresh the partition of the network and send the new keyshares off to the other members of their subgroup.
+- All old keyshares will now be incompatible with the refreshed keyshares. But the public validating key of the distributed signing keypair never changes.
+- The private access mode, an individual trigger will exist where it is initiated by the user (not yet implemented).
 
 ![Proactive Refresh Flow New](/sequenceDiagrams/proactiveRefresh.svg)
-
-
 
 ## Proactive Refresh but I asked ChatGPT3 to make it sound like a Doctor Seuss book.
 
