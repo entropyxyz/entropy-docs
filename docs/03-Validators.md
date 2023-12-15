@@ -4,7 +4,7 @@
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the Entropy network. It has two different binaries, both of which are run by each validator node:
 
 - The Entropy blockchain, built with [Substrate](https://docs.substrate.io/).
-- The [Threshold server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) which has an HTTP API based on [Axum](https://docs.rs/axum)
+- The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum)
 
 If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](SDK).
 
@@ -33,13 +33,13 @@ The purpose of the Entropy blockchain is to have a 'single source of truth' for 
 - **Free transactions pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/free-tx) [API](https://docs-api-entropy-core.vercel.app/pallet_free_tx/index.html) - free transactions are also known as 'zaps'. 
 
 
-## The Threshold Server [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server) [API](https://docs-api-entropy-core.vercel.app/server/index.html) 
+## The Threshold Signature Server [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) [API](https://docs-api-entropy-core.vercel.app/entropy_tss/index.html) 
 
-This is the part which carries out the threshold signing protocol, together with other instances of the threshold server. It has an encrypted key-value store used for private information where consensus is not required. Since the threshold server deals with private data which must never be exposed publicly on-chain, it is distributed as a separate binary.
+This is the part which carries out the threshold signing protocol, together with other instances of the threshold signature server. It has an encrypted key-value store used for private information where consensus is not required. Since the threshold signature server deals with private data which must never be exposed publicly on-chain, it is distributed as a separate binary. It also handles the distributed key generation and proactive-refresh protocols.
 
 It has the following features: 
 
-- The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server/src/signing_client) [API](https://docs-api-entropy-core.vercel.app/server/signing_client/index.html) which performs the threshold signing protocol.
+- The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs-api-entropy-core.vercel.app/entropy_protocol/index.html).
 - An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs-api-entropy-core.vercel.app/kvdb/index.html) for key shares, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
 - Executes [programs](Programs) - upon which a decision is made as to whether to participate in signing a given message.
 - An **HTTP API** for communication with users, with the entropy chain node, and with other threshold servers. 
