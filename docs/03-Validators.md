@@ -47,15 +47,15 @@ It has the following features:
 
 ### Usage
 
-`server` is a member of the `entropy-core` workspace. When you run `server`, you will be asked for a password
+`entropy-tss` is a member of the `entropy-core` workspace. When you run `entropy-tss`, you will be asked for a password
 used to encrypt the key-value store.
 
 Be aware there is no way to recover this password if you loose it.
 
 The database is stored in the `.entropy` directory, which is created in the current working directory where the binary is run. You can remove this directory if you need to 'start fresh' during development.
 
-If `server` is compiled with the `unsafe` feature enabled, some extra HTTP routes will be made available. These are for testing and development purposes only, and allow direct access to the key-value store.
+If `entropy-tss` is compiled with the `unsafe` feature enabled, some extra HTTP routes will be made available. These are for testing and development purposes only, and allow direct access to the key-value store.
 
 If you need these, build with:
 
-`cargo build --release --features unsafe`
+`cargo build -p entropy-tss --release --features unsafe`
