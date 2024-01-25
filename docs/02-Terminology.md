@@ -5,7 +5,7 @@
 - Every ['validator'](Validators) runs both a 'Entropy Chain Node' and 'Threshold Server'.
 - ['Threshold server'](Validators#the-threshold-server-src-api) - an instance of the entropy [threshold signing server](https://github.com/entropyxyz/entropy-core/tree/master/crypto/server). This consists of the 'signing client' which performs the threshold signing protocol, an encrypted key-value store for key shares, the execution of 'programs', and an HTTP api for communication with users, with the entropy chain node, and with other threshold servers. The threshold server also has an account for submitting transactions to the Entropy chain. 
 - 'Signing committee' - a set of Threshold Servers who have been selected to participate in signing.
-- ['Programs'](Programs) - the logic defining under what conditions a Threshold Server should participate in signing a particular transaction or message. Programs are compiled WebAssembly blobs that are uploaded to the blockchain, and may be updated.
+- ['Programs'](UploadPrograms) - the logic defining under what conditions a Threshold Server should participate in signing a particular transaction or message. Programs are compiled WebAssembly blobs that are uploaded to the blockchain, and may be updated.
 - 'Deploy Key' - Key used to deploy a program that can be used to remove a program
 - 'Program Modification Account' - the account on the Entropy chain which may update the programs for a particular user / organization / entity.
 - 'Signing Key' - the acocunt on the Entropy chain that is used to initate signing requests
