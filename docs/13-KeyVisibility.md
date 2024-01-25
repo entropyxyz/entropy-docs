@@ -1,7 +1,3 @@
----
-sidebar_position: 12
----
-
 # Key Visiblity
 
 <!-- TODO for Jake -->
