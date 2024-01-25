@@ -12,5 +12,5 @@
 - ['Signing subgroup' or 'Partition'](SigningGroupSelection) - a set of Threshold servers which all hold identical keyshares. The Entropy chain is responsible for assigning new Threshold Servers to a subgroup.
 - 'User' - here refers whoever is using the Entropy network to sign transactions or messages. This may be an individual, organisation or some other entity.
 - 'Program Developer' - here refers whoever is using the Entropy network to build and deploy programs.
-- 'Threshold Server Signing keys' - the Entropy chain account IDs for the threshold servers.
+- 'Threshold Server Signing account' - the Entropy chain account IDs for the threshold servers.
 - Be aware that the term 'transaction' can refer to both transactions submitted to the Entropy chain and transactions intended for signing by the Entropy network.
