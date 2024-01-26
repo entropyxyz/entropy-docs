@@ -2,7 +2,7 @@
 
 Programs are written and compiled to WASM using this [repository](https://github.com/entropyxyz/programs)
 
-* A program owner calls ```set_program``` in the program palles with
+* A program owner calls ```set_program``` in the program pallet with
     * the program bytecode
     * the configuration interface which is a seralized json object that allows a user to know the configuration of the program then set their own indiviudualized configuration in programsData
     * The signing key signs the tx and becomes the deployer key
