@@ -15,4 +15,4 @@ This describes the process by which a new validator node can join the network.
 
 - `Endpoint` -  The IP address of it's threshold server
 - `X25519PublicKey` - Its public encryption key for encrypting messages to and from other validators
-- Threshold Server Account: Account for the threshold server to submit transactions to the Entropy chain
+- `Threshold Server Signing Account` - Account for the threshold server to submit transactions to the Entropy chain
