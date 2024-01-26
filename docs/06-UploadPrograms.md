@@ -9,5 +9,5 @@ Programs are written and compiled to WASM using this [repository](https://github
     * A ref counter gets set to 0 when uploading
 
 * A program then gets stored in the Programs storage slot with the key being ```H(bytecode + configuration_interface)```. The hash is used by a user to point to the programs they want applied to their key, everytime a program is referenced the ref counter increments
-* Since the key is a hash there is no editting programs (since that would change the hash)
+* Since the key is a hash there is no editing programs (since that would change the hash)
 * Programs can be removed if the ref count is zero by the deploy key
