@@ -18,7 +18,7 @@ An example of a program that uses a config can be found [here][config-example]. 
 
 ## Auxilary Data
 
-Programs can require users to include auxilary data, separate from the message, in their signature request.
+Programs can require users to include auxiliary data, separate from the message, in their signature request.
 
 An example of a program that requires a zero-knowledge proof as auxilary data can be found [here][zkp-example].
 
