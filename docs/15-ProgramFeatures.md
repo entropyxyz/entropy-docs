@@ -24,7 +24,7 @@ An example of a program that requires a zero-knowledge proof as auxilary data ca
 
 ## Future Updates
 
-Just like [WASI], additional runtime functions and features (eg. oracles) will be added via [WITs][wit]. User will import them via [entropy-programs-core] and the newly compiled program will be able to interact with the new Wasm runtime functions. Any additional features will be implemented following the existing [WASI proposals] or new WITs will be defined.
+Just like [WASI], additional runtime functions and features (eg. oracles) will be added via [WITs][wit]. The user will import them via [entropy-programs-core] and the newly compiled program will be able to interact with the new Wasm runtime functions. Any additional features will be implemented following the existing [WASI proposals] or new WITs will be defined.
 
 [components]: https://github.com/WebAssembly/component-model
 [wit]: https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md
