@@ -16,7 +16,7 @@ Programs can include a configuration, or config, which allow users to modify the
 
 An example of a program that uses a config can be found [here][config-example]. In this example, the user specifies an allow-list of Ethereum recipients via a JSON string config.
 
-## Auxilary Data
+## Auxiliary Data
 
 Programs can require users to include auxiliary data, separate from the message, in their signature request.
 
