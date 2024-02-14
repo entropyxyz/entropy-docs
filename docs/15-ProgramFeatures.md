@@ -20,7 +20,7 @@ An example of a program that uses a config can be found [here][config-example]. 
 
 Programs can require users to include auxiliary data, separate from the message, in their signature request.
 
-An example of a program that requires a zero-knowledge proof as auxilary data can be found [here][zkp-example].
+An example of a program that requires a zero-knowledge proof as auxiliary data can be found [here][zkp-example].
 
 ## Future Updates
 
