@@ -12,7 +12,7 @@ The list of supported natively-supported hashing algorithms can be found [here][
 
 ## Program Configs
 
-Programs can include a configuration, or config, which allow users to modify the `evaluation` behavior without having to recompile and upload a new program to the chain. The format of this is undefined, allowing for a config to be defined as a serialized C-compatable struct, UTF-8 JSON string, or anything in between.
+Programs can include a configuration, or config, which allow users to modify the `evaluation` behavior without having to recompile and upload a new program to the chain. The format of this is undefined, allowing for a config to be defined as a serialized C-compatible struct, UTF-8 JSON string, or anything in between.
 
 An example of a program that uses a config can be found [here][config-example]. In this example, the user specifies a whitelist of Ethereum recipients via a JSON string config.
 
