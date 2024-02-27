@@ -1,8 +1,10 @@
 # 'Entrosplainer'
 
-Entropy is a layer one chain for decentralized signing infrastructure.
+Entropy is the Autonomous Agent Network.
 
-The Entropy network provides threshold signing as a service. It consists of a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
+Entropy provides a decentralized signing infrastructure through a network of programmable agents. Users can request that the network signs a message or transaction, and a committee of agents will decide whether to participate in collectively signing the message based on a program which defines the conditions under which a message should be signed.
+
+This is achieved with a proof of stake [application chain](https://www.figment.io/resources/smart-contracts-vs-application-specific-blockchains) built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares and deploys [programs](ProgramFeatures).
 
 Entropy's [threshold signature scheme](ThresholdSignatureScheme) uses ECDSA, with support for signing EVM transactions as well as arbitrary data, and support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
 
