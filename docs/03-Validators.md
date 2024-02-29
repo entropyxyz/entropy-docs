@@ -3,8 +3,8 @@
 
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the Entropy network. It has two different binaries, both of which are run by each validator node:
 
-- The Entropy blockchain, built with [Substrate](https://docs.substrate.io/).
-- The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum)
+- The Entropy blockchain, built with [Substrate](https://docs.substrate.io/). This handles public data relating to who the users are and which programs they use, who the validators are and which 'signing subgroup' they belong to, and the bytecode of all available programs.
+- The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum). This handles private data such a user's signing keyshares, and runs the signing protocol.
 
 If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](SDK).
 
@@ -12,7 +12,7 @@ If you are interested in how to interact with the Entropy network, rather than h
 
 ## The Entropy chain [src](https://github.com/entropyxyz/entropy-core) [API](https://docs-api-entropy-core.vercel.app/entropy)
 
-The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold server nodes need to have consensus on. For example, we need to have agreement of which validators belong to which signing subgroups, and which subgroups will participate in signing a particular message.
+The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold signature servers need to have consensus on. For example, we need to have agreement of which validators belong to which signing subgroups, and which subgroups will participate in signing a particular message.
 
 ### General functionality from Substrate / Polkadot:
 
@@ -27,9 +27,10 @@ The purpose of the Entropy blockchain is to have a 'single source of truth' for 
 
 ### Custom functionality specific to Entropy:
 
-- **Staking pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_staking_extension/index.html) - staking is extended to assign Threshold server endpoints to accounts, and allow these to be modified.
-- **Relayer pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/relayer/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_relayer/index.html) - allows the user to tell the chain they are  registering or signing, and the threshold server to confirm when the signing protocol is completed.  This uses substrate [events](https://docs.substrate.io/build/events-and-errors). 
-- **Slashing pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/slashing) [API](https://docs-api-entropy-core.vercel.app/pallet_slashing/index.html) - used to penalise nodes if they 'misbehave' during the signing protocol. (Not yet implemented)
+- **Staking extension pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_staking_extension/index.html) - staking is extended to assign a particular Threshold Signature Servers account to a particular chain node, and tracks which signing subgroup they belong to.
+- **Relayer pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/relayer/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_relayer/index.html) - This provides a registry of Entropy users, and which programs are currently associated with their account. This uses substrate [events](https://docs.substrate.io/build/events-and-errors). 
+- **Programs pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/programs/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_programs/index.html) - This stores program bytecode as well as metadata associated with the program such as a description of its interface and how many times it is used.
+- **Slashing pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/slashing) [API](https://docs-api-entropy-core.vercel.app/pallet_slashing/index.html) - used to penalise nodes if they 'misbehave' during the protocols. (Not yet implemented)
 - **Free transactions pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/free-tx) [API](https://docs-api-entropy-core.vercel.app/pallet_free_tx/index.html) - free transactions are also known as 'zaps'. 
 
 
@@ -40,10 +41,10 @@ This is the part which carries out the threshold signing protocol, together with
 It has the following features: 
 
 - The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs-api-entropy-core.vercel.app/entropy_protocol/index.html).
-- An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs-api-entropy-core.vercel.app/kvdb/index.html) for key shares, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
-- Executes programs - upon which a decision is made as to whether to participate in signing a given message.
-- An **HTTP API** for communication with users, with the entropy chain node, and with other threshold servers. 
-- An account for submitting transactions to the Entropy chain. 
+- An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs-api-entropy-core.vercel.app/kvdb/index.html) for key shares and other secret data, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
+- Executes [programs](ProgramFeatures) - upon which a decision is made as to whether to participate in signing a given message.
+- An **[HTTP API](https://docs-api-entropy-core.vercel.app/entropy_tss)** for communication with users, with the entropy chain node, and with other threshold servers. 
+- An account for submitting extrinsics (transactions) to the Entropy chain. For example, when the distributed key generation protocol runs successfully during user registration, each TSS server sends a confirmation to the chain by submitting a transaction.
 
 ### Usage
 
