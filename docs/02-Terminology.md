@@ -1,10 +1,10 @@
 # Terminology
 
-- 'Entropy network' - the set of entropy 'validators'. 
+- 'Entropy network' - the set of Entropy 'validators'.
 - ['Entropy chain'](Validators#the-entropy-chain-src-api) - an application blockchain built with [Substrate](https://substrate.io), with the purpose of coordinating distributed signing.
 - Every ['validator'](Validators) runs both a 'Entropy Chain Node' and 'Threshold Server'.
-- ['Threshold server'](Validators#the-threshold-signature-server-src-api) - an instance of the entropy [Threshold Signature Server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server). This consists of the 'signing client' which performs the threshold signing protocol, an encrypted key-value store for key shares, the execution of 'programs', and an HTTP api for communication with users, with the entropy chain node, and with other threshold servers. The threshold server also has an account for submitting transactions to the Entropy chain. 
-- 'Signing committee' - a set of Threshold Servers who have been selected to participate in signing a particular message.
+- ['Threshold server'](Validators#the-threshold-signature-server-src-api) - an instance of the Entropy [Threshold Signature Server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server). This consists of the 'signing client' which performs the threshold signing protocol, an encrypted key-value store for key shares, the execution of 'programs', and an HTTP API. The HTTP API is used for communication with users, with the Entropy chain node, and with other threshold servers. The threshold server also has an account for submitting transactions to the Entropy chain (usually refered to as the TSS account).
+- 'Signing committee' - a set of Threshold Servers who have been selected to participate in signing a particular message. This is composed of validators from different subgroups.
 - ['Programs'](ProgramFeatures) - the logic defining under what conditions a Threshold Server should participate in signing a particular transaction or message. Programs are compiled WebAssembly blobs that are uploaded to the blockchain, and may be updated.
 - 'Deploy Key' - Key used to deploy or remove a program.
 - 'Program Modification Account' - the account on the Entropy chain which may update the which programs a particular user employs.
