@@ -40,7 +40,7 @@ This is the part which carries out the threshold signing protocol, together with
 
 It has the following features: 
 
-- The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs-api-entropy-core.vercel.app/entropy_protocol/index.html).
+- The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs-api-entropy-core.vercel.app/entropy_protocol/index.html) which run the [ThresholdSignaureScheme].
 - An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs-api-entropy-core.vercel.app/kvdb/index.html) for key shares and other secret data, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
 - Executes [programs](ProgramFeatures) - upon which a decision is made as to whether to participate in signing a given message.
 - An **[HTTP API](https://docs-api-entropy-core.vercel.app/entropy_tss)** for communication with users, with the entropy chain node, and with other threshold servers. 
