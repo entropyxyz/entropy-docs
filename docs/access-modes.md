@@ -1,3 +1,7 @@
+---
+sidebar_position: 140
+---
+
 # Access Modes
 
 ![Access Modes](/img/public-private-permissioned-dark.svg#gh-dark-mode-only)&ensp;&ensp;

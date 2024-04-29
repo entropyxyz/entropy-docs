@@ -1,3 +1,7 @@
+---
+sidebar_position: 150
+---
+
 # Signing Group Selection
 
 - Signing groups are chosen and held on chain
