@@ -1,3 +1,7 @@
+---
+sidebar_position: 60
+---
+
 # Overview of Programs
 
 Programs are the agents that decide what signing requests get signed. More concretely, they are [WebAssembly components][components] that implement an Entropy-specific [interface][wit-interface]. The only function a user must manually implement is `evaluate`, which takes the user's signature request as input and returns as successful or an error. If no error is returned, then the message in the signature request will be signed using the program's corrosponding keypair with the specified hashing algorithm.

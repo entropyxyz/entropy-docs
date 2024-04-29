@@ -1,3 +1,6 @@
+---
+sidebar_position: 100
+---
 
 # Joining The Network
 

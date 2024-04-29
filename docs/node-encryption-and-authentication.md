@@ -1,3 +1,6 @@
+---
+sidebar_position: 90
+---
 
 # Node Encryption and Authentication
 

@@ -1,3 +1,7 @@
+---
+sidebar_position: 70
+---
+
 # Upload Program
 
 Programs are written and compiled to WASM using this [repository](https://github.com/entropyxyz/programs)
