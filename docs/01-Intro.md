@@ -1,4 +1,4 @@
-# Entrosplainer
+# 'Entrosplainer'
 
 Entropy is a layer one chain for decentralized signing infrastructure.
 
