@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "gh-pages -d build",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.2.1",
     "@tsconfig/docusaurus": "^1.0.5",
+    "gh-pages": "^6.1.1",
     "prettier": "2.8.7",
     "typescript": "^4.7.4"
   },
