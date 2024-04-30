@@ -34,16 +34,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
+This site is hosted on [GitHub Pages](https://pages.github.com/). It uses the `gh-pages` Node.js package to make deploying to the GitHub Pages site easy (by automating the process of committing to the `gh-pages` branch in this repository).
 
 ```sh
-USE_SSH=true yarn deploy
+npm run deploy # Deploy the site to GH Pages as your user.
 ```
-
-Not using SSH:
-
-```sh
-GIT_USER=$GITHUB_USERNAME yarn deploy
-```
-
-If you are using [GitHub Pages](https://pages.github.com/) for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
