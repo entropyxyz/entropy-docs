@@ -6,82 +6,40 @@ sidebar_position: 20
 
 Here is a list of some words and phrases found throughout the Entropy documentation that you might not be familar with.
 
-<!-- ## Autonomous Agents -->
+**Autonomous Agents**: A program designed to act independently, capable of executing tasks and making decisions based on predefined rules or algorithms. Autonomous agents are seen as key players in the evolution towards digital environments where AI and blockchains intersect, often call _autonomous worlds_.
 
-<!-- ## Intelligent Programs -->
+**Deploy key**: Key used to deploy or remove a program.
 
-<!-- ## Threshold Signing -->
+**Entropy chain**: An application blockchain with the purpose of coordinating distributed signing.
 
-## Deploy key
+**Entropy network**: The set of Entropy validators.
 
-Key used to deploy or remove a program.
+**Intelligent Programs**: A synonym for an autonomous agent (a program designed to act independently, capable of executing tasks and making decisions based on predefined rules).
 
-## Entropy chain
+**Partition**: Also called a _signing subgroup_. A set of threshold servers which all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
 
-An application blockchain with the purpose of coordinating distributed signing.
+**Program developer**: Refers to whoever is using the Entropy network to build and deploy programs.
 
-## Entropy network
+**Program modifiction account**: The account on the Entropy chain which may update the programs a particular user employs.
 
-The set of Entropy validators.
+**Programs**: The logic defining under what conditions a threshold Server should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain. Programs can be updated.
 
-## Partition
+**Signature request account**: The account on the Entropy chain that is used to initiate signature requests.
 
-Also called a _signing subgroup_. A set of threshold servers which all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
+**Signing committee**: A set of threshold servers who have been selected to participate in signing a particular message. This is composed of validators from different subgroups.
 
-## Programs
+**Signing subgroup**: Also called a _partition_. A set of Threshold servers which all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
 
-The logic defining under what conditions a threshold Server should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain. Programs can be updated.
+**TSS account**: Also called a _Threshold signature server account_. The Entropy chain account IDs for the threshold servers.
 
-## Program developer
+**Threshold Signing**: A cryptographic technique that allows a group of participants to collectively produce a digital signature on a message, without any single participant having access to the complete private signing key. The private signing key is divided into multiple shares, with each participant holding one share. To produce a valid signature, a predetermined threshold number of shares (e.g., 3 out of 5) must be combined. This way, no single entity possesses the entire private key.
 
-Refers to whoever is using the Entropy network to build and deploy programs.
+**Threshold server**: An instance of the Entropy [threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server).
 
-## Program modifiction account
+**Threshold signature server Account**: Also called a _TSS account_. The Entropy chain account IDs for the threshold servers.
 
-The account on the Entropy chain which may update the programs a particular user employs.
+**Transactions**: a transaction submitted to the Entropy chain, or a transaction intended to be signed by the Entropy network.
 
-## Signature request account
+**User**: Refers to whoever is using the Entropy network to sign transactions or messages. This may be an individual, an organisation, or some other entity.
 
-The account on the Entropy chain that is used to initiate signature requests.
-
-## Signing committee
-
-A set of threshold servers who have been selected to participate in signing a particular message. This is composed of validators from different subgroups.
-
-## Signing subgroup
-
-Also called a _partition_. A set of Threshold servers which all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
-
-## TSS account
-
-Also called a _Threshold signature server account_. The Entropy chain account IDs for the threshold servers.
-
-## Threshold signature server Account
-
-Also called a _TSS account_. The Entropy chain account IDs for the threshold servers.
-
-## User
-
-Refers to whoever is using the Entropy network to sign transactions or messages. This may be an individual, an organisation, or some other entity.
-
-## Threshold server
-
-An instance of the Entropy [threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server). This consists of:
-
-- the _signing client_ which performs the threshold signing protocol
-- an encrypted key-value store for key shares
-- the execution of 'programs'
-- an HTTP API which is used for communication with users within the Entropy chain, and with other threshold servers. 
-
-The threshold server also has an account for submitting transactions to the Entropy chain, refered to as the _TSS account_.
-
-## Transactions
-
-Refers to: 
-
-- transactions submitted to the Entropy chain.
-- transactions intended for signing by the Entropy network.
-
-## Validator
-
-A user running an _Entropy chain node_, and a _threshold server_.
+**Validator**: A user running an _Entropy chain node_, and a _threshold server_.
