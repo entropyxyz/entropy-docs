@@ -6,6 +6,12 @@ sidebar_position: 20
 
 Here is a list of some words and phrases found throughout the Entropy documentation that you might not be familar with.
 
+<!-- ## Autonomous Agents -->
+
+<!-- ## Intelligent Programs -->
+
+<!-- ## Threshold Signing -->
+
 ## Deploy key
 
 Key used to deploy or remove a program.
