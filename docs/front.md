@@ -1,6 +1,7 @@
 ---
 slug: /
 sidebar_label: Intro
+sidebar_position: 01
 ---
 
 # Entropy Documentation

@@ -1,3 +1,6 @@
+---
+sidebar_position: 30
+---
 
 # Entropy Validator Nodes
 
