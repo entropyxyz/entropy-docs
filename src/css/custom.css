@@ -22,6 +22,10 @@
   display: none;
 }
 
+.menu__list-item-collapsible > a {
+  font-weight: bold;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 /* [data-theme='dark'] { */
 /*   --ifm-color-primary: #25c2a0; */
