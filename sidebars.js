@@ -42,8 +42,8 @@ export default {
       type: 'category',
       label: 'Reference',
       items: [
-        { type: 'doc', id: 'reference/example', label: 'Command-line interface' },
-        { type: 'doc', id: 'reference/example', label: 'Source development kit' },
+        { type: 'doc', id: 'reference/cli', label: 'CLI' },
+        { type: 'doc', id: 'reference/sdk', label: 'SDK' },
       ],
     },
   ],
