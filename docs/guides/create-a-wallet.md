@@ -1,5 +1,5 @@
 ---
-title: "Title of the guide"
+title: "Create a wallet"
 ---
 
 ## Introduction
