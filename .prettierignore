@@ -1,6 +1,0 @@
-build/
-.vercel/
-.docusaurus/
-node_modules/
-yarn-error.log
-yarn-debug.log

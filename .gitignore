@@ -15,8 +15,10 @@
 .env.test.local
 .env.production.local
 
+# Because JS has too many package managers...
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .yarn
 .vercel
+.pnpm-lock.yaml
