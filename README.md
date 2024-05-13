@@ -2,11 +2,62 @@
 
 This repository contains the documentation for the Entropy project (found in `/docs`) and all the build scripts to create the [docs.entropy.xyz](https://docs.entropy.xyz) site. This repo also serves as the support hub for Entropy.
 
+- [Run locally](#run-locally)
 - [Information architecture](#information-architecture)
 - [Repository structure](#repository-structure)
 - [Support](#support)
 - [Contributions](#contributions)
 - [License](#license)
+
+## Run locally
+
+This repository uses the Docusaurus static-site-generator to build docs.entropy.xyz. To run the site locally:
+
+1. Clone this repository and move into the new directory:
+
+    ```shell
+    git clone https://github.com/entropyxyz/entropy-docs
+    cd entropy-docs
+    ```
+
+1. Install the dependencies for Docusaurus (pick one package manage process, do not run all three):
+
+    ```shell
+    # Using NPM
+    npm install
+    ```
+
+    ```shell
+    # Using PNPM
+    pnpm install
+    ```
+
+    ```shell
+    # Using Yarn
+    yarn
+    ```
+
+1. Run the build scripts and run a local server:
+
+    ```shell
+    # Using NPM
+    npm run start
+    ```
+
+    ```shell
+    # Using PNPM
+    pnpm run start
+    ```
+
+    ```shell
+    # Using Yarn
+    yarn start
+    ```
+
+1. Go to [localhost:3000](http://localhost:3000) in your browser.
+1. To stop the local server, press `CTRL` + `c` in the terminal window.
+
+To _build_ the site but not serve it, run steps `1` and `2`, followed by `yarn build`. This will build the site and save it in `./build`.
 
 ## Information architecture
 
