@@ -8,6 +8,7 @@ Get the balance of an account. You can select any of the accounts stored locally
 
 ```plaintext
 ? Choose account: (Use arrow keys)
+
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
 > charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
   Other
@@ -23,15 +24,21 @@ View all programs deployed to the network from locally stored accounts.
 
 ## Register
 
+Register a locally stored account.
+
 ## Construct an Ethereum Tx
 
+Create a transaction to run on an Ethereum network. This function does not publish the transaction.
+
 ## Sign
+
+Sign a message using a registered account.
 
 ## Transfer
 
 Transfer funds from a locally stored account to any other valid Entropy address.
 
-## Give Zaps
+<!-- ## Give Zaps -->
 
 ## Wallet
 
