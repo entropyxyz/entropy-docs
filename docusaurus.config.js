@@ -72,46 +72,6 @@ const config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Quick links',
-          items: [
-            {
-              label: 'Introduction',
-              to: 'introduction',
-            },
-            {
-              label: 'Quickstart',
-              to: 'quickstart',
-            },
-            {
-              label: 'Support',
-              to: 'support',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Website',
-              href: 'https://entropy.xyz',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.com/invite/9JUQwHBhVz',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/entropydotxyz',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Entropy. Built with Docusaurus.`,
-    },
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
