@@ -8,7 +8,7 @@ sidebar_position: 110
 
 The threshold signature scheme used is the 2021 Canetti-Gennaro-Goldfeder-Makriyannis-Peled scheme from the paper ['UC Non-Interactive, Proactive, Threshold ECDSA with Identifiable Aborts'](https://eprint.iacr.org/2021/060).
 
-For a high level introduction to threshold signature schemes, see [this section of the 'Entrosplainer'](Intro#hello-i-would-like-one-cryptography) - to summarize, they enable a group of parties to collectively compute a signature without any single party knowing the private key, and requiring very little centralized coordination.
+For a high level introduction to threshold signature schemes, see [this section of the 'Entrosplainer'](../basics/entrosplainer) - to summarize, they enable a group of parties to collectively compute a signature without any single party knowing the private key, and requiring very little centralized coordination.
 
 Doing threshold signing with ECDSA is more complicated than with Schnorr-based signature schemes such as EdDSA, or with RSA. It has taken quite some years of research to come up with a scheme which has good security features whilst not requiring too many communication rounds between parties.
 <!-- because $s$ computation is linear with Schnorr (explain) -->

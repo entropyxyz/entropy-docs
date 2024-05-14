@@ -12,7 +12,7 @@ The SDK method for registering is [`Entropy.register`](https://entropy-api-docs.
 
 ![Register Flow](/sequenceDiagrams/register.svg)
 
-1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', initial 'ProgramsData', and chosen [access mode](AccessModes). 
+1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', initial 'ProgramsData', and chosen [access mode](./access-modes.md). 
     * ```ProgramsData``` - Is multiple Programs Instances. Which contain the ```program_pointer``` (the hash of the program you want to use) and the ```program_config``` for that program. On the evaluation of a signature request a threshold server will run all the programs and pass through the program config for that program.
 
 1. The chain selects which nodes should perform a [distributed key generation (DKG)](https://docs.rs/synedrion/latest/synedrion/sessions/fn.make_key_gen_session.html) based on the current block number.

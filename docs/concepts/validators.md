@@ -9,7 +9,7 @@ sidebar_position: 30
 - The Entropy blockchain, built with [Substrate](https://docs.substrate.io/). This handles public data relating to who the users are and which programs they use, who the validators are and which 'signing subgroup' they belong to, and the bytecode of all available programs.
 - The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum). This handles private data such a user's signing keyshares, and runs the signing protocol.
 
-If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](SDK).
+If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](../reference/sdk).
 
 ![birdsEye](/img/birdsEye.png)
 
@@ -43,7 +43,7 @@ It has the following features:
 
 - The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs-api-entropy-core.vercel.app/entropy_protocol/index.html) which run the [ThresholdSignaureScheme].
 - An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs-api-entropy-core.vercel.app/kvdb/index.html) for key shares and other secret data, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
-- Executes [programs](ProgramFeatures) - upon which a decision is made as to whether to participate in signing a given message.
+- Executes [programs](./program-features) - upon which a decision is made as to whether to participate in signing a given message.
 - An **[HTTP API](https://docs-api-entropy-core.vercel.app/entropy_tss)** for communication with users, with the entropy chain node, and with other threshold servers.
 - An account for submitting extrinsics (transactions) to the Entropy chain. For example, when the distributed key generation protocol runs successfully during user registration, each TSS server sends a confirmation to the chain by submitting a transaction.
 

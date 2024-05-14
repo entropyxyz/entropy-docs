@@ -10,13 +10,13 @@ having the user and a committee of validators collectively perform the signing.
 
 The committee requires one Validator from each signing group as well as the user. The current version of the program will be executed here to determine whether or not to proceed with the signing protocol.
 
-For details on how signatures are actually created, see [Threshold Signature Scheme](ThresholdSignatureScheme).
+For details on how signatures are actually created, see [Threshold Signature Scheme](./threshold-signature-scheme.md).
 
 ## Signing process
 
 ![Signing Flow New](/sequenceDiagrams/signing-new.svg)
 
-1. The user computes the hash of the message they wish to sign, and selects a signing committee by deterministically selecting a member of each signing group based on this hash. They can get the details of the signing groups as they were published on chain when the user [registered](Register).
+1. The user computes the hash of the message they wish to sign, and selects a signing committee by deterministically selecting a member of each signing group based on this hash. They can get the details of the signing groups as they were published on chain when the user [registered](./register).
 2. The user contacts all threshold servers in the signing committee and makes a POST to `/user/sign_tx` with the message to be signed (encrypted for that node). 
 2. On receiving a message, each node checks that it is a member of the signing committee for that message using the hash.
 3. The Threshold server retrieves the latest version of the associated program from the entropy chain, and executes it with the message to be signed as input. Only on getting successful program output do they continue to the next step.
