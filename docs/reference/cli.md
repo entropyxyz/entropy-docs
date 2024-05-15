@@ -8,7 +8,61 @@ In it's current state, the CLI acts more like a text-based user interface (TUI).
 
 ## Install
 
+1. Make sure you've got Yarn 1.22.X installed:
+
+    ```
+    # MacOS
+    brew install yarn
+    ```
+
+    ```shell
+    # Debian/Ubuntu
+    sudo apt install yarn -y
+    ```
+
+    ```shell
+    # Arch
+    sudo pacman -S yarn
+    ```
+
+1. Clone the Entropy CLI repository and move into the new directory:
+
+    ```shell
+    git clone https://github.com/entropyxyz/cli && cd cli
+    ```
+
+1. Build the CLI with Yarn:
+
+    ```shell
+    yarn
+    ```
+
+1. Start the CLI:
+
+    ```shell
+    yarn start
+    ```
+
+You should now see the main menu:
+
+```plaintext
+? Select Action (Use arrow keys)
+
+> Balance
+  Deploy Program
+  User Programs
+  Register
+  Construct an Ethereum Tx
+  Sign
+  Transfer
+  Give Zaps
+  Wallet
+  Exit
+```
+
 ## Functions
+
+The following functions are available in the CLI.
 
 ### Balance
 
