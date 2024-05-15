@@ -28,7 +28,9 @@ export default {
         { type: 'doc', id: 'concepts/validators', label: 'Validators' },
       ],
     },
-    {
+    /* Hiding the Guides section until everything is written. The posts have been set to draft mode. 
+     *
+     * {
       type: 'category',
       label: 'Guides',
       items: [
@@ -37,7 +39,7 @@ export default {
         { type: 'doc', id: 'guides/deploy-a-program', label: 'Deploy a program' },
         { type: 'doc', id: 'guides/query-the-chain', label: 'Query the chain' },
       ],
-    },
+    }, */
     {
       type: 'category',
       label: 'Reference',

@@ -1,5 +1,6 @@
 ---
 title: "Create a wallet"
+draft: true
 ---
 
 ## Introduction

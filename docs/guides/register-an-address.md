@@ -1,5 +1,6 @@
 ---
 title: "Register an address"
+draft: true
 ---
 
 ## Introduction
