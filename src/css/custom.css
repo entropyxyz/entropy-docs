@@ -30,6 +30,10 @@ body {
   font-weight: bold;
 }
 
+.menu__list-item-collapsible:hover {
+  background-color: unset !important;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 /* [data-theme='dark'] { */
 /*   --ifm-color-primary: #25c2a0; */
