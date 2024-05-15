@@ -71,10 +71,10 @@ docs
 `-- reference
 ```
 
-**Basics**: information that everybody needs to know in order to understand, and effectivly use, Entropy.
-**Concepts**: discusses ideas and concepts that everyone may not be familiar with, or things that are relevant only to Entropy and not other blockchains.
-**Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
-**Reference**: in-depth reference documentation for the CLI and SDK.
+- **Basics**: information that everybody needs to know in order to understand, and effectivly use, Entropy.
+- **Concepts**: discusses ideas and concepts that everyone may not be familiar with, or things that are relevant only to Entropy and not other blockchains.
+- **Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
+- **Reference**: in-depth reference documentation for the CLI and SDK.
 
 ## Repository structure
 
