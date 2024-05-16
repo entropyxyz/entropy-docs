@@ -153,14 +153,18 @@ Registering an account is a feature unique to Entropy. Without going into too mu
 1. Select your account from the list.
 1. The CLI should register your account after a few seconds.
 
-## 5. Deploy a program
-
-1. This is tricky. We need to give the use a `.wasm` file to deploy their program.
-
-## 6. Interact with the program.
-
-1. Do _whatever_ we can do to interact with the program. This is likely just getting a `TRUE` or `FALSE` bool back from the chain.
+<!--## 5. Deploy a program-->
+<!---->
+<!--On the Entropy network, Programs (with a capital P) are small applications that run a particular ruleset. They're similar to _smart-contracts_ on other blockchain networks, but with some key differences. We won't go into too much detail here, however. All you need to know for now is that these Programs control _who_ can sign _what_.-->
+<!---->
+<!--For this quickstart, we're going to deploy an example program from the Entropy Programs GitHub repository.-->
+<!---->
+<!--1. -->
+<!---->
+<!--## 6. Interact with the program.-->
+<!---->
+<!--1. Do _whatever_ we can do to interact with the program. This is likely just getting a `TRUE` or `FALSE` bool back from the chain.-->
 
 ## Next steps
 
-Point folks to all of the guides we have.
+There's much more to come from Entropy! Next, you should checkout the [Entrosplainer](./entrosplainer.md) -- and end-to-end explanation of what Entropy is, why it's necessary, and how it works!
