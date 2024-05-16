@@ -106,7 +106,7 @@ You need funds to interact with the Entropy network. A wallet is where you can s
 1. Type `Y` and press `ENTER` to go back to the main menu.
 
 Next up, you'll request some funds to play around with.
-s
+
 ## 3. Get testing funds
 
 You need funds to interact with the Entropy blockchain network. To get these testing funds you will need a GitHub account.
@@ -136,16 +136,22 @@ Once you have been sent some funds, you can check your balance in the CLI.
 1. The CLI should now show your balance.
 
 :::note
-We're in the very early stages of the testnet. At some point soon we will have an automated faucet to hand out test funds.
+We're in the very early stages of the testnet. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
 :::
 
 ## 4. Register your address
 
-Explain why registering is necessary.
+Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ address, and that you're ready to start signing _things_.
 
-1. Steps.
-1. To.
-1. Register.
+1. Start the CLI by running `entropy` in your terminal:
+
+    ```
+    entropy
+    ```
+
+1. Select **Register**.
+1. Select your account from the list.
+1. The CLI should register your account after a few seconds.
 
 ## 5. Deploy a program
 
