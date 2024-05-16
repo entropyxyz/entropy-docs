@@ -28,24 +28,22 @@ export default {
         { type: 'doc', id: 'concepts/validators', label: 'Validators' },
       ],
     },
-    /* Hiding the Guides section until everything is written. The posts have been set to draft mode. 
-     *
-     * {
-      type: 'category',
-      label: 'Guides',
-      items: [
-        { type: 'doc', id: 'guides/create-a-wallet', label: 'Create a wallet' },
-        { type: 'doc', id: 'guides/register-an-address', label: 'Register an address' },
-        { type: 'doc', id: 'guides/deploy-a-program', label: 'Deploy a program' },
-        { type: 'doc', id: 'guides/query-the-chain', label: 'Query the chain' },
-      ],
-    }, */
+    //{
+    //  type: 'category',
+    //  label: 'Guides',
+    //  items: [
+    //    { type: 'doc', id: 'guides/create-a-wallet', label: 'Create a wallet' },
+    //    { type: 'doc', id: 'guides/register-an-address', label: 'Register an address' },
+    //    { type: 'doc', id: 'guides/deploy-a-program', label: 'Deploy a program' },
+    //    { type: 'doc', id: 'guides/query-the-chain', label: 'Query the chain' },
+    //  ],
+    //},
     {
       type: 'category',
       label: 'Reference',
       items: [
         { type: 'doc', id: 'reference/cli', label: 'CLI' },
-        { type: 'doc', id: 'reference/sdk', label: 'SDK' },
+        //{ type: 'doc', id: 'reference/sdk', label: 'SDK' },
       ],
     },
   ],

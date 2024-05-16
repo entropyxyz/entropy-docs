@@ -1,5 +1,6 @@
 ---
-sidebar_position: 40
+title: "SDK"
+draft: true
 ---
 
 # Software Development Kit
