@@ -13,7 +13,7 @@ If you are interested in how to interact with the Entropy network, rather than h
 
 ![birdsEye](/img/birdsEye.png)
 
-## The Entropy chain [src](https://github.com/entropyxyz/entropy-core) [API](https://docs-api-entropy-core.vercel.app/entropy)
+## The Entropy chain [src](https://github.com/entropyxyz/entropy-core/tree/master/node/cli)
 
 The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold signature servers need to have consensus on. For example, we need to have agreement of which validators belong to which signing subgroups, and which subgroups will participate in signing a particular message.
 
@@ -30,21 +30,21 @@ The purpose of the Entropy blockchain is to have a 'single source of truth' for 
 
 ### Custom functionality specific to Entropy:
 
-- **Staking extension pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_staking_extension/index.html) - staking is extended to assign a particular Threshold Signature Servers account to a particular chain node, and tracks which signing subgroup they belong to.
-- **Relayer pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/relayer/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_relayer/index.html) - This provides a registry of Entropy users, and which programs are currently associated with their account. This uses substrate [events](https://docs.substrate.io/build/events-and-errors).
-- **Programs pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/programs/src/lib.rs) [API](https://docs-api-entropy-core.vercel.app/pallet_programs/index.html) - This stores program bytecode as well as metadata associated with the program such as a description of its interface and how many times it is used.
-- **Free transactions pallet** [src](https://github.com/entropyxyz/entropy-core/tree/master/pallets/free-tx) [API](https://docs-api-entropy-core.vercel.app/pallet_free_tx/index.html) - free transactions are also known as 'zaps'.
+- **Staking extension pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) - staking is extended to assign a particular Threshold Signature Servers account to a particular chain node, and tracks which signing subgroup they belong to.
+- **Registry pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/registry/src/lib.rs) - This provides a registry of Entropy users, and which programs are currently associated with their account. This uses substrate [events](https://docs.substrate.io/build/events-and-errors).
+- **Programs pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/programs/src/lib.rs) - This stores program bytecode as well as metadata associated with the program such as a description of its interface and how many times it is used.
+<!-- Missing from here are the `parameters`, `propagation`, `slashing` and `transaction-pause` pallets -->
 
-## The Threshold Signature Server [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) [API](https://docs-api-entropy-core.vercel.app/entropy_tss/index.html)
+## The Threshold Signature Server [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) [API](https://docs.rs/entropy-tss)
 
 This is the part which carries out the threshold signing protocol, together with other instances of the threshold signature server. It has an encrypted key-value store used for private information where consensus is not required. Since the threshold signature server deals with private data which must never be exposed publicly on-chain, it is distributed as a separate binary. It also handles the distributed key generation and proactive-refresh protocols.
 
 It has the following features:
 
-- The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs-api-entropy-core.vercel.app/entropy_protocol/index.html) which run the [ThresholdSignaureScheme].
-- An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs-api-entropy-core.vercel.app/kvdb/index.html) for key shares and other secret data, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
+- The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs.rs/entropy-protocol) which run the [ThresholdSignaureScheme].
+- An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs.rs/entropy-kvdb) for key shares and other secret data, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
 - Executes [programs](./program-features) - upon which a decision is made as to whether to participate in signing a given message.
-- An **[HTTP API](https://docs-api-entropy-core.vercel.app/entropy_tss)** for communication with users, with the entropy chain node, and with other threshold servers.
+- An **[HTTP API](https://docs.rs/entropy-tss/latest/entropy_tss/#the-http-endpoints)** for communication with users, with the entropy chain node, and with other threshold servers.
 - An account for submitting extrinsics (transactions) to the Entropy chain. For example, when the distributed key generation protocol runs successfully during user registration, each TSS server sends a confirmation to the chain by submitting a transaction.
 
 ### Usage
