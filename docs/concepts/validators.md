@@ -9,8 +9,6 @@ sidebar_position: 30
 - The Entropy blockchain, built with [Substrate](https://docs.substrate.io/). This handles public data relating to who the users are and which programs they use, who the validators are and which 'signing subgroup' they belong to, and the bytecode of all available programs.
 - The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum). This handles private data such a user's signing keyshares, and runs the signing protocol.
 
-If you are interested in how to interact with the Entropy network, rather than how it works on the back end, you might want to jump to the [SDK documentation](../reference/sdk).
-
 ![birdsEye](/img/birdsEye.png)
 
 ## The Entropy chain [src](https://github.com/entropyxyz/entropy-core/tree/master/node/cli)
