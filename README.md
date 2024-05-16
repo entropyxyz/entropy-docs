@@ -1,6 +1,13 @@
-# Entropy Docs
+<h1 align="center">Entropy Docs</h1>
+<p align="center">
+    <strong>This repository contains the documentation for the Entropy project (found in <code>/docs</code>) and all the build scripts to create the <a href="https://docs.entropy.xyz">docs.entropy.xyz</a> site. This repo also serves as the support hub for Entropy.</strong>
+    <br><br>
+    <a href="https://github.com/orgs/entropyxyz/projects/32">Project Board</a>
+    <a href="https://github.com/entropyxyz/entropy-docs/issues">Issues</a>
+    <a href="https://github.com/entropyxyz/entropy-docs/blob/main/LICENSE">MIT License</a>
+</p>
 
-This repository contains the documentation for the Entropy project (found in `/docs`) and all the build scripts to create the [docs.entropy.xyz](https://docs.entropy.xyz) site. This repo also serves as the support hub for Entropy.
+## Table of contents
 
 - [Run locally](#run-locally)
 - [Information architecture](#information-architecture)
