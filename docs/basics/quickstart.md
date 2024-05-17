@@ -56,15 +56,11 @@ The command-line interface (CLI) is the most straightforward way to interact wit
                                                         @@@@@@     ENTROPY-CLI               
                                                         @@@@@@     
     ? Select Action (Use arrow keys)
-    ❯ Balance
-      Deploy Program
-      User Programs
+    ❯ Manage Accounts
+      Balance
       Register
-      Construct an Ethereum Tx
       Sign
       Transfer
-      Give Zaps
-      Wallet
       Exit
     ```
 
@@ -72,10 +68,10 @@ Next, you'll create an Entropy wallet.
 
 ## 2. Create an account
 
-You need funds to interact with the Entropy network. Funds are stored in an account, and a wallet is where you can store multiple accounts.
+You need funds to interact with the Entropy network. Your funds are stored in an account. You can have multiple accounts.
 
 1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
-1. Select **Wallet**.
+1. Select **Manage Accounts**.
 1. Select **New**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
 
