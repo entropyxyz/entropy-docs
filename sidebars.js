@@ -28,16 +28,17 @@ export default {
         { type: 'doc', id: 'concepts/validators', label: 'Validators' },
       ],
     },
-    //{
-    //  type: 'category',
-    //  label: 'Guides',
-    //  items: [
+    {
+      type: 'category',
+      label: 'Guides',
+      items: [
+        { type: 'doc', id: 'guides/get-test-funds', label: 'Get test funds' },
     //    { type: 'doc', id: 'guides/create-a-wallet', label: 'Create a wallet' },
     //    { type: 'doc', id: 'guides/register-an-address', label: 'Register an address' },
     //    { type: 'doc', id: 'guides/deploy-a-program', label: 'Deploy a program' },
     //    { type: 'doc', id: 'guides/query-the-chain', label: 'Query the chain' },
-    //  ],
-    //},
+      ],
+    },
     {
       type: 'category',
       label: 'Reference',
