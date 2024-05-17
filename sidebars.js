@@ -42,6 +42,7 @@ export default {
       type: 'category',
       label: 'Reference',
       items: [
+        { type: 'doc', id: 'reference/testnet', label: 'Testnet' },
         { type: 'doc', id: 'reference/cli', label: 'CLI' },
         //{ type: 'doc', id: 'reference/sdk', label: 'SDK' },
       ],
