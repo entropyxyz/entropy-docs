@@ -156,5 +156,5 @@ We appreciate your help in making our documentation even better. By following th
 
 ## License
 
-- Most things in `/docs` are licensed under [AGPL-3.0](./LICENSE) unless otherwise specified.
+- Most things in `/docs` are licensed under [MIT](./LICENSE) unless otherwise specified.
 - Docusaurus is _currently_ [MIT](https://github.com/facebook/docusaurus/blob/main/LICENSE) licensed. The maintainers of _this_ repository have no control on what license Facebook, and thus the Docusaurus team, apply to their code.
