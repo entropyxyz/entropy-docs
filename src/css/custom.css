@@ -17,32 +17,40 @@
 /*   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); */
 /* } */
 
-[data-theme='light'] img[src$="#gh-dark-mode-only"],
-[data-theme='dark'] img[src$="#gh-light-mode-only"] {
-  display: none;
-}
+ /*For readability concerns, you should choose a lighter palette in dark mode. */
+ [data-theme='dark'] { 
+   --ifm-color-primary: #25c2a0; 
+   --ifm-color-primary-dark: #21af90; 
+   --ifm-color-primary-darker: #1fa588; 
+   --ifm-color-primary-darkest: #1a8870; 
+   --ifm-color-primary-light: #29d5b0; 
+   --ifm-color-primary-lighter: #32d8b4; 
+   --ifm-color-primary-lightest: #4fddbf; 
+   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); 
+ } 
 
+/*Use fonts likely stored on the users device.*/
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Make top-level sidebar items bold.*/
 .menu__list-item-collapsible {
   font-weight: bold;
 }
 
+/*Disable hover on top-level sidebar items.*/
 .menu__list-item-collapsible:hover {
   background-color: unset !important;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-/* [data-theme='dark'] { */
-/*   --ifm-color-primary: #25c2a0; */
-/*   --ifm-color-primary-dark: #21af90; */
-/*   --ifm-color-primary-darker: #1fa588; */
-/*   --ifm-color-primary-darkest: #1a8870; */
-/*   --ifm-color-primary-light: #29d5b0; */
-/*   --ifm-color-primary-lighter: #32d8b4; */
-/*   --ifm-color-primary-lightest: #4fddbf; */
-/*   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); */
-/* } */
+/*Make breadcrumb boxes a sharp rectangle.*/
+.breadcrumbs__link {
+  border-radius: 0;
+}
+
+/*Make prev/next page boxes a sharp rectangle*/
+.pagination-nav__link {
+  border-radius: 0;
+}
 
