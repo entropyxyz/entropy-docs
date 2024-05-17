@@ -13,33 +13,28 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Install the Entropy CLI using NPM:
+1. Clone the Entropy CLI repository and move into the new `cli` directory:
 
     ```shell
-    npm install --global entropy
+    git clone https://github.com/entropyxyz/cli
+    cd cli
     ```
 
-    This installs the `entropy` binary so that you can access it anywhere on your computer.
-
-1. Check that `entropy` is installed properly by getting the version number:
+1. Use Yarn to install the dependencies and build the project.
 
     ```shell
-    entropy --version
+    yarn
     ```
 
-Next, you'll create an Entropy wallet.
+    This pull in the necessary packages and builds the CLI locally.
 
-## 2. Create a wallet
+1. Run the CLI using `yarn`:
 
-You need funds to interact with the Entropy network. A wallet is where you can store those funds.
-
-1. Start the CLI by running `entropy` in your terminal:
-
-    ```
-    entropy
+    ```shell
+    yarn start
     ```
 
-    This will start the CLI's text-based user interface:
+    This should output something like:
 
     ```plaintext
     @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
@@ -59,7 +54,7 @@ You need funds to interact with the Entropy network. A wallet is where you can s
                                                         @@@@@@            TEST               
                                                         @@@@@@            *NET               
                                                         @@@@@@     ENTROPY-CLI               
-                                                        @@@@@@     COREv0.0.10
+                                                        @@@@@@     
     ? Select Action (Use arrow keys)
     ❯ Balance
       Deploy Program
@@ -73,24 +68,31 @@ You need funds to interact with the Entropy network. A wallet is where you can s
       Exit
     ```
 
+Next, you'll create an Entropy wallet.
+
+## 2. Create an account
+
+You need funds to interact with the Entropy network. Funds are stored in an account, and a wallet is where you can store multiple accounts.
+
+1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
 1. Select **Wallet**.
 1. Select **New**.
-1. Type `N` and press `ENTER` when asked _Would you like to import a key?_:
+1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
 
     ```plaintext
     ? Would you like to import a key? n
     ```
 
-1. Enter a name for you wallet.
-1. Type `Y` and press `ENTER` when asked _Would you like to password protect this key?_:
+1. Enter a name for your account.
+1. Type `y` and press `ENTER` when asked _Would you like to password protect this key?_:
 
-    ```
+    ```plaintext
     ? Would you like to password protect this key? y
     ```
 
-    This password is used to locally encrypt your key. This helps keep your funds safe.
+    This password is used to locally encrypt your account. If you forget this password, you won't be able to access this account.
 
-1. Once you've entered your password the CLI will output some information about your new wallet:
+1. Once you've entered your password the CLI will output some information about your new account:
 
     ```plaintext
     New account:
@@ -117,7 +119,7 @@ You need funds to interact with the Entropy blockchain network. To get these tes
 1. You can leave the **Description** box empty.
 1. Click **Submit new issue**.
 
-At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, by may be longer. Once they've sent the funds to your account, they'll let you know in the issue you created, and close the issue.
+At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
 
 :::note
 We're in the very early stages of the testnet. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
@@ -125,27 +127,17 @@ We're in the very early stages of the testnet. We're building an automated fauce
 
 Once you have been sent some funds, you can check your balance in the CLI.
 
-1. Open the CLI text-based user interface:
-
-    ```shell
-    entropy
-    ```
-
+6. Open the CLI text-based user interface using `yarn start`.
 1. Select **Balance** from the menu.
-1. You should see your address from earlier listed. Use the arrow keys to highlight it and press `ENTER`.
+1. You should see your account from earlier listed. Use the arrow keys to highlight it and press `ENTER`.
 1. Enter the password for your account.
-1. The CLI should now show your balance.
+1. The CLI should show your balance.
 
-## 4. Register your address
+## 4. Register your account
 
-Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ address, and that you're ready to start signing _things_.
+Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ account and that you're ready to start signing things.
 
-1. Start the CLI by running `entropy` in your terminal:
-
-    ```
-    entropy
-    ```
-
+1. Open the CLI text-based user interface using `yarn start`.
 1. Select **Register**.
 1. Select your account from the list.
 1. The CLI should register your account after a few seconds.
