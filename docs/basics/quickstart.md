@@ -119,6 +119,10 @@ You need funds to interact with the Entropy blockchain network. To get these tes
 
 At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, by may be longer. Once they've sent the funds to your account, they'll let you know in the issue you created, and close the issue.
 
+:::note
+We're in the very early stages of the testnet. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
+:::
+
 Once you have been sent some funds, you can check your balance in the CLI.
 
 1. Open the CLI text-based user interface:
@@ -131,10 +135,6 @@ Once you have been sent some funds, you can check your balance in the CLI.
 1. You should see your address from earlier listed. Use the arrow keys to highlight it and press `ENTER`.
 1. Enter the password for your account.
 1. The CLI should now show your balance.
-
-:::note
-We're in the very early stages of the testnet. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
-:::
 
 ## 4. Register your address
 
