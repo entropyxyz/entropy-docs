@@ -13,7 +13,7 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Probably something like: 
+1. Install the Entropy CLI using NPM:
 
     ```shell
     npm install --global entropy
@@ -113,10 +113,7 @@ You need funds to interact with the Entropy blockchain network. To get these tes
 
 1. Log into your GitHub account and go to [github.com/entropyxyz/faucet](https://github.com/entropyxyz/faucet).
 1. Navigate to the **Issue** tab and select **New issue**.
-1. In the **Title** field, enter your `address` you copied from the previous section:
-
-<!-- ![]() -->
-
+1. In the **Title** field, enter your `address` you copied from the previous section.
 1. You can leave the **Description** box empty.
 1. Click **Submit new issue**.
 
