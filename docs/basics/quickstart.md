@@ -5,6 +5,10 @@ slug: /
 
 By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.
 
+:::info Rather skip the code?
+If you'd prefer to dive into the core concepts of Entropy instead of running through this quickstart, head over to the [Entrosplainer to learn how the project works](./entrosplainer.md)!
+:::
+
 ## What is Entropy
 
 The Entropy network provides threshold signing as a service. That means that multiple users can collectively sign a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we're going to cover at this time, but you'll learn more about Entropy as a concept in other parts of this docs website.
@@ -26,7 +30,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
     yarn
     ```
 
-    This pull in the necessary packages and builds the CLI locally.
+    This pulls in the necessary packages and builds the CLI locally.
 
 1. Run the CLI using `yarn`:
 
@@ -79,7 +83,7 @@ You need funds to interact with the Entropy network. Your funds are stored in an
     ? Would you like to import a key? n
     ```
 
-1. Enter a name for your account.
+1. Enter the name of your new account.
 1. Type `y` and press `ENTER` when asked _Would you like to password protect this key?_:
 
     ```plaintext
@@ -140,7 +144,7 @@ Registering an account is a feature unique to Entropy. Without going into too mu
 
 <!--## 5. Deploy a program-->
 <!---->
-<!--On the Entropy network, Programs (with a capital P) are small applications that run a particular ruleset. They're similar to _smart-contracts_ on other blockchain networks but with some key differences. We won't go into too much detail here, however. All you need to know for now is that these Programs control _who_ can sign _what_.-->
+<!--On the Entropy network, Programs (with a capital P) are small applications that run a particular ruleset. They're similar to _smart contracts_ on other blockchain networks but with some key differences. We won't go into too much detail here, however. All you need to know for now is that these Programs control _who_ can sign _what_.-->
 <!---->
 <!--For this quickstart, we're going to deploy an example program from the Entropy Programs GitHub repository.-->
 <!---->
@@ -153,3 +157,4 @@ Registering an account is a feature unique to Entropy. Without going into too mu
 ## Next steps
 
 There's much more to come from Entropy! Next, you should check out the [Entrosplainer](./entrosplainer.md) -- and end-to-end explanation of what Entropy is, why it's necessary, and how it works!
+
