@@ -40,6 +40,7 @@ export default {
       type: 'category',
       label: 'Reference',
       items: [
+        { type: 'doc', id: 'reference/networks', label: 'Networks' },
         { type: 'doc', id: 'reference/cli', label: 'CLI' },
       ],
     },
