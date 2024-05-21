@@ -98,7 +98,7 @@ A cryptographic technique that allows a group of participants to collectively pr
 
 ## Threshold server
 
-An instance of the Entropy [threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server).
+An instance of the Entropy [threshold signature server](../concepts/threshold-signature-scheme.md).
 
 ## Threshold signature server Account
 
