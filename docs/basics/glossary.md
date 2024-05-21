@@ -46,15 +46,9 @@ Also called a _signing subgroup_. A set of threshold servers which all hold iden
 
 ## Program
 
-The logic defining what conditions a threshold Server should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain. Programs can be updated.
+The logic defining what conditions a threshold Server should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain, and can be updated.
 
 Programs run when a [device key](#device-key) requests a signature from the program. Each program returns `true` or `false`. If the program returns `true`, the Entropy network executes signing, and a signature is returned to the requesting device key.
-
-A program has three inputs:
-
-- **Config**:
-- **Auxilary data**:
-- **Oracle data**: not used at this time, but will eventually take in data from an external oracle.
 
 ## Program developer
 
@@ -63,10 +57,6 @@ Refers to whoever is using the Entropy network to build and deploy programs.
 ## Program dev key
 
 Can deploy programs to be installed by admin keys. Program dev keys do not need to be registered.
-
-## Programs
-
-
 
 ## Registration
 
