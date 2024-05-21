@@ -10,15 +10,24 @@ The Entropy main network (mainnet) has not been released yet. Details of mainnet
 
 ## Testnet
 
-There is one public testnet available for developer to use. Here are the details.
+There is one public testnet available for developer to use. This is not a production network; it will reset frequently.
 
-### Endpoints
+### Public endpoints
 
-### Features and limitations
+```plaintext
+testnet.entropy.xyz
+```
 
-### Stability
+### Chain details
 
-### Usage examples
+- **Blocktime**: 6 seconds
+- **Registration time**: ~30 seconds
+- **Time to signature**: ~3 seconds when the network is under a light load. Further testing is needed to determine the upper limit under a heavy network load.
+- **Expected reset frequency**: there is no planned reset schedule. However, this network should be treated as unstable, as resets may happen periodically. An annoucement will be made on the [Entropy Discord server](https://discord.gg/zVpFC7ep) as to when a reset will occur.
+
+### Resources
+
+- **Block explorers**: at this time developers should use the default Polkadot.js blockchain explorer.
 
 ## Devnet
 
