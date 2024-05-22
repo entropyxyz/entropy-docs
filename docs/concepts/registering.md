@@ -1,8 +1,6 @@
 ---
-: 50
+title: "Registering"
 ---
-
-# Registering
 
 A user needs to register in order to be able to use the Entropy network to sign messages.
 
