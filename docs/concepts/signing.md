@@ -10,7 +10,7 @@ For details on how signatures are actually created, see [Threshold Signature Sch
 
 ## Signing process
 
-![Signing Flow New](./signing-new.svg)
+![Signing Flow New](./images/signing-new.svg)
 
 1. The user computes the hash of the message they wish to sign and selects a signing committee by deterministically selecting a member of each signing group based on this hash. They can get the details of the signing groups as they were published on-chain when the user [registered](./register).
 1. The user contacts all threshold servers in the signing committee and makes a POST to `/user/sign_tx` with the message to be signed (encrypted for that node). 
