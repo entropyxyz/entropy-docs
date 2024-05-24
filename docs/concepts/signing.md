@@ -12,7 +12,7 @@ For details on how signatures are actually created, see [Threshold Signature Sch
 
 ![Signing Flow New](./images/signing-new.svg)
 
-1. The user computes the hash of the message they wish to sign and selects a signing committee by deterministically selecting a member of each signing group based on this hash. They can get the details of the signing groups as they were published on-chain when the user [registered](./register).
+1. The user computes the hash of the message they wish to sign and selects a signing committee by deterministically selecting a member of each signing group based on this hash. They can get the details of the signing groups as they were published on-chain when the user [registered](./registering).
 1. The user contacts all threshold servers in the signing committee and makes a POST to `/user/sign_tx` with the message to be signed (encrypted for that node). 
 1. On receiving a message, each node checks that it is a member of the signing committee for that message using the hash.
 1. The Threshold server retrieves the latest version of the associated program from the entropy chain, and executes it with the message to be signed as input. Only on getting successful program output do they continue to the next step.

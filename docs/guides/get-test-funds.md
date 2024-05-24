@@ -22,7 +22,7 @@ Once you have been sent some funds, you can check your balance in the CLI.
 1. Select **Balance** from the menu.
 1. You should see your account in the list. Use the arrow keys to highlight it and press `ENTER`.
 
-    If you do not see you account listed, you need to [import your account](../guides/manage-accounts.md) into the CLI.
+    If you do not see you account listed, you need to import your account](./manage-accounts) into the CLI.
 
 1. Enter the password for your account.
 1. The CLI should show your balance.
