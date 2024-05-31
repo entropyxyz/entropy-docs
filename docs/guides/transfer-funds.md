@@ -3,19 +3,21 @@ title: "Transfer funds"
 draft: true
 ---
 
-This page covers how to transfer funds between two addresses. There are several different ways to complete a transfer; pick the process that best fits your situation. If you're not sure which process to follow, the [Substrate Explorer](#substrate-explorer) workflow is the easiest to follow.
+This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer](#substrate-explorer) workflow is the easiest.
 
 ## Polkadot Substrate Explorer
 
 ### Prerequisites
 
-- Two Entropy accounts that you have access to, one of which needs to have funds.
-- Access to the [Polkadot.js explorer](./use-the-explorer.md)
+To transfer funds, you must have the following:
+
+- Access to at least 2 [Entropy accounts](./manage-accounts), one of which must have funds.
+- Access to the [Polkadot.js explorer](./use-the-explorer).
 - A Polkadot.js compatible browser wallet. This guide uses the [Polkadot\{.js\} Browser Extension](https://polkadot.js.org/extension/) as an example.
 
 ### Steps
 
-1. Import the addresses into the wallet. In the Polkadot\{.js\} Browser Extension, this can by done by selecting the plus **+** icon and clicking **Import account from pre-existing seed**:
+1. Import the addresses into the wallet. In the Polkadot\{.js\} Browser Extension, this can be done by selecting the plus **+** icon and clicking **Import account from pre-existing seed**:
 
     ![](./images/transfer-funds-import-accounts.png)
 
@@ -49,4 +51,4 @@ The feature is not currently available in the CLI. See [issue #80 in the Entropy
 
 ## Entropy SDK
 
-The feature is not currently available in the SDK. See [issue #81 in the Entropy Docs repository](https://github.com/entropyxyz/entropy-docs/issues/81) to track the progress of this guide.
+The feature is not currently available in the SDK. To track the progress of this upcoming guide, see [issue #81 in the Entropy Docs repository](https://github.com/entropyxyz/entropy-docs/issues/81).
