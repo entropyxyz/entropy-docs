@@ -17,6 +17,16 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
+1. Ensure you have Yarn version 1.22.22 installed:
+
+    ```plaintext
+    yarn --version
+    ```
+
+    ```output
+    # 1.22.22
+    ```
+
 1. Clone the Entropy CLI repository and move into the new `cli` directory:
 
     ```shell
@@ -38,9 +48,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
     yarn start
     ```
 
-    This should output something like:
-
-    ```plaintext
+    ```output
     @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
     @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
     @@@@@@@@@@ @@@@@@@@@@ @@@@@@@ @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
@@ -79,14 +87,14 @@ You need funds to interact with the Entropy network. Your funds are stored in an
 1. Select **New**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
 
-    ```plaintext
+    ```output
     ? Would you like to import a key? n
     ```
 
 1. Enter the name of your new account.
 1. Type `y` and press `ENTER` when asked _Would you like to password protect this key?_:
 
-    ```plaintext
+    ```output
     ? Would you like to password protect this key? y
     ```
 
@@ -94,7 +102,7 @@ You need funds to interact with the Entropy network. Your funds are stored in an
 
 1. Once you've entered your password, the CLI will output some information about your new account:
 
-    ```plaintext
+    ```output
     New account:
     {
             name: MyFirstKey
