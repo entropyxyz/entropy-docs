@@ -45,7 +45,7 @@ In it's current state, the CLI acts more like a text-based user interface (TUI).
 
 You should now see the main menu:
 
-```plaintext
+```output
 ? Select Action (Use arrow keys)
 
 > Balance
@@ -68,7 +68,7 @@ The following functions are available in the CLI.
 
 Get the balance of an account. You can select any of the accounts stored locally, or enter an Entropy address.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -80,7 +80,7 @@ Get the balance of an account. You can select any of the accounts stored locally
 
 Transfer funds from a locally stored account to any other valid Entropy address.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -92,7 +92,7 @@ Transfer funds from a locally stored account to any other valid Entropy address.
 
 Create a new Entropy address to store locally. List all Entropy addresses stored locally.
 
-```plaintext
+```output
 ? choice: (Use arrow keys)
 
 > New Key
@@ -107,7 +107,7 @@ The following functions are currently in development, and may not work as intend
 
 Create a transaction to run on an Ethereum network. This function does not publish the transaction.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -119,7 +119,7 @@ Create a transaction to run on an Ethereum network. This function does not publi
 
 Deploy a program from a locally stored account.
 
-```plaintext
+```output
 ? Select your action: (Use arrow keys)
 
 > Deploy
@@ -131,7 +131,7 @@ Deploy a program from a locally stored account.
 
 Register a locally stored account.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -143,7 +143,7 @@ Register a locally stored account.
 
 Sign a message using a registered account.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -155,7 +155,7 @@ Sign a message using a registered account.
 
 View all programs deployed to the network from locally stored accounts.
 
-```plaintext
+```output
 ? What would you like to do? (Use arrow keys)
 
 > View My Programs
