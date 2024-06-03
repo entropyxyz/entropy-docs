@@ -44,9 +44,11 @@ body {
   background-color: unset !important;
 }
 
-/*Make breadcrumb boxes a sharp rectangle.*/
-.breadcrumbs__link {
-  border-radius: 0;
+/*Make breadcrumb boxes, preblocks, and codeblocks a sharp rectangle.*/
+.breadcrumbs__link,
+pre,
+code {
+    border-radius: 0;
 }
 
 /*Make prev/next page boxes a sharp rectangle*/
@@ -69,3 +71,10 @@ article a[href^="https://"]::after
   display: inline-block;
 }
 
+/*Hide copy code button on codeblocks with `output` set as the syntax*/
+.language-output div[class^="buttonGroup"] {
+    display: none;
+}
+div[class^="language"]:not(.language-output) {
+    margin-bottom: 0;
+}
