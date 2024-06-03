@@ -16,14 +16,14 @@ You need to have the Entropy CLI installed. [Take a look at the CLI page for det
 1. Select **New**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
 
-    ```plaintext
+    ```output
     ? Would you like to import a key? n
     ```
 
 1. Enter a name for your account.
 1. Type `y` and press `ENTER` when asked _Would you like to password protect this key?_:
 
-    ```plaintext
+    ```output
     ? Would you like to password protect this key? y
     ```
 
@@ -31,7 +31,7 @@ You need to have the Entropy CLI installed. [Take a look at the CLI page for det
 
 1. Once you've entered your password, the CLI will output some information about your new account:
 
-    ```plaintext
+    ```output
     New account:
     {
             name: MyFirstKey
@@ -51,29 +51,21 @@ You can import an account by using either the `seed` for the account, or it's `m
 1. Select **New**.
 1. Type `y` and press `ENTER` when asked _Would you like to import a key?_:
 
-    ```plaintext
+    ```output
     ? Would you like to import a key? y
     ```
 
-1. Select how you would like to import your account, either by using a mnemonic or a seed:
-
-    ```plaintext
-    ? select secret type: (Use arrow keys)
-    > mnemonic
-    seed
-    ```
-
-1. Enter your mnemonic/seed.
+1. Enter your seed.
 1. If you specificed a `path` when originally created the account you want to import, enter it when prompted:
 
-    ```plaintext
+    ```output
     path: ____
     ```
 
 1. Enter a name for the account you want to import.
 1. Type `y` and press `ENTER` when asked _Would you like to password protect this key?_:
 
-    ```plaintext
+    ```output
     ? Would you like to password protect this key? y
     ```
 
@@ -81,7 +73,7 @@ You can import an account by using either the `seed` for the account, or it's `m
 
 1. Once you've entered your password, the CLI will output some information about your new account:
 
-    ```plaintext
+    ```output
     New account:
     {
             name: MyImportedKey
