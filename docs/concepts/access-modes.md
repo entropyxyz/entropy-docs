@@ -1,7 +1,6 @@
 # Access Modes
 
-![Access Modes](/img/public-private-permissioned-dark.svg#gh-dark-mode-only)&ensp;&ensp;
-![Access Modes](/img/public-private-permissioned-light.svg#gh-light-mode-only)&ensp;&ensp;
+![Access Modes](./images/public-private-permissioned.svg)
 
 Entropy accounts can have two distinct access modes.
 
