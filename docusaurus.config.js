@@ -59,10 +59,11 @@ const config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Entropy',
+      title: '',
       logo: {
         alt: 'Entropy Logo',
-        src: 'img/entropy_small_logo.png',
+        src: 'img/entropy-logo-black.png',
+        srcDark: 'img/entropy-logo-white.png'
       },
       items: [
         {
