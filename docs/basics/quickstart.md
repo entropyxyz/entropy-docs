@@ -1,6 +1,7 @@
 ---
 title: "Quickstart"
 slug: /
+lead: "This is some lead text."
 ---
 
 By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.
@@ -76,13 +77,16 @@ The command-line interface (CLI) is the most straightforward way to interact wit
       Exit
     ```
 
+:::tip Closing the CLI tool
+You can close the CLI tool at any time by pressing `CTRL` + `c`. This will halt the CLI process and bring you back to your normal terminal window.
+:::
+
 Next, you'll create an Entropy wallet.
 
 ## 2. Create an account
 
 You need funds to interact with the Entropy network. Your funds are stored in an account. You can have multiple accounts.
 
-1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
 1. Select **Manage Accounts**.
 1. Select **New**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
@@ -91,16 +95,7 @@ You need funds to interact with the Entropy network. Your funds are stored in an
     ? Would you like to import a key? n
     ```
 
-1. Enter the name of your new account.
-1. Type `y` and press `ENTER` when asked _Would you like to password protect this key?_:
-
-    ```output
-    ? Would you like to password protect this key? y
-    ```
-
-    This password is used to encrypt your account locally. If you forget this password, you won't be able to access this account.
-
-1. Once you've entered your password, the CLI will output some information about your new account:
+1. Enter the name of your new account. The CLI will output some information about your new account:
 
     ```output
     New account:
@@ -121,16 +116,20 @@ Next up, you'll request some funds to play around with.
 
 You need funds to interact with the Entropy blockchain network. To get these testing funds, you will need a GitHub account.
 
-1. Log into your GitHub account and go to [github.com/entropyxyz/faucet](https://github.com/entropyxyz/faucet).
-1. Navigate to the **Issue** tab and select **New issue**.
+1. Log into your GitHub account and go to [github.com/entropyxyz/community](https://github.com/entropyxyz/community).
+1. Navigate to the **Discussions** tab and select **New discussion**.
+1. Next to **Get Test Funds** click **Get started**:
+
+    ![](./images/quickstart-create-test-funds-discussion.png)
+
 1. In the **Title** field, enter the `address` you copied from the previous section.
-1. You can leave the **Description** box empty.
-1. Click **Submit new issue**.
+1. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into the **Description** box. Otherwise, leave is blank.
+1. Click **Start discussion**.
 
 At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
 
 :::note
-We're in the very early stages of the testnet. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
+We're currently publically testing some of the Entropy tooling. As such, some of the workflows like getting test funds are a bit rough. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
 :::
 
 Once you have been sent some funds, you can check your balance in the CLI.
@@ -138,8 +137,11 @@ Once you have been sent some funds, you can check your balance in the CLI.
 6. Open the CLI text-based user interface using `yarn start`.
 1. Select **Balance** from the menu.
 1. You should see your account in the list. Use the arrow keys to highlight it and press `ENTER`.
-1. Enter the password for your account.
-1. The CLI should show your balance.
+1. The CLI should show your balance:
+
+    ```plaintext
+
+    ```
 
 ## 4. Register your account
 
@@ -149,18 +151,6 @@ Registering an account is a feature unique to Entropy. Without going into too mu
 1. Select **Register**.
 1. Select your account from the list.
 1. The CLI should register your account after a few seconds.
-
-<!--## 5. Deploy a program-->
-<!---->
-<!--On the Entropy network, Programs (with a capital P) are small applications that run a particular ruleset. They're similar to _smart contracts_ on other blockchain networks but with some key differences. We won't go into too much detail here, however. All you need to know for now is that these Programs control _who_ can sign _what_.-->
-<!---->
-<!--For this quickstart, we're going to deploy an example program from the Entropy Programs GitHub repository.-->
-<!---->
-<!--1. -->
-<!---->
-<!--## 6. Interact with the program.-->
-<!---->
-<!--1. Do _whatever_ we can do to interact with the program. This is likely just getting a `TRUE` or `FALSE` bool back from the chain.-->
 
 ## Next steps
 
