@@ -78,3 +78,13 @@ article a[href^="https://"]::after
 div[class^="language"]:not(.language-output) {
     margin-bottom: 0;
 }
+
+  .language-output {
+    background-color: LightGray !important;
+  }
+
+ [data-theme='dark'] { 
+  .language-output {
+    background-color: black !important;
+  }
+}
