@@ -20,7 +20,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
 
 1. Ensure you have Yarn version 1.22.22 installed:
 
-    ```plaintext
+    ```shell
     yarn --version
     ```
 
@@ -141,7 +141,7 @@ Once you have been sent some funds, you can check your balance in the CLI.
 1. You should see your account in the list. Use the arrow keys to highlight it and press `ENTER`.
 1. The CLI should show your balance:
 
-    ```plaintext
+    ```output
     ? Select Action Balance
     Address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has a balance of: 100000000000000 bits
     ```
