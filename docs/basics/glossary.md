@@ -24,7 +24,7 @@ Autonomous agents are sometimes also called [intelligent programs](#intelligent-
 
 ## Consumer key
 
-A synonym for a [device (or deploy) key](#device-key).
+A synonym for a [device key or deploy key](#device-key).
 
 ## Device key
 
