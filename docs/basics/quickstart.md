@@ -125,7 +125,7 @@ You need funds to interact with the Entropy blockchain network. To get these tes
     ![](./images/quickstart-create-test-funds-discussion.png)
 
 1. In the **Title** field, enter the `address` you copied from the previous section.
-1. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into the **Description** box. Otherwise, leave is blank.
+1. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into the **Description** box. Otherwise, leave it blank.
 1. Click **Start discussion**.
 
 At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
@@ -146,7 +146,7 @@ Once you have been sent some funds, you can check your balance in the CLI.
     Address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has a balance of: 100000000000000 bits
     ```
 
-Next, you're register your account on the Entropy network.
+Next, you'll register your account on the Entropy network.
 
 ## 4. Register your account
 
@@ -223,4 +223,4 @@ So, what was all that about? While this quickstart guide didn't go into much det
 
 ## Next steps
 
-There's much more to come from Entropy! Next, you should check out the [Entrosplainer](./entrosplainer.md) -- and end-to-end explanation of what Entropy is, why it's necessary, and how it works!
+There's much more to come from Entropy! Next, you should check out the [Entrosplainer](./entrosplainer.md), an end-to-end explanation of what Entropy is, why it's necessary, and how it works!
