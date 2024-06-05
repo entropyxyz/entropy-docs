@@ -1,10 +1,8 @@
 # Command-line interface
 
-The command-line interface (CLI) is a straight-forward way to experiment with the Entropy network and explore common workflows. 
+The command-line interface (CLI) is a straightforward way to experiment with the Entropy network and explore common workflows. 
 
-:::note Beta warning
-In it's current state, the CLI acts more like a text-based user interface (TUI). In the future, all functions will be callable directly from your terminal prompt using arguments and modifiers. For the timebeing, you can use this CLI to experiment and play around with the Entropy network.
-:::
+In its current state, the CLI acts more like a text-based user interface (TUI). In the future, all functions will be callable directly from your terminal prompt using arguments and modifiers. For the time being, you can use this CLI to experiment and play around with the Entropy network.
 
 ## Install
 
@@ -82,80 +80,77 @@ You should now see the main menu:
 
 The following functions are available in the CLI.
 
-### Balance
+### Manage Accounts
 
-Get the balance of an account. You can select any of the accounts stored locally, or enter an Entropy address.
+Create a new Entropy account to store locally. List all Entropy accounts stored locally. Import an account into the CLI using a seed.
 
 ```output
-? Choose account: (Use arrow keys)
-
-  aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
-> charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
-  Other
+> Create/Import Account
+  Select Account
+  List Accounts
 ```
+
+#### Create or Import Account
+
+Create a new Entropy account or import an existing account using a seed.
+
+#### Select Account
+
+Select an account to use within other functions. This is relevant if you have multiple accounts.
+
+For example, assume you have three accounts, and you want to check the balance of `account 2`. You would:
+
+1. Start the CLI.
+1. Navigate to **Manage Accounts**.
+1. Navigate to **Select Account**.
+1. Choose the account that you would like to select and use within other functions:
+
+    ```output
+    ? Choose account: (Use arrow keys)
+    > Gael (5CrFp9txcb5UECpNKsD6DTBsG4cj1z58DA43YikSVeeJqXJR)
+      Argo (5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv)
+      Lapp (5G92hBs4UfZpVFYtBmmN3UqPTzGgotq7PSA3XfBMALfvWDUb)
+    ```
+
+1. The account you select is what the CLI will use when running other functions.
+
+#### List Accounts
+
+Show all the locally stored accounts. This function shows secret details such as `seed` in plaintext.
+
+### Balance
+
+Get the balance of an account. You can select any of the accounts stored locally or enter an Entropy address.
+
+```output
+? Select Action Balance
+Address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has a balance of: 382000000000000 bits
+? Return to main menu? (Y/n)
+```
+
+### Register
+
+Register a locally stored account with the Entropy network.
+
+```output
+Attempting to register the address: 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv
+Your address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has been successfully registered.
+```
+
+The selected account must have available funds. Each registration costs about `400000000` bits.
 
 ### Transfer
 
 Transfer funds from a locally stored account to any other valid Entropy address.
 
 ```output
-? Choose account: (Use arrow keys)
-
-  aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
-> charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
-  Other
+? Select Action Transfer
+? Input amount to transfer: 12345
+? Input recipient's address: 5G92hBs4UfZpVFYtBmmN3UqPTzGgotq7PSA3XfBMALfvWDUb
+Transferring Funds |++++___________________| 22%
 ```
 
-### Wallet
-
-Create a new Entropy address to store locally. List all Entropy addresses stored locally.
-
-```output
-? choice: (Use arrow keys)
-
-> New Key
-  List Accounts
-```
-
-## In Development
-
-The following functions are currently in development, and may not work as intended right now.
-
-### Construct an Ethereum Tx
-
-Create a transaction to run on an Ethereum network. This function does not publish the transaction.
-
-```output
-? Choose account: (Use arrow keys)
-
-  aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
-> charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
-  Other
-```
-
-### Deploy Program
-
-Deploy a program from a locally stored account.
-
-```output
-? Select your action: (Use arrow keys)
-
-> Deploy
-  Get Program Pointers
-  Exit
-```
-
-### Register
-
-Register a locally stored account.
-
-```output
-? Choose account: (Use arrow keys)
-
-  aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
-> charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
-  Other
-```
+The `amount to transfer` value is in whole units, not bits. So transferring `1` would equal `10000000000` bits.
 
 ### Sign
 
@@ -169,22 +164,40 @@ Sign a message using a registered account.
   Other
 ```
 
+## In Development
+
+The following functions are currently in development and may not currently work as intended.
+
+### Deploy Program
+
+Deploy a program from a locally stored account.
+
+```output
+? Select Action Deploy Program
+? Select your action: (Use arrow keys)
+> Deploy
+  Get Program Pointers
+
+  Exit
+```
+
 ### User Programs
 
 View all programs deployed to the network from locally stored accounts.
 
 ```output
+? Select Action User Programs
 ? What would you like to do? (Use arrow keys)
-
 > View My Programs
   Add a Program to My List
   Remove a Program from My List
+  Check if Program Exists
   Exit to Main Menu
 ```
 
 ## Troubleshooting
 
-Here are some common problems you could encounter, and how to get around them.
+Here are some common problems you could encounter and how to get around them.
 
 #### How do I quit the CLI?
 
@@ -201,7 +214,7 @@ user@computer: $
 
 #### ERR::: RpcError: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
 
-This likely means that you don't have enough funds in the selected account to complete that function. Double check that you've selected the correct account, and check that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-test-funds.md).
+This likely means that you don't have enough funds in the selected account to complete that function. Double-check that you've selected the correct account and that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-test-funds.md).
 
 #### CLI crashes when registering
 
