@@ -66,6 +66,14 @@ This repository uses the Docusaurus static-site-generator to build docs.entropy.
 
 To _build_ the site but not serve it, run steps `1` and `2`, followed by `yarn build`. This will build the site and save it in `./build`.
 
+### Deploy
+
+Deploying the site is done from the command-line:
+
+```shell
+GIT_USER=<GITHUB_USERNAME> USE_SSH=true yarn deploy
+```
+
 ## Information architecture
 
 Documentation within this repository is found within the `/docs` directory. That directory is split into the following subdirectories:
