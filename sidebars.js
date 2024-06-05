@@ -31,6 +31,7 @@ export default {
       items: [
         { type: 'doc', id: 'guides/manage-accounts', label: 'Manage accounts' },
         { type: 'doc', id: 'guides/get-test-funds', label: 'Get test funds' },
+        { type: 'doc', id: 'guides/transfer-funds', label: 'Transfer funds' },
         { type: 'doc', id: 'guides/use-the-explorer', label: 'Use the explorer' },
       ],
     },

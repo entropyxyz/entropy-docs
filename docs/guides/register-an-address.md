@@ -3,29 +3,34 @@ title: "Register an address"
 draft: true
 ---
 
-## Introduction
+Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ account and that you're ready to start signing things.
 
-A brief introduction explaining the purpose of this guide and who it's intended for. 
+## Entropy CLI
 
-## Prerequisites
+1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
+1. Back at the main menu within the CLI, select **Register**:
 
-List any prior knowledge or tools users need to have before starting this guide.
+    ```output
+    ? Select Action
+      Manage Accounts
+      Balance
+    > Register
+      Sign
+      Transfer
+      Deploy Program
+      User Programs
+      Exit    
+    ```
 
-## Steps
+1. The CLI will send your selected account information to the network. As long as you have enough funds in your account, the network will register your account.
 
-1. **Step 1:** Briefly describe the first step.
-    * Add detailed instructions with clear and concise language. 
-    * Use bullet points or numbered lists for numbered steps.
-    * Include screenshots or code snippets to enhance clarity (optional).
+    ```output
+    Attempting to register the address: 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv
+    Your address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has been successfully registered.
+    ```
 
-2. **Step 2:** Explain the second step and so on.
-    * Follow the same format as step 1.
+1. Press `Y` to go back to the main menu.
 
-## Troubleshooting
+## Entropy SDK
 
-Offer potential solutions to common problems users might encounter during the process.
-
-## Additional Resources
-
-List any additional resources (links to documentation, tutorials, etc.) that users might find helpful.
-
+The feature is not currently available in the SDK.
