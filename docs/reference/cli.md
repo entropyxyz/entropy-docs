@@ -8,6 +8,24 @@ In it's current state, the CLI acts more like a text-based user interface (TUI).
 
 ## Install
 
+Follow these steps to manually install the CLI.
+
+:::tip One-line install
+Already know what you're doing and just want to get the CLI going? Run this one-liner to install the CLI's dependencies, clone the repository, build the project, and run the interface:
+
+```plaintext
+# Debian/Ubuntu
+sudo apt update -y && sudo apt install nodejs npm -y && npm install -g yarn && git clone https://github.com/entropyxyz/cli && cd cli && yarn && yarn
+```
+
+```plaintext
+# MacOS
+brew update && brew install node && source ~/.zshrc && npm install -g yarn && git clone https://github.com/entropyxyz/cli && cd cli && yarn && yarn
+```
+
+If you're new to the CLI or just want to see what each command outputs, follow the rest of this guide.
+:::
+
 1. Make sure you've got Yarn 1.22.X installed:
 
     ```
@@ -164,6 +182,23 @@ View all programs deployed to the network from locally stored accounts.
   Exit to Main Menu
 ```
 
-<!--## Troubleshooting-->
-<!---->
-<!--Here are some common problems you could encounter, and how to get around them.-->
+## Troubleshooting
+
+Here are some common problems you could encounter, and how to get around them.
+
+#### How do I quit the CLI?
+
+Press `CTRL` + `c` at any point to exit the CLI program, even if you're within a function:
+
+```output
+? Select Action Transfer
+? Input amount to transfer: 1000
+? Input recipient's address:        <----- Pressed `CTRL` + `c` here.
+error Command failed with exit code 130.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+user@computer: $
+```
+
+#### ERR::: RpcError: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
+
+This likely means that you don't have enough funds in the selected account to complete that function. Double check that you've selected the correct account, and check that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-test-funds.md).
