@@ -78,10 +78,10 @@ docs
 `-- reference
 ```
 
-**Basics**: information that everybody needs to know in order to understand, and effectivly use, Entropy.
-**Concepts**: discusses ideas and concepts that everyone may not be familiar with, or things that are relevant only to Entropy and not other blockchains.
-**Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
-**Reference**: in-depth reference documentation for the CLI and SDK.
+* **Basics**: information that everybody needs to know in order to understand, and effectivly use, Entropy.
+* **Concepts**: discusses ideas and concepts that everyone may not be familiar with, or things that are relevant only to Entropy and not other blockchains.
+* **Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
+* **Reference**: in-depth reference documentation for the CLI and SDK.
 
 ## Repository structure
 
@@ -106,51 +106,52 @@ docs
 
 ## Support
 
-All support tickets are handled in the **Issues** tab of this repository. If you encounter anyone claiming to be from Entropy in any other location on the web (Discord, Discuss, Reddit, Twitter, etc) this is likely a scam.
+All support tickets are handled in the **Issues** tab of this repository. If you encounter anyone claiming to be from Entropy in any other location on the web (Discord, Discuss, Reddit, Twitter/X, etc.), this is likely a scam.
 
 ### Submitting a ticket
 
-To submit a suppor ticket:
+To submit a support ticket:
 
-1. Click on the **Issues** tab within this repository.
-1. Select **New Issue**.
+1. Click on the [**Issues**](https://github.com/entropyxyz/entropy-docs/issues) tab within this repository.
+1. Select [**New Issue**](https://github.com/entropyxyz/entropy-docs/issues/new).
 1. Fill out the fields and click **Create issue**.
 1. Someone from Entropy will reach out to you within that issue thread for more details.
 
 ### Discord
 
-We do not use Discord for support tickets. If you receive a message about a support ticket from someone claiming to be from Entropy, this is likely a scam. All support tickets are handled publically through GitHub Issues in this repository.
+**We do not use Discord for support tickets.** If you receive a message about a support ticket from someone claiming to be from Entropy, this is likely a scam. All support tickets are handled publically through GitHub Issues in this repository.
 
 ## Contribute
 
+We appreciate contributions of any size from everyone, from fixing typos to proposing substantial rewrites to aid clarity. This section briefly describes how you can contribute to our documentation in four easy steps.
+
 ### Getting started
 
-**Fork the repository**: Before making changes, you'll need to create a fork of our repository on GitHub. This creates a copy in your own account that you can modify.
-
-**Clone your fork**: Once you've forked the repository, clone it to your local machine. This will allow you to make changes locally.
+1. [**Fork this repository**](https://github.com/entropyxyz/entropy-docs/fork): Before making changes, you'll need to [create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) of our repository on GitHub. This creates a copy in your own account that you can modify.
+1. **Clone your fork**: Once you've forked our repository, [clone your fork to your local machine](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). This will allow you to make changes locally.
 
 ### Making changes
 
-**Identify your contribution**: Look through the documentation in the `docs/` directory and find areas where you can improve the content, fix typos, or add new information.
-**Edit files**: Make the changes you'd like to see. Check out the [Docusaurus documentation](https://docusaurus.io/docs/markdown-features) for any specific markdown rules you might not be aware of.
+1. **Identify your contribution**: Look through the documentation in the `docs/` directory and find areas where you can improve the content, fix typos, or add new information.
+1. **Edit files**: Make the changes you'd like to see. Check out the [Docusaurus documentation](https://docusaurus.io/docs/markdown-features) for any specific markdown rules you might not be aware of.
 
 ### Submitting your changes
 
-**Commit your changes**: Commit your changes with a descriptive message explaining what you modified.
-**Push your changes**: Push your committed changes to your forked repository on GitHub.
-**Create a pull request**: On GitHub, navigate to your forked repository and create a pull request. This sends a notification to the Entropy Docs team about your proposed changes.
+1. **Commit your changes**: [Commit your changes](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) with a descriptive message explaining what you modified.
+1. **Push your changes**: [Push your committed changes](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) to your forked repository on GitHub.
+1. **Create a pull request**: On GitHub, navigate to your forked repository and [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). This sends a notification to the Entropy Docs team about your proposed changes.
 
 ### Review Process
 
-**Review from the docs team**: The Entropy docs team will review your pull request and may ask questions or suggest edits.
-**Respond to feedback**: Be prepared to discuss your changes and make adjustments based on the feedback provided.
-**Merging your pull request**: Once your pull request is approved, we will merge your changes into the `main` branch.
+1. **Receive review from the docs team**: The Entropy docs team will review your pull request and may ask questions or suggest edits.
+2. **Respond to feedback**: Be prepared to discuss your changes and make adjustments based on the feedback provided.
+3. **Your proposed changes are merged**: Once your pull request is approved, we will merge your changes into the `main` branch.
 
 ### Additional Tips
 
-**Small, focused changes**: Break down larger contributions into smaller, more manageable pull requests. This makes the review process easier and faster.
-**Test your changes**: Test your changes to ensure they don't introduce any unintended consequences.
-**Stay up-to-date**: Keep an eye on this repository for any updates or changes to the contribution guidelines.
+* **Small, focused changes**: [Break down larger contributions into smaller, more manageable pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/best-practices-for-pull-requests#write-small-prs). This makes the review process easier and faster.
+* **Test your changes**: Test your changes to ensure they don't introduce any unintended consequences. In the simplest case, this just means to remember to [run your copy locally](#run-locally) to ensure your changes do what you intended.
+* **Stay up-to-date**: Consider [configuring your GitHub notification settings to watch for any updates to this repository](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository) or changes to the contribution guidelines.
 
 We appreciate your help in making our documentation even better. By following these guidelines, you can ensure a smooth and successful contribution process.
 
