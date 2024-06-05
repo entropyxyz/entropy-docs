@@ -18,19 +18,21 @@ Plugins that provide support for different chains and program configurations. Fo
 
 ## Autonomous agent
 
-A program designed to act independently, capable of executing tasks and making decisions based on predefined rules or algorithms. Autonomous agents are seen as key players in the evolution towards digital environments where AI and blockchains intersect, often call _autonomous worlds_. Sometimes called an [intelligent program](#intelligent-program).
+A program designed to act independently, capable of executing tasks and making decisions based on predefined rules or algorithms. Autonomous agents are seen as key players in the evolution towards digital environments where AI and blockchains intersect, often called _autonomous worlds_.
+
+Autonomous agents are sometimes also called [intelligent programs](#intelligent-program).
 
 ## Consumer key
 
-A synonym for [deploy key](#device-key).
+A synonym for a [device (or deploy) key](#device-key).
 
 ## Device key
 
-A key that can request signatures from programs. By default, device keys cannot install programs or modify the settings of programs -- however programs can be given admin-key privalages. This key does not need to hold funds in order to perform actions.
+A key that can request signatures from Entropy Programs. By default, device keys cannot install Programs or modify the settings of Programs. However, Programs can be given admin-key privileges. A device key does not need to hold funds in order to perform actions.
 
 ## Entropy chain
 
-An application blockchain with the purpose of coordinating distributed signing.
+An application-specific layer 1 blockchain with the purpose of coordinating distributed signing.
 
 ## Entropy network
 
@@ -42,25 +44,25 @@ A synonym for an [autonomous agent](#autonomous-agent).
 
 ## Partition
 
-Also called a _signing subgroup_. A set of threshold servers which all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
+Also called a _signing subgroup_. A set of threshold signing servers that all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold signing servers to a subgroup.
 
 ## Program
 
-The logic defining what conditions a threshold Server should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain, and can be updated.
+The logic defining what conditions a threshold signing server (TSS) should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain, and can be updated by subsequent authenticated, valid transactions.
 
-Programs run when a [device key](#device-key) requests a signature from the program. Each program returns `true` or `false`. If the program returns `true`, the Entropy network executes signing, and a signature is returned to the requesting device key.
+Programs run when a [device key](#device-key) requests a signature from the Program. Each Program returns `true` or `false`. If the Program returns `true`, the Entropy Network executes signing, and a signature is returned to the requesting device key.
 
 ## Program developer
 
-Refers to whoever is using the Entropy network to build and deploy programs.
+Refers to the human or humans using the Entropy Network to build and deploy programs.
 
 ## Program dev key
 
-Can deploy programs to be installed by admin keys. Program dev keys do not need to be registered.
+An authorization key that permits its holder to deploy Programs for installation onto the Entropy blockchain by admin keys. Program dev keys do not need to be registered.
 
 ## Registration
 
-The process of establishing an account. Registered accounts can be initialized with programs and modify those programs later.
+The process of establishing an Entropy account. Registered accounts can be initialized with Programs and modify those Programs later.
 
 ## Signature request account
 
@@ -68,11 +70,13 @@ The account on the Entropy chain that is used to initiate signature requests.
 
 ## Signing committee
 
-A set of threshold servers that have been selected to participate in signing a particular message. This is composed of validators from different subgroups.
+A set of threshold signing servers that have been selected to participate in signing a particular message. This is composed of validators from different [signing subgroups](#signing-subgroup).
 
 ## Signing subgroup
 
-Also called a _partition_. A set of Threshold servers that all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
+A set of threshold signing servers that all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold servers to a subgroup.
+
+A signing subgroup is also called a _partition_.
 
 ## SS58
 
@@ -80,9 +84,9 @@ The default Substrate address format. The SS58 encoded address format is based o
 
 ## TSS account
 
-Also called a _Threshold signature server account_. The Entropy chain account IDs for the threshold servers.
+A _threshold signature (or signing) server account_ is the identifier for an Entropy chain account belonging to a given threshold signing server.
 
-## Threshold Signing
+## Threshold signing
 
 A cryptographic technique that allows a group of participants to collectively produce a digital signature on a message without any single participant having access to the complete private signing key. The private signing key is divided into multiple shares, with each participant holding one share. To produce a valid signature, a predetermined threshold number of shares (e.g., 3 out of 5) must be combined. This way, no single entity possesses the entire private key.
 
@@ -90,13 +94,9 @@ A cryptographic technique that allows a group of participants to collectively pr
 
 An instance of the Entropy [threshold signature server](../concepts/threshold-signature-scheme.md).
 
-## Threshold signature server Account
+## Transaction
 
-Also called a _TSS account_. The Entropy chain account IDs for the threshold servers.
-
-## Transactions
-
-A transaction submitted to the Entropy chain or a transaction intended to be signed by the Entropy network.
+A transaction is a discrete request submitted for inclusion on the Entropy blockchain containing a Program or account registration, modification, or other arbitrary data that a user such as a program developer or autonomous agent wants to have signed and validated by the Entropy Network.
 
 ## User
 
@@ -104,4 +104,4 @@ Refers to whoever is using the Entropy network to sign transactions or messages.
 
 ## Validator
 
-A device running an _Entropy chain node_, and a _threshold server_.
+A device running both an _Entropy chain node_, and a _threshold signing server_.
