@@ -63,7 +63,7 @@ If you're new to the CLI or just want to see what each command outputs, follow t
 
 You should now see the main menu:
 
-```plaintext
+```output
 ? Select Action (Use arrow keys)
 
 > Balance
@@ -86,7 +86,7 @@ The following functions are available in the CLI.
 
 Get the balance of an account. You can select any of the accounts stored locally, or enter an Entropy address.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -98,7 +98,7 @@ Get the balance of an account. You can select any of the accounts stored locally
 
 Transfer funds from a locally stored account to any other valid Entropy address.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -110,7 +110,7 @@ Transfer funds from a locally stored account to any other valid Entropy address.
 
 Create a new Entropy address to store locally. List all Entropy addresses stored locally.
 
-```plaintext
+```output
 ? choice: (Use arrow keys)
 
 > New Key
@@ -125,7 +125,7 @@ The following functions are currently in development, and may not work as intend
 
 Create a transaction to run on an Ethereum network. This function does not publish the transaction.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -137,7 +137,7 @@ Create a transaction to run on an Ethereum network. This function does not publi
 
 Deploy a program from a locally stored account.
 
-```plaintext
+```output
 ? Select your action: (Use arrow keys)
 
 > Deploy
@@ -149,7 +149,7 @@ Deploy a program from a locally stored account.
 
 Register a locally stored account.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -161,7 +161,7 @@ Register a locally stored account.
 
 Sign a message using a registered account.
 
-```plaintext
+```output
 ? Choose account: (Use arrow keys)
 
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
@@ -173,7 +173,7 @@ Sign a message using a registered account.
 
 View all programs deployed to the network from locally stored accounts.
 
-```plaintext
+```output
 ? What would you like to do? (Use arrow keys)
 
 > View My Programs
@@ -202,3 +202,23 @@ user@computer: $
 #### ERR::: RpcError: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
 
 This likely means that you don't have enough funds in the selected account to complete that function. Double check that you've selected the correct account, and check that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-test-funds.md).
+
+#### CLI crashes when registering
+
+You may encounter the following error when registering:
+
+```output
+2024-06-05 00:11:42        REGISTRY: Unknown signed extensions ValidateConfirmRegistered found, treating them as no-effect
+2024-06-05 00:11:42        API/INIT: RPC methods not decorated: chainSpec_v1_chainName, chainSpec_v1_genesisHash, chainSpec_v1_properties
+Attempting to register the address: 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv
+/root/cli/src/config/index.ts:21
+  return JSON.parse(configBuffer.toString())
+              ^
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at Object.get (/root/cli/src/config/index.ts:21:15)
+
+    at async EventEmitter.<anonymous> (/root/cli/src/common/initializeEntropy.ts:102:23)
+```
+
+This is a bug that the Entropy team are aware of, and are working on a fix. In the meantime, restart the CLI and try to register that account again. If it keep failing, please raise an issue in the [Entropy CLI repository](https://github.com/entropyxyz/cli/issues).
