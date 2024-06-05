@@ -16,6 +16,10 @@ A key that allows you to deploy programs and modify the settings of those progra
 
 Plugins that provide support for different chains and program configurations. For example, an adapter can be used to define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all.
 
+## Application chain
+
+A blockchain that is exclusively designed for a single application, unlike a public blockchain designed for multiple apps. Also called an _application-specific blockchain_, or _appchain_.
+
 ## Autonomous agent
 
 A program designed to act independently, capable of executing tasks and making decisions based on predefined rules or algorithms. Autonomous agents are seen as key players in the evolution towards digital environments where AI and blockchains intersect, often called _autonomous worlds_.
