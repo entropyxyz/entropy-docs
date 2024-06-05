@@ -84,7 +84,7 @@ The default Substrate address format. The SS58 encoded address format is based o
 
 ## TSS account
 
-A _threshold signature (or signing) server account_ is the identifier for an Entropy chain account belonging to a given threshold signing server.
+A _threshold signature server account_ is the identifier for an Entropy chain account belonging to a given threshold signing server. These servers are sometimes referred to as threshold _signing_ servers.
 
 ## Threshold signing
 
