@@ -16,7 +16,7 @@ A key that allows you to deploy programs and modify the settings of those progra
 
 Plugins that provide support for different chains and program configurations. For example, an adapter can be used to define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all.
 
-## Autonomous Agents
+## Autonomous agent
 
 A program designed to act independently, capable of executing tasks and making decisions based on predefined rules or algorithms. Autonomous agents are seen as key players in the evolution towards digital environments where AI and blockchains intersect, often call _autonomous worlds_. Sometimes called an [intelligent program](#intelligent-program).
 
@@ -24,7 +24,7 @@ A program designed to act independently, capable of executing tasks and making d
 
 A synonym for [deploy key](#device-key).
 
-## Device keys
+## Device key
 
 A key that can request signatures from programs. By default, device keys cannot install programs or modify the settings of programs -- however programs can be given admin-key privalages. This key does not need to hold funds in order to perform actions.
 

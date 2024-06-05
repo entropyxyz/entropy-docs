@@ -2,7 +2,7 @@
 title: "Transfer funds"
 ---
 
-This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer](#substrate-explorer) workflow is the easiest.
+This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer](#polkadot-substrate-explorer) workflow is the easiest.
 
 ## Polkadot Substrate Explorer
 
