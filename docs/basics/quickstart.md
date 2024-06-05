@@ -91,7 +91,7 @@ Next, you'll create an Entropy account.
 You need funds to interact with the Entropy network. Your funds are stored in an account. You can have multiple accounts.
 
 1. Select **Manage Accounts**.
-1. Select **New**.
+1. Select **Create/Import Account**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
 
     ```output
