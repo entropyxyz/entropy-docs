@@ -18,14 +18,15 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Ensure you have Yarn version 1.22.22 installed:
+1. Ensure you have Node.js version 20.9.0 or above, and Yarn version 1.22.22 installed:
 
     ```shell
-    yarn --version
+    node --version && yarn --version
     ```
 
     ```output
-    # 1.22.22
+    v22.2.0
+    1.22.22
     ```
 
 1. Clone the Entropy CLI repository and move into the new `cli` directory:
