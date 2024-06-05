@@ -18,7 +18,7 @@
 
 ## Run locally
 
-This repository uses the Docusaurus static-site-generator to build docs.entropy.xyz. To run the site locally:
+This repository uses the Docusaurus static-site-generator to build `docs.entropy.xyz`. To run the site locally:
 
 1. Clone this repository and move into the new directory:
 
