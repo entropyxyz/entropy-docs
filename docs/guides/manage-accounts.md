@@ -101,7 +101,7 @@ If you need to export an account that you created in the CLI, follow these steps
 
 1. The critical part of this JSON object is the `seed` element:
 
-    ```
+    ```output
     "seed": "0xe7f6d671e3db7b85a8e3e7da1ffd348b6334f7df383604db0d6e12ab8d58430e",
     ```
 
