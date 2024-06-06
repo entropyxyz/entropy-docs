@@ -8,8 +8,6 @@ This page details some of the ways you can create and maintain your Entropy acco
 
 The CLI has a built-in account manager. This is useful for running quick, one-time transactions. The CLI account manager can also be helpful for testing purposes.
 
-### Prerequisites
-
 You need to have the Entropy CLI installed. [Take a look at the CLI page for details on how to install the CLI](../reference/cli.md).
 
 ### Create an account
@@ -68,6 +66,47 @@ You can import an account by the `seed` for the account. Most Substrate-based wa
     ```
 
 1. Type `Y` and press `ENTER` to go back to the main menu.
+
+### Export an account
+
+If you need to export an account that you created in the CLI, follow these steps:
+
+1. Open your `~/.entropy-cli.config` file in a text editor. It should look something like:
+
+    ```output
+    {
+        "accounts": [
+        {
+            "name": "Andre",
+                "address": "5CrFp9txcb5UECpNKsD6DTBsG4cj1z58DA43YikSVeeJqXJR",
+                "data": {
+                    "debug": true,
+                    "seed": "0xe7f6d671e3db7b85a8e3e7da1ffd348b6334f7df383604db0d6e12ab8d58430e",
+                    "admin": {
+                        "address": "5CrFp9txcb5UECpNKsD6DTBsG4cj1z58DA43YikSVeeJqXJR",
+                        "type": "registration",
+                        "verifyingKeys": [],
+                        "userContext": "ADMIN_KEY",
+                        "seed": "0xe7f6d671e3db7b85a8e3e7da1ffd348b6334f7df383604db0d6e12ab8d58430e",
+                        "path": "",
+                        "pair": {
+                            "address": "5CrFp9txcb5UECpNKsD6DTBsG4cj1z58DA43YikSVeeJqXJR",
+                            "addressRaw": {
+                                "0": 34,
+                                "1": 189,
+                                "2": 158,
+
+    ...
+    ```
+
+1. The critical part of this JSON object is the `seed` element:
+
+    ```
+    "seed": "0xe7f6d671e3db7b85a8e3e7da1ffd348b6334f7df383604db0d6e12ab8d58430e",
+    ```
+
+    You can use this `seed` to import your key into another wallet or import it back into the Entropy CLI using the [Import function](#import-an-account).
+1. All the accounts created in the CLI are stored in the `~/.entropy-cli.config` file. Make sure to export the specific account you need.
 
 ## Subkey
 
