@@ -2,9 +2,9 @@
 title: "Transfer funds"
 ---
 
-This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer](#polkadot-substrate-explorer) workflow is the easiest.
+This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer](#substrate-explorer) workflow is the easiest.
 
-## Polkadot Substrate Explorer
+## Substrate explorer
 
 ### Prerequisites
 
@@ -20,12 +20,12 @@ To transfer funds, you must have the following:
 
     ![](./images/transfer-funds-import-accounts.png)
 
-1. Start the Polkadot explorer and connect to the `testnet.entropy.xyz:9944` network.
+1. Start the Substrate explorer and connect to the `testnet.entropy.xyz:9944` network.
 1. Select the **Accounts** dropdown and click **Accounts**.
 
     ![](./images/transfer-funds-accounts-dropdown.png)
 
-1. A popup should display asking if you want to grant the Polkadot Explorer access to your wallet. Click **Yes, allow this application access**.
+1. A popup should display asking if you want to grant the Substrate Explorer access to your wallet. Click **Yes, allow this application access**.
 
     ![](./images/transfer-funds-authorize-application.png)
 

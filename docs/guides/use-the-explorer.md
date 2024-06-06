@@ -4,14 +4,14 @@ title: "Use the explorer"
 
 A blockchain explorer is a web-based tool that functions like a search engine specifically designed for blockchain data. Blockchains, like Entropy,  store information in public databases called ledgers. These ledgers are transparent, meaning anyone can view them. However, the data can be complex and challenging to understand without assistance. Blockchain explorers act as an interface, allowing users to quickly search, retrieve, and analyze information on the blockchain.
 
-The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for interacting with Polkadot and Substrate blockchains. Since Entropy is built using Substrate, we can use this explorer to search and view chain data on the Entropy network.
+The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for interacting with Substrate blockchains. Since Entropy is built using Substrate, we can use this explorer to search and view chain data on the Entropy network.
 
 ## Prerequisites
 
 - [Docker](https://docker.com)
 
 :::note Why Docker?
-The Entropy networks use regular WebSockets `ws://...`, rather than Secure WebSockets `wss://...`. Due to this limitation, you must run the Polkadot block explorer _locally_. The easiest way to do this is to use Docker.
+The Entropy networks use regular WebSockets `ws://...`, rather than Secure WebSockets `wss://...`. Due to this limitation, you must run the block explorer _locally_. The easiest way to do this is to use Docker.
 :::
 
 ## Run the explorer
@@ -48,4 +48,4 @@ The Entropy networks use regular WebSockets `ws://...`, rather than Secure WebSo
 
     ![A functioning blockchain explorer window.](./images/functioning-block-explorer.png)
 
-You should now be able to use the block explorer as usual. Check out the [Polkadot Wiki](https://wiki.polkadot.network/) for details on what information you can get from this blockchain explorer.
+You should now be able to use the block explorer as usual. Check out the [wiki](https://wiki.polkadot.network/) for details on what information you can get from this blockchain explorer.
