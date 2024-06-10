@@ -126,7 +126,7 @@ You need funds to interact with the Entropy blockchain network. To get these tes
     ![](./images/quickstart-create-test-funds-discussion.png)
 
 1. In the **Title** field, enter the `address` you copied from the previous section.
-1. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into the **Description** box. Otherwise, leave it blank.
+1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into this field.
 1. Click **Start discussion**.
 
 At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
