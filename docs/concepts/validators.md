@@ -13,7 +13,7 @@ title: "Validators"
 
 The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold signature servers need to have consensus on. For example, we need to have agreement of which validators belong to which signing subgroups, and which subgroups will participate in signing a particular message.
 
-### General functionality from Substrate / Polkadot:
+### General functionality from Substrate
 
 - Uses the **[BABE consensus algorithm](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html)** (Blind Assignment for Blockchain Extension). A brief description of BABE:
   - Time is divided into 'epochs', which consist of a series of 'slots' for each block that will be published.

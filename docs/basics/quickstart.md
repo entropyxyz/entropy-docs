@@ -18,14 +18,15 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Ensure you have Yarn version 1.22.22 installed:
+1. Ensure you have Node.js version 20.9.0 or above, and Yarn version 1.22.22 installed:
 
     ```shell
-    yarn --version
+    node --version && yarn --version
     ```
 
     ```output
-    # 1.22.22
+    v22.2.0
+    1.22.22
     ```
 
 1. Clone the Entropy CLI repository and move into the new `cli` directory:
@@ -90,7 +91,7 @@ Next, you'll create an Entropy account.
 You need funds to interact with the Entropy network. Your funds are stored in an account. You can have multiple accounts.
 
 1. Select **Manage Accounts**.
-1. Select **New**.
+1. Select **Create/Import Account**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
 
     ```output
@@ -125,7 +126,7 @@ You need funds to interact with the Entropy blockchain network. To get these tes
     ![](./images/quickstart-create-test-funds-discussion.png)
 
 1. In the **Title** field, enter the `address` you copied from the previous section.
-1. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into the **Description** box. Otherwise, leave is blank.
+1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into this field.
 1. Click **Start discussion**.
 
 At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
@@ -146,7 +147,7 @@ Once you have been sent some funds, you can check your balance in the CLI.
     Address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has a balance of: 100000000000000 bits
     ```
 
-Next, you're register your account on the Entropy network.
+Next, you'll register your account on the Entropy network.
 
 ## 4. Register your account
 
@@ -223,4 +224,4 @@ So, what was all that about? While this quickstart guide didn't go into much det
 
 ## Next steps
 
-There's much more to come from Entropy! Next, you should check out the [Entrosplainer](./entrosplainer.md) -- and end-to-end explanation of what Entropy is, why it's necessary, and how it works!
+There's much more to come from Entropy! Next, you should check out the [Entrosplainer](./entrosplainer.md), an end-to-end explanation of what Entropy is, why it's necessary, and how it works!
