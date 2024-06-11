@@ -22,44 +22,44 @@ This repository uses the Docusaurus static-site-generator to build docs.entropy.
 
 1. Clone this repository and move into the new directory:
 
-    ```shell
-    git clone https://github.com/entropyxyz/entropy-docs
-    cd entropy-docs
-    ```
+   ```shell
+   git clone https://github.com/entropyxyz/entropy-docs
+   cd entropy-docs
+   ```
 
-1. Install the dependencies for Docusaurus (pick one package manage process, do not run all three):
+1. Install the dependencies for Docusaurus (pick one package manager process; do not run all three):
 
-    ```shell
-    # Using NPM
-    npm install
-    ```
+   ```shell
+   # Using NPM
+   npm install
+   ```
 
-    ```shell
-    # Using PNPM
-    pnpm install
-    ```
+   ```shell
+   # Using PNPM
+   pnpm install
+   ```
 
-    ```shell
-    # Using Yarn
-    yarn
-    ```
+   ```shell
+   # Using Yarn
+   yarn
+   ```
 
 1. Run the build scripts and run a local server:
 
-    ```shell
-    # Using NPM
-    npm run start
-    ```
+   ```shell
+   # Using NPM
+   npm run start
+   ```
 
-    ```shell
-    # Using PNPM
-    pnpm run start
-    ```
+   ```shell
+   # Using PNPM
+   pnpm run start
+   ```
 
-    ```shell
-    # Using Yarn
-    yarn start
-    ```
+   ```shell
+   # Using Yarn
+   yarn start
+   ```
 
 1. Go to [localhost:3000](http://localhost:3000) in your browser.
 1. To stop the local server, press `CTRL` + `c` in the terminal window.
@@ -84,7 +84,7 @@ git checkout gh-pages && git pull && checkout main && npm run start
 
 ## Information architecture
 
-Documentation within this repository is found within the `/docs` directory. That directory is split into the following subdirectories:
+Documentation within this repository can be found in the `/docs` directory. That directory is split into the following subdirectories:
 
 ```plaintext
 docs
@@ -95,43 +95,43 @@ docs
 ```
 
 **Basics**: information that everybody needs to know in order to understand, and effectivly use, Entropy.
-**Concepts**: discusses ideas and concepts that everyone may not be familiar with, or things that are relevant only to Entropy and not other blockchains.
-**Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
+**Concepts**: discusses ideas and concepts that everyone may not be familiar with or things that are relevant only to Entropy and not other blockchains.
+**Guides**: easy-to-understand guides that show users how to hit a specific goal without diving into the content discussed in `/concepts`.
 **Reference**: in-depth reference documentation for the CLI and SDK.
 
 ## Repository structure
 
-| File or directory | Description |
-| --- | --- |
-| .docusaurus | Configuration directory specific to Docusaurus. Holds themes and plugins for this site. |
-| .git/ | Stores Git version control information (ignore). |
-| .github/ | Directory for GitHub specific configurations (ignore). |
-| .gitignore | File specifying files to be ignored by Git (ignore). |
-| LICENSE | File containing the license under which this project is distributed. |
-| README.md | This file. |
-| blog/ | Directory containing markdown files for Entropy Docs blog posts. This is currently un-used. |
-| docs/ | Core directory containing markdown files for Entropy technical documentation. |
-| docusaurus.config.js | Main configuration file for this Docusaurus project. |
-| package-lock.json | (Generated file) Lists exact versions of dependencies used in this project. |
-| package.json | File specifying project dependencies and scripts. |
-| sidebars.js | File defining the navigation structure for the docs site. Docusaurus depends on this file. |
-| src/ | Source code directory for this Docusaurus project, specifically React components. |
-| static/ | Directory for static assets used by docs.entropy.xyz site (images, fonts, etc.). |
-| tsconfig.json | Configuration file for TypeScript (ignore). |
-| yarn.lock | Similar to `package-lock.json`. Lists exact versions of dependencies used in this project. |
+| File or directory    | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| .docusaurus          | Configuration directory specific to Docusaurus. Holds themes and plugins for this site.     |
+| .git/                | Stores Git version control information (ignore).                                            |
+| .github/             | Directory for GitHub-specific configurations (ignore).                                      |
+| .gitignore           | File specifying files to be ignored by Git (ignore).                                        |
+| LICENSE              | File containing the license under which this project is distributed.                        |
+| README.md            | This file.                                                                                  |
+| blog/                | Directory containing markdown files for Entropy Docs blog posts. This is currently unused. |
+| docs/                | Core directory containing markdown files for Entropy technical documentation.               |
+| docusaurus.config.js | Main configuration file for this Docusaurus project.                                        |
+| package-lock.json    | (Generated file) Lists exact versions of dependencies used in this project.                 |
+| package.json         | File specifying project dependencies and scripts.                                           |
+| sidebars.js          | File defining the navigation structure for the docs site. Docusaurus depends on this file.  |
+| src/                 | Source code directory for this Docusaurus project, specifically React components.           |
+| static/              | Directory for static assets used by docs.entropy.xyz site (images, fonts, etc.).            |
+| tsconfig.json        | Configuration file for TypeScript (ignore).                                                 |
+| yarn.lock            | Similar to `package-lock.json`. Lists exact versions of dependencies used in this project.  |
 
 ## Support
 
-All support tickets are handled in the **Issues** tab of this repository. If you encounter anyone claiming to be from Entropy in any other location on the web (Discord, Discuss, Reddit, Twitter, etc) this is likely a scam.
+All support tickets are handled in the **Discussion** tab of the [github.com/entropyxyz/community repository](https://github.com/entropyxyz/community).
 
 ### Submitting a ticket
 
-To submit a suppor ticket:
+To submit a support ticket:
 
-1. Click on the **Issues** tab within this repository.
-1. Select **New Issue**.
-1. Fill out the fields and click **Create issue**.
-1. Someone from Entropy will reach out to you within that issue thread for more details.
+1. Head to the **Discussion** tab of the [github.com/entropyxyz/community repository](https://github.com/entropyxyz/community).
+1. Select **New discusison**.
+1. Next to *Support** click **Get started**.
+1. Someone from Entropy will reach out to you within that thread for more details.
 
 ### Discord
 
@@ -173,4 +173,4 @@ We appreciate your help in making our documentation even better. By following th
 ## License
 
 - Most things in `/docs` are licensed under [MIT](./LICENSE) unless otherwise specified.
-- Docusaurus is _currently_ [MIT](https://github.com/facebook/docusaurus/blob/main/LICENSE) licensed. The maintainers of _this_ repository have no control on what license Facebook, and thus the Docusaurus team, apply to their code.
+- Docusaurus is _currently_ [MIT](https://github.com/facebook/docusaurus/blob/main/LICENSE) licensed. The maintainers of _this_ repository have no control over what license Facebook, and thus the Docusaurus team, apply to their code.
