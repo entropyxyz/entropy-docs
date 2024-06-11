@@ -74,6 +74,14 @@ Deploying the site is done from the command-line:
 GIT_USER=<GITHUB_USERNAME> USE_SSH=true yarn deploy
 ```
 
+#### Troubleshooting
+
+If the deploy doesn't work for whatever reason, try checking out to the `gh-pages` branch, pullling in the latest changes, and running the `deploy` command again:
+
+```shell
+git checkout gh-pages && git pull && checkout main && npm run start
+```
+
 ## Information architecture
 
 Documentation within this repository is found within the `/docs` directory. That directory is split into the following subdirectories:
