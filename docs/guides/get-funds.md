@@ -20,7 +20,7 @@ We're currently publically testing some of the Entropy tooling. As such, some of
 1. Navigate to the **Discussions** tab and select **New discussion**.
 1. Next to **Get Test Funds** click **Get started**:
 
-    ![](./images/get-test-funds-create-test-funds-discussion.png)
+   ![](./images/get-test-funds-create-test-funds-discussion.png)
 
 1. In the **Title** field, enter the `address` you copied from the previous section.
 1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into this field.
