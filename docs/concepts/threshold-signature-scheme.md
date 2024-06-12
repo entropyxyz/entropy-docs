@@ -8,7 +8,7 @@ The threshold signature scheme used is the 2021 Canetti-Gennaro-Goldfeder-Makriy
 
 For a high-level introduction to threshold signature schemes, see [this section of the 'Entrosplainer'](../basics/entrosplainer). To summarize, they enable a group of parties to collectively compute a signature without any single party knowing the private key and requiring very little centralized coordination.
 
-Threshold signing with ECDSA is more complicated than with Schnorr-based signature schemes such as EdDSA or RSA. It has taken quite some years of research to develop a scheme that has good security features while not requiring too many communication rounds between parties.
+Threshold signing with ECDSA is more complicated than with Schnorr-based signature schemes such as EdDSA or BIP-340. It has taken quite some years of research to develop a scheme that has good security features while not requiring too many communication rounds between parties.
 
 Threshold schemes are commonly referred to as $t$ of $n$, meaning $t$ parties must participate in the protocol to sign a message. Entropy currently uses $n$-of-$n$, meaning rather than choosing a threshold, **all** parties are needed to sign a message. However, this isn't as dangerous as it might sound, since Entropy has 'signing subgroups' of nodes, of which all members hold identical keyshares. So, even if a portion of Entropy nodes were to go offline, signing messages would still be possible.
 
