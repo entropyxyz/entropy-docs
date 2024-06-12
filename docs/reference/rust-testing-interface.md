@@ -37,7 +37,7 @@ To run the RTI you will need the following packages installed:
 3. Rust:
 
     ```shell
-    # Debian/Ubuntu, MacOS, and most other Unix-based operating system.
+    # Any Unix-based operating system:
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ```
 
@@ -126,10 +126,6 @@ Ask the network to sign a given message.
 #### Usage
 
 ```output
-entropy-test-cli sign <SIGNATURE_VERIFYING_KEY> <MESSAGE> [AUXILARY_DATA]
-```
-
-```shell
 entropy-test-cli sign <SIGNATURE_VERIFYING_KEY> <MESSAGE> [AUXILARY_DATA]
 ```
 
