@@ -1,14 +1,14 @@
 ---
-title: "Rust Testing Inteface"
+title: "Rust Testing Interface"
 ---
 
-The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command-line. The RTI is intended for testing [Entropy Core](https://github.com/entropyxyz/entropy-core) functionality, and wasn't designed for end-user or production use.
+The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command line. It is intended for testing [Entropy Core](https://github.com/entropyxyz/entropy-core) functionality and wasn't designed for end-user or production use.
 
-The RTI has no secure private key storage and is only intended for use with test networks. If you're looking for a fully featured interface, [use the CLI](./cli.md).
+The RTI has no secure private key storage and is only intended for use with test networks. If you want a fully featured interface, [use the CLI](./cli.md).
 
 ## Prerequisites
 
-To run the RTI you will need the following packages installed:
+To run the RTI, you will need the following packages installed:
 
 1. OpenSSL:
 
@@ -64,7 +64,7 @@ You can use the following environment variables to make using the RTI easier:
 
 | Variable | Description | Example |
 | -------- | ----------- | ------- |
-| `ENTROPY-MNEMONIC` | The mnemonic of the account that you'd like to use when interacting with the RTI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
+| `ENTROPY-MNEMONIC` | The mnemonic of the account you'd like to use when interacting with the RTI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
 | `ENTROPY_DEVNET` | The specific chain-endpoint you want to use when interacting with the RTI. | `ENTROPY_DEVNET='ws://testnet.entropy.xyz:9944'` |
 
 ## Usage
@@ -101,24 +101,6 @@ entropy-test-cli status
 entropy-test-cli --chain-endpoint="ws://testnet.entropy.xyz:9944" status
 ```
 
-```output
-Verifying key:                                                   Visibility:  Programs:
-02253a6308e78bd657ff575753214e68365cd30193319929acaece162ccb46ed54 Public       ["0x1bb4…df10"]
-033abd94b1fd9d91afa32a1549d139ebb7893941b170ec8c668449e97dc68058ed Public       ["0x0000…0000"]
-02f23fca0eb0e898462ea677199feafa7c3669a3b805095433d9feba8bb196f19c Public       ["0xffb6…d66c"]
-03e1dc804f87a35aacae761cf603b395d588193054e7f91d6ae5de1293196311ec Public       ["0x0000…0000"]
-0280595beab23c3cb640674416e1ede5a77101d5c850b7ac6a52ace8189f4abcc3 Public       ["0x0000…0000"]
-
-There are 3 stored programs
-
-Hash        Stored by:                                       Times used: Size in bytes: Configurable? Has auxiliary?
-0x1bb4…df10 5HZ151yLivMZWzNSkn5TeSrCHXnmxTFRKW11yudkuLPGdNvr           1          20971 false         false
-0xffb6…d66c 5CtViLgvdHoLDvdsSsfEPxczsF6D7FtQ59h6B4Gey5EXE47t           1         769174 false         false
-0x0000…0000 5GELKrs47yAx2RFihHKbaFUTLKhSdMR3yXGFdBCRHWuZaoJr          13         300498 true          true
-Success: Got status
-That took 1.161501375s
-```
-
 ### Sign
 
 Ask the network to sign a given message.
@@ -129,9 +111,15 @@ Ask the network to sign a given message.
 entropy-test-cli sign <SIGNATURE_VERIFYING_KEY> <MESSAGE> [AUXILARY_DATA]
 ```
 
+#### Example
+
+```output
+entropy-test-cli sign 0x1ca639d1cae8ea4e4bd37f972999e0e140866614b621bc09950ceb469b987e27 "Good morning."
+```
+
 ### Store program
 
-Store a given program on chain.
+Store a given program on-chain.
 
 #### Usage
 
