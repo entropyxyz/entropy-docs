@@ -42,6 +42,7 @@ export default {
       items: [
         { type: 'doc', id: 'reference/networks', label: 'Networks' },
         { type: 'doc', id: 'reference/cli', label: 'CLI' },
+        { type: 'doc', id: 'reference/rust-testing-interface', label: 'Rust Testing Interface' },
       ],
     },
   ],
