@@ -64,15 +64,13 @@ You should now see the main menu:
 ```output
 ? Select Action (Use arrow keys)
 
-> Balance
-  Deploy Program
-  User Programs
+❯ Manage Accounts
+  Balance
   Register
-  Construct an Ethereum Tx
   Sign
   Transfer
-  Give Zaps
-  Wallet
+  Deploy Program
+  User Programs
   Exit
 ```
 
