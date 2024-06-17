@@ -19,7 +19,7 @@ The Entropy networks use regular WebSockets `ws://...`, rather than Secure WebSo
 1. Open a terminal window and run:
 
    ```shell
-   docker run --rm -it --name polkadot-ui -e WS_URL=ws://someip:9944 -p 80:80 jacogr/polkadot-js-apps:latest
+   docker run --rm -it --name polkadot-ui -p 80:80 jacogr/polkadot-js-apps:latest
    ```
 
    This command will start a background process.
