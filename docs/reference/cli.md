@@ -212,7 +212,7 @@ user@computer: $
 
 #### ERR::: RpcError: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
 
-This likely means that you don't have enough funds in the selected account to complete that function. Double-check that you've selected the correct account and that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-test-funds.md).
+This likely means that you don't have enough funds in the selected account to complete that function. Double-check that you've selected the correct account and that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-funds.md).
 
 #### CLI crashes when registering
 
