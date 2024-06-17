@@ -46,7 +46,30 @@ That's it! The transaction will take up to 6 seconds to transfer funds from one 
 
 ## Entropy CLI
 
-The feature is not currently available in the CLI. See [issue #80 in the Entropy Docs repository](https://github.com/entropyxyz/entropy-docs/issues/80) to track the progress of this guide.
+You must have the Entropy CLI installed on your machine in order to transfer funds with this method. [Check out the installation instructions for more details](../reference/cli.md).
+
+1. From the main menu in the CLI select **Manage Accounts**:
+
+    ```output
+    ? Select Action
+    ❯ Manage Accounts
+      Balance
+      Register
+      Sign
+      Transfer
+      Deploy Program
+      User Programs
+      Exit
+    ```
+
+1. Choose **Select Accounts**.
+1. Select the account you want to transfer funds _from_.
+1. Return to the main menu.
+1. Select **Transfer**.
+1. Enter the amount of funds you want to transfer.
+1. Enter the address that you want to transfer funds _to_.
+
+The transfer should take about 10 seconds.
 
 ## Entropy SDK
 
