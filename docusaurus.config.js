@@ -41,8 +41,6 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/entropyxyz/entropy-docs/edit/main',
           remarkPlugins: [math],
           rehypePlugins: [katex],
@@ -56,7 +54,6 @@ const config = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   ({
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: '',
@@ -66,6 +63,10 @@ const config = {
         srcDark: 'img/entropy-logo-white.png'
       },
       items: [
+        {
+          type: 'search',
+          position: 'right',
+        },
         {
           href: 'https://github.com/entropyxyz',
           label: 'GitHub',
@@ -78,6 +79,10 @@ const config = {
       darkTheme: darkCodeTheme,
     },
   }),
+
+  plugins: [
+    require.resolve('docusaurus-lunr-search')
+  ], 
 
   stylesheets: [
     {
