@@ -43,7 +43,7 @@ To run the RTI, you will need the following packages installed:
 
 ## Installation
 
-Install the RTI is to use the pre-build crate through Cargo:
+Install the RTI using the pre-build crate through Cargo:
 
     ```shell
     cargo install entropy-test-cli
