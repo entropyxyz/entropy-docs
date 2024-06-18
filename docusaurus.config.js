@@ -71,6 +71,11 @@ const config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'html',
+          position: 'right',
+          value:'<div class="colorModeToggle_node_modules-@docusaurus-theme-classic-lib-theme-Navbar-Content-styles-module toggle_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module"><button class="clean-btn toggleButton_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module"id=font-switcher-button onclick=switch_fonts() type=button><svg class=lightToggleIcon_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module height=24 viewBox="0 0 24 24"width=24><path d="M12 3V21M9 21H15M19 6V3H5V6"stroke=#000000 stroke-linecap=round stroke-linejoin=round stroke-width=2 /></svg></button></div>'
+        },
       ],
     },
     prism: {
@@ -87,6 +92,13 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
+
+  scripts: [
+    {
+      src: '/javascript/custom.js',
+      async: false
+    }
+  ]
 }
 
 module.exports = config
