@@ -105,7 +105,6 @@ You need funds to interact with the Entropy network. Your funds are stored in an
     {
             name: MyFirstAccount
             address: 5HMnksPMRPqsDqyCj31VoQFgpiswsr12bk2YTyfMUEKCm2bv
-            type: seed
     }
     ```
 
