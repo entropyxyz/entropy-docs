@@ -28,7 +28,6 @@ You need to have the Entropy CLI installed. [Take a look at the CLI page for det
    {
            name: Ludleth
            address: 5HMnksPMRPqsDqyCj31VoQFgpiswsr12bk2YTyfMUEKCm2bv
-           type: seed
    }
    ```
 
