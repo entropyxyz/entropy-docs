@@ -64,7 +64,50 @@ This repository uses the Docusaurus static-site-generator to build `docs.entropy
 1. Go to [localhost:3000](http://localhost:3000) in your browser.
 1. To stop the local server, press `CTRL` + `c` in the terminal window.
 
-To _build_ the site but not serve it, run steps `1` and `2`, followed by `yarn build`. This will build the site and save it in `./build`.
+The search bar does not work when running the website locally using this method. To interact with the search bar, you must [Build](#build) the site.
+
+### Build
+
+1. Clone this repository and move into the new directory:
+
+   ```shell
+   git clone https://github.com/entropyxyz/entropy-docs
+   cd entropy-docs
+   ```
+
+1. Install the dependencies for Docusaurus (pick one package manager process; do not run all three):
+
+   ```shell
+   # Using NPM
+   npm install
+   ```
+
+   ```shell
+   # Using PNPM
+   pnpm install
+   ```
+
+   ```shell
+   # Using Yarn
+   yarn
+   ```
+
+1. Run the build scripts:
+
+   ```shell
+   # Using NPM
+   npm run build 
+   ```
+
+   ```shell
+   # Using PNPM
+   pnpm run build
+   ```
+
+   ```shell
+   # Using Yarn
+   yarn build
+   ```
 
 ### Deploy
 
