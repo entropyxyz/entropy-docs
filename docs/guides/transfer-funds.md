@@ -20,7 +20,7 @@ To transfer funds, you must have the following:
 
    ![](./images/transfer-funds-import-accounts.png)
 
-1. Start the Substrate explorer and connect to the `testnet.entropy.xyz:9944` network.
+1. Start the Substrate explorer and connect to the `testnet.entropy.xyz` network.
 1. Select the **Accounts** dropdown and click **Accounts**.
 
    ![](./images/transfer-funds-accounts-dropdown.png)
