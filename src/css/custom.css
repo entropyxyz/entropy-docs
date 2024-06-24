@@ -29,6 +29,21 @@
    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); 
  } 
 
+/*Grab the OpenDyslexic font from a CDN.*/
+@font-face {
+  font-family: 'opendyslexic';
+	src: url('/fonts/OpenDyslexic3-Regular.ttf');
+	font-style: normal;
+	font-weight: normal;
+} 
+
+@font-face {
+	font-family: 'opendyslexic';
+	src: url('/fonts/OpenDyslexic3-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+} 
+
 /*Use fonts likely stored on the users device.*/
 body {
   font-family: Arial, Helvetica, sans-serif;
