@@ -2,16 +2,13 @@
 title: "Spin up a devnet"
 ---
 
-A developer network (devnet) is a private, isolated blockchain network used by developers to test and experiment with features and programs without affecting any other Entropy networks or risking real assets. This guide will walk you through the process of creating a devnet locally on your machine.
+A developer network (devnet) is a private, isolated blockchain network that developers use to test and experiment with features and programs without affecting other Entropy networks or risking real-world assets. This guide will walk you through creating a local devnet on your machine.
 
 Developers should use a devnet when testing new features, experimenting with network parameters, or during initial development stages. However, developers should avoid using it for final production deployments, security audits requiring mainnet conditions, or when real-world economic incentives need to be tested.
 
-There are two ways to spin up a devnet:
-
-- [Running a Docker image](#docker-image)
-- [Building from source](#build-from-source)
-
 ## Docker image
+
+Spinning up a devnet using the Docker images supplied in the Entropy Core repo is the easiest way to get up and running. The requirements are fiarly minimal, and everything should work straight out of the box.
 
 ### Prerequisites
 
@@ -68,7 +65,7 @@ Docker Compose version v2.27.0-desktop.2
     ✔ Container entropy-devnet-local-bob-tss-server-1    Started
     ```
 
-1. Confirm that the containers are up by running:
+1. Confirm that the containers are up and running:
 
     ```shell
     docker ps
@@ -102,7 +99,7 @@ Docker Compose version v2.27.0-desktop.2
 
     If this is the first time you are running the Rust testing interface, the `cargo` command above will take a few minutes to complete.
 
-1. You can also verify that things are working normally by checking the server logs:
+1. You can also verify that things are working as expected by checking the server logs:
 
     ```shell
     docker compose logs
@@ -142,26 +139,79 @@ Docker Compose version v2.27.0-desktop.2
 
 ## Build from source
 
+It is possible to build the chain node and threshold-signature scheme server binaries. However, the process for spinning up a devnet with this method is slightly more involved than the Docker method outlined above. We recommend that you only follow this method if you have a specific reason to _not_ run Docker.
+
 ### Prerequisites
+
+You must have the latest LTS version of [Rust](https://www.rust-lang.org/tools/install) installed, along with all the [Substrate dependencies](https://docs.substrate.io/install/) for your operating system.
 
 ### Steps
 
-1. Lorem.
-1. Ipsum.
-1. I don't know any more Latin.
+1. Clone the Entropy Core repository and move into the new `entropy-core` directory:
+
+    ```shell
+    git clone https://github.com/entropyxyz/entropy-core.git
+    cd entropy-core
+    ```
+
+1. Build the chain node and threshold signature scheme server binaries:
+
+    ```shell
+    cargo build --release
+    ```
+
+    ```output
+    Downloaded asn1-rs-derive v0.4.0
+    Downloaded byte-tools v0.3.1
+    Downloaded const-random-macro v0.1.16
+
+    ...
+    ```
+
+    Cargo is downloading and compiling a lot of tooling for the binaries. This process may take upwards of 10 minutes, depending on your system.
+
+1. Run the node binary:
+
+    ```shell
+    ./target/release/entropy --dev --rpc-external
+    ```
+
+    ```output
+    2024-06-24 18:36:10 💤 Idle (0 peers), best: #4 (0xe3da…d11b), finalized #0 (0xe938…3b8f), ⬇ 0 ⬆ 0
+    2024-06-24 18:36:12 🙌 Starting consensus session on top of parent 0xe3da43079cb427b60ca77cee0fe206b933ec9df57ece549ad46a5681ea95d11b
+    2024-06-24 18:36:12 🎁 Prepared block for proposing at 5 (2 ms) [hash: 0x636c606f7d66d8c25bc64956c14b1a9c209d035279ff4f7dccd629c346d81047; parent_hash: 0xe3da…d11b; extrinsics (1): [0x7f45…6999
+    ```
+
+1. Confirm that the local devnet is functioning by using the Rust test inteface within the Entropy Core repo:
+
+    ```shell
+    cargo run -p entropy-test-cli -- --chain-endpoint="ws://127.0.0.1:9944" status
+    ```
+
+    ```output
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.83s
+        Running `target/debug/entropy-test-cli '--chain-endpoint=ws://127.0.0.1:9944' status`
+
+    ...
+
+    Hash        Stored by:                                       Times used: Size in bytes: Configurable? Has auxiliary?
+    0x0000…0000 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY          10         300498 true          true
+    Success: Got status
+    That took 182.155ms
+    ```
+
+    If this is the first time you are running the Rust testing interface, the `cargo` command above will take a few minutes to complete.
+
+1. That's it!
 
 ## Best Practices
 
 It's important to regularly reset the network to maintain a clean testing environment, thoroughly document all configuration settings for reproducibility, and simulate various network conditions to ensure robustness. 
 
-Developers should strive to mirror the mainnet environment as closely as possible while still maintaining flexibility for rapid iteration. If you plan to share access to the devnet, it's important to establish a clear protocol for managing and distributing test tokens, implement monitoring and logging systems to track network behaviour, and regularly update the devnet software to match planned mainnet upgrades. 
+Developers should strive to mirror the mainnet environment as closely as possible while still maintaining flexibility for rapid iteration. If you plan to share access to the devnet, it's essential to establish a clear protocol for managing and distributing test tokens, implement monitoring and logging systems to track network behaviour, and regularly update the devnet software to match planned mainnet upgrades. 
 
 ## Troubleshooting
 
-**Cannot connect to the Docker daemon**: If you see this error message:
+**Cannot connect to the Docker daemon**: If you see the error message `Cannot connect to the Docker daemon at unix:///Users/johnny/.docker/run/docker.sock. Is the docker daemon running?` it's likely because your Docker daemon isn't running. Double-check that you've opened the Docker application.
 
-```plaintext
-Cannot connect to the Docker daemon at unix:///Users/johnny/.docker/run/docker.sock. Is the docker daemon running?
-```
-
-It's likely because your Docker deamo
+**I can't build from source**: there are quite a few dependencies for building Substrate-based nodes. Run through the [official Substrate documentation](https://docs.substrate.io/install/) and make sure you have everything installed.
