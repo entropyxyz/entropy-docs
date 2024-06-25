@@ -1,6 +1,8 @@
 ---
 title: Hextra Theme
 layout: hextra-home
+cascade:
+  type: docs
 ---
 
 {{< hextra/hero-badge >}}
