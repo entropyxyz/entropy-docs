@@ -1,7 +1,7 @@
-baseURL: https://example.org/
+baseURL: "/"
 languageCode: en-us
-title: My New Hugo Site
-theme: hextra
+title: "Entropy Docs"
+theme: "hextra"
 
 menu:
   main:
