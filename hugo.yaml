@@ -14,3 +14,29 @@ menu:
       url: "https://github.com/imfing/hextra"
       params:
         icon: github
+  sidebar:
+    - name: More
+      params:
+        type: separator
+      weight: 1
+    - name: "Community Repository ↗"
+      url: "https://github.com/entropyxyz/community"
+      weight: 3
+
+params:
+  description: ""
+
+  navbar:
+    displayTitle: false
+    displayLogo: true
+    logo:
+      path: "images/entropy-logo-black.png"
+      dark: "images/entropy-logo-white.png"
+      width: 80
+
+  page:
+    width: full
+
+  theme:
+    default: system
+    displayToggle: true
