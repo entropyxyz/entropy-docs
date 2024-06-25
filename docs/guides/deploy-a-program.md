@@ -6,6 +6,8 @@ After writing a program, you'll need to deploy it to a network before you can in
 
 ## CLI
 
+Here is the process for deploying a program using the Entropy CLI.
+
 ### Prepare your program
 
 Before you can upload your program, you'll need the following:
