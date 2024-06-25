@@ -2,7 +2,7 @@
 /node_modules
 
 # Production
-/public
+*public*
 
 # Misc
 .DS_Store
