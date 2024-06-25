@@ -7,9 +7,9 @@ prev: /docs
 
 By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.
 
-:::info Rather skip the code?
+{{< callout type="info" >}}
 If you'd prefer to dive into the core concepts of Entropy instead of running through this quickstart, head over to the [Entrosplainer to learn how the project works](./entrosplainer.md)!
-:::
+{{< /callout >}}
 
 ## What is Entropy
 
@@ -81,9 +81,9 @@ The command-line interface (CLI) is the most straightforward way to interact wit
       Exit
     ```
 
-:::tip Closing the CLI tool
+{{< callout type="info" >}}
 You can close the CLI tool at any time by pressing `CTRL` + `c`. This will halt the CLI process and bring you back to your normal terminal window.
-:::
+{{< /callout >}}
 
 Next, you'll create an Entropy account.
 
@@ -131,9 +131,9 @@ You need funds to interact with the Entropy blockchain network. To get these tes
 
 At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
 
-:::note
+{{< callout type="warning" >}}
 We're currently publically testing some of the Entropy tooling. As such, some of the workflows like getting test funds are a bit rough. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
-:::
+{{< /callout >}}
 
 Once you have been sent some funds, you can check your balance in the CLI.
 
