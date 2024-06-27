@@ -10,10 +10,6 @@ The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for
 
 - [Docker](https://docker.com)
 
-:::note Why Docker?
-The Entropy networks use regular WebSockets `wss://...`, rather than Secure WebSockets `wss://...`. Due to this limitation, you must run the block explorer _locally_. The easiest way to do this is to use Docker.
-:::
-
 ## Run the explorer
 
 1. Open a terminal window and run:
