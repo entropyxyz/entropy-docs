@@ -7,7 +7,7 @@ Registering an account is a feature unique to Entropy. Without going into too mu
 ## CLI
 
 1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
-1. Back at the main menu within the CLI, select **Register**:
+1. At the main menu within the CLI, select **Register**:
 
    ```output
    ? Select Action
