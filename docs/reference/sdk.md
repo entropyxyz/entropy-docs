@@ -1,6 +1,5 @@
 ---
 title: "SDK"
-draft: true
 ---
 
 # Software Development Kit
