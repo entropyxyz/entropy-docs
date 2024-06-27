@@ -35,6 +35,7 @@ export default {
         { type: 'doc', id: 'guides/register-an-account', label: 'Register an account' },
         { type: 'doc', id: 'guides/spin-up-a-devnet', label: 'Spin up a devnet' },
         { type: 'doc', id: 'guides/use-the-explorer', label: 'Use the explorer' },
+        { type: 'doc', id: 'guides/deploy-a-program', label: 'Deploy a program' },
       ],
     },
     {

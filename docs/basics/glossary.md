@@ -6,7 +6,7 @@ Here is a list of some words and phrases found throughout the Entropy documentat
 
 ## Account
 
-All of the information associated with a specific program for a particular user or entity. An account is established with an [admin key](#admin-key). An admin key can assign capabilities to [device keys](#device-keys).
+All of the information associated with a specific program for a particular user or entity. An account is established with an [admin key](#admin-key). An admin key can assign capabilities to [device keys](#device-key).
 
 ## Admin key
 
