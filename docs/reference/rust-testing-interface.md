@@ -65,7 +65,7 @@ You can use the following environment variables to make using the RTI easier:
 | Variable | Description | Example |
 | -------- | ----------- | ------- |
 | `ENTROPY-MNEMONIC` | The mnemonic of the account you'd like to use when interacting with the RTI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
-| `ENTROPY_DEVNET` | The specific chain-endpoint you want to use when interacting with the RTI. | `ENTROPY_DEVNET='ws://testnet.entropy.xyz:9944'` |
+| `ENTROPY_DEVNET` | The specific chain-endpoint you want to use when interacting with the RTI. | `ENTROPY_DEVNET='wss://testnet.entropy.xyz'` |
 
 ## Usage
 
@@ -82,7 +82,7 @@ entropy-test-cli register <MNEMONIC> [KEY_VISIBILITY] [PROGRAMS]
 #### Example
 
 ```shell
-entropy-test-cli --chain-endpoint="ws://testnet.entropy.xyz:9944" register "image point raccoon steak champion clown adult until hamster sun army year"
+entropy-test-cli --chain-endpoint="wss://testnet.entropy.xyz" register "image point raccoon steak champion clown adult until hamster sun army year"
 ```
 
 ### Status
@@ -98,7 +98,7 @@ entropy-test-cli status
 #### Example
 
 ```shell
-entropy-test-cli --chain-endpoint="ws://testnet.entropy.xyz:9944" status
+entropy-test-cli --chain-endpoint="wss://testnet.entropy.xyz" status
 ```
 
 ### Sign
@@ -114,7 +114,7 @@ entropy-test-cli sign <SIGNATURE_VERIFYING_KEY> <MESSAGE> [AUXILARY_DATA]
 #### Example
 
 ```output
-entropy-test-cli --chain-endpoint="ws://testnet.entropy.xyz:9944" sign "0x1ca639d1cae8ea4e4bd37f972999e0e140866614b621bc09950ceb469b987e27" "Good morning."
+entropy-test-cli --chain-endpoint="wss://testnet.entropy.xyz" sign "0x1ca639d1cae8ea4e4bd37f972999e0e140866614b621bc09950ceb469b987e27" "Good morning."
 ```
 
 ### Store program
@@ -130,7 +130,7 @@ entropy-test-cli store-program <MNEMONIC> [PROGRAM_FILE] [CONFIG_INTERFACE_FILE]
 #### Example
 
 ```shell
-entropy-test-cli --chain-endpoint="ws://testnet.entropy.xyz:9944" store-program "image point raccoon steak champion clown adult until hamster sun army year" ./program.wasm ./interface-file.config ./aux-data.config
+entropy-test-cli --chain-endpoint="wss://testnet.entropy.xyz" store-program "image point raccoon steak champion clown adult until hamster sun army year" ./program.wasm ./interface-file.config ./aux-data.config
 ```
 
 ### Update programs
@@ -146,5 +146,5 @@ entropy-test-cli update-programs <SIGNATURE_VERIFYING_KEY> <MNEMONIC> [PROGRAMS]
 #### Example
 
 ```shell
-entropy-test-cli --chain-endpoint="ws://testnet.entropy.xyz:9944" update-programs "0x1ca639d1cae8ea4e4bd37f972999e0e140866614b621bc09950ceb469b987e27" "image point raccoon steak champion clown adult until hamster sun army year" ./programs
+entropy-test-cli --chain-endpoint="wss://testnet.entropy.xyz" update-programs "0x1ca639d1cae8ea4e4bd37f972999e0e140866614b621bc09950ceb469b987e27" "image point raccoon steak champion clown adult until hamster sun army year" ./programs
 ```
