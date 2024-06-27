@@ -8,7 +8,7 @@ Developers should use a devnet when testing new features, experimenting with net
 
 ## Docker image
 
-Spinning up a devnet using the Docker images supplied in the Entropy Core repo is the easiest way to get up and running. The requirements are fiarly minimal, and everything should work straight out of the box.
+Spinning up a devnet using the Docker images supplied in the Entropy Core repo is the easiest way to get up and running. The requirements are fairly minimal, and everything should work straight out of the box.
 
 ### Prerequisites
 
@@ -79,7 +79,7 @@ Docker Compose version v2.27.0-desktop.2
     3b0048bcaa00   entropyxyz/entropy       "/usr/local/bin/entr…"   1 minutes ago   Up 4 seconds   3001/tcp, 9615/tcp, 30333/tcp, 127.0.0.1:9945->9944/tcp             entropy-devnet-local-bob-chain-node-1
     ```
 
-1. Confirm that the local devnet is functioning by using the Rust test inteface within the Entropy Core repo:
+1. Confirm that the local devnet is functioning by using the Rust test interface within the Entropy Core repo:
 
     ```shell
     cargo run -p entropy-test-cli -- --chain-endpoint="ws://127.0.0.1:9944" status
@@ -182,7 +182,7 @@ You must have the latest LTS version of [Rust](https://www.rust-lang.org/tools/i
     2024-06-24 18:36:12 🎁 Prepared block for proposing at 5 (2 ms) [hash: 0x636c606f7d66d8c25bc64956c14b1a9c209d035279ff4f7dccd629c346d81047; parent_hash: 0xe3da…d11b; extrinsics (1): [0x7f45…6999
     ```
 
-1. Confirm that the local devnet is functioning by using the Rust test inteface within the Entropy Core repo:
+1. Confirm that the local devnet is functioning by using the Rust test interface within the Entropy Core repo:
 
     ```shell
     cargo run -p entropy-test-cli -- --chain-endpoint="ws://127.0.0.1:9944" status
