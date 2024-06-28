@@ -31,4 +31,4 @@ testnet.entropy.xyz
 
 ## Devnet
 
-Developer networks (devnets) are local test networks available for developer to quickly test their Entropy programs and workflows. The details of these devnets depend on how they are set up by the developer.
+Developer networks (devnets) are local test networks available for developers to quickly test their Entropy programs and workflows. The details of these devnets depend on how they are set up by the developer.
