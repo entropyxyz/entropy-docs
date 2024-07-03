@@ -2,6 +2,7 @@
 title: "Basics"
 sidebar:
   open: true
+weight: 1
 ---
 
 The following sections explore the very basics of Entropy:
