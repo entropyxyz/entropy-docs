@@ -1,6 +1,7 @@
 ---
 title: "Quickstart"
 weight: 1
+url: "/"
 next: /docs/guide
 prev: /docs
 ---
