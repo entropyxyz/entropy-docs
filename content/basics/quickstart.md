@@ -2,8 +2,6 @@
 title: "Quickstart"
 weight: 1
 url: "/"
-next: /docs/guide
-prev: /docs
 ---
 
 By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.

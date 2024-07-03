@@ -1,7 +1,5 @@
 ---
 title: "Basics"
-prev: /docs/getting-started
-next: /docs/guide/organize-files
 sidebar:
   open: true
 ---
