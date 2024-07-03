@@ -11,7 +11,7 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/imfing/hextra"
+      url: "https://github.com/entropyxyz/entropy-docs"
       params:
         icon: github
   sidebar:
@@ -21,10 +21,16 @@ menu:
       weight: 1
     - name: "Community Repository ↗"
       url: "https://github.com/entropyxyz/community"
+      weight: 2
+    - name: "GitHub Organization ↗"
+      url: "https://github.com/entropyxyz"
       weight: 3
+    - name: "Discord Server ↗"
+      url: "https://discord.com/invite/9JUQwHBhVz"
+      weight: 4
 
 params:
-  description: ""
+  description: "Entropy liberates users from on-chain friction through novel cryptography to build autonomous systems."
 
   navbar:
     displayTitle: false
