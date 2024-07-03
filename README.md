@@ -18,8 +18,9 @@
 
 ## Run locally
 
-This repository uses the Docusaurus static-site-generator to build `docs.entropy.xyz`. To run the site locally:
+This repository uses the Hugo static-site-generator to build `docs.entropy.xyz`. To run the site locally:
 
+1. Install [Hugo](https://gohugo.io/installation/).
 1. Clone this repository and move into the new directory:
 
    ```shell
@@ -27,60 +28,16 @@ This repository uses the Docusaurus static-site-generator to build `docs.entropy
    cd entropy-docs
    ```
 
-1. Install the dependencies for Docusaurus (pick one package manager process; do not run all three):
+1. Build and serve the site locally using Hugo:
 
-   ```shell
-   # Using NPM
-   npm install
-   ```
+    ```shell
+    hugo server
+    ```
 
-   ```shell
-   # Using PNPM
-   pnpm install
-   ```
-
-   ```shell
-   # Using Yarn
-   yarn
-   ```
-
-1. Run the build scripts and run a local server:
-
-   ```shell
-   # Using NPM
-   npm run start
-   ```
-
-   ```shell
-   # Using PNPM
-   pnpm run start
-   ```
-
-   ```shell
-   # Using Yarn
-   yarn start
-   ```
-
-1. Go to [localhost:3000](http://localhost:3000) in your browser.
+1. Go to [localhost:1313](http://localhost:1313) in your browser.
 1. To stop the local server, press `CTRL` + `c` in the terminal window.
 
-To _build_ the site but not serve it, run steps `1` and `2`, followed by `yarn build`. This will build the site and save it in `./build`.
-
-### Deploy
-
-Deploying the site is done from the command-line:
-
-```shell
-GIT_USER=<GITHUB_USERNAME> USE_SSH=true yarn deploy
-```
-
-#### Troubleshooting
-
-If the deploy doesn't work for whatever reason, try checking out to the `gh-pages` branch, pullling in the latest changes, and running the `deploy` command again:
-
-```shell
-git checkout gh-pages && git pull && checkout main && npm run start
-```
+To _build_ the site but not serve it, run steps `1` and `2`, followed by `hugo`. This create a new directory called `public` and save the site in there.
 
 ## Information architecture
 
@@ -98,27 +55,6 @@ docs
 * **Concepts**: discusses ideas and concepts that everyone may not be familiar with, or things that are relevant only to Entropy and not other blockchains.
 * **Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
 * **Reference**: in-depth reference documentation for the CLI and SDK.
-
-## Repository structure
-
-| File or directory    | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| .docusaurus          | Configuration directory specific to Docusaurus. Holds themes and plugins for this site.     |
-| .git/                | Stores Git version control information (ignore).                                            |
-| .github/             | Directory for GitHub-specific configurations (ignore).                                      |
-| .gitignore           | File specifying files to be ignored by Git (ignore).                                        |
-| LICENSE              | File containing the license under which this project is distributed.                        |
-| README.md            | This file.                                                                                  |
-| blog/                | Directory containing markdown files for Entropy Docs blog posts. This is currently unused. |
-| docs/                | Core directory containing markdown files for Entropy technical documentation.               |
-| docusaurus.config.js | Main configuration file for this Docusaurus project.                                        |
-| package-lock.json    | (Generated file) Lists exact versions of dependencies used in this project.                 |
-| package.json         | File specifying project dependencies and scripts.                                           |
-| sidebars.js          | File defining the navigation structure for the docs site. Docusaurus depends on this file.  |
-| src/                 | Source code directory for this Docusaurus project, specifically React components.           |
-| static/              | Directory for static assets used by docs.entropy.xyz site (images, fonts, etc.).            |
-| tsconfig.json        | Configuration file for TypeScript (ignore).                                                 |
-| yarn.lock            | Similar to `package-lock.json`. Lists exact versions of dependencies used in this project.  |
 
 ## Support
 
@@ -174,4 +110,3 @@ We appreciate your help in making our documentation even better. By following th
 ## License
 
 - Most things in `/docs` are licensed under [MIT](./LICENSE) unless otherwise specified.
-- Docusaurus is _currently_ [MIT](https://github.com/facebook/docusaurus/blob/main/LICENSE) licensed. The maintainers of _this_ repository have no control over what license Facebook, and thus the Docusaurus team, apply to their code.
