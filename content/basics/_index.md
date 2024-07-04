@@ -1,8 +1,6 @@
 ---
 title: "Basics"
-sidebar:
-  open: true
-weight: 1
+weight: 10
 ---
 
 The following sections explore the very basics of Entropy:
@@ -13,4 +11,3 @@ The following sections explore the very basics of Entropy:
   {{< card link="support" title="Support" icon="question-mark-circle" >}}
   {{< card link="glossary" title="Glossary" icon="book-open" >}}
 {{< /cards >}}
-

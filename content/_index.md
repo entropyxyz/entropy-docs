@@ -20,15 +20,14 @@ Explore our guides and examples to integrate Entropy into your project.
   {{< card link="./reference" title="Reference" image="https://placehold.co/200x150" subtitle="Dive right into the codebase with the reference docs." >}}
 {{< /cards >}}
 
-## Try it out
+## Install the CLI
 
-{{< tabs items="1. Install the CLI, 2. Create an account, 3. Request a signature" >}}
+The Entropy command-line interface (CLI) is the fastest way to interact with the Entropy network. You can find out more by heading over to the [CLI reference section](./reference/cli.md).
+
+{{< tabs items="Debian/Ubuntu, MacOS, Build from source" >}}
 
     {{< tab >}}
     ```shell
-    git clone https://github.com/entropyxyz/cli
-    cd cli
-    yarn
     ```
     {{< /tab >}}
 

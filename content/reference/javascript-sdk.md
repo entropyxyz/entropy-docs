@@ -1,8 +1,6 @@
 ---
-title: "SDK"
+title: "JavaScript SDK"
 draft: true
 ---
-
-# Software Development Kit
 
 - [Source code](https://github.com/entropyxyz/entropy-js)
