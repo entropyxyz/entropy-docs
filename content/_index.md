@@ -28,18 +28,34 @@ The Entropy command-line interface (CLI) is the fastest way to interact with the
 
     {{< tab >}}
     ```shell
+    sudo apt update -y 
+    sudo apt install nodejs npm -y
+    npm install -g yarn 
+    git clone https://github.com/entropyxyz/cli 
+    cd cli 
+    yarn 
+    yarn start
     ```
     {{< /tab >}}
 
     {{< tab >}}
     ```shell
-    yarn run accounts --generate
+    brew update 
+    brew install node 
+    source ~/.zshrc 
+    npm install -g yarn 
+    git clone https://github.com/entropyxyz/cli 
+    cd cli 
+    yarn 
+    yarn start
     ```
     {{< /tab >}}
 
     {{< tab >}}
     ```shell
-    yarn run programs --pointer "0xwoi2rhfitf8273tygfyaygw" --address 1
+    git clone https://github.com/entropyxyz/cli
+    cd cli
+    make install
     ```
     {{< /tab >}}
 
