@@ -1,5 +1,6 @@
 ---
 title: "Support"
+description: "Stuck? Need help? Check out how to get support."
 ---
 
 This page outlines the support process for Entropy users. Since the network is still in its early stages, this process is likely to change.

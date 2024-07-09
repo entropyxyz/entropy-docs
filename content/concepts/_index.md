@@ -5,7 +5,7 @@ weight: 20
 
 The following sections explore the core concepts of Entropy:
 
-{{< cards >}}
+{{< cards style="wide" >}}
   {{< card link="access-modes" title="Access modes" icon="lock-open" >}}
   {{< card link="joining-the-network" title="Joining the network" icon="share" >}}
   {{< card link="node-encryption-and-authentication" title="Node encryption and authentication" icon="cube-transparent" >}}

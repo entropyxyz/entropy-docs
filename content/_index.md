@@ -12,12 +12,31 @@ Entropy Docs
 Explore our guides and examples to integrate Entropy into your project.
 {{< /hextra/hero-headline >}}
 
-![](https://placehold.co/1000x400)
+![](https://placehold.co/1200x400)
 
 {{< cards >}}
-  {{< card link="./basics/quickstart" title="Get started" image="https://placehold.co/200x150" subtitle="Understand the basics of Entropy with the Quickstart guide." >}}
-  {{< card link="./basics/entrosplainer" title="Core concepts" image="https://placehold.co/200x150" subtitle="Learn about the core concepts of Entropy with the Entrosplainer." >}}
-  {{< card link="./reference" title="Reference" image="https://placehold.co/200x150" subtitle="Dive right into the codebase with the reference docs." >}}
+
+    {{< card 
+        link="./basics/quickstart" 
+        title="Get started" 
+        image="https://placehold.co/200x150" 
+        subtitle="Understand the basics of Entropy with the Quickstart guide." 
+    >}}
+
+    {{< card 
+        link="./basics/entrosplainer" 
+        title="Core concepts" 
+        image="https://placehold.co/200x150" 
+        subtitle="Learn about the core concepts of Entropy with the Entrosplainer." 
+    >}}
+
+    {{< card 
+        link="./reference" 
+        title="Reference" 
+        image="https://placehold.co/200x150" 
+        subtitle="Dive right into the codebase with the reference docs." 
+    >}}
+
 {{< /cards >}}
 
 ## Install the CLI

@@ -1,5 +1,6 @@
 ---
 title: "Quickstart"
+description: "Start experimenting with the Entropy network quickly."
 weight: 1
 ---
 

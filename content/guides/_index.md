@@ -5,7 +5,7 @@ weight: 30
 
 Use the following guides to discover how to best use the Entropy network:
 
-{{< cards >}}
+{{< cards style="wide" >}}
   {{< card link="deploy-a-program" title="Deploy a program" icon="truck" >}}
   {{< card link="get-funds" title="Get funds" icon="currency-dollar" >}}
   {{< card link="manage-accounts" title="Manage accounts" icon="user-add" >}}
