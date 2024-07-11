@@ -12,27 +12,39 @@ To run the RTI, you will need the following packages installed:
 
 1. OpenSSL:
 
-    ```shell
-    # Debian/Ubuntu
-    sudo apt install libssl-dev
-    ```
+    {{< tabs items="Debian/Ubuntu, MacOS" >}}
 
-    ```shell
-    # MacOS
-    brew install openssl 
-    ```
-    
+        {{< tab >}}
+        ```shell
+        sudo apt install libssl-dev
+        ```
+        {{< /tab >}}
+
+        {{< tab >}}
+        ```shell
+        brew install openssl 
+        ```
+        {{< /tab >}}
+
+    {{< /tabs >}}
+
 2. The `pkg-config` tool:
 
-    ```shell
-    # Debian/Ubuntu
-    sudo apt install pkg-config
-    ```
+    {{< tabs items="Debian/Ubuntu, MacOS" >}}
 
-    ```shell
-    # MacOS
-    brew install pkg-config
-    ```
+        {{< tab >}}
+        ```shell
+        sudo apt install pkg-config
+        ```
+        {{< /tab >}}
+
+        {{< tab >}}
+        ```shell
+        brew install pkg-config
+        ```
+        {{< /tab >}}
+
+    {{< /tabs >}}
 
 3. Rust:
 
@@ -64,7 +76,7 @@ You can use the following environment variables to make using the RTI easier:
 
 | Variable | Description | Example |
 | -------- | ----------- | ------- |
-| `ENTROPY-MNEMONIC` | The mnemonic of the account you'd like to use when interacting with the RTI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
+| `ENTROPY_MNEMONIC` | The mnemonic of the account you'd like to use when interacting with the RTI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
 | `ENTROPY_DEVNET` | The specific chain-endpoint you want to use when interacting with the RTI. | `ENTROPY_DEVNET='ws://testnet.entropy.xyz:9944'` |
 
 ## Usage
