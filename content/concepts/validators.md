@@ -38,7 +38,7 @@ It has the following features:
 
 - The **signing client** [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server/src/signing_client) which handles listeners for the different protocol sessions. The protocol transport is handled by the **entropy-protocol** crate [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/protocol) [API](https://docs.rs/entropy-protocol), which runs the [ThresholdSignaureScheme].
 - An **encrypted key-value store** [src](https://github.com/entropyxyz/entropy-core/tree/master/crypto/kvdb) [API](https://docs.rs/entropy-kvdb) for key shares and other secret data, which are submitted by the user. Built with [sled](https://docs.rs/sled/latest/sled).
-- Executes [programs](./programs) - upon which a decision is made as to whether to participate in signing a given message.
+- Executes [programs]({{< relref "./programs" >}}) - upon which a decision is made as to whether to participate in signing a given message.
 - An **[HTTP API](https://docs.rs/entropy-tss/latest/entropy_tss/#the-http-endpoints)** for communication with users, with the entropy chain node, and with other threshold servers.
 - An account for submitting extrinsic (transactions) to the Entropy chain. For example, when the distributed key generation protocol runs successfully during user registration, each TSS server sends a confirmation to the chain by submitting a transaction.
 

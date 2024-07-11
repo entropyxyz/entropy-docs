@@ -13,7 +13,7 @@ As ECDSA schemes sign 256-bit numbers, programs can include a `custom_hash` func
 
 An example of a custom hash implementation is available in the [entropyxyz/programs repository](https://github.com/entropyxyz/programs/tree/master/examples/custom-hash).
 
-The list of natively supported hashing algorithms can be found within the [entropyxyz/entropy-core repository](://GitHub.com/entropyxyz/entropy-core/blob/master/crates/shared/src/types.rs#L101).
+The list of natively supported hashing algorithms can be found within the [entropyxyz/entropy-core repository](https://github.com/entropyxyz/entropy-core/blob/master/crates/shared/src/types.rs#L101).
 
 ### Program Configs
 

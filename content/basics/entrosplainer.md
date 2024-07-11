@@ -7,9 +7,12 @@ Entropy is a layer one chain for decentralized signing infrastructure.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake application chain built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
-Entropy's [threshold signature scheme](../concepts/threshold-signature-scheme.md) uses the [Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm), with support for signing [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/) transactions as well as arbitrary data. Support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
+{{< relref "" >}}
 
-Entropy's [Programs](../concepts/programs) are stored on chain as [WebAssembly](https://webassembly.org/). They are mutable and may be updated by signing a transaction using the "account key," which is defined during that account's initial registration. There are plans for governance mechanisms for managing Program updates as an organization, or issuing emergency fixes.
+Entropy's [threshold signature scheme]({{< relref "../concepts/threshold-signature-scheme.md" >}}) uses the [Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm), with support for signing [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/) transactions as well as arbitrary data. Support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
+
+Entropy's [Programs]({{< relref "../concepts/programs" >}}) are stored on chain as [WebAssembly](https://webassembly.org/). They are mutable and may be updated by signing a transaction using the "account key," which is defined during that account's initial registration. There are plans for governance mechanisms for managing Program updates as an organization, or issuing emergency fixes.
+
 
 The Entropy blockchain is used for consensus about which validator nodes hold which key-shares, provides a mechanism for excluding nodes which do not adhere to the signing protocol, and stores the Programs associated with an account. Once a user is registered with an account, signing a message with Entropy does not require submitting a transaction to the Entropy chain. This means getting a signature is fast and costs nothing.
 

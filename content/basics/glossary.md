@@ -7,7 +7,7 @@ Here is a list of some words and phrases found throughout the Entropy documentat
 
 ## Account
 
-All of the information associated with a specific program for a particular user or entity. An account is established with an [admin key](#admin-key). An admin key can assign capabilities to [device keys](#device-key).
+All of the information associated with a specific program for a particular user or entity. An account is established with an [admin key]({{< relref "#admin-key" >}}). An admin key can assign capabilities to [device keys]({{< relref "#device-key" >}}).
 
 ## Admin key
 
@@ -25,11 +25,11 @@ A blockchain that is exclusively designed for a single application, unlike a pub
 
 A program designed to act independently, capable of executing tasks and making decisions based on predefined rules or algorithms. Autonomous agents are seen as key players in the evolution towards digital environments where AI and blockchains intersect, often called _autonomous worlds_.
 
-Autonomous agents are sometimes also called [intelligent programs](#intelligent-program).
+Autonomous agents are sometimes also called [intelligent programs]({{< relref "#intelligent-program" >}}).
 
 ## Consumer key
 
-A synonym for a [device key or deploy key](#device-key).
+A synonym for a [device key or deploy key]({{< relref "#device-key" >}}).
 
 ## Device key
 
@@ -45,7 +45,7 @@ The set of Entropy validators.
 
 ## Intelligent program
 
-A synonym for an [autonomous agent](#autonomous-agent).
+A synonym for an [autonomous agent]({{< relref "#autonomous-agent" >}}).
 
 ## Partition
 
@@ -55,7 +55,7 @@ Also called a _signing subgroup_. A set of threshold signing servers that all ho
 
 The logic defining what conditions a threshold signing server (TSS) should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain, and can be updated by subsequent authenticated, valid transactions.
 
-Programs run when a [device key](#device-key) requests a signature from the Program. Each Program returns `true` or `false`. If the Program returns `true`, the Entropy Network executes signing, and a signature is returned to the requesting device key.
+Programs run when a [device key]({{< relref "#device-key" >}}) requests a signature from the Program. Each Program returns `true` or `false`. If the Program returns `true`, the Entropy Network executes signing, and a signature is returned to the requesting device key.
 
 ## Program developer
 
@@ -75,7 +75,7 @@ The account on the Entropy chain that is used to initiate signature requests.
 
 ## Signing committee
 
-A set of threshold signing servers that have been selected to participate in signing a particular message. This is composed of validators from different [signing subgroups](#signing-subgroup).
+A set of threshold signing servers that have been selected to participate in signing a particular message. This is composed of validators from different [signing subgroups]({{< relref "#signing-subgroup" >}}).
 
 ## Signing subgroup
 
@@ -97,7 +97,7 @@ A cryptographic technique that allows a group of participants to collectively pr
 
 ## Threshold server
 
-An instance of the Entropy [threshold signature server](../concepts/threshold-signature-scheme.md).
+An instance of the Entropy [threshold signature server]({{< relref "../concepts/threshold-signature-scheme.md" >}}).
 
 ## Transaction
 

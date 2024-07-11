@@ -8,7 +8,7 @@ In its current state, the CLI acts more like a text-based user interface (TUI). 
 ## Quick install
 
 {{< callout type="warning" >}}
-This section is for users who know what they're doing. If you're new to Entropy or the command-line, we **highly recommend** you follow the [Standard installation steps](#standard-installation).
+This section is for users who know what they're doing. If you're new to Entropy or the command-line, we **highly recommend** you follow the [Standard installation steps]({{< relref "#standard-installation" >>}).
 {{< /callout >}}
 
 Already know what you're doing and just want to get the CLI going? Run this one-liner to install the CLI's dependencies, clone the repository, build the project, and run the interface:
@@ -29,7 +29,7 @@ Already know what you're doing and just want to get the CLI going? Run this one-
 
 {{< /tabs >}}
 
-You can now [interact with the CLI](#functions)
+You can now [interact with the CLI]({{< relref "#functions" >}})
 
 ## Standard installation
 
@@ -232,7 +232,7 @@ user@computer: $
 
 #### ERR::: RpcError: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low
 
-This likely means that you don't have enough funds in the selected account to complete that function. Double-check that you've selected the correct account and that the account has enough funds in it. If you need more test funds, [head over to the faucet for more](../guides/get-funds.md).
+This likely means that you don't have enough funds in the selected account to complete that function. Double-check that you've selected the correct account and that the account has enough funds in it. If you need more test funds, [head over to the faucet for more]({{< relref "../guides/get-funds.md" >}}).
 
 #### CLI crashes when registering
 

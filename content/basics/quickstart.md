@@ -7,7 +7,7 @@ weight: 1
 By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.
 
 {{< callout type="info" >}}
-If you'd prefer to dive into the core concepts of Entropy instead of running through this quickstart, head over to the [Entrosplainer to learn how the project works](./entrosplainer.md)!
+If you'd prefer to dive into the core concepts of Entropy instead of running through this quickstart, head over to the [Entrosplainer to learn how the project works]({{< relref "./entrosplainer.md" >}})!
 {{< /callout >}}
 
 ## What is Entropy
@@ -223,4 +223,4 @@ So, what was all that about? While this quickstart guide didn't go into much det
 
 ## Next steps
 
-There's much more to come from Entropy! Next, you should check out the [Entrosplainer](./entrosplainer.md), an end-to-end explanation of what Entropy is, why it's necessary, and how it works!
+There's much more to come from Entropy! Next, you should check out the [Entrosplainer]({{< relref "./entrosplainer.md" >}}), an end-to-end explanation of what Entropy is, why it's necessary, and how it works!

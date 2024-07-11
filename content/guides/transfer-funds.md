@@ -2,7 +2,7 @@
 title: "Transfer funds"
 ---
 
-This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer](#substrate-explorer) workflow is the easiest.
+This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the [Substrate Explorer]({{< relref "#substrate-explorer" >}}) workflow is the easiest.
 
 ## Substrate explorer
 
@@ -10,8 +10,8 @@ This page covers how to transfer funds between two addresses. There are several 
 
 To transfer funds, you must have the following:
 
-- Access to at least 2 [Entropy accounts](./manage-accounts), one of which must have funds.
-- Access to the [Polkadot.js explorer](./use-the-explorer).
+- Access to at least 2 [Entropy accounts]({{< relref "./manage-accounts" >}}), one of which must have funds.
+- Access to the [Polkadot.js explorer]({{< relref "./use-the-explorer" >}}).
 - A Polkadot.js compatible browser wallet. This guide uses the [Polkadot\{.js\} Browser Extension](https://polkadot.js.org/extension/) as an example.
 
 ### Steps

@@ -8,7 +8,7 @@ This page details some of the ways you can create and maintain your Entropy acco
 
 The CLI has a built-in account manager. This is useful for running quick, one-time transactions. The CLI account manager can also be helpful for testing purposes.
 
-You need to have the Entropy CLI installed. [Take a look at the CLI page for details on how to install the CLI](../reference/cli.md).
+You need to have the Entropy CLI installed. [Take a look at the CLI page for details on how to install the CLI]({{< relref "../reference/cli.md" >}}).
 
 ### Create an account
 
@@ -104,7 +104,7 @@ If you need to export an account that you created in the CLI, follow these steps
    "seed": "0xe7f6d671e3db7b85a8e3e7da1ffd348b6334f7df383604db0d6e12ab8d58430e",
    ```
 
-   You can use this `seed` to import your key into another wallet or import it back into the Entropy CLI using the [Import function](#import-an-account).
+   You can use this `seed` to import your key into another wallet or import it back into the Entropy CLI using the [Import function]({{< relref "#import-an-account" >}}).
 
 1. All the accounts created in the CLI are stored in the `~/.entropy-cli.config` file. Make sure to export the specific account you need.
 
