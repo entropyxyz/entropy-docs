@@ -1,6 +1,7 @@
-# Command-line interface
-
-The command-line interface (CLI) is a straightforward way to experiment with the Entropy network and explore common workflows. 
+---
+title: "Command-line interface"
+lead: "The command-line interface (CLI) is a straightforward way to experiment with the Entropy network and explore common workflows."
+---
 
 In its current state, the CLI acts more like a text-based user interface (TUI). In the future, all functions will be callable directly from your terminal prompt using arguments and modifiers. For the time being, you can use this CLI to experiment and play around with the Entropy network.
 

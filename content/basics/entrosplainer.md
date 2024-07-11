@@ -1,5 +1,6 @@
 ---
 title: "Entrosplainer"
+description: "Learn the basic core concepts of Entropy, and what it's built for."
 ---
 
 Entropy is a layer one chain for decentralized signing infrastructure.

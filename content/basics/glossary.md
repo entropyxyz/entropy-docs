@@ -1,5 +1,6 @@
 ---
 title: "Glossary"
+description: "Basic descriptions for some of the unique language found within this site."
 ---
 
 Here is a list of some words and phrases found throughout the Entropy documentation that you might not be familar with.
