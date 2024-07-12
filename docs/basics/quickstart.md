@@ -18,36 +18,26 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Ensure you have Node.js version 20.9.0 or above, and Yarn version 1.22.22 installed:
+1. Ensure you have Node.js version 20.9.0 or above:
 
     ```shell
-    node --version && yarn --version
+    node --version
     ```
 
     ```output
     v22.2.0
-    1.22.22
     ```
 
-1. Clone the Entropy CLI repository and move into the new `cli` directory:
+1. Install the Entropy CLI globally using NPM:
 
     ```shell
-    git clone https://github.com/entropyxyz/cli
-    cd cli
+    npm install --global @entropyxyz/cli
     ```
 
-1. Use Yarn to install the dependencies and build the project.
+1. Run the CLI using `entropy`:
 
     ```shell
-    yarn
-    ```
-
-    This pulls in the necessary packages and builds the CLI locally.
-
-1. Run the CLI using `yarn`:
-
-    ```shell
-    yarn start
+    entropy
     ```
 
     ```output
@@ -136,7 +126,7 @@ We're currently publically testing some of the Entropy tooling. As such, some of
 
 Once you have been sent some funds, you can check your balance in the CLI.
 
-6. Open the CLI text-based user interface using `yarn start`.
+6. Open the CLI text-based user interface using `entropy`.
 1. Select **Balance** from the menu.
 1. You should see your account in the list. Use the arrow keys to highlight it and press `ENTER`.
 1. The CLI should show your balance:

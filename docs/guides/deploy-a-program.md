@@ -24,7 +24,7 @@ Next, you can move on to starting the CLI and deploying your program.
 
 ### Deploy the program
 
-1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
+1. Start the CLI by running `entropy`.
 1. At the main menu within the CLI, select **Deploy Program**:
 
    ```output
@@ -55,7 +55,7 @@ You can now interact with your program using the program pointer.
 
 If you've lost your program pointer, you can list it by running the following:
 
-1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
+1. Start the CLI by running `entropy`.
 1. At the main menu within the CLI, select **Deploy Program**:
 
    ```output
@@ -83,4 +83,4 @@ If you've lost your program pointer, you can list it by running the following:
 
 ## Troubleshooting
 
-**No such file or directory**: this indicates that you have given the CLI a path to a `.wasm` file that either does not exist or the CLI does not have permission to read from. Confirm that the path is correct and that the CLI has permission to read from that file. An easy way to do this is to move the `.wasm` program file into the same directory from which you are running the `yarn start` command.
+**No such file or directory**: this indicates that you have given the CLI a path to a `.wasm` file that either does not exist or the CLI does not have permission to read from. Confirm that the path is correct and that the CLI has permission to read from that file.
