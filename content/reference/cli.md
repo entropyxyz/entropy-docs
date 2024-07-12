@@ -8,7 +8,7 @@ In its current state, the CLI acts more like a text-based user interface (TUI). 
 ## Quick install
 
 {{< callout type="warning" >}}
-This section is for users who know what they're doing. If you're new to Entropy or the command-line, we **highly recommend** you follow the [Standard installation steps]({{< relref "#standard-installation" >>}).
+This section is for users who know what they're doing. If you're new to Entropy or the command-line, we **highly recommend** you follow the [Standard installation steps]({{< relref "#standard-installation" >}}).
 {{< /callout >}}
 
 Already know what you're doing and just want to get the CLI going? Run this one-liner to install the CLI's dependencies, clone the repository, build the project, and run the interface:

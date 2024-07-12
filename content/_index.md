@@ -5,14 +5,14 @@ toc: false
 ---
 
 {{< hextra/hero-headline >}}
-Entropy Docs
+Entropy documentation
 {{< /hextra/hero-headline >}}
 
 {{< hextra/hero-subtitle>}}
-Explore our guides and examples to integrate Entropy into your project.
+Build simple and secure decentralized asset custodians, delegate on-chain actions to an updatable agent, and build context-aware automation for your smart contracts and blockchain protocols.
 {{< /hextra/hero-headline >}}
 
-![](./images/index-main-banner.png)
+Explore our guides and examples to integrate Entropy into your project:
 
 {{< cards >}}
 
