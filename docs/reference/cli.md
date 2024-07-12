@@ -6,73 +6,42 @@ In its current state, the CLI acts more like a text-based user interface (TUI). 
 
 ## Install
 
-Follow these steps to manually install the CLI.
+Follow these steps to install Entropy globally using NPM:
 
-:::tip One-line install
-Already know what you're doing and just want to get the CLI going? Run this one-liner to install the CLI's dependencies, clone the repository, build the project, and run the interface:
-
-```plaintext
-# Debian/Ubuntu
-sudo apt update -y && sudo apt install nodejs npm -y && npm install -g yarn && git clone https://github.com/entropyxyz/cli && cd cli && yarn && yarn
-```
-
-```plaintext
-# MacOS
-brew update && brew install node && source ~/.zshrc && npm install -g yarn && git clone https://github.com/entropyxyz/cli && cd cli && yarn && yarn
-```
-
-If you're new to the CLI or just want to see what each command outputs, follow the rest of this guide.
-:::
-
-1. Make sure you've got Yarn 1.22.X installed:
-
-    ```
-    # MacOS
-    brew install yarn
-    ```
+1. Ensure you have Node.js version 20.9.0 or above:
 
     ```shell
-    # Debian/Ubuntu
-    sudo apt install yarn -y
+    node --version
     ```
+
+    ```output
+    v22.2.0
+    ```
+
+1. Install the Entropy CLI globally using NPM:
 
     ```shell
-    # Arch
-    sudo pacman -S yarn
+    npm install --global @entropyxyz/cli
     ```
 
-1. Clone the Entropy CLI repository and move into the new directory:
+1. You can now run the CLI anywhere using `entropy`:
 
     ```shell
-    git clone https://github.com/entropyxyz/cli && cd cli
+    entropy
     ```
 
-1. Build the CLI with Yarn:
+    ```output
+    ? Select Action (Use arrow keys)
 
-    ```shell
-    yarn
+    ❯ Manage Accounts
+      Balance
+      Register
+      Sign
+      Transfer
+      Deploy Program
+      User Programs
+      Exit
     ```
-
-1. Start the CLI:
-
-    ```shell
-    yarn start
-    ```
-
-You should now see the main menu:
-
-```output
-? Select Action (Use arrow keys)
-
-❯ Manage Accounts
-  Balance
-  Register
-  Sign
-  Transfer
-  Deploy Program
-  User Programs
-  Exit
-```
 
 ## Functions
 
@@ -205,8 +174,6 @@ Press `CTRL` + `c` at any point to exit the CLI program, even if you're within a
 ? Select Action Transfer
 ? Input amount to transfer: 1000
 ? Input recipient's address:        <----- Pressed `CTRL` + `c` here.
-error Command failed with exit code 130.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 user@computer: $
 ```
 

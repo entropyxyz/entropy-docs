@@ -12,7 +12,7 @@ You need to have the Entropy CLI installed. [Take a look at the CLI page for det
 
 ### Create an account
 
-1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
+1. Start the CLI by running `entropy`.
 1. Select **Manage Accounts**.
 1. Select **New**.
 1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
@@ -37,7 +37,7 @@ You need to have the Entropy CLI installed. [Take a look at the CLI page for det
 
 You can import an account by the `seed` for the account. Most Substrate-based wallets allow you to export your account information.
 
-1. Start the CLI by running `yarn start` within your local copy of the `entropyxyz/cli` repository.
+1. Start the CLI by running `entropy`.
 1. Select **Manage Accounts**.
 1. Select **New**.
 1. Type `y` and press `ENTER` when asked _Would you like to import a key?_:
