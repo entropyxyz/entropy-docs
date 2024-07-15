@@ -1,10 +1,9 @@
 ---
 title: "Quickstart"
 description: "Start experimenting with the Entropy network quickly."
+lead: "By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy."
 weight: 1
 ---
-
-By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.
 
 {{< callout type="info" >}}
 If you'd prefer to dive into the core concepts of Entropy instead of running through this quickstart, head over to the [Entrosplainer to learn how the project works]({{< relref "./entrosplainer.md" >}})!
@@ -18,36 +17,26 @@ The Entropy network provides threshold signing as a service. That means that mul
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Ensure you have Node.js version 20.9.0 or above, and Yarn version 1.22.22 installed:
+1. Ensure you have Node.js version 20.9.0 or above:
 
     ```shell
-    node --version && yarn --version
+    node --version
     ```
 
     ```output
     v22.2.0
-    1.22.22
     ```
 
-1. Clone the Entropy CLI repository and move into the new `cli` directory:
+1. Install the Entropy CLI globally using NPM:
 
     ```shell
-    git clone https://github.com/entropyxyz/cli
-    cd cli
+    npm install --global @entropyxyz/cli
     ```
 
-1. Use Yarn to install the dependencies and build the project.
+1. Run the CLI using `entropy`:
 
     ```shell
-    yarn
-    ```
-
-    This pulls in the necessary packages and builds the CLI locally.
-
-1. Run the CLI using `yarn`:
-
-    ```shell
-    yarn start
+    entropy
     ```
 
     ```output
@@ -81,7 +70,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
     ```
 
 {{< callout type="info" >}}
-You can close the CLI tool at any time by pressing `CTRL` + `c`. This will halt the CLI process and bring you back to your normal terminal window.
+**Closing the CLI**: You can close the CLI tool at any time by pressing `CTRL` + `c`. This will halt the CLI process and bring you back to your normal terminal window.
 {{< /callout >}}
 
 Next, you'll create an Entropy account.
