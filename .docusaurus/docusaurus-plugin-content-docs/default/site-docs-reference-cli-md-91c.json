@@ -1,0 +1,24 @@
+{
+  "id": "reference/cli",
+  "title": "Command-line interface",
+  "description": "The command-line interface (CLI) is a straightforward way to experiment with the Entropy network and explore common workflows.",
+  "source": "@site/docs/reference/cli.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/cli",
+  "permalink": "/reference/cli",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/reference/cli.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Networks",
+    "permalink": "/reference/networks"
+  },
+  "next": {
+    "title": "Rust Testing Interface",
+    "permalink": "/reference/rust-testing-interface"
+  }
+}

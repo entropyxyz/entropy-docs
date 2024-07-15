@@ -1,0 +1,27 @@
+{
+  "id": "basics/entrosplainer",
+  "title": "Entrosplainer",
+  "description": "Entropy is a layer one chain for decentralized signing infrastructure.",
+  "source": "@site/docs/basics/entrosplainer.md",
+  "sourceDirName": "basics",
+  "slug": "/basics/entrosplainer",
+  "permalink": "/basics/entrosplainer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/basics/entrosplainer.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Quickstart",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "Support",
+    "permalink": "/basics/support"
+  }
+}

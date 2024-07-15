@@ -1,0 +1,26 @@
+{
+  "id": "guides/transfer-funds",
+  "title": "Transfer funds",
+  "description": "This page covers how to transfer funds between two addresses. There are several ways to complete a transfer; pick the process that best fits your situation. If you're unsure which process to follow, the Substrate Explorer workflow is the easiest.",
+  "source": "@site/docs/guides/transfer-funds.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/transfer-funds",
+  "permalink": "/guides/transfer-funds",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/transfer-funds.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Transfer funds"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Get funds",
+    "permalink": "/guides/get-funds"
+  },
+  "next": {
+    "title": "Register an address",
+    "permalink": "/guides/register-an-account"
+  }
+}

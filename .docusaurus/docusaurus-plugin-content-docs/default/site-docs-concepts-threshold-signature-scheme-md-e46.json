@@ -1,0 +1,26 @@
+{
+  "id": "concepts/threshold-signature-scheme",
+  "title": "Threshold Signature Scheme",
+  "description": "- The TSS Implementation used by Entropy is Synedrion src API",
+  "source": "@site/docs/concepts/threshold-signature-scheme.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/threshold-signature-scheme",
+  "permalink": "/concepts/threshold-signature-scheme",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/threshold-signature-scheme.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Threshold Signature Scheme"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Signing",
+    "permalink": "/concepts/signing"
+  },
+  "next": {
+    "title": "Validators",
+    "permalink": "/concepts/validators"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "guides/guides",
+  "title": "Guides",
+  "description": "<!--",
+  "source": "@site/docs/guides/guides.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/",
+  "permalink": "/guides/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/guides.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Guides"
+  },
+  "sidebar": "guidesSidebar"
+}

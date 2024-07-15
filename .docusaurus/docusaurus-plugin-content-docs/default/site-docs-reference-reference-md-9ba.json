@@ -1,0 +1,17 @@
+{
+  "id": "reference/reference",
+  "title": "Reference",
+  "description": "",
+  "source": "@site/docs/reference/reference.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/",
+  "permalink": "/reference/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/reference/reference.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Reference"
+  }
+}

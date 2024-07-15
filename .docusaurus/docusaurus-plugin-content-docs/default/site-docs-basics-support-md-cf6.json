@@ -1,0 +1,26 @@
+{
+  "id": "basics/support",
+  "title": "Support",
+  "description": "This page outlines the support process for Entropy users. Since the network is still in its early stages, this process is likely to change.",
+  "source": "@site/docs/basics/support.md",
+  "sourceDirName": "basics",
+  "slug": "/basics/support",
+  "permalink": "/basics/support",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/basics/support.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Support"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Entrosplainer",
+    "permalink": "/basics/entrosplainer"
+  },
+  "next": {
+    "title": "Glossary",
+    "permalink": "/basics/glossary"
+  }
+}

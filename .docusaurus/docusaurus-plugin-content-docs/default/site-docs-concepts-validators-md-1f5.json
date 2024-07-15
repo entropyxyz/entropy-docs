@@ -1,0 +1,26 @@
+{
+  "id": "concepts/validators",
+  "title": "Validators",
+  "description": "entropy-core is run by validator nodes in the Entropy network. It has two different binaries, both of which are run by each validator node:",
+  "source": "@site/docs/concepts/validators.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/validators",
+  "permalink": "/concepts/validators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/validators.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Validators"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Threshold Signature Scheme",
+    "permalink": "/concepts/threshold-signature-scheme"
+  },
+  "next": {
+    "title": "Manage accounts",
+    "permalink": "/guides/manage-accounts"
+  }
+}

@@ -5,95 +5,44 @@ lead: "The command-line interface (CLI) is a straightforward way to experiment w
 
 In its current state, the CLI acts more like a text-based user interface (TUI). In the future, all functions will be callable directly from your terminal prompt using arguments and modifiers. For the time being, you can use this CLI to experiment and play around with the Entropy network.
 
-## Quick install
+## Install
 
-Already know what you're doing and just want to get the CLI going? Run this one-liner to install the CLI's dependencies, clone the repository, build the project, and run the interface:
+Follow these steps to install Entropy globally using NPM:
 
-{{< callout type="warning" >}}
-This section is for users who know what they're doing. If you're new to Entropy or the command-line, we **highly recommend** you follow the [Standard installation steps]({{< relref "#standard-installation" >}}).
-{{< /callout >}}
-
-
-{{< tabs items="Debian/Ubuntu, MacOS" >}}
-
-    {{< tab >}}
-    ```shell
-    sudo apt update -y && sudo apt install nodejs npm -y && npm install -g yarn && git clone https://github.com/entropyxyz/cli && cd cli && yarn && yarn
-    ```
-    {{< /tab >}}
-
-    {{< tab >}}
-    ```shell
-    brew update && brew install node && source ~/.zshrc && npm install -g yarn && git clone https://github.com/entropyxyz/cli && cd cli && yarn && yarn
-    ```
-    {{< /tab >}}
-
-{{< /tabs >}}
-
-You can now [interact with the CLI]({{< relref "#functions" >}})
-
-## Standard installation
-
-Follow these steps to manually install the CLI.
-
-1. Make sure you've got Yarn 1.22.X installed:
-
-    {{< tabs items="MacOS, Debian/Ubuntu, Arch" >}}
-
-        {{< tab >}}
-        ```shell
-        brew install yarn
-        ```
-        {{< /tab >}}
-
-        {{< tab >}}
-        ```shell
-        sudo apt install yarn -y
-        ```
-        {{< /tab >}}
-
-        {{< tab >}}
-        ```shell
-        sudo pacman -S yarn
-        ```
-        {{< /tab >}}
-
-    {{< /tabs >}}
-
-1. Clone the Entropy CLI repository and move into the new directory:
+1. Ensure you have Node.js version 20.9.0 or above:
 
     ```shell
-    git clone https://github.com/entropyxyz/cli && cd cli
+    node --version
     ```
 
-1. Build the CLI with Yarn:
+    ```output
+    v22.2.0
+    ```
+
+1. Install the Entropy CLI globally using NPM:
 
     ```shell
-    yarn
+    npm install --global @entropyxyz/cli
     ```
 
-1. Start the CLI:
+1. You can now run the CLI anywhere using `entropy`:
 
     ```shell
-    yarn start
+    entropy
     ```
 
-You should now see the main menu:
+    ```output
+    ? Select Action (Use arrow keys)
 
-```output
-? Select Action (Use arrow keys)
-
-> Balance
-  Deploy Program
-  User Programs
-  Register
-  Construct an Ethereum Tx
-  Sign
-  Transfer
-  Give Zaps
-  Wallet
-  Exit
-```
+    ❯ Manage Accounts
+      Balance
+      Register
+      Sign
+      Transfer
+      Deploy Program
+      User Programs
+      Exit
+    ```
 
 ## Functions
 

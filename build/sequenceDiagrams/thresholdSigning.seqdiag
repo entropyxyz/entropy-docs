@@ -1,0 +1,9 @@
+Title: Theshold signing
+
+
+participant user_1
+participant user_2
+
+user_1 ->> user_2: messages
+user_2 ->> user_1: messages
+Note over user_1 , user_2: Both now possess a valid signature

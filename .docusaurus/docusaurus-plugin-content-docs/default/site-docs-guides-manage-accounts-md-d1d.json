@@ -1,0 +1,26 @@
+{
+  "id": "guides/manage-accounts",
+  "title": "Manage accounts",
+  "description": "This page details some of the ways you can create and maintain your Entropy accounts.",
+  "source": "@site/docs/guides/manage-accounts.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/manage-accounts",
+  "permalink": "/guides/manage-accounts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/manage-accounts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Manage accounts"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Validators",
+    "permalink": "/concepts/validators"
+  },
+  "next": {
+    "title": "Get funds",
+    "permalink": "/guides/get-funds"
+  }
+}

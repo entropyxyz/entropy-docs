@@ -1,0 +1,26 @@
+{
+  "id": "concepts/joining-the-network",
+  "title": "Joining the network",
+  "description": "This page describes how a new validator node can join the network.",
+  "source": "@site/docs/concepts/joining-the-network.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/joining-the-network",
+  "permalink": "/concepts/joining-the-network",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/joining-the-network.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Joining the network"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Glossary",
+    "permalink": "/basics/glossary"
+  },
+  "next": {
+    "title": "Node encryption and authentication",
+    "permalink": "/concepts/node-encryption-and-authentication"
+  }
+}

@@ -1,0 +1,20 @@
+Title: Signing
+
+participant User
+participant Chain
+participant Validator_1
+participant Validator_2
+
+# Signing Process
+
+User -> User: Creates tx for desiered chain
+User -> Chain: Sends hash of tx to sign 
+Chain -> Chain: Chooses the signers for the transaction
+Chain -> Validator_1: Passes hash and signers through offchain worker
+Chain -> Validator_2: Passes hash and signers through offchain worker
+User -> Validator_1: Passes full transaction through private means
+User -> Validator_2: Passes full transaction through private means
+Validator_1 -> Chain: Requiers Constraints pass and tx matches hash to sign
+Validator_2 -> Chain: Requiers Constraints pass and tx matches hash to sign
+Note right of Validator_2: The signing process now takes place
+User -> User: User now has signed transaction they can send

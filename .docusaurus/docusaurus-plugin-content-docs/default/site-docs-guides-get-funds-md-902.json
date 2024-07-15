@@ -1,0 +1,26 @@
+{
+  "id": "guides/get-funds",
+  "title": "Get funds",
+  "description": "You need funds to interact with the Entropy blockchain network. To get these testing funds, you will need a GitHub account.",
+  "source": "@site/docs/guides/get-funds.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/get-funds",
+  "permalink": "/guides/get-funds",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/get-funds.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Get funds"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Manage accounts",
+    "permalink": "/guides/manage-accounts"
+  },
+  "next": {
+    "title": "Transfer funds",
+    "permalink": "/guides/transfer-funds"
+  }
+}

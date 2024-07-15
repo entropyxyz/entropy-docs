@@ -1,0 +1,26 @@
+{
+  "id": "guides/use-the-explorer",
+  "title": "Use the explorer",
+  "description": "A blockchain explorer is a web-based tool that functions like a search engine specifically designed for blockchain data. Blockchains, like Entropy, store information in public databases called ledgers. These ledgers are transparent, meaning anyone can view them. However, the data can be complex and challenging to understand without assistance. Blockchain explorers act as an interface, allowing users to quickly search, retrieve, and analyze information on the blockchain.",
+  "source": "@site/docs/guides/use-the-explorer.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/use-the-explorer",
+  "permalink": "/guides/use-the-explorer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/use-the-explorer.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Use the explorer"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Spin up a devnet",
+    "permalink": "/guides/spin-up-a-devnet"
+  },
+  "next": {
+    "title": "Deploy a program",
+    "permalink": "/guides/deploy-a-program"
+  }
+}

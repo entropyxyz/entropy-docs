@@ -1,0 +1,26 @@
+{
+  "id": "basics/glossary",
+  "title": "Glossary",
+  "description": "Here is a list of some words and phrases found throughout the Entropy documentation that you might not be familar with.",
+  "source": "@site/docs/basics/glossary.md",
+  "sourceDirName": "basics",
+  "slug": "/basics/glossary",
+  "permalink": "/basics/glossary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/basics/glossary.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Glossary"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Support",
+    "permalink": "/basics/support"
+  },
+  "next": {
+    "title": "Joining the network",
+    "permalink": "/concepts/joining-the-network"
+  }
+}

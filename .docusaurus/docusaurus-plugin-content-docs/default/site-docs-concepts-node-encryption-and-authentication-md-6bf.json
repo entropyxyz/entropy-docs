@@ -1,0 +1,26 @@
+{
+  "id": "concepts/node-encryption-and-authentication",
+  "title": "Node encryption and authentication",
+  "description": "When sending messages to threshold signature servers on the Entropy network, you must authenticate and encrypt the messages.",
+  "source": "@site/docs/concepts/node-encryption-and-authentication.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/node-encryption-and-authentication",
+  "permalink": "/concepts/node-encryption-and-authentication",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/node-encryption-and-authentication.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Node encryption and authentication"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Joining the network",
+    "permalink": "/concepts/joining-the-network"
+  },
+  "next": {
+    "title": "Proactive refresh",
+    "permalink": "/concepts/proactive-refresh"
+  }
+}

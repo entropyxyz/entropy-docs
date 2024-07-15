@@ -1,0 +1,24 @@
+{
+  "id": "basics/quickstart",
+  "title": "Quickstart",
+  "description": "By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy.",
+  "source": "@site/docs/basics/quickstart.md",
+  "sourceDirName": "basics",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/basics/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Quickstart",
+    "slug": "/",
+    "lead": "This is some lead text."
+  },
+  "sidebar": "sidebar",
+  "next": {
+    "title": "Entrosplainer",
+    "permalink": "/basics/entrosplainer"
+  }
+}

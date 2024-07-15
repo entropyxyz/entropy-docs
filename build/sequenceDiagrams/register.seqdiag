@@ -1,0 +1,20 @@
+Title: Registering
+
+participant User
+participant Chain
+participant Validator\n in subgroup 1 as Validator_1
+participant Validator\n in subgroup 2 as Validator_2
+participant Another validator\n in subgroup 1 as Validator_3
+participant Another validator\n in subgroup 2 as Validator_4
+
+# Registering
+User -> Chain: Informs chain\nof registration
+Note over Chain: Selects validators for DKG
+Chain -> Validator_1: Sends user information
+Chain -> Validator_2: Sends user information
+Note over Validator_1 , Validator_2: Perform DKG
+Validator_1 -> Validator_3: Sends key-share to rest of subgroup
+Validator_2 -> Validator_4: Sends key-share to rest of subgroup
+Validator_1 -> Chain: Confirms user is registered
+Validator_2 -> Chain: Confirms user is registered
+Note over Chain: User now in\nregistered state

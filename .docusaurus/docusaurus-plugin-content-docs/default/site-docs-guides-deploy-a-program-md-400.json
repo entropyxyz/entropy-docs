@@ -1,0 +1,26 @@
+{
+  "id": "guides/deploy-a-program",
+  "title": "Deploy a program",
+  "description": "After writing a program, you'll need to deploy it to a network before you can interact with it. By the end of this guide, you will know how to deploy a program to an Entropy network.",
+  "source": "@site/docs/guides/deploy-a-program.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/deploy-a-program",
+  "permalink": "/guides/deploy-a-program",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/deploy-a-program.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Deploy a program"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Use the explorer",
+    "permalink": "/guides/use-the-explorer"
+  },
+  "next": {
+    "title": "Networks",
+    "permalink": "/reference/networks"
+  }
+}

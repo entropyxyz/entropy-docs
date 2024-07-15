@@ -1,0 +1,26 @@
+{
+  "id": "concepts/signing",
+  "title": "Signing",
+  "description": "The signing process can only take place when a user is already registered on Entropy. The process involves the user and a committee of validators collectively performing the signing.",
+  "source": "@site/docs/concepts/signing.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/signing",
+  "permalink": "/concepts/signing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/signing.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Signing"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Registering",
+    "permalink": "/concepts/registering"
+  },
+  "next": {
+    "title": "Threshold Signature Scheme",
+    "permalink": "/concepts/threshold-signature-scheme"
+  }
+}

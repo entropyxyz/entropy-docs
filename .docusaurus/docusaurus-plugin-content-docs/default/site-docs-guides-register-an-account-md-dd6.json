@@ -1,0 +1,26 @@
+{
+  "id": "guides/register-an-account",
+  "title": "Register an address",
+  "description": "Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own this account and that you're ready to start signing things.",
+  "source": "@site/docs/guides/register-an-account.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/register-an-account",
+  "permalink": "/guides/register-an-account",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/register-an-account.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Register an address"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Transfer funds",
+    "permalink": "/guides/transfer-funds"
+  },
+  "next": {
+    "title": "Spin up a devnet",
+    "permalink": "/guides/spin-up-a-devnet"
+  }
+}

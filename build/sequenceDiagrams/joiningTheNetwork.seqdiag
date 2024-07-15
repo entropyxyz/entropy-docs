@@ -1,0 +1,13 @@
+Title: Joining The Network
+
+participant New_Validator
+participant Current_Validator
+participant Chain
+
+# Joining The Network
+New_Validator -> New_Validator: Spins up chain instance
+New_Validator -> New_Validator: Starts threshold server
+Chain -> New_Validator: Places validator in subgroup
+New_Validator -> Current_Validator: Contacts validator in subgroup asks for keys
+Current_Validator -> New_Validator: Validates validator's subgroup then encrypts and sends keys
+New_Validator -> Chain: Once all keys are recieved informs chain it has synced

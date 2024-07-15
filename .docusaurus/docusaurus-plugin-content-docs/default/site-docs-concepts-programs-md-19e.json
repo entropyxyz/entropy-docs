@@ -1,0 +1,26 @@
+{
+  "id": "concepts/programs",
+  "title": "Programs",
+  "description": "Programs are the agents that decide what signing requests get signed.",
+  "source": "@site/docs/concepts/programs.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/programs",
+  "permalink": "/concepts/programs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/programs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Programs"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Proactive refresh",
+    "permalink": "/concepts/proactive-refresh"
+  },
+  "next": {
+    "title": "Registering",
+    "permalink": "/concepts/registering"
+  }
+}

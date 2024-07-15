@@ -1,0 +1,17 @@
+{
+  "id": "basics/basics",
+  "title": "Basics",
+  "description": "",
+  "source": "@site/docs/basics/basics.md",
+  "sourceDirName": "basics",
+  "slug": "/basics/",
+  "permalink": "/basics/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/basics/basics.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Basics"
+  }
+}

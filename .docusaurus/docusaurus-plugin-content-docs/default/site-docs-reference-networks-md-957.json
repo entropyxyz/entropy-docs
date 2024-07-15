@@ -1,0 +1,26 @@
+{
+  "id": "reference/networks",
+  "title": "Networks",
+  "description": "This page lists useful information about the Entropy network and all available test networks (testnets).",
+  "source": "@site/docs/reference/networks.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/networks",
+  "permalink": "/reference/networks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/reference/networks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Networks"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Deploy a program",
+    "permalink": "/guides/deploy-a-program"
+  },
+  "next": {
+    "title": "Command-line interface",
+    "permalink": "/reference/cli"
+  }
+}

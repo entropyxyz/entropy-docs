@@ -1,0 +1,15 @@
+{
+  "id": "concepts/access-modes",
+  "title": "Access Modes",
+  "description": "Access Modes",
+  "source": "@site/docs/concepts/access-modes.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/access-modes",
+  "permalink": "/concepts/access-modes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/access-modes.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,17 @@
+{
+  "id": "concepts/concepts",
+  "title": "Concepts",
+  "description": "",
+  "source": "@site/docs/concepts/concepts.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/",
+  "permalink": "/concepts/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/concepts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Concepts"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "reference/sdk",
+  "title": "SDK",
+  "description": "- Source code",
+  "source": "@site/docs/reference/sdk.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/sdk",
+  "permalink": "/reference/sdk",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/reference/sdk.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "SDK"
+  }
+}

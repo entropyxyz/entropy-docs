@@ -1,0 +1,26 @@
+{
+  "id": "concepts/registering",
+  "title": "Registering",
+  "description": "A user needs to register in order to be able to use the Entropy network to sign messages.",
+  "source": "@site/docs/concepts/registering.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/registering",
+  "permalink": "/concepts/registering",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/concepts/registering.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Registering"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Programs",
+    "permalink": "/concepts/programs"
+  },
+  "next": {
+    "title": "Signing",
+    "permalink": "/concepts/signing"
+  }
+}

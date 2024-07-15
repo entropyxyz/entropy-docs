@@ -1,0 +1,22 @@
+{
+  "id": "reference/rust-testing-interface",
+  "title": "Rust Testing Interface",
+  "description": "The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command line. It is intended for testing Entropy Core functionality and wasn't designed for end-user or production use.",
+  "source": "@site/docs/reference/rust-testing-interface.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/rust-testing-interface",
+  "permalink": "/reference/rust-testing-interface",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/reference/rust-testing-interface.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Rust Testing Interface"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Command-line interface",
+    "permalink": "/reference/cli"
+  }
+}

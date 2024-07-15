@@ -1,0 +1,26 @@
+{
+  "id": "guides/spin-up-a-devnet",
+  "title": "Spin up a devnet",
+  "description": "A developer network (devnet) is a private, isolated blockchain network that developers use to test and experiment with features and programs without affecting other Entropy networks or risking real-world assets. This guide will walk you through creating a local devnet on your machine.",
+  "source": "@site/docs/guides/spin-up-a-devnet.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/spin-up-a-devnet",
+  "permalink": "/guides/spin-up-a-devnet",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/entropyxyz/entropy-docs/edit/main/docs/guides/spin-up-a-devnet.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Spin up a devnet"
+  },
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Register an address",
+    "permalink": "/guides/register-an-account"
+  },
+  "next": {
+    "title": "Use the explorer",
+    "permalink": "/guides/use-the-explorer"
+  }
+}
