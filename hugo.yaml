@@ -1,0 +1,48 @@
+baseURL: "/"
+languageCode: en-us
+title: "Entropy Docs"
+theme: "hextra"
+
+menu:
+  main:
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/entropyxyz/entropy-docs"
+      params:
+        icon: github
+  sidebar:
+    - name: More
+      params:
+        type: separator
+      weight: 1
+    - name: "Community Repository ↗"
+      url: "https://github.com/entropyxyz/community"
+      weight: 2
+    - name: "GitHub Organization ↗"
+      url: "https://github.com/entropyxyz"
+      weight: 3
+    - name: "Discord Server ↗"
+      url: "https://discord.com/invite/9JUQwHBhVz"
+      weight: 4
+
+params:
+  description: "Entropy liberates users from on-chain friction through novel cryptography to build autonomous systems."
+
+  navbar:
+    displayTitle: false
+    displayLogo: true
+    logo:
+      path: "images/entropy-logo-black.png"
+      dark: "images/entropy-logo-white.png"
+      width: 80
+
+  page:
+    width: full
+
+  theme:
+    default: system
+    displayToggle: true

@@ -1,0 +1,12 @@
+{{- $cols := .Get "cols" | default 3 -}}
+
+<!--If we set `style="wide"` in _index.md then remove the hextra-cards-grid-cols.-->
+{{- $style:= .Get "style" -}}
+{{- if eq $style "wide" -}}
+  <div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose">
+{{- else -}}
+  <div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose" style="--hextra-cards-grid-cols: {{ $cols }};">
+{{- end -}}
+
+{{- .Inner -}}
+</div>

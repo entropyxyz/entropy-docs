@@ -1,6 +1,6 @@
 <h1 align="center">Entropy Docs</h1>
 <p align="center">
-    <strong>This repository contains the documentation for the Entropy project (found in <code>/docs</code>) and all the build scripts to create the <a href="https://docs.entropy.xyz">docs.entropy.xyz</a> site. This repo also serves as the support hub for Entropy.</strong>
+    <strong>This repository contains the documentation for the Entropy project (found in <code>/content</code>) and all the build scripts to create the <a href="https://docs.entropy.xyz">docs.entropy.xyz</a> site.</strong>
     <br><br>
     <a href="https://github.com/orgs/entropyxyz/projects/32">Project Board</a>
     <a href="https://github.com/entropyxyz/entropy-docs/issues">Issues</a>
@@ -18,8 +18,9 @@
 
 ## Run locally
 
-This repository uses the Docusaurus static-site-generator to build `docs.entropy.xyz`. To run the site locally:
+This repository uses the Hugo static-site-generator to build `docs.entropy.xyz`. To run the site locally:
 
+1. Install [Hugo](https://gohugo.io/installation/).
 1. Clone this repository and move into the new directory:
 
    ```shell
@@ -27,103 +28,26 @@ This repository uses the Docusaurus static-site-generator to build `docs.entropy
    cd entropy-docs
    ```
 
-1. Install the dependencies for Docusaurus (pick one package manager process; do not run all three):
+1. Build and serve the site locally using Hugo:
 
-   ```shell
-   # Using NPM
-   npm install
-   ```
+    ```shell
+    hugo server
+    ```
 
-   ```shell
-   # Using PNPM
-   pnpm install
-   ```
-
-   ```shell
-   # Using Yarn
-   yarn
-   ```
-
-1. Run the build scripts and run a local server:
-
-   ```shell
-   # Using NPM
-   npm run start
-   ```
-
-   ```shell
-   # Using PNPM
-   pnpm run start
-   ```
-
-   ```shell
-   # Using Yarn
-   yarn start
-   ```
-
-1. Go to [localhost:3000](http://localhost:3000) in your browser.
+1. Go to [localhost:1313](http://localhost:1313) in your browser.
 1. To stop the local server, press `CTRL` + `c` in the terminal window.
 
-The search bar does not work when running the website locally using this method. To interact with the search bar, you must [Build](#build) the site.
+## Build the site
 
-### Build
-
-1. Clone this repository and move into the new directory:
-
-   ```shell
-   git clone https://github.com/entropyxyz/entropy-docs
-   cd entropy-docs
-   ```
-
-1. Install the dependencies for Docusaurus (pick one package manager process; do not run all three):
-
-   ```shell
-   # Using NPM
-   npm install
-   ```
-
-   ```shell
-   # Using PNPM
-   pnpm install
-   ```
-
-   ```shell
-   # Using Yarn
-   yarn
-   ```
-
-1. Run the build scripts:
-
-   ```shell
-   # Using NPM
-   npm run build 
-   ```
-
-   ```shell
-   # Using PNPM
-   pnpm run build
-   ```
-
-   ```shell
-   # Using Yarn
-   yarn build
-   ```
-
-### Deploy
-
-Deploying the site is done from the command-line:
+To _build_ the site but not serve it, run steps `1` and `2` from the previous section, followed by `hugo`: 
 
 ```shell
-GIT_USER=<GITHUB_USERNAME> USE_SSH=true yarn deploy
+git clone https://github.com/entropyxyz/entropy-docs
+cd entropy-docs
+hugo
 ```
 
-#### Troubleshooting
-
-If the deploy doesn't work for whatever reason, try checking out to the `gh-pages` branch, pullling in the latest changes, and running the `deploy` command again:
-
-```shell
-git checkout gh-pages && git pull && checkout main && npm run start
-```
+This create a new directory called `public` and save the site in there.
 
 ## Information architecture
 
@@ -142,27 +66,6 @@ docs
 * **Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
 * **Reference**: in-depth reference documentation for the CLI and SDK.
 
-## Repository structure
-
-| File or directory    | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| .docusaurus          | Configuration directory specific to Docusaurus. Holds themes and plugins for this site.     |
-| .git/                | Stores Git version control information (ignore).                                            |
-| .github/             | Directory for GitHub-specific configurations (ignore).                                      |
-| .gitignore           | File specifying files to be ignored by Git (ignore).                                        |
-| LICENSE              | File containing the license under which this project is distributed.                        |
-| README.md            | This file.                                                                                  |
-| blog/                | Directory containing markdown files for Entropy Docs blog posts. This is currently unused. |
-| docs/                | Core directory containing markdown files for Entropy technical documentation.               |
-| docusaurus.config.js | Main configuration file for this Docusaurus project.                                        |
-| package-lock.json    | (Generated file) Lists exact versions of dependencies used in this project.                 |
-| package.json         | File specifying project dependencies and scripts.                                           |
-| sidebars.js          | File defining the navigation structure for the docs site. Docusaurus depends on this file.  |
-| src/                 | Source code directory for this Docusaurus project, specifically React components.           |
-| static/              | Directory for static assets used by docs.entropy.xyz site (images, fonts, etc.).            |
-| tsconfig.json        | Configuration file for TypeScript (ignore).                                                 |
-| yarn.lock            | Similar to `package-lock.json`. Lists exact versions of dependencies used in this project.  |
-
 ## Support
 
 All support tickets are handled in the **Discussion** tab of the [github.com/entropyxyz/community repository](https://github.com/entropyxyz/community).
@@ -178,7 +81,7 @@ To submit a support ticket:
 
 ### Discord
 
-**We do not use Discord for support tickets.** If you receive a message about a support ticket from someone claiming to be from Entropy, this is likely a scam. All support tickets are handled publically through GitHub Issues in this repository.
+**We do not use Discord for support tickets.** If you receive a message about a support ticket from someone claiming to be from Entropy, this is likely a scam. All support tickets are handled publically through GitHub.
 
 ## Contribute
 
@@ -216,5 +119,6 @@ We appreciate your help in making our documentation even better. By following th
 
 ## License
 
-- Most things in `/docs` are licensed under [MIT](./LICENSE) unless otherwise specified.
-- Docusaurus is _currently_ [MIT](https://github.com/facebook/docusaurus/blob/main/LICENSE) licensed. The maintainers of _this_ repository have no control over what license Facebook, and thus the Docusaurus team, apply to their code.
+- Most things in `/content` are licensed under [MIT](./LICENSE) unless otherwise specified.
+- The theme for this site is modified version of [Imfing's Hextra theme](https://github.com/imfing/hextra) used under the [MIT license](https://github.com/imfing/hextra/blob/e3b582676e5db64078053db99e3636e5b6311874/LICENSE).
+- Hugo is _currently_ licensed under the [Apache 2.0 License](https://github.com/gohugoio/hugo/blob/439f07eac4706eb11fcaea259f04b3a4e4493fa1/LICENSE). The maintainers of _this_ repository have no control over what license the Hugo team apply to their code.
