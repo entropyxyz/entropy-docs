@@ -14,11 +14,7 @@ Before you can upload your program, you'll need the following:
 
 1. The absolute path of your program (e.g. `/home/alex/simple_signer.wasm`).
 1. The program configuration for your file as a single line of JSON. Configuration files are not mandatory, as not all programs require one.
-1. An account with enough funds to deploy your program. In early tests of the Entropy testnet it cost around `2000000000000` bits to deploy a barebones program.
-
-    :::note Non-registered account
-    It is not necessary to register your account before deploying a program.
-    :::
+1. An account with enough funds to deploy your program. In early tests of the Entropy testnet it cost around `2000000000000` bits to deploy a barebones program. It is not necessary to register your account before deploying a program.
 
 Next, you can move on to starting the CLI and deploying your program.
 
