@@ -3,7 +3,12 @@ title: "Command-line interface"
 lead: "The command-line interface (CLI) is a straightforward way to experiment with the Entropy network and explore common workflows."
 ---
 
-In its current state, the CLI acts more like a text-based user interface (TUI). In the future, all functions will be callable directly from your terminal prompt using arguments and modifiers. For the time being, you can use this CLI to experiment and play around with the Entropy network.
+There are two ways to interact with the CLI:
+
+- [Using the text-based user interface (TBUI)]({{< relref "#text-based-user-interface" >}})
+- [Passing arguments directly to the CLI in single commands]({{< relref "#single-line-commands" >}})
+
+After installing, running `entropy` without any arguments will take you to the text-based user interface. If you pass any arguments, however, the CLI will assume you want to run the CLI as a single command.
 
 ## Install
 
@@ -44,9 +49,41 @@ Follow these steps to install Entropy globally using NPM:
       Exit
     ```
 
-## Functions
+1. You can also interact with the CLI through one-line commands by adding any of the arguments listed in the help section:
 
-The following functions are available in the CLI.
+    ```shell
+    entropy --help
+    ```
+
+    ```output
+    Usage: entropy [options] [command]
+
+    CLI interface for interacting with entropy.xyz. Running without commands starts an interactive ui
+
+    Options:
+      -e, --endpoint <endpoint>                           Runs entropy with the given endpoint and ignores
+                                                          network endpoints in config. Can also be given a
+                                                          stored endpoint name from config eg: `entropy
+
+                                                          --endpoint test-net`. (default:
+                                                          "ws://testnet.entropy.xyz:9944/", env: ENDPOINT)
+      -h, --help                                          display help for command
+
+    Commands:
+      list|ls                                             List all accounts. Output is JSON of form [{ name,
+                                                          address, data }]
+
+      balance [options] <address>                         Get the balance of an Entropy account. Output is a
+
+                                                          number
+      transfer [options] <source> <destination> <amount>  Transfer funds between two Entropy accounts.
+      sign [options] <address> <message>                  Sign a message using the Entropy network. Output is
+                                                          a signature (string)
+    ```
+
+## Text-based user-interface
+
+The following functions are available within the CLI using the text-based user interface (TBUI). To start the TBUI, simply enter `entropy` without any arguments into your terminal:
 
 ### Manage Accounts
 
@@ -126,15 +163,10 @@ Sign a message using a registered account.
 
 ```output
 ? Choose account: (Use arrow keys)
-
   aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
 > charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
   Other
 ```
-
-## In Development
-
-The following functions are currently in development and may not currently work as intended.
 
 ### Deploy Program
 
@@ -161,6 +193,152 @@ View all programs deployed to the network from locally stored accounts.
   Remove a Program from My List
   Check if Program Exists
   Exit to Main Menu
+```
+
+## Single-line commands
+
+You can interact with Entropy quickly by giving single-line commands to the `entropy` executable.
+
+### Options
+
+#### Endpoint
+
+You can specify a specific endpoint when passing commands to the CLI. This is done with the `-e` or `--endpoint` argument.
+
+**Examples**:
+
+Supply a custom endpoint using the `--endpoint` option:
+
+```shell
+entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' --endpoint 'wss://custom-endpoint.example.com'
+```
+
+Specify the custom endpoint prior to calling the `entropy` executable:
+
+```shell
+ENDPOINT='wss://custom-endpoint.example.com'
+entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c'
+```
+
+### Commands
+
+You can enter the following commands directly from the command line.
+
+#### Help
+
+Displays basic help information.
+
+**Arguments**:
+
+None.
+
+**Example**:
+
+```shell
+entropy --help
+```
+
+```output
+Usage: entropy [options] [command]
+
+CLI interface for interacting with entropy.xyz. Running without commands starts an interactive ui
+
+Options:
+
+  -e, --endpoint <endpoint>                           Runs entropy with the given endpoint and ignores
+                                                      network endpoints in config. Can also be given a
+                                                      stored endpoint name from config eg: `entropy
+                                                      --endpoint test-net`. (default:
+                                                      "ws://testnet.entropy.xyz:9944/", env: ENDPOINT)
+  -h, --help                                          display help for command
+
+Commands:
+  list|ls                                             List all accounts. Output is JSON of form [{ name,
+                                                      address, data }]
+  balance [options] <address>                         Get the balance of an Entropy account. Output is a
+                                                      number
+  transfer [options] <source> <destination> <amount>  Transfer funds between two Entropy accounts.
+  sign [options] <address> <message>                  Sign a message using the Entropy network. Output is
+                                                      a signature (string)
+```
+
+#### List
+
+Lists all the locally stored accounts. Output data in a standard JSON format.
+
+**Arguments**:
+
+None.
+
+**Example**:
+
+```shell
+entropy list
+```
+
+```output
+[
+  {
+    "name": "Eygon",
+    "address": "5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c",
+    "verifyingKeys": []
+  },
+  {
+
+    "name": "Yoel",
+    "address": "5CRnXJRaGZnA8UfhZ7AUyYjkYLvocFSPVzf1odPJfudKxtjY",
+    "verifyingKeys": []
+  }
+]
+```
+
+#### Balance
+
+Display the balance of an Entropy account. Outputs the number of bits held by the given account as an integer.
+
+**Arguments**:
+
+- `address`: the public address of the account that you want to get the balance of. This account does not have to be stored locally by the CLI and can be any valid Entropy address.
+
+**Example**:
+
+```shell
+entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c'
+```
+
+```output
+1392000839928
+```
+
+#### Transfer
+
+Transfer funds from one Entropy account to another. You must control the _source_ account to be able to send funds from it.
+
+**Arguments**:
+
+- `source`: the public address of the account from which you want to send funds.
+- `destination`: the public address of the account to which you want to send funds. This account does not have to be stored locally by the CLI and can be any valid Entropy address.
+- `amount`: the number of bits you want to send to the `destination` account.
+
+**Example**:
+
+```shell
+entropy transfer '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' `5CRnXJRaGZnA8UfhZ7AUyYjkYLvocFSPVzf1odPJfudKxtjY` 100000000
+```
+
+#### Sign
+
+Sign a message using the Entropy network. Output is a signature as a string.
+
+**Arguments**:
+
+- `address`: the public address of the account with which you want to sign the message.
+- `message`: the message that you want to sign. It must be submitted as a string. Line breaks are not currently supported.
+
+**Example**:
+
+```shell
+entropy sign '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' 'Pickle Pee, Pump-a-Rum!'
 ```
 
 ## Troubleshooting
@@ -203,3 +381,7 @@ SyntaxError: Unexpected end of JSON input
 ```
 
 This is a bug that the Entropy team are aware of, and are working on a fix. In the meantime, restart the CLI and try to register that account again. If it keep failing, please raise an issue in the [Entropy CLI repository](https://github.com/entropyxyz/cli/issues).
+
+#### How do I enter the text-based user interface?
+
+[Install]({{< relref "#install" >}}) the `entropy` executable and enter `entropy` from the command line without any arguments.
