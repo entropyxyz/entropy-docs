@@ -3,10 +3,21 @@ title: "Command-line interface"
 lead: "The command-line interface (CLI) is a straightforward way to experiment with the Entropy network and explore common workflows."
 ---
 
-There are two ways to interact with the CLI:
+{{< cards cols=2 >}}
 
-- [Using the text-based user interface (TBUI)]({{< relref "#text-based-user-interface" >}})
-- [Passing arguments directly to the CLI in single commands]({{< relref "#single-line-commands" >}})
+    {{< card 
+        link="#interactive-mode" 
+        title="Interactive mode" 
+        subtitle="Use the text-based user interface (TUI) to interact with the CLI tool." 
+    >}}
+
+    {{< card 
+        link="#programmatic-mode" 
+        title="Programmatic mode" 
+        subtitle="Pass arguments directly to the CLI as single-line terminal commands." 
+    >}}
+
+{{< /cards >}}
 
 After installing, running `entropy` without any arguments will take you to the text-based user interface. If you pass any arguments, however, the CLI will assume you want to run the CLI as a single command.
 
@@ -81,9 +92,9 @@ Follow these steps to install Entropy globally using NPM:
                                                           a signature (string)
     ```
 
-## Text-based user-interface
+## Interactive mode
 
-The following functions are available within the CLI using the text-based user interface (TBUI). To start the TBUI, simply enter `entropy` without any arguments into your terminal:
+The following functions are available within the CLI using the text-based user interface (TUI). To start the TUI, simply enter `entropy` without any arguments into your terminal:
 
 ### Manage Accounts
 
@@ -195,7 +206,7 @@ View all programs deployed to the network from locally stored accounts.
   Exit to Main Menu
 ```
 
-## Single-line commands
+## Programmatic mode
 
 You can interact with Entropy quickly by giving single-line commands to the `entropy` executable.
 
@@ -307,7 +318,7 @@ entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c'
 ```
 
 ```output
-1392000839928
+1392000839928 BITS
 ```
 
 #### Transfer
@@ -323,7 +334,7 @@ Transfer funds from one Entropy account to another. You must control the _source
 **Example**:
 
 ```shell
-entropy transfer '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' `5CRnXJRaGZnA8UfhZ7AUyYjkYLvocFSPVzf1odPJfudKxtjY` 100000000
+entropy transfer '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' '5CRnXJRaGZnA8UfhZ7AUyYjkYLvocFSPVzf1odPJfudKxtjY' 100000
 ```
 
 #### Sign
