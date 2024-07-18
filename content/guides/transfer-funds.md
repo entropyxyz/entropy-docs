@@ -44,9 +44,15 @@ To transfer funds, you must have the following:
 
 That's it! The transaction will take up to 6 seconds to transfer funds from one account to another.
 
-## CLI
+## Interactive CLI
 
-You must have the Entropy CLI installed on your machine in order to transfer funds with this method. [Check out the installation instructions for more details]({{< relref "../reference/cli.md" >}}).
+Here is the process for transfering using the Entropy CLI's interactive text-based user interface (TUI).
+
+1. Start the TUI:
+
+    ```shell
+    entropy
+    ```
 
 1. From the main menu in the CLI select **Manage Accounts**:
 

@@ -4,9 +4,9 @@ title: "Deploy a program"
 
 After writing a program, you'll need to deploy it to a network before you can interact with it. By the end of this guide, you will know how to deploy a program to an Entropy network.
 
-## CLI
+## Interactive CLI
 
-Here is the process for deploying a program using the Entropy CLI.
+Here is the process for deploying a program using the Entropy CLI's interactive text-based user interface (TUI).
 
 ### Prepare your program
 
@@ -73,7 +73,6 @@ If you've lost your program pointer, you can list it by running the following:
     [
       '0xe80c83dd6597c15de5979c6dc0164ebeb626f3da8e6e03f3345146064938fab4',
       '0x7110f20247e9ac29355245e7864cff44066c9a24c0ae303478528645fe542e6e'
-
     ]
     ```
 
