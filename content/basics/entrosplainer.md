@@ -83,7 +83,7 @@ In the Entropy scheme, key shares are generally custodied by nodes on the Entrop
 
 Much like a multisignature, the Entropy Network is a decentralized intermediary between users and their funds. But, unlike a multisignature, Entropy can represent and custody funds sitting on any other blockchain, without complicated cross-chain communication. Here's how.
 
-## Entropy in 300
+## Entropy in 3️⃣0️⃣ seconds 🕐️
 
 Alice, a user or organization, wants to construct a transaction for chain X, from her Entropy-managed account.
 
