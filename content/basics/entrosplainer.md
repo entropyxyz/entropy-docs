@@ -7,8 +7,6 @@ Entropy is a layer one chain for decentralized signing infrastructure.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake application chain built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
-{{< relref "" >}}
-
 Entropy's [threshold signature scheme]({{< relref "../concepts/threshold-signature-scheme.md" >}}) uses the [Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm), with support for signing [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/) transactions as well as arbitrary data. Support for other signature schemes is planned. This gives us a blockchain-agnostic programmable signing infrastructure.
 
 Entropy's [Programs]({{< relref "../concepts/programs" >}}) are stored on chain as [WebAssembly](https://webassembly.org/). They are mutable and may be updated by signing a transaction using the "account key," which is defined during that account's initial registration. There are plans for governance mechanisms for managing Program updates as an organization, or issuing emergency fixes.
@@ -66,7 +64,7 @@ A $t$-of-$n$ multisignature is a way for $t$ (**t**hreshold) participants out of
 
 Each participant signs a message with their private key. A trusted centralized coordinator verifies that the $t$ signatures are valid. In blockchain contexts, the central coordinator is typically spelled "smart contract."
 
-![Signing flow](./images/multisig-flow.svg)
+![Signing flow](./images/entrosplainer-multisig-flow.svg)
 
 _2-of-3 Multisignature_
 
@@ -76,7 +74,7 @@ Participants in a threshold signature scheme don't hold onto independent private
 
 Threshold signatures schemes eliminate the requirement for a trusted coordinator, and are a powerful and flexible cryptographic primitive.
 
-![Threshold Signing flow](./images/tss-sequence.svg)
+![Threshold Signing flow](./images/entrosplainer-tss-sequence.svg)
 
 _2-of-3 Threshold Signature Scheme_
 
