@@ -85,37 +85,7 @@ To submit a support ticket:
 
 ## Contribute
 
-We appreciate contributions of any size from everyone, from fixing typos to proposing substantial rewrites to aid clarity. This section briefly describes how you can contribute to our documentation in four easy steps.
-
-### Getting started
-
-1. [**Fork this repository**](https://github.com/entropyxyz/entropy-docs/fork): Before making changes, you'll need to [create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) of our repository on GitHub. This creates a copy in your own account that you can modify.
-1. **Clone your fork**: Once you've forked our repository, [clone your fork to your local machine](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). This will allow you to make changes locally.
-
-### Making changes
-
-1. **Identify your contribution**: Look through the documentation in the `docs/` directory and find areas where you can improve the content, fix typos, or add new information.
-1. **Edit files**: Make the changes you'd like to see. Check out the [Docusaurus documentation](https://docusaurus.io/docs/markdown-features) for any specific markdown rules you might not be aware of.
-
-### Submitting your changes
-
-1. **Commit your changes**: [Commit your changes](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) with a descriptive message explaining what you modified.
-1. **Push your changes**: [Push your committed changes](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) to your forked repository on GitHub.
-1. **Create a pull request**: On GitHub, navigate to your forked repository and [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). This sends a notification to the Entropy Docs team about your proposed changes.
-
-### Review Process
-
-1. **Receive review from the docs team**: The Entropy docs team will review your pull request and may ask questions or suggest edits.
-2. **Respond to feedback**: Be prepared to discuss your changes and make adjustments based on the feedback provided.
-3. **Your proposed changes are merged**: Once your pull request is approved, we will merge your changes into the `main` branch.
-
-### Additional Tips
-
-* **Small, focused changes**: [Break down larger contributions into smaller, more manageable pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/best-practices-for-pull-requests#write-small-prs). This makes the review process easier and faster.
-* **Test your changes**: Test your changes to ensure they don't introduce any unintended consequences. In the simplest case, this just means to remember to [run your copy locally](#run-locally) to ensure your changes do what you intended.
-* **Stay up-to-date**: Consider [configuring your GitHub notification settings to watch for any updates to this repository](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository) or changes to the contribution guidelines.
-
-We appreciate your help in making our documentation even better. By following these guidelines, you can ensure a smooth and successful contribution process.
+We appreciate contributions of any size from everyone, from fixing typos to proposing substantial rewrites to aid clarity. Simply make a PR with your edits, and a member of the Entropy devrel team will review everything.
 
 ## License
 
