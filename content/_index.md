@@ -5,14 +5,14 @@ toc: false
 ---
 
 {{< hextra/hero-headline >}}
-Entropy documentation
+Build programs. Get signatures. Free users.
 {{< /hextra/hero-headline >}}
 
 {{< hextra/hero-subtitle>}}
-Build simple and secure decentralized asset custodians, delegate on-chain actions to an updatable agent, and build context-aware automation for your smart contracts and blockchain protocols.
+Entropy enables users to generate cryptographic signatures without those users needing to manage their private keys. 
 {{< /hextra/hero-headline >}}
 
-Explore our guides and examples to integrate Entropy into your project:
+That sounds simple enough, but solving this problem can enable developers to create all kinds of automated tooling and blockchain infrastructure. This kind of stuff can free users from the constant busy-work of the modern blockchain. Explore our guides and examples to integrate Entropy into your project:
 
 {{< cards >}}
 
