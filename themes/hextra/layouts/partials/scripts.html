@@ -73,3 +73,9 @@
     });
   </script>
 {{ end }}
+
+
+{{/* Plausible Analytics */}}
+{{ if site.Params.plausibleAnalytics }}
+  <script defer data-domain="docs.entropy.xyz" src="https://plausible.io/js/script.js"></script>
+{{ end }}
