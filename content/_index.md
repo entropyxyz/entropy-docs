@@ -9,10 +9,8 @@ Build programs. Get signatures. Free users.
 {{< /hextra/hero-headline >}}
 
 {{< hextra/hero-subtitle>}}
-Entropy enables users to generate cryptographic signatures without those users needing to manage their private keys. 
+Entropy enables users to generate cryptographic signatures without directly interacting with their private key. Solving this problem will allow developers to create all kinds of automated tooling and blockchain infrastructure, free users from the busy-work of the modern blockchain.
 {{< /hextra/hero-headline >}}
-
-That sounds simple enough, but solving this problem can enable developers to create all kinds of automated tooling and blockchain infrastructure. This kind of stuff can free users from the constant busy-work of the modern blockchain. Explore our guides and examples to integrate Entropy into your project:
 
 {{< cards >}}
 
