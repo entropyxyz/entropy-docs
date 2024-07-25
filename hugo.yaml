@@ -46,3 +46,5 @@ params:
   theme:
     default: system
     displayToggle: true
+
+  plausibleAnalytics: true
