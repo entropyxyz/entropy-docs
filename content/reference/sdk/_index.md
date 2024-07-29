@@ -54,7 +54,7 @@ Below is an example that instantiates Entropy, deploys a program, registers usin
     const saveToStorage = (state) => persistMe = state
     keyring.accounts.on('account-update', (fullAccount) => { saveToStorage(fullAccount) })
 
-    // Create a new Entropy instance with the keyring and endpoint
+    // Create a new Entropy instance with the keyring and endpoint.
     let entropy = New Entropy({keyring, endpoint})
     ```
 
@@ -65,10 +65,10 @@ Below is an example that instantiates Entropy, deploys a program, registers usin
     const loadedFromStorage = persistMe
     const newKeyring = new Keyring(loadFromStorage)
 
-    // Set up an event listener for account updates (same as before)
+    // Set up an event listener for account updates (same as before).
     keyring.accounts.on('account-update', (fullAccountAsJSON) => { saveToStorage(fullAccountAsJSON) })
 
-    // Create a new Entropy instance with the new keyring and endpoint
+    // Create a new Entropy instance with the new keyring and endpoint.
     entropy = new Entropy({keyring: newKeyring, endpoint})
     ```
 
