@@ -4,7 +4,8 @@
     margin-top: 0px;
 }
 
-/*Signal outbound links that will take users away from this site.*/
+/* Signal outbound links that will take users away from this site. */
+/* --------------------------------------------------------------- */
 article a[href^="http"]::after,
 article a[href^="https://"]::after
 {
@@ -18,3 +19,11 @@ article a[href^="https://"]::after
   background-size: contain;
   display: inline-block;
 }
+
+/* Exclude links within elements with the hextra-cards class */
+.hextra-cards a[href^="http"]::after,
+.hextra-cards a[href^="https://"]::after {
+  content: none;
+  background-image: none;
+}
+/* --------------------------------------------------------------- */
