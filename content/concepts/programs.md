@@ -1,8 +1,8 @@
 ---
 title: "Programs"
+lead: "The purpose of an Entropy program is to determine whether a group of nodes should generate a signature or not. Developers can create and deploy programs, but validator nodes are the only agents that will directly interact with the programs once deployed. Programs do not return any data other than a success or failed response."
 ---
 
-Programs are the agents that decide what signing requests get signed. 
 ## Features and details
 
 More concretely, they are WebAssembly components that implement an Entropy-specific interface. The only function a user must manually implement is `evaluate`, which takes the user's signature request as input and returns it as successful or an error. If no error is returned, then the message in the signature request will be signed using the program's corresponding key pair with the specified hashing algorithm.
