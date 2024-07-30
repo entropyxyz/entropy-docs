@@ -15,17 +15,17 @@ menu:
       params:
         icon: github
   sidebar:
-    - name: More
+    - name: External links
       params:
         type: separator
       weight: 1
-    - name: "Community Repository ↗"
+    - name: "Community Repository"
       url: "https://github.com/entropyxyz/community"
       weight: 2
-    - name: "GitHub Organization ↗"
+    - name: "GitHub Organization"
       url: "https://github.com/entropyxyz"
       weight: 3
-    - name: "Discord Server ↗"
+    - name: "Discord Server"
       url: "https://discord.com/invite/9JUQwHBhVz"
       weight: 4
 
@@ -41,7 +41,7 @@ params:
       width: 80
 
   page:
-    width: full
+    width: full # full/wide/normal
 
   theme:
     default: system
