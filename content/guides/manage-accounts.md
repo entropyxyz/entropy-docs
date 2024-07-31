@@ -4,7 +4,7 @@ title: "Manage accounts"
 
 This page details some of the ways you can create and maintain your Entropy accounts.
 
-## Interactive mode using the CLI
+## Interactive CLI
 
 The CLI has a built-in account manager. This is useful for running quick, one-time transactions. The CLI account manager can also be helpful for testing purposes. Here is the process for managing your accounts using the CLI's interactive text-based user interface (TUI).
 
