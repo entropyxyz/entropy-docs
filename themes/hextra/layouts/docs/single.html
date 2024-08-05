@@ -7,7 +7,7 @@
             {{ partial "breadcrumb.html" . }}
             <div class="content">
                 <h1>{{ .Title }}</h1>
-                <p class="lead italic">{{ .Params.Lead }}</p>
+                <p class="lead italic">{{ .Params.Lead | markdownify }}</p>
                 {{ .Content }}
             </div>
             {{ partial "components/last-updated.html" . }}
