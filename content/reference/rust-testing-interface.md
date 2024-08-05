@@ -1,85 +1,74 @@
 ---
 title: "Rust Testing Interface"
+lead: "The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command line. It is intended for testing [Entropy Core](https://github.com/entropyxyz/entropy-core) functionality and wasn't designed for end-user or production use."
 ---
 
-The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command line. It is intended for testing [Entropy Core](https://github.com/entropyxyz/entropy-core) functionality and wasn't designed for end-user or production use.
+{{< callout type="warning" >}}
+This CLI has no secure private key storage and is intended for use with test networks. If you want a fully featured interface, [check out the JavaScript CLI]({{< relref "./cli.md" >}}).
+{{< /callout >}}
 
-The RTI has no secure private key storage and is only intended for use with test networks. If you want a fully featured interface, [use the CLI]({{< relref "./cli.md" >}}).
+## Installation
 
-## Prerequisites
+We've made installing this CLI straightforward by using Rust's Cargo crate manager.
 
-To run the RTI, you will need the following packages installed:
+### Prerequisites
 
-1. OpenSSL:
+To run this CLI, you need to:
 
-    {{< tabs items="Debian/Ubuntu, MacOS" >}}
-
-        {{< tab >}}
-        ```shell
-        sudo apt install libssl-dev
-        ```
-        {{< /tab >}}
-
-        {{< tab >}}
-        ```shell
-        brew install openssl 
-        ```
-        {{< /tab >}}
-
-    {{< /tabs >}}
-
-2. The `pkg-config` tool:
+1. Install the OpenSSL and `pkg-config` packages:
 
     {{< tabs items="Debian/Ubuntu, MacOS" >}}
 
         {{< tab >}}
         ```shell
-        sudo apt install pkg-config
+        sudo apt install libssl-dev pkg-config
         ```
         {{< /tab >}}
 
         {{< tab >}}
         ```shell
-        brew install pkg-config
+        brew install openssl pkg-config
         ```
         {{< /tab >}}
 
     {{< /tabs >}}
 
-3. Rust:
+1. Ensure that the latest stable release of Rust is installed:
 
     ```shell
     # Any Unix-based operating system:
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ```
 
-## Installation
+## Install the CLI
 
-The easiest way to install the RTI is to use the pre-build crate through Cargo:
+The easiest way to install this CLI is to use the pre-built crate through Cargo:
 
-    ```shell
-    cargo install entropy-test-cli
-    ```
+```shell
+cargo install entropy-test-cli
+```
 
-    ```output
-    Updating crates.io index
-    Downloaded entropy-test-cli v0.1.0
+```output
+Updating crates.io index
+Downloaded entropy-test-cli v0.1.0
 
-    ...
+...
 
-    Installed package `entropy-test-cli v0.1.0` (executable `entropy-test-cli`) 
-    ```
+Installed package `entropy-test-cli v0.1.0` (executable `entropy-test-cli`) 
+```
 
 ### Environment variables
 
-You can use the following environment variables to make using the RTI easier:
+You can use the following environment variables to make using this CLI easier:
 
 | Variable | Description | Example |
 | -------- | ----------- | ------- |
-| `ENTROPY_MNEMONIC` | The mnemonic of the account you'd like to use when interacting with the RTI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
-| `ENTROPY_DEVNET` | The specific chain-endpoint you want to use when interacting with the RTI. | `ENTROPY_DEVNET='ws://testnet.entropy.xyz:9944'` |
+| `ENTROPY_MNEMONIC` | The mnemonic of the account you'd like to use when interacting with this CLI. | `ENTROPY_MNEMONIC='choice square dance because into glance hazard return cram host snap deer'` |
+| `ENTROPY_DEVNET` | The specific chain-endpoint you want to use when interacting with this CLI. | `ENTROPY_DEVNET='ws://testnet.entropy.xyz:9944'` |
 
 ## Usage
+
+You can use this CLI to register an account with the network, display a list of registered accounts, ask the network to sign a message, store a program on the network, and update a program that you stored on the network.
 
 ### Register
 
