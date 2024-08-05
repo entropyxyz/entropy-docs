@@ -13,52 +13,36 @@ We've made installing this CLI straightforward by using Rust's Cargo crate manag
 
 ### Prerequisites
 
-To run this CLI, you will need the following packages installed:
+To run this CLI, you need to:
 
-1. OpenSSL:
-
-    {{< tabs items="Debian/Ubuntu, MacOS" >}}
-
-        {{< tab >}}
-        ```shell
-        sudo apt install libssl-dev
-        ```
-        {{< /tab >}}
-
-        {{< tab >}}
-        ```shell
-        brew install openssl 
-        ```
-        {{< /tab >}}
-
-    {{< /tabs >}}
-
-2. The `pkg-config` tool:
+1. Install the OpenSSL and `pkg-config` packages:
 
     {{< tabs items="Debian/Ubuntu, MacOS" >}}
 
         {{< tab >}}
         ```shell
-        sudo apt install pkg-config
+        sudo apt install libssl-dev pkg-config
         ```
         {{< /tab >}}
 
         {{< tab >}}
         ```shell
-        brew install pkg-config
+        brew install openssl pkg-config
         ```
         {{< /tab >}}
 
     {{< /tabs >}}
 
-3. Rust:
+1. Ensure that the latest stable release of Rust is installed:
 
     ```shell
     # Any Unix-based operating system:
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ```
 
-The easiest way to install this CLI is to use the pre-build crate through Cargo:
+## Install the CLI
+
+The easiest way to install this CLI is to use the pre-built crate through Cargo:
 
 ```shell
 cargo install entropy-test-cli
