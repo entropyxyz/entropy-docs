@@ -1,8 +1,13 @@
+/* Creates easy-to-read introduction to each page. */
+/* ----------------------------------------------- */
 .lead {
     font-weight: 100;
     font-size: 20px;
     margin-top: 0px;
 }
+/* ----------------------------------------------- */
+
+
 
 /* Signal outbound links that will take users away from this site. */
 /* --------------------------------------------------------------- */
@@ -19,11 +24,24 @@ article a[href^="https://"]::after
   background-size: contain;
   display: inline-block;
 }
+/* --------------------------------------------------------------- */
 
-/* Exclude links within elements with the hextra-cards class */
+
+
+/* Exclude links within elements with the hextra-cards class. */
+/* ---------------------------------------------------------- */
 .hextra-cards a[href^="http"]::after,
 .hextra-cards a[href^="https://"]::after {
   content: none;
   background-image: none;
 }
-/* --------------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+
+
+
+/* Hide copy button in codeblocks without the `language-XYZ` class. */
+/* ---------------------------------------------------------------- */
+.hextra-code-block > pre:not([class^="language-"]) + .hextra-code-copy-btn-container {
+  display: none;
+}
+/* ---------------------------------------------------------------- */
