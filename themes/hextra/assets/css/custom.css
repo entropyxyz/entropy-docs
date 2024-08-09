@@ -52,10 +52,10 @@ article a[href^="https://"]::after
 /* ------------------------------------ */
 @font-face {
   font-family: Open-Dyslexic;
-  src: url(/static/fonts/OpenDyslexic-Regular.woff2);
+  src: url(/fonts/OpenDyslexic-Regular.woff2);
 }
 @font-face {
   font-family: Open-Dyslexic-Mono;
-  src: url(/static/fonts/OpenDyslexic-Mono.otf);
+  src: url(/fonts/OpenDyslexic-Mono.otf);
 }
 /* ------------------------------------ */
