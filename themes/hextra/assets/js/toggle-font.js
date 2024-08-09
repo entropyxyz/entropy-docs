@@ -1,10 +1,16 @@
 function toggleFont() {
-    console.log("ToggleFont function hit!");
-    var currentFont = document.body.style.fontFamily;
+    var contentElements = document.querySelectorAll('.content');
+    var currentFont = window.getComputedStyle(contentElements[0]).fontFamily;
 
-    if (currentFont.includes('serif')) {
-      document.body.style.fontFamily = 'sans-serif'; // Example sans-serif font
+    if (!currentFont.includes('Open-Dyslexic')) {
+        contentElements.forEach(function(element) {
+            element.style.fontFamily = 'Open-Dyslexic';
+        });
+        console.log("Switch to Open-Dyslexic.");
     } else {
-      document.body.style.fontFamily = 'serif'; // Example serif font
+        contentElements.forEach(function(element) {
+            element.style.fontFamily = 'sans-serif';
+        });
+        console.log("Switch to sans-serif.");
     }
 }

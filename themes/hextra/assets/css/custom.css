@@ -45,3 +45,12 @@ article a[href^="https://"]::after
   display: none;
 }
 /* ---------------------------------------------------------------- */
+
+
+/* Import OpenDyslexic for font toggle. */
+/* ------------------------------------ */
+@font-face {
+  font-family: Open-Dyslexic;
+  src: url(/static/fonts/OpenDyslexic-Regular.woff2);
+}
+/* ------------------------------------ */
