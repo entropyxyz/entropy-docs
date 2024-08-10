@@ -20,7 +20,6 @@ function setDyslexicFonts() {
     preElements.forEach(function(element) {
         element.style.fontFamily = 'Open-Dyslexic-Mono';
     });
-    console.log("Switch to Open-Dyslexic and Open-Dyslexic-Mono for pre tags.");
 }
 
 function setDefaultFonts() {
@@ -30,7 +29,6 @@ function setDefaultFonts() {
     preElements.forEach(function(element) {
         element.style.fontFamily = 'monospace';
     });
-    console.log("Switch to sans-serif and monospace for pre tags.");
 }
 
 document.addEventListener('DOMContentLoaded', function() {
