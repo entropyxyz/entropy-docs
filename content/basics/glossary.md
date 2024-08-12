@@ -1,21 +1,21 @@
 ---
 title: "Glossary"
-description: "Basic descriptions for some of the unique language found within this site."
+description: "Basic descriptions of some of the unique language found within this site."
 ---
 
-Here is a list of some words and phrases found throughout the Entropy documentation that you might not be familar with.
+Here is a list of some unfamiliar words and phrases found throughout the Entropy documentation.
 
 ## Account
 
-All of the information associated with a specific program for a particular user or entity. An account is established with an [admin key]({{< relref "#admin-key" >}}). An admin key can assign capabilities to [device keys]({{< relref "#device-key" >}}).
+All information is associated with a specific program for a particular user or entity. An account is established with an [admin key]({{< relref "#admin-key" >}}). An admin key can assign capabilities to [device keys]({{< relref "#device-key" >}}).
 
 ## Admin key
 
-A key that allows you to deploy programs and modify the settings of those programs. Admin keys cannot request signatures. This key must be funded in order to perform some actions.
+A key that allows you to deploy programs and modify the settings of those programs. Admin keys cannot request signatures. This key must be funded to perform some actions.
 
 ## Adapter
 
-Plugins that provide support for different chains and program configurations. For example, an adapter can be used to define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all.
+Plugins that provide support for different chains and program configurations. For example, an adapter can define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all.
 
 ## Application chain
 
@@ -33,11 +33,11 @@ A synonym for a [device key or deploy key]({{< relref "#device-key" >}}).
 
 ## Device key
 
-A key that can request signatures from Entropy Programs. By default, device keys cannot install Programs or modify the settings of Programs. However, Programs can be given admin-key privileges. A device key does not need to hold funds in order to perform actions.
+A key that can request signatures from Entropy Programs. By default, device keys cannot install or modify the Programs settings. However, Programs can be given admin-key privileges. A device key does not need to hold funds in order to perform actions.
 
 ## Entropy chain
 
-An application-specific layer 1 blockchain with the purpose of coordinating distributed signing.
+An application-specific layer-1 blockchain to coordinate distributed signing.
 
 ## Entropy network
 
@@ -49,11 +49,11 @@ A synonym for an [autonomous agent]({{< relref "#autonomous-agent" >}}).
 
 ## Partition
 
-Also called a _signing subgroup_. A set of threshold signing servers that all hold identical keyshares. To sign a message, one member of each subgroup must participate. The Entropy chain is responsible for assigning new threshold signing servers to a subgroup.
+Also called a _signing subgroup_, a subgroup is a set of threshold signing servers that all hold identical key shares. To sign a message, one member of each subgroup must participate. The Entropy chain assigns new threshold signing servers to a subgroup.
 
 ## Program
 
-The logic defining what conditions a threshold signing server (TSS) should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain, and can be updated by subsequent authenticated, valid transactions.
+The logic defining what conditions a threshold signing server (TSS) should participate in signing a particular transaction or message. Programs are compiled into WebAssembly blobs that are uploaded to the blockchain and can be updated by subsequent authenticated, valid transactions.
 
 Programs run when a [device key]({{< relref "#device-key" >}}) requests a signature from the Program. Each Program returns `true` or `false`. If the Program returns `true`, the Entropy Network executes signing, and a signature is returned to the requesting device key.
 
@@ -93,7 +93,7 @@ A _threshold signature server account_ is the identifier for an Entropy chain ac
 
 ## Threshold signing
 
-A cryptographic technique that allows a group of participants to collectively produce a digital signature on a message without any single participant having access to the complete private signing key. The private signing key is divided into multiple shares, with each participant holding one share. To produce a valid signature, a predetermined threshold number of shares (e.g., 3 out of 5) must be combined. This way, no single entity possesses the entire private key.
+A cryptographic technique that allows a group of participants to collectively produce a digital signature on a message without any single participant having access to the complete private signing key. The private signing key is divided into multiple shares, with each participant holding one share. A predetermined threshold number of shares (e.g., 3 out of 5) must be combined to produce a valid signature. This way, no single entity possesses the entire private key.
 
 ## Threshold server
 
@@ -101,7 +101,7 @@ An instance of the Entropy [threshold signature server]({{< relref "../concepts/
 
 ## Transaction
 
-A transaction is a discrete request submitted for inclusion on the Entropy blockchain containing a Program or account registration, modification, or other arbitrary data that a user such as a program developer or autonomous agent wants to have signed and validated by the Entropy Network.
+A transaction is a specific request submitted for inclusion on the Entropy blockchain. It can contain a program or account registration, modification, or any other data that a user, like a program developer or autonomous agent, wants to have signed and validated by the Entropy Network.
 
 ## User
 
@@ -109,4 +109,4 @@ Refers to whoever is using the Entropy network to sign transactions or messages.
 
 ## Validator
 
-A device running both an _Entropy chain node_, and a _threshold signing server_.
+A device running both an _Entropy chain node_and a _threshold signing server_.
