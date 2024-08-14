@@ -39,3 +39,7 @@ The workflow is as follows:
 1. A program then gets stored in the Programs storage slot with the key being `H(bytecode + configuration_interface)`. The hash is used by a user to point to the programs they want applied to their key, everytime a program is referenced the ref counter increments
 1. Since the key is a hash there is no editing programs (since that would change the hash)
 1. Programs can be removed if the ref count is zero by the deploy key
+
+## Device-proxy
+
+The device-proxy program is ...
