@@ -18,3 +18,6 @@ yarn-error.log*
 .yarn*
 .vercel
 .pnpm-lock.yaml
+
+# Because WSL is weird.
+*Zone.Identifier*

@@ -21,21 +21,21 @@ Entropy enables users to generate cryptographic signatures without directly inte
     {{< card 
         link="./basics/quickstart" 
         title="Get started" 
-        image="./images/index-quickstart.png" 
+        image="./images/index-quickstart-page.png" 
         subtitle="Understand the basics of Entropy with the Quickstart guide." 
     >}}
 
     {{< card 
         link="./basics/entrosplainer" 
         title="Core concepts" 
-        image="./images/index-core-concepts.png" 
+        image="./images/index-entropy-home-screen.png" 
         subtitle="Learn about the core concepts of Entropy with the Entrosplainer." 
     >}}
 
     {{< card 
         link="./reference" 
         title="Reference" 
-        image="./images/index-reference.png" 
+        image="./images/index-sdk-github-page.png" 
         subtitle="Dive right into the codebase with the reference docs." 
     >}}
 
