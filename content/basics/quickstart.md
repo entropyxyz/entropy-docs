@@ -11,7 +11,7 @@ If you'd prefer to dive into the core concepts of Entropy instead of running thr
 
 ## What is Entropy
 
-The Entropy network provides threshold signing as a service. That means that multiple users can collectively sign a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we're going to cover at this time, but you'll learn more about Entropy as a concept in other parts of this docs website.
+The Entropy network provides threshold signing as a service. That means multiple users can collectively sign a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we will cover now, but you'll learn more about Entropy in other parts of this docs website.
 
 ## 1. Install CLI
 
@@ -70,7 +70,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
     ```
 
 {{< callout type="info" >}}
-**Closing the CLI**: You can close the CLI tool at any time by pressing `CTRL` + `c`. This will halt the CLI process and bring you back to your normal terminal window.
+**Closing the CLI**: You can close the CLI tool anytime by pressing `CTRL` + `c`. This will halt the CLI process and return you to your normal terminal window.
 {{< /callout >}}
 
 Next, you'll create an Entropy account.
@@ -99,7 +99,7 @@ You need funds to interact with the Entropy network. Your funds are stored in an
 
     Make a note of the `address` field. You'll need that in the next step.
 
-1. Type `Y` and press `ENTER` to go back to the main menu.
+1. Type `Y` and press `ENTER` to return to the main menu.
 
 Next up, you'll request some funds to play around with.
 
@@ -114,13 +114,13 @@ You need funds to interact with the Entropy blockchain network. To get these tes
     ![](./images/quickstart-create-test-funds-discussion.png)
 
 1. In the **Title** field, enter the `address` you copied from the previous section.
-1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into this field.
+1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and why into this field.
 1. Click **Start discussion**.
 
-At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
+At this point, someone from Entropy will send you some test funds. Once they've sent the funds to your provided address, they'll let you know and close the issue.
 
 {{< callout type="warning" >}}
-We're currently publically testing some of the Entropy tooling. As such, some of the workflows like getting test funds are a bit rough. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
+We're currently publically testing some of the Entropy tooling. As such, some of the workflows, like getting test funds, are a bit rough. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
 {{< /callout >}}
 
 Once you have been sent some funds, you can check your balance in the CLI.
@@ -155,7 +155,7 @@ Registering an account is a feature unique to Entropy. Without going into too mu
       Exit    
     ```
 
-1. The CLI will send your selected account information to the network. The network will then register your account, as long as you have enough funds in your account.
+1. The CLI will send your selected account information to the network. The network will then register your account as long as you have enough funds.
 
     ```output
     Attempting to register the address: 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv
@@ -191,7 +191,7 @@ Next up, we'll attempt to get a signature from the network!
     ```
 
 1. Press `ENTER` to open a text editor.
-1. Within your text editor, enter a message. It doesn't really matter what the message is at this point.
+1. Within your text editor, enter a message. It doesn't matter what the message is at this point.
 1. Once you have finished entering your message into the text editor, save and quit the text editor.
 1. The CLI should output a `Uint8Array` signature:
 
@@ -213,3 +213,4 @@ So, what was all that about? While this quickstart guide didn't go into much det
 ## Next steps
 
 There's much more to come from Entropy! Next, you should check out the [Entrosplainer]({{< relref "./entrosplainer.md" >}}), an end-to-end explanation of what Entropy is, why it's necessary, and how it works!
+
