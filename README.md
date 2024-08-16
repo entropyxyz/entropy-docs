@@ -20,7 +20,19 @@
 
 This repository uses the Hugo static-site-generator to build `docs.entropy.xyz`. To run the site locally:
 
-1. Install [Hugo](https://gohugo.io/installation/).
+1. Install [Hugo](https://gohugo.io/installation/). This generally boils down to either:
+
+    ```shell
+    # MacOS
+    brew install hugo
+
+    # Ubuntu
+    sudo apt install hugo
+
+    # Arch
+    sudo pacman -S hugo
+    ```
+
 1. Clone this repository and move into the new directory:
 
    ```shell
@@ -91,4 +103,4 @@ We appreciate contributions of any size from everyone, from fixing typos to prop
 
 - Most things in `/content` are licensed under [MIT](./LICENSE) unless otherwise specified.
 - The theme for this site is modified version of [Imfing's Hextra theme](https://github.com/imfing/hextra) used under the [MIT license](https://github.com/imfing/hextra/blob/e3b582676e5db64078053db99e3636e5b6311874/LICENSE).
-- Hugo is _currently_ licensed under the [Apache 2.0 License](https://github.com/gohugoio/hugo/blob/439f07eac4706eb11fcaea259f04b3a4e4493fa1/LICENSE). The maintainers of _this_ repository have no control over what license the Hugo team apply to their code.
+- Hugo is licensed under the [Apache 2.0 License](https://github.com/gohugoio/hugo/blob/439f07eac4706eb11fcaea259f04b3a4e4493fa1/LICENSE).
