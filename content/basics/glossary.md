@@ -69,6 +69,10 @@ An authorization key that permits its holder to deploy Programs for installation
 
 The process of establishing an Entropy account. Registered accounts can be initialized with Programs and modify those Programs later.
 
+## Session
+
+An on-chain session is 2400 blocks or about 4 hours.
+
 ## Signature request account
 
 The account on the Entropy chain that is used to initiate signature requests.
