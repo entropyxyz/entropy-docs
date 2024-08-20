@@ -11,7 +11,9 @@ If you'd prefer to dive into the core concepts of Entropy instead of running thr
 
 ## What is Entropy
 
-The Entropy network provides threshold signing as a service. That means multiple users can collectively sign a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we will cover now, but you'll learn more about Entropy in other parts of this docs website.
+{{< tooltip "account" >}}
+
+The Entropy network provides threshold signing as a service. That means multiple users can collectively sign {{< tooltip "account" >}} a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we will cover now, but you'll learn more about Entropy in other parts of this docs website.
 
 ## 1. Install CLI
 
@@ -73,7 +75,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
 **Closing the CLI**: You can close the CLI tool anytime by pressing `CTRL` + `c`. This will halt the CLI process and return you to your normal terminal window.
 {{< /callout >}}
 
-Next, you'll create an Entropy account.
+Next, you'll create an Entropy {{< tooltip "account" >}}.
 
 ## 2. Create an account
 

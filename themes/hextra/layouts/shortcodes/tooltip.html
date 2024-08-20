@@ -1,0 +1,67 @@
+<!-- Create array/map of all possible tooltips. -->
+{{ $tooltips := dict
+  "account" "All information is associated with a specific program for a particular user or entity."
+}}
+
+<!-- Pick the item from the array/map we want based on -->
+<!-- what is inside the quotes in the markdown shortcode. -->
+{{ $value := .Get 0 }}
+{{ $description := index $tooltips $value }}
+
+<style>
+.tooltip {
+  /* Span a container for tooltip text. */
+  position:relative;
+  border-bottom:1px dashed #000;
+  /* ---------------------------------- */
+}
+
+.tooltip:before {
+  /* Do some CSS3 magic. */
+  content: attr(data-text); 
+  position:absolute;
+  /* ------------------- */
+  
+  /* Centre vertically. */
+  top:50%;
+  transform:translateY(-50%);
+  /* ------------------ */
+
+  
+  /* Move to the right and add a left margin. */
+  left:100%;
+  margin-left:15px; 
+  /* ---------------------------------------- */
+  
+
+  /* Add some basic styling. */
+  width:200px;
+  padding:10px;
+  border-radius:10px;
+  background:#000;
+  color: #fff;
+  text-align:center;
+  /* ----------------------- */
+
+
+  /* Hide by default. */
+  display:none;
+  /* ---------------- */
+}
+
+.tooltip:hover:before {
+  display:block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip:before {
+    background-color: white;
+    color: black;
+  }
+}
+</style>
+
+<span 
+  data-text="{{ $description | safeHTML }}" 
+  class="tooltip"
+>{{ $value | safeHTML }}</span>
