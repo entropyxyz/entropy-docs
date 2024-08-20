@@ -1,6 +1,6 @@
 ---
 title: "Joining the network"
-lead: "This page describes how a new validator node can join the network."
+lead: "This page covers the process of joining the Entropy network as a validator node, along with specific information that each node must provide."
 ---
 
 {{< callout type="info" >}}
