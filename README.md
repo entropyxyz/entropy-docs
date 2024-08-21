@@ -78,6 +78,33 @@ docs
 * **Guides**: easy-to-understand guides that show users how to hit a specific goal, without diving into the content discussed in `/concepts`.
 * **Reference**: in-depth reference documentation for the CLI and SDK.
 
+## Site features
+
+This site contains quite a few shortcodes that writers can use to add extra functionality into each page.
+
+### Tooltips
+
+Tooltips allow the reader to hover over a particular word or phrase, and have a description or explanation of that element shown to them quickly. Every avavailable tooltip can be found within `./themes/hextra/layouts/shortcodes/tooltip.html`:
+
+```go
+<!-- Create array/map of all possible tooltips. -->
+{{ $tooltips := dict
+  "account" "All information is associated with a specific program for a particular user or entity."
+  "admin key" "A key that allows you to deploy programs and modify the settings of those programs. Admin keys cannot request signatures. This key must be funded to perform some actions."
+  "adapter" "Plugins that provide support for different chains and program configurations. For example, an adapter can define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all."
+
+...
+
+```
+
+To use a tooltip, use the following syntax:
+
+```markdown
+You will need to have a funded Entropy {{< tooltip "account" >}} in order to progress with this tutorial.
+```
+
+Attempting to use a tooltip element that does not exist in the `tooltip.html` shortcode will cause the Hugo build to fail.
+
 ## Support
 
 All support tickets are handled in the **Discussion** tab of the [github.com/entropyxyz/community repository](https://github.com/entropyxyz/community).
