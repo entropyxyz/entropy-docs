@@ -11,9 +11,7 @@ If you'd prefer to dive into the core concepts of Entropy instead of running thr
 
 ## What is Entropy
 
-{{< tooltip "account" >}}
-
-The Entropy network provides threshold signing as a service. That means multiple users can collectively sign {{< tooltip "account" >}} a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we will cover now, but you'll learn more about Entropy in other parts of this docs website.
+The Entropy network provides threshold signing as a service. That means multiple users can collectively sign a message to perform _some_ function on any blockchain network. Entropy can also be used to perform non-blockchain tasks like encrypting and decrypting chunks of data. That's all we will cover now, but you'll learn more about Entropy in other parts of this docs website.
 
 ## 1. Install CLI
 
