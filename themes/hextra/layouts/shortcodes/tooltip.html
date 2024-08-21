@@ -12,7 +12,7 @@
 .tooltip {
   /* Span a container for tooltip text. */
   position:relative;
-  border-bottom:1px dashed #000;
+  border-bottom: 1px dashed grey;
   /* ---------------------------------- */
 }
 
@@ -38,9 +38,9 @@
   width:200px;
   padding:10px;
   border-radius:10px;
-  background:#000;
-  color: #fff;
   text-align:center;
+  background-color: grey;
+  color: white;
   /* ----------------------- */
 
 
@@ -51,13 +51,6 @@
 
 .tooltip:hover:before {
   display:block;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tooltip:before {
-    background-color: white;
-    color: black;
-  }
 }
 </style>
 
