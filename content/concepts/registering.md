@@ -1,8 +1,7 @@
 ---
 title: "Registering"
+lead: "A user needs to register in order to be able to use the Entropy network to sign messages. This page covers that process."
 ---
-
-A user needs to register in order to be able to use the Entropy network to sign messages.
 
 The SDK method for registering is [`Entropy.register`](https://github.com/entropyxyz/sdk/blob/main/README.md#register).
 

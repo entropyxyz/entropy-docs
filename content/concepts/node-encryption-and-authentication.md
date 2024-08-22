@@ -1,8 +1,7 @@
 ---
 title: "Node encryption and authentication"
+lead: "When sending messages to threshold signature servers on the Entropy network, you must authenticate and encrypt the messages. This page covers that process."
 ---
-
-When sending messages to threshold signature servers on the Entropy network, you must authenticate and encrypt the messages. 
 
 The authentication process is simple: each node has a substrate account stored on the chain, referred to as a TSS account.
 
