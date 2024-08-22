@@ -73,7 +73,7 @@ The command-line interface (CLI) is the most straightforward way to interact wit
 **Closing the CLI**: You can close the CLI tool anytime by pressing `CTRL` + `c`. This will halt the CLI process and return you to your normal terminal window.
 {{< /callout >}}
 
-Next, you'll create an Entropy account.
+Next, you'll create an Entropy {{< tooltip "account" >}}.
 
 ## 2. Create an account
 
