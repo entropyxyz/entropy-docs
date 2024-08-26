@@ -1,8 +1,7 @@
 ---
 title: "Register an address"
+lead: "Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ account and that you're ready to start signing things."
 ---
-
-Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ account and that you're ready to start signing things.
 
 ## Interactive CLI
 

@@ -1,8 +1,7 @@
 ---
 title: "Networks"
+lead: "This page lists useful information about the Entropy network and all available test networks (testnets)."
 ---
-
-This page lists useful information about the Entropy network and all available test networks (testnets).
 
 ## Mainnet
 
