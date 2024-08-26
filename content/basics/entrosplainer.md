@@ -65,7 +65,18 @@ A $t$-of-$n$ multisignature is a way for $t$ (**t**hreshold) participants out of
 
 Each participant signs a message with their private key. A trusted centralized coordinator verifies that the $t$ signatures are valid. In blockchain contexts, the central coordinator is typically spelled "smart contract."
 
-![Signing flow](./images/entrosplainer-multisig-flow.svg)
+```mermaid
+graph TD
+    A["Alice"]
+    B["Bob"]
+    C["Charlie"]
+    D["Trusted Coordinator"]
+    E["End"]
+
+    A --> |"&nbsp;sign(m)&nbsp;"| D
+    C --> |"&nbsp;sign(m)&nbsp;"| D
+    D --> |"&nbsp;Return OK or INVALID&nbsp;"| E
+```
 
 _2-of-3 Multisignature_
 
@@ -75,7 +86,19 @@ Participants in a threshold signature scheme don't hold onto independent private
 
 Threshold signature schemes eliminate the requirement for a trusted coordinator and are a powerful and flexible cryptographic primitive.
 
-![Threshold Signing flow](./images/entrosplainer-tss-sequence.svg)
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    participant Charlie
+    
+    Alice->>Bob: Messages
+
+    Bob->>Alice: Messages
+    
+    Note over Alice,Bob: Both now possess a valid signature
+    Note over Charlie: Has nothing
+```
 
 _2-of-3 Threshold Signature Scheme_
 
