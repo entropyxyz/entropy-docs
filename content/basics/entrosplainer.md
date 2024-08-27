@@ -1,10 +1,8 @@
 ---
 title: "Entrosplainer"
-description: "Learn the basic core concepts of Entropy, and what it's built for."
+lead: "Learn the basic core concepts of Entropy, and what it's built for."
 math: true
 ---
-
-Entropy is a layer-one chain for decentralized signing infrastructure.
 
 The Entropy network provides threshold signing as a service. It consists of a proof of stake application chain built with [Substrate](https://substrate.io/) where each validator node deploys a [threshold signing client](https://en.wikipedia.org/wiki/Threshold_cryptosystem) which holds secret key-shares. The decision as to whether the network will collectively sign a particular message is determined by a predefined program.
 
