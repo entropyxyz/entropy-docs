@@ -1,8 +1,7 @@
 ---
 title: "Deploy a program"
+lead: "After writing a program, you'll need to deploy it to a network before you can interact with it. By the end of this guide, you will know how to deploy a program to an Entropy network."
 ---
-
-After writing a program, you'll need to deploy it to a network before you can interact with it. By the end of this guide, you will know how to deploy a program to an Entropy network.
 
 ## Interactive CLI
 

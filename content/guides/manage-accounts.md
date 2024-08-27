@@ -1,8 +1,7 @@
 ---
 title: "Manage accounts"
+lead: "This page details some of the ways you can create and maintain your Entropy accounts."
 ---
-
-This page details some of the ways you can create and maintain your Entropy accounts.
 
 ## Interactive CLI
 

@@ -1,8 +1,9 @@
 ---
 title: "Use the explorer"
+lead: "A blockchain explorer is a web-based tool that functions like a search engine specifically designed for blockchain data. This page explains how to connect to one for Entropy."
 ---
 
-A blockchain explorer is a web-based tool that functions like a search engine specifically designed for blockchain data. Blockchains, like Entropy, store information in public databases called ledgers. These ledgers are transparent, meaning anyone can view them. However, the data can be complex and challenging to understand without assistance. Blockchain explorers act as an interface, allowing users to quickly search, retrieve, and analyze information on the blockchain.
+Blockchains, like Entropy, store information in public databases called ledgers. These ledgers are transparent, meaning anyone can view them. However, the data can be complex and challenging to understand without assistance. Blockchain explorers act as an interface, allowing users to quickly search, retrieve, and analyze information on the blockchain.
 
 The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for interacting with Substrate blockchains. Since Entropy is built using Substrate, we can use this explorer to search and view chain data on the Entropy network.
 

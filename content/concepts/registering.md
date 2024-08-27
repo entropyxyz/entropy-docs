@@ -1,8 +1,7 @@
 ---
 title: "Registering"
+lead: "A user needs to register in order to be able to use the Entropy network to sign messages. This page covers that process."
 ---
-
-A user needs to register in order to be able to use the Entropy network to sign messages.
 
 The SDK method for registering is [`Entropy.register`](https://github.com/entropyxyz/sdk/blob/main/README.md#register).
 
@@ -10,7 +9,7 @@ The SDK method for registering is [`Entropy.register`](https://github.com/entrop
 
 ![Register Flow](./images/register.svg)
 
-1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', initial 'ProgramsData', and chosen [access mode]({{< relref "./access-modes.md" >}}). 
+1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', and initial 'ProgramsData'. 
     * ```ProgramsData``` - Is multiple Programs Instances. Which contain the ```program_pointer``` (the hash of the program you want to use) and the ```program_config``` for that program. On the evaluation of a signature request a threshold server will run all the programs and pass through the program config for that program.
 
 1. The chain selects which nodes should perform a [distributed key generation (DKG)](https://docs.rs/synedrion/latest/synedrion/sessions/fn.make_key_gen_session.html) based on the current block number.

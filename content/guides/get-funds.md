@@ -1,8 +1,7 @@
 ---
 title: "Get funds"
+lead: "You need funds to interact with the Entropy blockchain network. To get these testing funds, you will need a GitHub account."
 ---
-
-You need funds to interact with the Entropy blockchain network. To get these testing funds, you will need a GitHub account.
 
 ## Mainnet
 

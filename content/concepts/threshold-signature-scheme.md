@@ -1,5 +1,6 @@
 ---
 title: "Threshold Signature Scheme"
+lead: "This page covers what a threshold signature scheme is, and how they are used within the Entropy network."
 ---
 
 - The TSS Implementation used by Entropy is **Synedrion** [src](https://github.com/entropyxyz/synedrion) [API](https://docs.rs/synedrion)

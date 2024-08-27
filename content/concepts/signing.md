@@ -1,8 +1,8 @@
 ---
 title: "Signing"
+lead: "The signing process can only take place when a user is already registered on Entropy. The process involves the user and a committee of validators collectively performing the signing."
 ---
 
-The signing process can only take place when a user is already registered on Entropy. The process involves the user and a committee of validators collectively performing the signing.
 
 The committee requires one Validator from each signing group as well as the user. The current version of the program will be executed here to determine whether or not to proceed with the signing protocol.
 
