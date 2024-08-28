@@ -3,6 +3,13 @@ title: "Programs"
 lead: "The purpose of an Entropy program is to determine whether a group of nodes should generate a signature or not. Developers can create and deploy programs, but validator nodes are the only agents that will directly interact with the programs once deployed. Programs do not return any data other than a _success_ or _failed_ response."
 ---
 
+# Questions:
+#     - Is there a size limit for programs?
+#     - What can I call?
+#     - Can I call other chains or things external to the program.
+#     - Can I call other programs?
+#     - Can I get randomness within a program?
+
 ## Features and Details
 
 In more concrete terms, Entropy programs are WebAssembly components that implement an Entropy-specific interface. The only function that a user must manually implement is `evaluate`, which takes the user's signature request as input and returns a success or an error. If no error is returned, then the message in the signature request will be signed using the program's corresponding key pair with the specified hashing algorithm.
