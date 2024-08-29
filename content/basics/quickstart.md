@@ -193,17 +193,10 @@ Next up, we'll attempt to get a signature from the network!
 1. Press `ENTER` to open a text editor.
 1. Within your text editor, enter a message. It doesn't matter what the message is at this point.
 1. Once you have finished entering your message into the text editor, save and quit the text editor.
-1. The CLI should output a `Uint8Array` signature:
+1. The CLI will output a `base64` encoded string:
 
     ```output
-    signature: Uint8Array(65) [
-        205,  50, 230, 124,  87,  36,  31,  59, 120, 211, 254,
-        244,  29,  69, 194, 137,   1, 235, 195, 223,  77,   1,
-        115,  52, 194, 219, 184,  49,  54, 222, 137,  17,  47,
-        89,  77, 244,  50, 151, 103, 233,  81, 123,  59, 102,
-        247,  71, 223,  28,  15, 200, 138, 156, 223, 114,  51,
-        89, 145,  10,  49, 233, 239, 231, 150,  58,   1
-    ]
+    signature: 0x4dc30d4b250900148b1facd054fdc611bd1c4103bf20409bf57fa04db5ba8fd00515ef9c497223e174ebad2bf69830997256c4081868b9f7f4b1f729eb8662ad00
     ```
 
 Congratulations! You just received a signature from the Entropy network using the CLI!
