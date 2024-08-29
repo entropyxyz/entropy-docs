@@ -5,7 +5,18 @@ lead: "Getting a signature from the network is the main purpose of Entropy. Once
 
 ## Signing process
 
-![Signing Flow New](./images/signing-new.svg)
+```mermaid
+sequenceDiagram
+    Alice->>Alice: Creates transaction.
+    Alice->>Validator Bob: Sends transaction through private means. 
+    Alice->>Validator Charlie: Sends transaction through private means.
+    Validator Bob->> Validator Bob: Determines whether they are a member of the signing committee.
+    Validator Charlie->> Validator Charlie: Determines whether they are a member of the signing committee.
+    Validator Bob->> Signing Committee: Requires constraints pass and the transaction matches the hash to sign.
+    Validator Charlie->> Signing Committee: Requires constraints pass and the transaction matches the hash to sign.
+    Signing Committee->> Signing Committee: Generates signature.
+    Signing Committee->> Alice: Sends completed signature.
+```
 
 1. The user computes the hash of the message they wish to sign and selects a signing committee by deterministically selecting a member of each signing group based on this hash. They can get the details of the signing groups as they were published on-chain when the user [registered]({{< relref "./registering" >}}).
 1. The user contacts all threshold servers in the signing committee and makes a POST to `/user/sign_tx` with the message to be signed (encrypted for that node). 
