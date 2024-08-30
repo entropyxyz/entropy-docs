@@ -7,7 +7,41 @@ The SDK method for registering is [`Entropy.register`](https://github.com/entrop
 
 ## The registering process
 
-![Register Flow](./images/register.svg)
+```mermaid
+sequenceDiagram
+    actor User
+    participant Chain
+
+    participant Validator Alice
+    participant Validator Bob
+    participant Validator Charlie
+    participant Validator David
+
+    box Subgroup 1
+    participant Validator Alice
+    participant Validator Bob
+    end
+
+    box Subgroup 2
+    participant Validator Charlie
+    participant Validator David
+    end
+
+    User ->> Chain: Informs chain of registration.
+
+    Note over Chain: Selects validators for distributed-key-generation (DKG).
+    Chain ->> Validator Alice: Sends user information.
+    Chain ->> Validator Charlie: Sends user information.
+
+    Note over Validator Alice, Validator Bob: Perform DKG.
+    Note over Validator Charlie, Validator David: Perform DKG.
+    Validator Alice ->> Validator Bob: Sends key-share to rest of subgroup.
+    Validator Charlie ->> Validator David: Sends key-share to rest of subgroup.
+
+    Validator Alice ->> Chain: Confirms user is registered.
+    Validator Charlie ->> Chain: Confirms user is registered.
+    Note over Chain: User now in a registered state.
+```
 
 1. The user registers with the Entropy chain by submitting a transaction from the 'signature request account' containing the 'Account Key', and initial 'ProgramsData'. 
     * ```ProgramsData``` - Is multiple Programs Instances. Which contain the ```program_pointer``` (the hash of the program you want to use) and the ```program_config``` for that program. On the evaluation of a signature request a threshold server will run all the programs and pass through the program config for that program.

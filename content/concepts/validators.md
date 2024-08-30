@@ -7,7 +7,19 @@ title: "Validators"
 - The Entropy blockchain is built with [Substrate](https://docs.substrate.io/). This handles public data relating to who the users are and which programs they use, who the validators are and which 'signing subgroup' they belong to, and the bytecode of all available programs.
 - The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum). This handles private data, such as a user's signing key shares, and runs the signing protocol.
 
-![birdsEye](./images/birdsEye.png)
+```mermaid
+flowchart TD
+    block_n["Block (n)"]
+    block_n_plus_1["Block (n + 1)"]
+    block_n_plus_2["Block (n + 2)"]
+    threshold_server["Threshold Server"]
+
+    block_n --> block_n_plus_1
+    block_n_plus_1 --> block_n_plus_2
+
+    block_n-- "Messages come into threshold server through offchain worker." ---threshold_server
+    threshold_server-- "Threshold server talks to chain through RPC (transaction for writes)." ---block_n_plus_1
+```
 
 ## The Entropy chain [src](https://github.com/entropyxyz/entropy-core/tree/master/node/cli)
 
