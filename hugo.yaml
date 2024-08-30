@@ -48,3 +48,23 @@ params:
     displayToggle: true
 
   plausibleAnalytics: true
+
+glossary:
+  - name: "account"
+    description: "All information is associated with a specific program for a particular user or entity."
+  - name: "admin key"
+    description: "A key that allows you to deploy programs and modify the settings of those programs. Admin keys cannot request signatures. This key must be funded to perform some actions."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
