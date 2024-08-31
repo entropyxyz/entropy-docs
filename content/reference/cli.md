@@ -356,7 +356,10 @@ entropy sign '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' 'Pickle Pee, Pum
 
 ## Configuration
 
-The CLI uses a configuration file to set and store basic information. This file is saved in `~/.config`
+The CLI uses a configuration file to set and store basic information. This file is saved in: 
+
+- **MacOS**: `/Library/Preferences/entropy-cryptography/entropy-cli.json`
+- **Ubuntu**: `~/.config/entropy-cryptography/entropy-cli.json`
 
 ## Troubleshooting
 
