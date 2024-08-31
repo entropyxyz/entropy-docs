@@ -8,12 +8,14 @@ lead: "The command-line interface (CLI) is a straightforward way to experiment w
     {{< card 
         link="#interactive-mode" 
         title="Interactive mode" 
+        image="/images/entropy-tui-terminal.png"
         subtitle="Use the text-based user interface (TUI) to interact with the CLI tool." 
     >}}
 
     {{< card 
         link="#programmatic-mode" 
         title="Programmatic mode" 
+        image="/images/entropy-cli-terminal.png"
         subtitle="Pass arguments directly to the CLI as single-line terminal commands." 
     >}}
 
@@ -351,6 +353,13 @@ Sign a message using the Entropy network. Output is a signature as a string.
 ```shell
 entropy sign '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' 'Pickle Pee, Pump-a-Rum!'
 ```
+
+## Configuration
+
+The CLI uses a configuration file to set and store basic information. This file is saved in: 
+
+- **MacOS**: `/Library/Preferences/entropy-cryptography/entropy-cli.json`
+- **Ubuntu**: `~/.config/entropy-cryptography/entropy-cli.json`
 
 ## Troubleshooting
 
