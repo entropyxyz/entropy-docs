@@ -94,7 +94,6 @@ Tooltips allow the reader to hover over a particular word or phrase, and have a 
   "adapter" "Plugins that provide support for different chains and program configurations. For example, an adapter can define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all."
 
 ...
-
 ```
 
 To use a tooltip, use the following syntax:
@@ -115,7 +114,7 @@ To submit a support ticket:
 
 1. Head to the **Discussion** tab of the [github.com/entropyxyz/community repository](https://github.com/entropyxyz/community).
 1. Select **New discusison**.
-1. Next to \*Support** click **Get started\*\*.
+1. Next to **Support** click **Get started**.
 1. Someone from Entropy will reach out to you within that thread for more details.
 
 ### Discord
