@@ -110,36 +110,3 @@ You can get a signature programmatically by using the CLI directly through your 
     ```
 
 Take a look at the [CLI reference page]({{< relref "../reference/command-line-interface.md" >}}) for more information on how to use the Entropy CLI programmatically.
-#
-# ## Rust testing interface 
-#
-# As an alternative to the [Entropy CLI above]({{< relref "#command-line-interface" >}}), you can get a signature programmatically by using the Rust-based Entropy Test CLI.
-#
-# 1. Ensure that you have the `entropy-test-cli` binary installed:
-#
-#     ```shell
-#     entropy-test-cli --help
-#     ```
-#
-#     ```output
-#     This is a CLI test client.
-#     It requires a running deployment of Entropy with at least two chain nodes and two TSS servers.
-#
-#     Usage: entropy-test-cli [OPTIONS] <COMMAND>
-#
-#     ...
-#     ```
-#
-#     Check the [Rust Testing Interface page]({{< relref "../reference/rust-testing-interface.md"}}) for more details on how to install this interface.
-#
-# 1. Request a signature by using the `sign` command with the address you want to use, and the message you want to sign:
-#
-#     ```shell
-#     entropy-test-cli sign <SIGNATURE_VERIFYING_KEY> <MESSAGE>
-#     ```
-#
-#     For example:
-#
-#     ```shell
-#     entropy-test-cli sign 
-#     ```
