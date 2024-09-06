@@ -4,7 +4,7 @@ lead: "The Rust testing interface (RTI) is a simple way to perform some actions 
 ---
 
 {{< callout type="warning" >}}
-This CLI has no secure private key storage and is intended for use with test networks. If you want a fully featured interface, [check out the JavaScript CLI]({{< relref "./cli.md" >}}).
+This CLI has no secure private key storage and is intended for use with test networks. If you want a fully featured interface, [check out the JavaScript CLI]({{< relref "./command-line-interface.md" >}}).
 {{< /callout >}}
 
 ## Installation

@@ -7,7 +7,7 @@ lead: "This page details some of the ways you can create and maintain your Entro
 
 The CLI has a built-in account manager. This is useful for running quick, one-time transactions. The CLI account manager can also be helpful for testing purposes. Here is the process for managing your accounts using the CLI's interactive text-based user interface (TUI).
 
-You need to have the Entropy CLI installed. [Take a look at the CLI page for details on how to install the CLI]({{< relref "../reference/cli.md" >}}).
+You need to have the Entropy CLI installed. [Take a look at the CLI page for details on how to install the CLI]({{< relref "../reference/command-line-interface.md" >}}).
 
 ### Create an account
 
