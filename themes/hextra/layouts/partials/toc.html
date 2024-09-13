@@ -12,7 +12,9 @@
         <p class="hx-mb-4 hx-font-semibold hx-tracking-tight">{{ $onThisPage }}</p>
         {{- range . -}}
           <ul>
-            {{- with .Headings -}}{{ template "toc-subheading" (dict "headings" . "level" 0) }}{{- end -}}
+            {{- with .Headings -}}
+              {{- template "toc-subheading" (dict "headings" . "level" 1 "maxDepth" 2) -}}
+            {{- end -}}
           </ul>
         {{- end -}}
       {{- end -}}
@@ -54,28 +56,20 @@
   {{ end -}}
 </nav>
 
-{{/* TOC subheadings component. This is a recursive component that renders a list of headings. */}}
+{{/* Define the toc-subheading template */}}
 {{- define "toc-subheading" -}}
-  {{- $headings := .headings -}}
   {{- $level := .level -}}
-  {{- if ge $level 6 -}}
-    {{ return }}
-  {{- end -}}
-
-  {{- $padding := (mul $level 4) -}}
-  {{- $class := cond (eq $level 0) "hx-font-semibold" (printf "ltr:hx-pl-%d rtl:hx-pr-%d" $padding $padding) -}}
-
-  {{- range $headings }}
-    {{- if .Title }}
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="{{ $class }} hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#{{ anchorize .ID }}">
-          {{- .Title | safeHTML | plainify | htmlUnescape }}
-        </a>
+  {{- $maxDepth := .maxDepth -}}
+  {{- range .headings -}}
+    {{- if le $level $maxDepth -}}
+      <li>
+        <a href="#{{ .ID }}">{{ .Title }}</a>
+        {{- with .Headings -}}
+          <ul>
+            {{- template "toc-subheading" (dict "headings" . "level" (add $level 1) "maxDepth" $maxDepth) -}}
+          </ul>
+        {{- end -}}
       </li>
     {{- end -}}
-    {{- with .Headings -}}
-      {{ template "toc-subheading" (dict "headings" . "level" (add $level 1)) }}
-    {{- end -}}
-
   {{- end -}}
 {{- end -}}
