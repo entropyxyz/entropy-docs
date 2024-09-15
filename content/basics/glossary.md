@@ -1,13 +1,11 @@
 ---
 title: "Glossary"
-lead: "Basic descriptions of some of the unique language found within this site."
+lead: "A list of some unfamiliar words and phrases found throughout Entropy documentation."
 ---
-
-Here is a list of some unfamiliar words and phrases found throughout the Entropy documentation.
 
 ## Account
 
-All information is associated with a specific program for a particular user or entity. An account is established with an [admin key]({{< relref "#admin-key" >}}). An admin key can assign capabilities to [device keys]({{< relref "#device-key" >}}).
+A unique public and private key pair that can hold, send, and receive digital assets. The account essentially contains all the information associated with a specific program for a particular user or entity. An account is established with an [admin key]({{< relref "#admin-key" >}}) which can assign capabilities to [device keys]({{< relref "#device-key" >}}).
 
 ## Admin key
 
