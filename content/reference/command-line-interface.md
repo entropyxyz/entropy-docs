@@ -360,8 +360,27 @@ entropy sign '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' 'Pickle Pee, Pum
 
 The CLI uses a configuration file to set and store basic information. This file is saved in: 
 
+- **Arch**: `~/.config/entropy-cryptography/entropy-cli.json`
 - **MacOS**: `/Library/Preferences/entropy-cryptography/entropy-cli.json`
 - **Ubuntu**: `~/.config/entropy-cryptography/entropy-cli.json`
+- **Windows**: `C:\Users\<USERNAME>\AppData\Roaming\entropy-cryptography\Config\entropy-cli.json`
+
+This configuration file contains:
+
+| Description | Name in configuration file |
+| ----------- | -------------------------- |
+| Account information | `accounts: [...]` |
+| Which account is currently selected | `selectAccount` |
+| Endpoints that you are connected to | `endpoints: {...}` |
+| Configuration version | `migration-version` |
+
+{{< callout type="danger" >}}
+The config file contains your unencrypted private key.
+{{< /callout >}}
+
+### Deleting your config
+
+The config file gets generated the first time that you start the CLI. If you somehow _break_ your config, you can delete your existing config and start the CLI -- it will generate a new base-config.
 
 ## Troubleshooting
 
