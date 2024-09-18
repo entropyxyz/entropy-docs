@@ -358,12 +358,14 @@ entropy sign '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' 'Pickle Pee, Pum
 
 ## Configuration
 
-The CLI uses a configuration file to set and store basic information. This file is saved in: 
+The CLI uses a configuration file to set and store basic information. This CLI uses [env-paths](https://www.npmjs.com/package/env-paths) to determine where configurations files should be stored:
 
 - **Arch**: `~/.config/entropy-cryptography/entropy-cli.json`
 - **MacOS**: `/Library/Preferences/entropy-cryptography/entropy-cli.json`
 - **Ubuntu**: `~/.config/entropy-cryptography/entropy-cli.json`
 - **Windows**: `C:\Users\<USERNAME>\AppData\Roaming\entropy-cryptography\Config\entropy-cli.json`
+
+### Config file contents
 
 This configuration file contains:
 
@@ -380,7 +382,24 @@ The config file contains your unencrypted private key.
 
 ### Deleting your config
 
-The config file gets generated the first time that you start the CLI. If you somehow _break_ your config, you can delete your existing config and start the CLI -- it will generate a new base-config.
+The config file gets generated the first time that you start the CLI. If you somehow _break_ your config, you can delete your existing config and start the CLI -- it will generate a new base config.
+
+## Logs
+
+Similar to the configuration file, log files for this CLI can be found in the default [env-paths](https://www.npmjs.com/package/env-paths) locations:
+
+- **Arch**: `~/.local/state/entropy-cryptography/`
+- **MacOS**: `/Library/Logs/entropy-cryptography/`
+- **Ubuntu**: `~/.local/state/entropy-cryptography/`
+- **Windows**: `C:\Users\<USERNAME>\AppData\Local\entropy-cryptography\Log`
+
+### Log file contents
+
+There are three types of log file:
+
+- **Debug**: Contains detailed technical information useful for troubleshooting during software development and maintenance.
+- **Error**: Records specific software failures, including the time, severity, and context of each error.
+- **Info**: Tracks general system events, providing a high-level overview of the application's behaviour.
 
 ## Troubleshooting
 
