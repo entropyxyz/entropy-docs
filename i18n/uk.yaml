@@ -1,3 +1,4 @@
+# On-page variables
 backToTop: "Прокрутіть до верху"
 changeLanguage: "Змінити мову"
 changeTheme: "Змінити тему"
@@ -13,3 +14,10 @@ poweredBy: "Технологія Hugo"
 readMore: "Читати далі"
 searchPlaceholder: "пошук..."
 
+# Navigation
+search: "Пошук"
+github: "GitHub"
+external-links: "Зовнішні посилання"
+community-repository: "Репозиторій спільноти"
+github-organization: "Організація GitHub"
+discord-server: "Сервер Discord"

@@ -6,26 +6,32 @@ theme: "hextra"
 menu:
   main:
     - name: Search
+      identifier: search
       weight: 4
       params:
         type: search
     - name: GitHub
+      identifier: github
       weight: 5
       url: "https://github.com/entropyxyz/entropy-docs"
       params:
         icon: github
   sidebar:
     - name: External links
+      identifier: external-links
       params:
         type: separator
       weight: 1
     - name: "Community Repository"
+      identifier: community-repository 
       url: "https://github.com/entropyxyz/community"
       weight: 2
     - name: "GitHub Organization"
+      identifier: github-organization 
       url: "https://github.com/entropyxyz"
       weight: 3
     - name: "Discord Server"
+      identifier: discord-server
       url: "https://discord.com/invite/9JUQwHBhVz"
       weight: 4
 
@@ -55,5 +61,6 @@ params:
   theme:
     default: system
     displayToggle: true
+    hideLabel: true
 
   plausibleAnalytics: true
