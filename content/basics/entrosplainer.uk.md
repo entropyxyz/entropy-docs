@@ -1,6 +1,6 @@
 ---
-title: "Entrosplainer"
-lead: "Learn the basic core concepts of Entropy, and what it's built for."
+title: "Основи ентропії"
+lead: "Дізнайтеся про основні поняття Entropy та для чого вона створена."
 math: true
 ---
 
