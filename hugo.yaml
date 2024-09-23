@@ -29,6 +29,15 @@ menu:
       url: "https://discord.com/invite/9JUQwHBhVz"
       weight: 4
 
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+  uk:
+    languageName: Українська
+    weight: 2
+
 params:
   description: "Entropy liberates users from on-chain friction through novel cryptography to build autonomous systems."
 
