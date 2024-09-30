@@ -1,7 +1,11 @@
 ---
 title: "Rust Testing Interface"
-lead: "The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command line. It is intended for testing [Entropy Core](https://github.com/entropyxyz/entropy-core) functionality and wasn't designed for end-user or production use."
+lead: "The Rust testing interface (RTI) is a simple way to perform some actions on the Entropy network directly from the command line. The RTI is intended for testing [Entropy Core](https://github.com/entropyxyz/entropy-core) functionality."
 ---
+
+## Limitations
+
+Actions like deploying a program or storing accounts aren't possible through this interface. Developers looking for a fully featured command-line interface should see the [Entropy CLI](./command-line-interface.md).
 
 {{< callout type="warning" >}}
 **No Secure Key Storage**: This CLI has no secure private key storage and is only intended for use with test networks. Do not use this interface in a production environment. If you want a fully featured interface, [check out the Entropy CLI]({{< relref "./command-line-interface.md" >}}).
