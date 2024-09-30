@@ -8,15 +8,15 @@ aliases:
 {{< cards cols=2 >}}
 
     {{< card 
-        link="#interactive-mode" 
-        title="Interactive mode" 
+        link="#interactive-cli" 
+        title="Interactive CLI" 
         image="/images/entropy-tui-terminal.png"
         subtitle="Use the text-based user interface (TUI) to interact with the CLI tool." 
     >}}
 
     {{< card 
-        link="#programmatic-mode" 
-        title="Programmatic mode" 
+        link="#programmatic-cli" 
+        title="Programmatic CLI" 
         image="/images/entropy-cli-terminal.png"
         subtitle="Pass arguments directly to the CLI as single-line terminal commands." 
     >}}
@@ -96,7 +96,7 @@ Follow these steps to install Entropy globally using NPM:
                                                           a signature (string)
     ```
 
-## Interactive mode
+## Interactive CLI
 
 The following functions are available within the CLI using the text-based user interface (TUI). To start the TUI, simply enter `entropy` without any arguments into your terminal:
 
@@ -210,7 +210,7 @@ View all programs deployed to the network from locally stored accounts.
   Exit to Main Menu
 ```
 
-## Programmatic mode
+## Programmatic CLI
 
 You can interact with Entropy quickly by giving single-line commands to the `entropy` executable.
 
