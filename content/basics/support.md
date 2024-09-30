@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "Stuck and need help? Learn how to get support here."
+lead: "Stuck and need help? Learn how to get support here."
 ---
 
 This page provides guidance on how Entropy users can seek support.
