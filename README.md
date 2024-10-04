@@ -137,3 +137,5 @@ You can find all the docs in the `/content` folder. This content directory is st
 - Most things in `/content` are licensed under [MIT](./LICENSE) unless otherwise specified.
 - The theme for this site is a modified version of [Imfing's Hextra theme](https://github.com/imfing/hextra) used under the [MIT license](https://github.com/imfing/hextra/blob/e3b582676e5db64078053db99e3636e5b6311874/LICENSE).
 - Hugo is licensed under the [Apache 2.0 License](https://github.com/gohugoio/hugo/blob/439f07eac4706eb11fcaea259f04b3a4e4493fa1/LICENSE).
+
+<!-- This is a comment that doesn't need to exist. It's only here in a test branch. If you see this comment while checked out any branch that doesn't start with `test`, delete it. -->
