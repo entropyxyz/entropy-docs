@@ -41,8 +41,6 @@ To transfer funds, you must have the following:
 
    ![](./images/transfer-funds-authorize-transaction.png)
 
-1. Enter your password if prompted, and click **Sign the transaction**.
-
 That's it! The transaction will take up to 6 seconds to transfer funds from one account to another.
 
 ## Interactive CLI
