@@ -4,8 +4,8 @@ title: "Validators"
 
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the Entropy network. It has two different binaries, both of which are run by each validator node:
 
-- The Entropy blockchain is built with [Substrate](https://docs.substrate.io/). This handles public data relating to who the users are and which programs they use, who the validators are and which 'signing subgroup' they belong to, and the bytecode of all available programs.
-- The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum). This handles private data, such as a user's signing key shares, and runs the signing protocol.
+- The Entropy blockchain is built with [Substrate](https://docs.substrate.io/). This handles public data relating to who the users are and which programs they use, who the validators are and which belong to the signing comittee, and the bytecode of all available programs.
+- The [Threshold signature server](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) which has an HTTP API based on [Axum](https://docs.rs/axum). This handles private data, such as parent network key share, and runs the signing protocol.
 
 ```mermaid
 flowchart TD
@@ -23,7 +23,7 @@ flowchart TD
 
 ## The Entropy chain [src](https://github.com/entropyxyz/entropy-core/tree/master/node/cli)
 
-The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold signature servers need to have consensus on. For example, we need to have agreement of which validators belong to which signing subgroups, and which subgroups will participate in signing a particular message.
+The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold signature servers need to have consensus on. For example, we need to have agreement of which validators belong to the singing comittee 
 
 ### General functionality from Substrate
 
@@ -38,7 +38,7 @@ The purpose of the Entropy blockchain is to have a 'single source of truth' for 
 
 ### Custom functionality specific to Entropy:
 
-- **Staking extension pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) - staking is extended to assign a particular Threshold Signature Servers account to a particular chain node, and tracks which signing subgroup they belong to.
+- **Staking extension pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/staking/src/lib.rs) - staking is extended to assign a particular Threshold Signature Servers account to a particular chain node, and tracks which ones are in the signing comittee. 
 - **Registry pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/registry/src/lib.rs) - This provides a registry of Entropy users and which programs are currently associated with their account. This uses Substrate [events](https://docs.substrate.io/build/events-and-errors).
 - **Programs pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/programs/src/lib.rs) - This stores program bytecode as well as metadata associated with the program, such as a description of its interface and how many times it is used.
 
