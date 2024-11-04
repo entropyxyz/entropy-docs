@@ -39,6 +39,10 @@ Follow these steps to install Entropy globally using NPM:
     v20.18.0
     ```
 
+    {{< callout type="info" >}}
+    Consider using [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) to keep your Node installation organized. NVM also makes it trivial to switch between Node versions when necessary.
+    {{< /callout >}}
+
 1. Install the Entropy CLI globally using NPM:
 
     ```shell
