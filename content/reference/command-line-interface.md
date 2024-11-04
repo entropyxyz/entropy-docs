@@ -29,14 +29,14 @@ After installing, running `entropy` without any arguments will take you to the t
 
 Follow these steps to install Entropy globally using NPM:
 
-1. Ensure you have Node.js version 20.9.0 or above:
+1. The CLI requires Node version 20 to run. Ensure you have Node.js version `20.x.x`:
 
     ```shell
     node --version
     ```
 
     ```output
-    v22.2.0
+    v20.18.0
     ```
 
 1. Install the Entropy CLI globally using NPM:
@@ -45,7 +45,7 @@ Follow these steps to install Entropy globally using NPM:
     npm install --global @entropyxyz/cli
     ```
 
-1. You can now run the CLI anywhere using `entropy`:
+1. You can now run the text-based interface anywhere using `entropy`:
 
     ```shell
     entropy
