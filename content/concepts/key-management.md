@@ -11,7 +11,7 @@ The idea here is that when validators join the network they may be selected to t
 
 The selected TSSs will connect to each other and execute the key reshare protocol on the parent network key, generating a new set of key shares. This protocol is similar to the distributed key generation protocol used during jump starting the network. Upon receiving a new key share, the recipients will hold the new key share in a secondary slot and rotate them to the current parent network key when everyone in the signing group has agreed that the rotation was succeful. All previous key shares will be incompatible with the refreshed key shares. However, the public validating key of the parent network key signing keypair never changes. This means all child keys will also remain the same.
 
-For information on chain randomness used see (here)[https://docs.substrate.io/build/randomness/]
+Check out the [Substrate documentation for information on _chain randomness_](https://docs.substrate.io/build/randomness/).
 
 ```mermaid
 sequenceDiagram
