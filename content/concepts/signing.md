@@ -1,6 +1,6 @@
 ---
 title: "Signing"
-lead: "Getting a signature from the network is the main purpose of Entropy. Once you have this signature you can apply it onto whatever cryptographic process you need, like signing a PGP message or submitting an Ethereum transaction. This page covers how signing works."
+lead: "This section delves into the technical details of the signing process, including the interaction between users, relayer nodes, and the signing committee, as well as the underlying threshold signature scheme."
 ---
 
 ## Signing process

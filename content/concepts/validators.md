@@ -1,5 +1,6 @@
 ---
 title: "Validators"
+lead: "This section provides a technical overview of the validator nodes that power the Entropy network, focusing on the roles of the Entropy blockchain and the threshold signature server."
 ---
 
 [`entropy-core`](https://github.com/entropyxyz/entropy-core) is run by validator nodes in the Entropy network. It has two different binaries, both of which are run by each validator node:

@@ -1,7 +1,11 @@
 ---
-title: "Key Reshare"
-lead: "This page covers the process where key shares held by signing validators in our network periodically subsitute signers in and out and swap keyshares"
+title: "Key management"
+lead: "This page explains the process for periodically substituting signers, swapping keyshares, and other processes the network uses to manage keys."
+aliases:
+    - key-reshare
 ---
+
+## Key reshare
 
 The idea here is that when validators join the network they may be selected to the signing comittee. A smaller randomly selected group of validators that is responsible for holding the parent network key. Every session, which consists of 2400 blocks (equivalent to 4 hours), the chain will notify the TSSs (Threshold Signature Servers) that a reshare is taking place. The chain will also reandomly select a validator to join the netowrk and remove the oldest signer from the comittee.
 
@@ -17,12 +21,12 @@ sequenceDiagram
     Entropy Chain->>+Validator TSS: When everyone is done tells all signers to rotate their holding key to the new parent key.
 ```
 
-## Negative pathways 
+### Negative pathways 
 
-* The above describes the happy pathway this part is for edge cases 
+- The above describes the happy pathway this part is for edge cases 
 
-### A failure of reshare protocol 
+#### A failure of reshare protocol 
 
-* There are multiple ways this process can fail, if that were to happen the offending party would be known as everyone in the new signing party needs to participate 
-* Since the process is two steps the current signing party would remain the offending party would be moved to slashing and the chain would initate a new reshare (not implemented yet)
-* All parties are unable to unbond until leaving the singing party so their funds would be at risk and able to be slashed
+- There are multiple ways this process can fail, if that were to happen the offending party would be known as everyone in the new signing party needs to participate 
+- Since the process is two steps the current signing party would remain the offending party would be moved to slashing and the chain would initate a new reshare (not implemented yet)
+- All parties are unable to unbond until leaving the singing party so their funds would be at risk and able to be slashed
