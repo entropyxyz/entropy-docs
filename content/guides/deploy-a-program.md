@@ -19,7 +19,7 @@ Next, you can move on to starting the CLI and deploying your program.
 
 ### Deploy the program
 
-1. Start the CLI by running `entropy`.
+1. Start the CLI by running `entropy tui`.
 1. At the main menu within the CLI, select **Deploy Program**:
 
    ```output
@@ -50,7 +50,7 @@ You can now interact with your program using the program pointer.
 
 If you've lost your program pointer, you can list it by running the following:
 
-1. Start the CLI by running `entropy`.
+1. Start the CLI by running `entropy tui`.
 1. At the main menu within the CLI, select **Deploy Program**:
 
    ```output

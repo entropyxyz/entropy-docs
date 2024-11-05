@@ -33,10 +33,10 @@ The command-line interface (CLI) is the most straightforward way to interact wit
     npm install --global @entropyxyz/cli
     ```
 
-1. Run the CLI using `entropy`:
+1. Run the CLI using `entropy tui`:
 
     ```shell
-    entropy
+    entropy tui
     ```
 
     ```output
