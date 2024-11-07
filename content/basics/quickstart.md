@@ -105,34 +105,22 @@ Next up, you'll request some funds to play around with.
 
 ## 3. Get testing funds
 
-You need funds to interact with the Entropy blockchain network. To get these testing funds, you will need a GitHub account.
+Funds for testing are available from the CLI's built-in faucet.
 
-1. Log into your GitHub account and go to [github.com/entropyxyz/community](https://github.com/entropyxyz/community).
-1. Navigate to the **Discussions** tab and select **New discussion**.
-1. Next to **Get Test Funds** click **Get started**:
+1. Navigate to **Manage Accounts** and then **Select Account**.
+1. Select the account you want to receive test funds.
+1. Go back the main TUI menu and select **Entropy Faucet**.
 
-    ![](./images/quickstart-create-test-funds-discussion.png)
-
-1. In the **Title** field, enter the `address` you copied from the previous section.
-1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and why into this field.
-1. Click **Start discussion**.
-
-At this point, someone from Entropy will send you some test funds. Once they've sent the funds to your provided address, they'll let you know and close the issue.
-
-{{< callout type="warning" >}}
-We're currently publically testing some of the Entropy tooling. As such, some of the workflows, like getting test funds, are a bit rough. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
-{{< /callout >}}
+The CLI will request `2` test tokens from the Entropy network and forward them to your selected account. This equates to `20,000,000,000` bits, which is enough to perform transactions like registering an account and deploying a program.
 
 Once you have been sent some funds, you can check your balance in the CLI.
 
-6. Open the CLI text-based user interface using `yarn start`.
-1. Select **Balance** from the menu.
-1. You should see your account in the list. Use the arrow keys to highlight it and press `ENTER`.
+1. Return to the main menue and select **Balance**.
 1. The CLI should show your balance:
 
     ```output
     ? Select Action Balance
-    Address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has a balance of: 100000000000000 bits
+    Entropy Account [Andre] (5F3xmKa3WRkoHR4o6XjFQaWF2EskhtSh4ST5wY5cfsD9JYbC) has a balance of: 20,000,000,000 BITS
     ```
 
 Next, you'll register your account on the Entropy network.
