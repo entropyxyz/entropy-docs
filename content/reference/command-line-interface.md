@@ -104,7 +104,7 @@ Follow these steps to install Entropy globally using NPM:
 
 You can interact with Entropy quickly by giving single-line commands to the `entropy` executable.
 
-```shell
+```output
 Usage: entropy [options] [command]
 
 CLI interface for interacting with entropy.xyz.
@@ -125,7 +125,7 @@ Commands:
 
 ### `tui`
 
-```shell
+```output
 Usage: entropy tui [options]
 
 Text-based User Interface (interactive)
@@ -138,7 +138,7 @@ Options:
 
 ### `account`
 
-```shell
+```output
 Usage: entropy account [options] [command]
 
 Commands to work with accounts on the Entropy Network
@@ -156,7 +156,7 @@ Commands:
 
 #### `create`
 
-```shell
+```output
 Usage: entropy account create|new [options] <name>
 
 Create a new entropy account from scratch. Output is JSON of form {name, address}
@@ -171,7 +171,7 @@ Options:
 
 #### `import`
 
-```shell
+```output
 Usage: entropy account import [options] <name> <seed>
 
 Import an existing entropy account from seed. Output is JSON of form {name, address}
@@ -187,7 +187,7 @@ Options:
 
 #### `list`
 
-```shell
+```output
 Usage: entropy account list|ls [options]
 
 List all accounts. Output is JSON of form [{ name, address, verifyingKeys }]
@@ -198,7 +198,7 @@ Options:
 
 #### `register`
 
-```shell
+```output
 Usage: entropy account register [options]
 
 Register an entropy account with a program
@@ -211,7 +211,7 @@ Options:
 
 ### `sign`
 
-```shell
+```output
 Usage: entropy sign [options] <msg>
 
 Sign a message using the Entropy network. Output is a JSON { verifyingKey, signature }
@@ -227,7 +227,7 @@ Options:
 
 ### `balance`
 
-```shell
+```output
 Usage: entropy balance [options] <account>
 
 Command to retrieive the balance of an account on the Entropy Network
@@ -242,7 +242,7 @@ Options:
 
 ### `transfer`
 
-```shell
+```output
 Usage: entropy transfer [options] <destination> <amount>
 
 Transfer funds between two Entropy accounts.
@@ -259,7 +259,7 @@ Options:
 
 ### `program`
 
-```shell
+```output
 Usage: entropy program [options] [command]
 
 Commands for working with programs deployed to the Entropy Network
@@ -279,7 +279,7 @@ Commands:
 
 #### `deploy`
 
-```shell
+```output
 Usage: entropy program deploy [options] <bytecode> <configurationSchema> <auxillaryDataSchema>
 
 Deploys a program to the Entropy network, returning a program pointer. Requires
@@ -298,7 +298,7 @@ Options:
 
 #### `get`
 
-```shell
+```output
 Usage: entropy program get [options] <programPointer>
 
 Get a program interface by it's pointer.
@@ -314,7 +314,7 @@ Options:
 
 #### `listDeployed`
 
-```shell
+```output
 Usage: entropy program listDeployed [options]
 
 Get a list of all programs the current account has deployed
@@ -327,7 +327,7 @@ Options:
 
 #### `add`
 
-```shell
+```output
 Usage: entropy program add [options] <programPointer> [programConfigPath]
 
 Add a program to the current account
@@ -347,7 +347,7 @@ Options:
 
 #### `remove`
 
-```shell
+```output
 Usage: entropy program remove|rm [options] <programPointer>
 
 Remove a program from an account (specified by a verifyingKey)
@@ -367,7 +367,7 @@ Options:
 
 #### `list`
 
-```shell
+```output
 Usage: entropy program list|ls [options] <verifyingKey>
 
 List all the programs (an associated config) added to a particular
