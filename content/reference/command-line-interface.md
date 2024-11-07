@@ -103,149 +103,317 @@ Follow these steps to install Entropy globally using NPM:
 
 You can interact with Entropy quickly by giving single-line commands to the `entropy` executable.
 
-### Options
-
-#### Endpoint
-
-You can specify a specific endpoint when passing commands to the CLI. This is done with the `-e` or `--endpoint` argument.
-
-**Examples**:
-
-Supply a custom endpoint using the `--endpoint` option:
-
 ```shell
-entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' --endpoint 'wss://custom-endpoint.example.com'
-```
-
-Specify the custom endpoint prior to calling the `entropy` executable:
-
-```shell
-ENDPOINT='wss://custom-endpoint.example.com'
-entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c'
-```
-
-### Commands
-
-You can enter the following commands directly from the command line.
-
-#### Help
-
-Displays basic help information.
-
-**Arguments**:
-
-None.
-
-**Example**:
-
-```shell
-entropy --help
-```
-
-```output
 Usage: entropy [options] [command]
 
-CLI interface for interacting with entropy.xyz. Running without commands starts an interactive ui
+CLI interface for interacting with entropy.xyz.
 
 Options:
-
-  -e, --endpoint <endpoint>                           Runs entropy with the given endpoint and ignores
-                                                      network endpoints in config. Can also be given a
-                                                      stored endpoint name from config eg: `entropy
-                                                      --endpoint test-net`. (default:
-                                                      "ws://testnet.entropy.xyz:9944/", env: ENDPOINT)
-  -h, --help                                          display help for command
+  -v, --version                              Displays the current running version of Entropy CLI.
+  -cv, --core-version                        Displays the current running version of the Entropy Protocol
+  -h, --help                                 display help for command
 
 Commands:
-  list|ls                                             List all accounts. Output is JSON of form [{ name,
-                                                      address, data }]
-  balance [options] <address>                         Get the balance of an Entropy account. Output is a
-                                                      number
-  transfer [options] <source> <destination> <amount>  Transfer funds between two Entropy accounts.
-  sign [options] <address> <message>                  Sign a message using the Entropy network. Output is
-                                                      a signature (string)
+  tui [options]                              Text-based User Interface (interactive)
+  account                                    Commands to work with accounts on the Entropy Network
+  sign [options] <msg>                       Sign a message using the Entropy network. Output is a JSON { verifyingKey, signature }
+  balance [options] <account>                Command to retrieive the balance of an account on the Entropy Network
+  transfer [options] <destination> <amount>  Transfer funds between two Entropy accounts.
+  program                                    Commands for working with programs deployed to the Entropy Network
 ```
 
-#### List
-
-Lists all the locally stored accounts. Output data in a standard JSON format.
-
-**Arguments**:
-
-None.
-
-**Example**:
+### `tui`
 
 ```shell
-entropy list
+Usage: entropy tui [options]
+
+Text-based User Interface (interactive)
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
 ```
 
-```output
-[
-  {
-    "name": "Eygon",
-    "address": "5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c",
-    "verifyingKeys": []
-  },
-  {
-
-    "name": "Yoel",
-    "address": "5CRnXJRaGZnA8UfhZ7AUyYjkYLvocFSPVzf1odPJfudKxtjY",
-    "verifyingKeys": []
-  }
-]
-```
-
-#### Balance
-
-Display the balance of an Entropy account. Outputs the number of bits held by the given account as an integer.
-
-**Arguments**:
-
-- `address`: the public address of the account that you want to get the balance of. This account does not have to be stored locally by the CLI and can be any valid Entropy address.
-
-**Example**:
+### `account`
 
 ```shell
-entropy balance '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c'
+Usage: entropy account [options] [command]
+
+Commands to work with accounts on the Entropy Network
+
+Options:
+  -h, --help                      display help for command
+
+Commands:
+  create|new [options] <name>     Create a new entropy account from scratch. Output is JSON of form {name, address}
+  import [options] <name> <seed>  Import an existing entropy account from seed. Output is JSON of form {name, address}
+  list|ls                         List all accounts. Output is JSON of form [{ name, address, verifyingKeys }]
+  register [options]              Register an entropy account with a program
+  help [command]                  display help for command
 ```
 
-```output
-1392000839928 BITS
-```
-
-#### Transfer
-
-Transfer funds from one Entropy account to another. You must control the _source_ account to be able to send funds from it.
-
-**Arguments**:
-
-- `source`: the public address of the account from which you want to send funds.
-- `destination`: the public address of the account to which you want to send funds. This account does not have to be stored locally by the CLI and can be any valid Entropy address.
-- `amount`: the number of bits you want to send to the `destination` account.
-
-**Example**:
+#### `create`
 
 ```shell
-entropy transfer '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' '5CRnXJRaGZnA8UfhZ7AUyYjkYLvocFSPVzf1odPJfudKxtjY' 100000
+Usage: entropy account create|new [options] <name>
+
+Create a new entropy account from scratch. Output is JSON of form {name, address}
+
+Arguments:
+  name        A user friendly name for your new account.
+
+Options:
+  --path      Derivation path
+  -h, --help  display help for command
 ```
 
-#### Sign
-
-Sign a message using the Entropy network. Output is a signature as a string.
-
-**Arguments**:
-
-- `address`: the public address of the account with which you want to sign the message.
-- `message`: the message that you want to sign. It must be submitted as a string. Line breaks are not currently supported.
-
-**Example**:
+#### `import`
 
 ```shell
-entropy sign '5DSUAf2DwxW2ebZq15Pm6Z3SJ69Ur8fGd8ytWvgxvNjYtr7c' 'Pickle Pee, Pump-a-Rum!'
+Usage: entropy account import [options] <name> <seed>
+
+Import an existing entropy account from seed. Output is JSON of form {name, address}
+
+Arguments:
+  name        A user friendly name for your new account.
+  seed        The seed for the account you are importing
+
+Options:
+  --path      Derivation path
+  -h, --help  display help for command
+```
+
+#### `list`
+
+```shell
+Usage: entropy account list|ls [options]
+
+List all accounts. Output is JSON of form [{ name, address, verifyingKeys }]
+
+Options:
+  -h, --help  display help for command
+```
+
+#### `register`
+
+```shell
+Usage: entropy account register [options]
+
+Register an entropy account with a program
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
+```
+
+### `sign`
+
+```shell
+Usage: entropy sign [options] <msg>
+
+Sign a message using the Entropy network. Output is a JSON { verifyingKey, signature }
+
+Arguments:
+  msg                           Message you would like to sign (string)
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
+```
+
+### `balance`
+
+```shell
+Usage: entropy balance [options] <account>
+
+Command to retrieive the balance of an account on the Entropy Network
+
+Arguments:
+  account               The address an account address whose balance you want to query. Can also be the human-readable name of one of your accounts
+
+Options:
+  -e, --endpoint <url>  Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help            display help for command
+```
+
+### `transfer`
+
+```shell
+Usage: entropy transfer [options] <destination> <amount>
+
+Transfer funds between two Entropy accounts.
+
+Arguments:
+  destination                   Account address funds will be sent to
+  amount                        Amount of funds to be moved (in "tokens")
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
+```
+
+### `program`
+
+```shell
+Usage: entropy program [options] [command]
+
+Commands for working with programs deployed to the Entropy Network
+
+Options:
+  -h, --help                                                               display help for command
+
+Commands:
+  deploy [options] <bytecode> <configurationSchema> <auxillaryDataSchema>  Deploys a program to the Entropy network, returning a program pointer. Requires funds.
+  get [options] <programPointer>                                           Get a program interface by it's pointer.
+  listDeployed [options]                                                   Get a list of all programs the current account has deployed
+  add [options] <programPointer> [programConfigPath]                       Add a program to the current account
+  remove|rm [options] <programPointer>                                     Remove a program from an account (specified by a verifyingKey)
+  list|ls [options] <verifyingKey>                                         List all the programs (an associated config) added to a particular verifyingKey.
+  help [command]                                                           display help for command
+```
+
+#### `deploy`
+
+```shell
+Usage: entropy program deploy [options] <bytecode> <configurationSchema> <auxillaryDataSchema>
+
+Deploys a program to the Entropy network, returning a program pointer. Requires
+funds.
+
+Arguments:
+  bytecode                      The path to your program bytecode. Must be a .wasm file.
+  configurationSchema           The path to the JSON Schema for validating configurations passed in by users installing this program. Must be a .json file.
+  auxillaryDataSchema           The path to the JSON Schema for validating auxillary data passed to the program on calls to "sign". Must be a .json file.
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
+```
+
+#### `get`
+
+```shell
+Usage: entropy program get [options] <programPointer>
+
+Get a program interface by it's pointer.
+
+Arguments:
+  programPointer                The pointer for the program interface.
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
+```
+
+#### `listDeployed`
+
+```shell
+Usage: entropy program listDeployed [options]
+
+Get a list of all programs the current account has deployed
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
+```
+
+#### `add`
+
+```shell
+Usage: entropy program add [options] <programPointer> [programConfigPath]
+
+Add a program to the current account
+
+Arguments:
+  programPointer                The pointer for the program interface.
+  programConfigPath             The path to the config to apply to the program.
+                                Must be a .json file
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -k, --verifying-key <key>     The verifying key to perform this function
+                                with.
+  -h, --help                    display help for command
+```
+
+#### `remove`
+
+```shell
+Usage: entropy program remove|rm [options] <programPointer>
+
+Remove a program from an account (specified by a verifyingKey)
+
+Arguments:
+  programPointer                The pointer for the program you want to remove.
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -k, --verifying-key <key>     The verifying key to perform this function
+                                with.
+  -p, --program-mod-key <key>   The programModKey to perform this function
+                                with.
+  -h, --help                    display help for command
+```
+
+#### `list`
+
+```shell
+Usage: entropy program list|ls [options] <verifyingKey>
+
+List all the programs (an associated config) added to a particular
+verifyingKey.
+
+Arguments:
+  verifyingKey                  The verifyingKey being queried.
+
+Options:
+  -a, --account <name|address>  Sets the account for the session. Defaults to the last set account (or the first account if one has not been set before). (default: "", env: ENTROPY_ACCOUNT)
+  -e, --endpoint <url>          Runs entropy with the given endpoint and ignores network endpoints in config. Can also be given a stored endpoint name from config eg: `entropy --endpoint test-net`. (default: "wss://testnet.entropy.xyz/", env: ENTROPY_ENDPOINT)
+  -h, --help                    display help for command
 ```
 
 ## Text-based user interface
+
+```output
+  @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
+  @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
+  @@@@@@@@@@ @@@@@@@@@@ @@@@@@@ @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
+  @@@@@ @@@@ @@@@@ @@@@ @@@@@@@ @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@@@@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@@@@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@      @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+  @@@@@@@@@@ @@@@@ @@@@ @@@@@@@ @@@@@       @@@@@@@@@ @@@@@@@@@@ @@@@@@@@@@@
+  @@@@@@@@@@ @@@@@ @@@@ @@@@@@@ @@@@@       @@@@@@@@@ @@@@@@@@@@ @@@@@@@@@@@
+                                                      @@@@@@            TEST
+                                                      @@@@@@            *NET
+                                                      @@@@@@     ENTROPY-CLI
+                                                      @@@@@@     COREv0.3.0
+
+? Select Action (Use arrow keys)
+❯ Manage Accounts
+  Entropy Faucet
+  Balance
+  Register
+  Sign
+  Transfer
+  Deploy Program
+  User Programs
+  Exit
+```
 
 The following functions are available within the CLI using the text-based user interface (TUI). To start the TUI, simply enter `entropy tui` without any arguments into your terminal:
 
@@ -268,41 +436,22 @@ entropy tui
 
 ### Manage Accounts
 
-Create a new Entropy account to store locally. List all Entropy accounts stored locally. Import an account into the CLI using a seed.
+Create, import, and list your accounts.
 
 ```output
-> Create/Import Account
+❯ Create/Import Account
   Select Account
   List Accounts
+  Exit to Main Menu
 ```
 
-#### Create or Import Account
+### Entropy Faucet
 
-Create a new Entropy account or import an existing account using a seed.
+Get test funds to spend on the testnet.
 
-#### Select Account
-
-Select an account to use within other functions. This is relevant if you have multiple accounts.
-
-For example, assume you have three accounts, and you want to check the balance of `account 2`. You would:
-
-1. Start the CLI.
-1. Navigate to **Manage Accounts**.
-1. Navigate to **Select Account**.
-1. Choose the account that you would like to select and use within other functions:
-
-    ```output
-    ? Choose account: (Use arrow keys)
-    > Gael (5CrFp9txcb5UECpNKsD6DTBsG4cj1z58DA43YikSVeeJqXJR)
-      Argo (5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv)
-      Lapp (5G92hBs4UfZpVFYtBmmN3UqPTzGgotq7PSA3XfBMALfvWDUb)
-    ```
-
-1. The account you select is what the CLI will use when running other functions.
-
-#### List Accounts
-
-Show all the locally stored accounts. This function shows secret details such as `seed` in plaintext.
+```output
+Account: 5F3xmKa3WRkoHR4o6XjFQaWF2EskhtSh4ST5wY5cfsD9JYbC has been successfully funded with 20,000,000,000 BITS
+```
 
 ### Balance
 
@@ -325,6 +474,17 @@ Your address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has been successfu
 
 The selected account must have available funds. Each registration costs about `400000000` bits.
 
+### Sign
+
+Sign a message using a registered account.
+
+```output
+? Choose account: (Use arrow keys)
+  aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
+> charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
+  Other
+```
+
 ### Transfer
 
 Transfer funds from a locally stored account to any other valid Entropy address.
@@ -337,17 +497,6 @@ Transferring Funds |++++___________________| 22%
 ```
 
 The `amount to transfer` value is in whole units, not bits. So transferring `1` would equal `10000000000` bits.
-
-### Sign
-
-Sign a message using a registered account.
-
-```output
-? Choose account: (Use arrow keys)
-  aragon (5FTwtSAjnKFybzkAKvyEo7owikXcHXmwzN7MzjwDNKEbjkub)
-> charlie (5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT)
-  Other
-```
 
 ### Deploy Program
 
