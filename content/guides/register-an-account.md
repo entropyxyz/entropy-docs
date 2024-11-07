@@ -7,7 +7,7 @@ lead: "Registering an account is a feature unique to Entropy. Without going into
 
 Here is the process for registering an address using the Entropy CLI's interactive text-based user interface (TUI).
 
-1. Start the CLI by running `entropy`.
+1. Start the CLI by running `entropy tui`.
 1. Back at the main menu within the CLI, select **Register**:
 
    ```output
