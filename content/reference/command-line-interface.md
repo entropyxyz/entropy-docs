@@ -27,14 +27,14 @@ aliases:
 
 Follow these steps to install Entropy globally using NPM:
 
-1. The CLI requires Node version 20 to run. Ensure you have Node.js version `20.x.x`:
+1. The CLI requires Node version 20 or higher to run:
 
     ```shell
     node --version
     ```
 
     ```output
-    v20.18.0
+    v23.1.0
     ```
 
     {{< callout type="info" >}}
