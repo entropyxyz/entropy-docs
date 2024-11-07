@@ -22,7 +22,7 @@ flowchart TD
     threshold_server-- "Threshold server talks to chain through RPC (transaction for writes)." ---block_n_plus_1
 ```
 
-## The Entropy chain [src](https://github.com/entropyxyz/entropy-core/tree/master/node/cli)
+## The Entropy chain
 
 The purpose of the Entropy blockchain is to have a 'single source of truth' for the information which needs to be public and which the threshold signature servers need to have consensus on. For example, we need to have agreement of which validators belong to the singing comittee 
 
@@ -43,7 +43,7 @@ The purpose of the Entropy blockchain is to have a 'single source of truth' for 
 - **Registry pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/registry/src/lib.rs) - This provides a registry of Entropy users and which programs are currently associated with their account. This uses Substrate [events](https://docs.substrate.io/build/events-and-errors).
 - **Programs pallet** [src](https://github.com/entropyxyz/entropy-core/blob/master/pallets/programs/src/lib.rs) - This stores program bytecode as well as metadata associated with the program, such as a description of its interface and how many times it is used.
 
-## The Threshold Signature Server [src](https://github.com/entropyxyz/entropy-core/tree/master/crates/threshold-signature-server) [API](https://docs.rs/entropy-tss)
+## The Threshold Signature Server
 
 This is the part that carries out the threshold signing protocol, together with other instances of the threshold signature server. It has an encrypted key-value store used for private information where consensus is not required. Since the threshold signature server deals with private data that must never be exposed publicly on-chain, it is distributed as a separate binary. It also handles the distributed key generation and proactive-refresh protocols.
 
@@ -69,3 +69,7 @@ If `entropy-tss` is compiled with the `unsafe` feature enabled, some extra HTTP 
 If you need these, build with:
 
 `cargo build -p entropy-tss --release --features unsafe`
+
+## Become a validator
+
+While we're not yet introducing external validators onto the network, you can register [your interest in running an Entropy validator node using this form](https://entropyxyz.typeform.com/to/oEOLvnoD).
