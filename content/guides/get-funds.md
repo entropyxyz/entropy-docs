@@ -1,28 +1,24 @@
 ---
 title: "Get funds"
-lead: "You need funds to interact with the Entropy blockchain network. To get these testing funds, you will need a GitHub account."
+lead: "This page covers how to get your hands on test funds and experience the Entropy testnet directly."
 ---
 
 ## Mainnet
 
-The Entropy main network (mainnet) has yet to be released; as such, mainnet funds are not available.
+The Entropy main network (mainnet) has yet to be released; as such, mainnet funds are unavailable.
 
 ## Testnet
 
-Funds for testing are available from the manual faucet.
+Funds for testing are available from the CLI faucet. You need to have the [Entropy CLI]({{<relref "reference/command-line-interface">}}) installed to receive test funds.
 
-{{< callout type="warning" >}}
-We're currently publically testing some of the Entropy tooling. As such, some of the workflows, like getting test funds, are a bit rough. We're building an automated faucet to hand out test funds, and we'll update this page when it's ready.
-{{< /callout >}}
+1. Start the CLI's text-based user interface (TUI):
 
-1. Log into your GitHub account and go to [github.com/entropyxyz/community](https://github.com/entropyxyz/community).
-1. Navigate to the **Discussions** tab and select **New discussion**.
-1. Next to **Get Test Funds** click **Get started**:
+    ```shell
+    entropy tui
+    ```
 
-   ![](./images/get-test-funds-create-test-funds-discussion.png)
+1. Navigate to **Manage Accounts** and then **Select Account**.
+1. Select the account you want to receive test funds.
+1. Return to the main TUI menu and select **Entropy Faucet**.
 
-1. In the **Title** field, enter the `address` you copied from the previous section.
-1. Enter any text into the **Description** field; GitHub doesn't allow users to leave this field blank. If you need more than 10,000 test funds, enter the amount of funds you need and a reason why into this field.
-1. Click **Start discussion**.
-
-At this point, someone from Entropy will send you some test funds. This should happen within a couple of hours, but may be longer. Once they've sent the funds to the address you provided they'll let you know, and close the issue.
+The CLI will request `2` test tokens from the Entropy network and forward them to your selected account. This equates to `20,000,000,000` bits, enough to perform transactions like registering an account and deploying a program.
