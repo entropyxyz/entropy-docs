@@ -17,14 +17,14 @@ The Entropy network provides threshold signing as a service. That means multiple
 
 The command-line interface (CLI) is the most straightforward way to interact with Entropy from your device.
 
-1. Ensure you have Node.js version 20.9.0 or above:
+1. Ensure you have Node.js version `20.x.x` or above:
 
     ```shell
     node --version
     ```
 
     ```output
-    v22.2.0
+    v23.1.0
     ```
 
 1. Install the Entropy CLI globally using NPM:
@@ -33,33 +33,52 @@ The command-line interface (CLI) is the most straightforward way to interact wit
     npm install --global @entropyxyz/cli
     ```
 
-1. Run the CLI using `entropy tui`:
+1. Test that the CLI is installed by requesting the CLI version:
+
+
+    ```shell
+    entropy --version
+    ```
+
+    ```output
+    v0.1.0
+    ```
+
+Next, you'll create an Entropy account.
+
+## 2. Create an account
+
+You need funds to interact with the Entropy network. Your funds are stored in an account. You can have multiple accounts.
+
+1. Open the Entropy CLI text-based user interface (TUI):
 
     ```shell
     entropy tui
     ```
 
     ```output
-    @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
-    @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
-    @@@@@@@@@@ @@@@@@@@@@ @@@@@@@ @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
-    @@@@@ @@@@ @@@@@ @@@@ @@@@@@@ @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@@@@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@@@@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@      @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
-    @@@@@@@@@@ @@@@@ @@@@ @@@@@@@ @@@@@       @@@@@@@@@ @@@@@@@@@@ @@@@@@@@@@@
-    @@@@@@@@@@ @@@@@ @@@@ @@@@@@@ @@@@@       @@@@@@@@@ @@@@@@@@@@ @@@@@@@@@@@               
-                                                        @@@@@@            TEST               
-                                                        @@@@@@            *NET               
-                                                        @@@@@@     ENTROPY-CLI               
-                                                        @@@@@@     
+      @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
+      @@@@@@@@@@ @@@@@@@@@@ @@@@@   @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
+      @@@@@@@@@@ @@@@@@@@@@ @@@@@@@ @@@@@@@@@@@ @@@@@@@@@ @@@@@@@@@@ @@@@@ @@@@@
+      @@@@@ @@@@ @@@@@ @@@@ @@@@@@@ @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@ @@@@@ @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@@@@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@@@@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@      @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@ @@@@ @@@@@ @@@@ @@@@@   @@@@@       @@@@ @@@@ @@@@@ @@@@ @@@@@ @@@@@
+      @@@@@@@@@@ @@@@@ @@@@ @@@@@@@ @@@@@       @@@@@@@@@ @@@@@@@@@@ @@@@@@@@@@@
+      @@@@@@@@@@ @@@@@ @@@@ @@@@@@@ @@@@@       @@@@@@@@@ @@@@@@@@@@ @@@@@@@@@@@
+                                                          @@@@@@            TEST
+                                                          @@@@@@            *NET
+                                                          @@@@@@     ENTROPY-CLI
+                                                          @@@@@@     COREv0.3.0
+
     ? Select Action (Use arrow keys)
     ❯ Manage Accounts
+      Entropy Faucet
       Balance
       Register
       Sign
@@ -69,36 +88,15 @@ The command-line interface (CLI) is the most straightforward way to interact wit
       Exit
     ```
 
-{{< callout type="info" >}}
-**Closing the CLI**: You can close the CLI tool anytime by pressing `CTRL` + `c`. This will halt the CLI process and return you to your normal terminal window.
-{{< /callout >}}
-
-Next, you'll create an Entropy account.
-
-## 2. Create an account
-
-You need funds to interact with the Entropy network. Your funds are stored in an account. You can have multiple accounts.
-
 1. Select **Manage Accounts**.
 1. Select **Create/Import Account**.
-1. Type `n` and press `ENTER` when asked _Would you like to import a key?_:
+1. Type `n` and press `ENTER` when asked _Would you like to import your own seed?_:
 
     ```output
-    ? Would you like to import a key? n
+    ? Would you like to import your own seed? (y/N) n
     ```
 
-1. Enter the name of your new account. The CLI will output some information about it:
-
-    ```output
-    New account:
-    {
-            name: MyFirstAccount
-            address: 5HMnksPMRPqsDqyCj31VoQFgpiswsr12bk2YTyfMUEKCm2bv
-    }
-    ```
-
-    Make a note of the `address` field. You'll need that in the next step.
-
+1. Enter the name of your new account.
 1. Type `Y` and press `ENTER` to return to the main menu.
 
 Next up, you'll request some funds to play around with.
@@ -107,20 +105,18 @@ Next up, you'll request some funds to play around with.
 
 Funds for testing are available from the CLI's built-in faucet.
 
-1. Navigate to **Manage Accounts** and then **Select Account**.
-1. Select the account you want to receive test funds.
-1. Go back the main TUI menu and select **Entropy Faucet**.
+1. Select **Entropy Faucet** from the main menu.
 
-The CLI will request `2` test tokens from the Entropy network and forward them to your selected account. This equates to `20,000,000,000` bits, which is enough to perform transactions like registering an account and deploying a program.
-
-Once you have been sent some funds, you can check your balance in the CLI.
-
-1. Return to the main menue and select **Balance**.
-1. The CLI should show your balance:
+    The CLI will request `2` test tokens from the Entropy network and send them to your selected account. This equates to `20,000,000,000` bits, which is enough to perform actions like registering an account, transferring funds, and deploying a program.
 
     ```output
-    ? Select Action Balance
-    Entropy Account [Andre] (5F3xmKa3WRkoHR4o6XjFQaWF2EskhtSh4ST5wY5cfsD9JYbC) has a balance of: 20,000,000,000 BITS
+    ⠧ Funding account…
+    ```
+
+1. Once you have been sent some funds, the CLI will output a success message:
+
+    ```output
+    Account: 5EFDfxft4oZYvjj35TWttFkkKZSHUDVnBRmp3eMQQcpt9zku has been successfully funded with 20,000,000,000 BITS
     ```
 
 Next, you'll register your account on the Entropy network.
@@ -129,7 +125,7 @@ Next, you'll register your account on the Entropy network.
 
 Registering an account is a feature unique to Entropy. Without going into too much detail, it advertises to the network that you own _this_ account and that you're ready to start signing things.
 
-1. Back at the main menu within the CLI, select **Register**:
+1. Back at the main menu, select **Register**:
 
     ```output
     ? Select Action
@@ -146,8 +142,8 @@ Registering an account is a feature unique to Entropy. Without going into too mu
 1. The CLI will send your selected account information to the network. The network will then register your account as long as you have enough funds.
 
     ```output
-    Attempting to register the address: 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv
-    Your address 5Dcps2RdXPQfiJBxxDnrF8iDzDHcnZC8rb5mcJ3xicqzhYbv has been successfully registered.
+    Attempting to register the address: 5EFDfxft4oZYvjj35TWttFkkKZSHUDVnBRmp3eMQQcpt9zku
+    Your address 5EFDfxft4oZYvjj35TWttFkkKZSHUDVnBRmp3eMQQcpt9zku has been successfully registered.
     ```
 
 1. Press `Y` to go back to the main menu.
@@ -170,21 +166,29 @@ Next up, we'll attempt to get a signature from the network!
       Exit
     ```
 
-1. Select **Sign With Adapter**.
-1. Select **Text Input**.
 1. The CLI will prompt you to enter a message in the default terminal-based text editor on your system:
 
     ```output
     ? Enter the message you wish to sign (this will open your default editor): Press <enter> to launch your preferred editor.
     ```
 
+    {{< callout "info" >}}
+    You can set your terminal's preferred editor by changing the `EDITOR` environment variable:
+
+    ```shell
+    # Set default text-editor to Neovim.
+    export EDITOR='nvim'
+    ```
+    {{< /callout >}}
+
 1. Press `ENTER` to open a text editor.
 1. Within your text editor, enter a message. It doesn't matter what the message is at this point.
 1. Once you have finished entering your message into the text editor, save and quit the text editor.
-1. The CLI will output a `base64` encoded string:
+1. The CLI will output the verifying key used to sign the message and the signature of the message itself:
 
     ```output
-    signature: 0x4dc30d4b250900148b1facd054fdc611bd1c4103bf20409bf57fa04db5ba8fd00515ef9c497223e174ebad2bf69830997256c4081868b9f7f4b1f729eb8662ad00
+    verifying key: 0x03aee03ad9862e9f31d06f7d1b4b388ad1c66152ad17f919fc16fcc75929b08db3
+    signature: 0xe78fce90707f824530677ba91ef90d3be4418da3eb10b3233709553b4355f1973b21e88d285e04ba323c8fe0d079a4f027c840a23cc57590371d57c95ed9eaa901
     ```
 
 Congratulations! You just received a signature from the Entropy network using the CLI!
@@ -194,4 +198,3 @@ So, what was all that about? While this quickstart guide didn't go into much det
 ## Next steps
 
 There's much more to come from Entropy! Next, you should check out the [Entrosplainer]({{< relref "./entrosplainer.md" >}}), an end-to-end explanation of what Entropy is, why it's necessary, and how it works!
-
