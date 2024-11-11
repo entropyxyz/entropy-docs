@@ -69,7 +69,7 @@ The process of establishing an Entropy account. Registered accounts can be initi
 
 ## Session
 
-An on-chain session is 2400 blocks or about 4 hours.
+An on-chain session is 2400 blocks or about four hours.
 
 ## Signature request account
 
@@ -107,8 +107,12 @@ A transaction is a specific request submitted for inclusion on the Entropy block
 
 ## User
 
-Refers to whoever is using the Entropy network to sign transactions or messages. This may be an individual, an organisation, or some other entity.
+Refers to whoever is using the Entropy network to sign transactions or messages. This may be an individual, an organization, or some other entity.
 
 ## Validator
 
 A device running both an _Entropy chain node_and a _threshold signing server_.
+
+## Wallet
+
+A program or application that stores and manages a user's tokens. Wallets hold the public and private keys that provide access and control over a user's assets. Since Entropy is built on the Substrate blockchain, most Substrate wallets should be compatible with Entropy.
