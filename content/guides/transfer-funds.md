@@ -13,7 +13,7 @@ To transfer funds, you must have the following:
 
 - Access to at least 2 [Entropy accounts]({{< relref "./manage-accounts" >}}), one of which must have funds.
 - Access to the [Polkadot.js explorer]({{< relref "./use-the-explorer" >}}).
-- A Polkadot.js compatible browser wallet. This guide uses the [Polkadot\{.js\} Browser Extension](https://polkadot.js.org/extension/) as an example.
+- A Polkadot.js compatible browser wallet. This guide uses the [Polkadot.js Browser Extension](https://polkadot.js.org/extension/) as an example.
 
 ### Steps
 
@@ -75,9 +75,3 @@ Here is the process for transfering using the Entropy CLI's interactive text-bas
 1. Enter the address that you want to transfer funds _to_.
 
 The transfer should take about 10 seconds.
-
-<!--
-## SDK
-
-The feature is not currently available in the SDK. To track the progress of this upcoming guide, see [issue #81 in the Entropy Docs repository](https://github.com/entropyxyz/entropy-docs/issues/81).
--->
