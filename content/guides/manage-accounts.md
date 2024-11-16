@@ -22,13 +22,13 @@ You need to have the Entropy CLI installed. [Take a look at the CLI page for det
 
 1. Enter the name of your new account. The CLI will output some information about it:
 
-   ```output
-   New account:
-   {
-           name: Ludleth
-           address: 5HMnksPMRPqsDqyCj31VoQFgpiswsr12bk2YTyfMUEKCm2bv
-   }
-   ```
+    ```output
+    Secret seed:        0xbb843570917266ffd1a76653281ff0283e87ed9e12d7dbf24f3a78519be51289
+    Public key (hex):   0x2e1370eab7fa85743c1656b0d962f8a38f65cf9cc1a980ab2b5cce8b51ac620d
+    AccountID:          0x2e1370eab7fa85743c1656b0d962f8a38f65cf9cc1a980ab2b5cce8b51ac620d
+    Public key (SS58):  5D77qPQj7S346ocxgHX7XmYUqtQft4ghXBYBuv8HuznDgDm7
+    SS58 Address:       5D77qPQj7S346ocxgHX7XmYUqtQft4ghXBYBuv8HuznDgDm7
+    ```
 
 1. Type `Y` and press `ENTER` to go back to the main menu.
 
