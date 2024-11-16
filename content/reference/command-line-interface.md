@@ -81,7 +81,6 @@ Follow these steps to install Entropy globally using NPM:
 
 
 1. You can also interact with the CLI through the TUI by adding `tui`:
-<<<<<<< HEAD
 
     ```shell
     entropy tui
