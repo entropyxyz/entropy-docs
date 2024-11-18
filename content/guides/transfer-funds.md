@@ -35,7 +35,7 @@ To transfer funds, you must have the following:
 
    ![](./images/transfer-funds-select-to-address.png)
 
-1. Enter the number of tokens you want to send. The minimum number you can send is `10000`.
+1. Enter the number of `bits` you want to send.
 1. Click **Make Transfer**.
 1. Review the details on this confirmation page and click **Sign and Submit**.
 

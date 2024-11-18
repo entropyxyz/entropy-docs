@@ -25,6 +25,10 @@ A program designed to act independently, capable of executing tasks and making d
 
 Autonomous agents are sometimes also called [intelligent programs]({{< relref "#intelligent-program" >}}).
 
+## Bit
+
+The token uses to perform transactions on the Entropy blockchain. 1 `bit` is equal to 10,000,000,000 `nanoBITS`.
+
 ## Consumer key
 
 A synonym for a [device key or deploy key]({{< relref "#device-key" >}}).
@@ -44,6 +48,10 @@ The set of Entropy validators.
 ## Intelligent program
 
 A synonym for an [autonomous agent]({{< relref "#autonomous-agent" >}}).
+
+## Nanobit
+
+The smallest possible value transferable on the Entropy blockchain. 10,000,000,000 `nanoBITS` is equal to 1 `bit`.
 
 ## Partition
 
@@ -115,4 +123,4 @@ A device running both an _Entropy chain node_and a _threshold signing server_.
 
 ## Wallet
 
-A program or application that stores and manages a user's tokens. Wallets hold the public and private keys that provide access and control over a user's assets. Since Entropy is built on the Substrate blockchain, most Substrate wallets should be compatible with Entropy.
+A program or application that stores and manages a user's `bits`. Wallets hold the public and private keys that provide access and control over a user's assets. Since Entropy is built on the Substrate blockchain, most Substrate wallets should be compatible with Entropy.

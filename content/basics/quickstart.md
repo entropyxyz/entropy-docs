@@ -107,7 +107,7 @@ Funds for testing are available from the CLI's built-in faucet.
 
 1. Select **Entropy Faucet** from the main menu.
 
-    The CLI will request `2` test tokens from the Entropy network and send them to your selected account. This equates to `20,000,000,000` bits, which is enough to perform actions like registering an account, transferring funds, and deploying a program.
+    The CLI will request `2` test `bits` from the Entropy network and send them to your selected account. This equates to 20,000,000,000 `nanobits`, which is enough to perform actions like registering an account, transferring funds, and deploying a program.
 
     ```output
     ⠧ Funding account…
