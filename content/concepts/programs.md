@@ -39,7 +39,7 @@ Programs can require users to include auxiliary data, separate from the message,
 
 ### Oracle Data
 
-Oracle data in this regard is information that can be grabbed by the chain and passed through to the program. This information comes from the pallet ```Oracle``` and storage slot ```OracleData```. ```OracleData``` takes in a key which can denoate any oracle data you want. Oracle data needs to come from the chain first as all programs need to be deterministic. 
+Oracle data is information that can be grabbed by the chain and passed through to the program. This information comes from the pallet `Oracle` and storage slot `OracleData`. `OracleData` takes in a key which can denote any oracle data you want. Oracle data needs to come from the chain first as all programs need to be deterministic. 
 
 Current headings 
 
