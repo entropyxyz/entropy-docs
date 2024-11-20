@@ -37,6 +37,18 @@ Programs can include a configuration which allows users to modify the `evaluatio
 
 Programs can require users to include auxiliary data, separate from the message, in their signature request.
 
+### Oracle Data
+
+Oracle data is information that can be grabbed by the chain and passed through to the program. This information comes from the pallet `Oracle` and storage slot `OracleData`. `OracleData` takes in a key which can denote any oracle data you want. Oracle data needs to come from the chain first as all programs need to be deterministic. 
+
+All oracle data is scale encode to chain
+
+Current headings 
+
+| Key                   | Value                                       | Type    |
+| --------------------- | ------------------------------------------- | ------- |
+| block_number_entropy  | Stores the current block number of entropy  | u32     |
+
 ### Custom Hashing
 
 As ECDSA schemes sign 256-bit numbers, programs can include a `custom_hash` function so users can utilize less common hashing functions. In its simplest form, the function converts a signature request (which also contains the message) into a 256-bit number.
