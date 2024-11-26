@@ -11,28 +11,49 @@ Spinning up a devnet using the Docker images supplied in the Entropy Core repo i
 
 ### Prerequisites
 
-You need to have [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed. Verify you have them both installed by running:
+You need to have the following software installed:
 
-```shell
-docker version && docker compose version
-```
+- Docker and Docker Compose
+- Rust
+- A common C Compiler
+- OpenSSL
+- PKG-config
 
-```output
-Client:
-    Cloud integration: v1.0.35+desktop.13
-    Version:           26.1.1
+{{< tabs items="Debian/Ubuntu, MacOS, Arch" >}}
 
-...
+    {{< tab >}}
+    ```shell
+    curl -fsSL https://get.docker.com -o install-docker.sh
+    sudo sh install-docker.sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    sudo apt update && sudo apt install build-essential clang libssl-dev pkg-config -y
+    ```
+    {{< /tab >}}
 
-Docker Compose version v2.27.0-desktop.2
-```
+    {{< tab >}}
+    ```shell
+    brew install --cask docker
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    brew install openssl pkg-config
+    ```
+    {{< /tab >}}
+
+    {{< tab >}}
+    ```shell
+    sudo pacman -S docker docker-compose
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    sudo pacman -S clang libssl-dev pkg-config
+    ```
+    {{< /tab >}}
+
+{{< /tabs >}}
 
 ### Steps
 
 1. Clone the Entropy Core repository and move into the new `entropy-core` directory:
 
     ```shell
-    git clone https://github.com/entropyxyz/entropy-core.git
+    git clone https://github.com/entropyxyz/entropy-core
     cd entropy-core
     ```
 
@@ -42,13 +63,31 @@ Docker Compose version v2.27.0-desktop.2
     echo "127.0.0.1	alice-tss-server bob-tss-server" | sudo tee -a /etc/hosts
     ```
 
-    You may need to enter your computer's password when prompted.
+    Enter an admin password if prompted.
+
+1. Start the Docker daemon, if it isn't running already:
+
+    {{< tabs items="Linux, MacOS" >}}
+
+        {{< tab >}}
+        ```shell
+        sudo systemctl start docker
+        ```
+        {{< /tab >}}
+
+        {{< tab >}}
+        ```shell
+        dockerd
+        ```
+        {{< /tab >}}
+
+    {{< /tabs >}}
 
 1. Start the Docker containers:
 
 
     ```shell
-    docker compose up --detach # Detaching is optional.
+    docker compose up --detach
     ```
 
     ```output
@@ -212,3 +251,17 @@ Developers should strive to mirror the mainnet environment as closely as possibl
 **Cannot connect to the Docker daemon**: If you see the error message `Cannot connect to the Docker daemon at unix:///Users/johnny/.docker/run/docker.sock. Is the docker daemon running?` it's likely because your Docker daemon isn't running. Double-check that you've opened the Docker application.
 
 **I can't build from source**: there are quite a few dependencies for building Substrate-based nodes. Run through the [official Substrate documentation](https://docs.substrate.io/install/) and make sure you have everything installed.
+
+**Permission denied while trying to connect to the Docker daemon socket**: you likely don't have the correct permissions and user-groups set. Verify that the Docker socket file /var/run/docker.sock has the correct permissions. It should be owned by the `root` user and have appropriate permissions for the `docker` group:
+
+```shell
+sudo chown root:docker /var/run/docker.sock
+sudo chmod 0660 /var/run/docker.sock
+```
+
+Also, make sure that your current user is in the `docker` group:
+
+```shell
+sudo su
+usermod -aG docker your_username
+```
