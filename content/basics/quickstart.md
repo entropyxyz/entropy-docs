@@ -96,7 +96,16 @@ You need funds to interact with the Entropy network. Your funds are stored in an
     ? Would you like to import your own seed? (y/N) n
     ```
 
-1. Enter the name of your new account.
+1. Enter the name of your new account. The TUI should output something like:
+
+    ```output
+    Secret seed:        0xbb843570917266ffd1a76653281ff0283e87ed9e12d7dbf24f3a78519be51289
+    Public key (hex):   0x2e1370eab7fa85743c1656b0d962f8a38f65cf9cc1a980ab2b5cce8b51ac620d
+    AccountID:          0x2e1370eab7fa85743c1656b0d962f8a38f65cf9cc1a980ab2b5cce8b51ac620d
+    Public key (SS58):  5D77qPQj7S346ocxgHX7XmYUqtQft4ghXBYBuv8HuznDgDm7
+    SS58 Address:       5D77qPQj7S346ocxgHX7XmYUqtQft4ghXBYBuv8HuznDgDm7 
+    ```
+
 1. Type `Y` and press `ENTER` to return to the main menu.
 
 Next up, you'll request some funds to play around with.
