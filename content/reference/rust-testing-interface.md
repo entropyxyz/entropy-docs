@@ -21,17 +21,17 @@ To run this CLI, you need to:
 
 1. Install the OpenSSL and `pkg-config` packages:
 
-    {{< tabs items="Debian/Ubuntu, MacOS" >}}
+    {{< tabs items="MacOS, Debian/Ubuntu" >}}
 
         {{< tab >}}
         ```shell
-        sudo apt install libssl-dev pkg-config
+        brew install openssl pkg-config
         ```
         {{< /tab >}}
 
         {{< tab >}}
         ```shell
-        brew install openssl pkg-config
+        sudo apt install libssl-dev pkg-config
         ```
         {{< /tab >}}
 
