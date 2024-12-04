@@ -205,7 +205,7 @@ You must have the latest LTS version of [Rust](https://www.rust-lang.org/tools/i
 
 It's important to regularly reset the network to maintain a clean testing environment, thoroughly document all configuration settings for reproducibility, and simulate various network conditions to ensure robustness. 
 
-Developers should strive to mirror the mainnet environment as closely as possible while still maintaining flexibility for rapid iteration. If you plan to share access to the devnet, it's essential to establish a clear protocol for managing and distributing test `bits`, implement monitoring and logging systems to track network behaviour, and regularly update the devnet software to match planned mainnet upgrades. 
+Developers should strive to mirror the mainnet environment as closely as possible while still maintaining flexibility for rapid iteration. If you plan to share access to the devnet, it's essential to establish a clear protocol for managing and distributing test `BITS`, implement monitoring and logging systems to track network behaviour, and regularly update the devnet software to match planned mainnet upgrades. 
 
 ## Troubleshooting
 

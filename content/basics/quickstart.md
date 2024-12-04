@@ -1,7 +1,7 @@
 ---
 title: "Quickstart"
 description: "Start experimenting with the Entropy network quickly."
-lead: "By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be a bit foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy."
+lead: "By the end of this guide, you will have deployed a program onto the Entropy blockchain and be able to interact with it to produce signatures. These terms (deploy, program, blockchain, signature) may be somewhat foreign to you right now, and that's ok! You don't need to understand everything in order to play around with Entropy."
 weight: 1
 ---
 
@@ -107,7 +107,7 @@ Funds for testing are available from the CLI's built-in faucet.
 
 1. Select **Entropy Faucet** from the main menu.
 
-    The CLI will request `2` test `bits` from the Entropy network and send them to your selected account. This equates to 20,000,000,000 `nanobits`, which is enough to perform actions like registering an account, transferring funds, and deploying a program.
+    The CLI will request `2` test `BITS` from the Entropy network and send them to your selected account. This equates to 20,000,000,000 `nanobits`, which is enough to perform actions like registering an account, transferring funds, and deploying a program.
 
     ```output
     ⠧ Funding account…
