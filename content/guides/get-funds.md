@@ -21,4 +21,4 @@ Funds for testing are available from the CLI faucet. You need to have the [Entro
 1. Select the account you want to receive test funds.
 1. Return to the main TUI menu and select **Entropy Faucet**.
 
-The CLI will request `2` test tokens from the Entropy network and forward them to your selected account. This equates to `20,000,000,000` bits, enough to perform transactions like registering an account and deploying a program.
+The CLI will request `2` test `BITS` from the Entropy network and forward them to your selected account. This equates to `20,000,000,000 nanoBITS`, enough to perform transactions like registering an account and deploying a program.
