@@ -1,0 +1,25 @@
+<!-- Fill out this template to help us review your pull request. Delete any comments once you are done. -->
+
+## Description
+
+<!-- - Quickly describe the changes you made and why you made them. -->
+<!-- - Reference the issue/issues that this PR fixes. -->
+
+<!-- - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- - ALL PRs MUST CLOSE AN ISSUE. IF AN ISSUES DOES NOT EXIST, GO MAKE ONE. -->
+<!-- - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+## Breaking changes
+
+<!-- - Does your pull request introduce any breaking changes? If so, please list them clearly and explain how they will affect users.-->
+
+## Documentation updates
+
+<!-- - Reference any updates to the documentation within this repo.-->
+<!-- - Link to your PR that updates documentation in other repos, like github.com/entropyxyz/entropy-docs-->
+
+## Checklist:
+
+- [ ] I have added tests for my changes.
+- [ ] I have updated the documentation (README, etc.) to reflect the changes.
+- [ ] I have read and followed the CONTRIBUTE.md guidelines.
