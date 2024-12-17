@@ -5,7 +5,9 @@ lead: "A list of useful tools, workflows, and projects that can help developers 
 
 ## Polkadot Chain Explorer
 
-[![Screenshot of the Polkadot Chain Explorer page.](./images/polkadot-explorer-page.png)](https://polkadot.js.org)
+{{< image src="../images/polkadot-explorer-page.png" >}}
+
+<!--[![Screenshot of the Polkadot Chain Explorer page.](./images/polkadot-explorer-page.png)](https://polkadot.js.org)-->
 
 [polkadot.js.org/apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.entropy.xyz#/explorer)
 
@@ -13,7 +15,7 @@ A one-size-fits-all blockchain explorer for Substrate-based chains, built by the
 
 ## Testnet Status
 
-[![Screenshot of the Entropy Testnet page.](./images/entropy-status-page.png)](https://status.entropy.xyz)
+{{< image src="../images/entropy-status-page.png" >}}
 
 [status.entropy.xyz](https://status.entropy.xyz/)
 
@@ -21,7 +23,7 @@ A constantly updated list of registered accounts, programs, and validators.
 
 ## Uptime
 
-[![Screenshot of the Entropy Uptime page.](./images/uptime-entropy-page.png)](https://entropydotxyz.statuspage.io)
+{{< image src="../images/uptime-entropy-page.png" >}}
 
 [uptime.entropy.xyz](https://entropydotxyz.statuspage.io/)
 
