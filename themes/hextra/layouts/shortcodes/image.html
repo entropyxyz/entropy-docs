@@ -1,0 +1,16 @@
+{{ $originalSrc := .Get "src" }}
+{{ $fileExt := path.Ext $originalSrc }}
+{{ $fileName := strings.TrimSuffix $fileExt $originalSrc }}
+
+{{ $darkSrc := printf "%s-dark%s" $fileName $fileExt }}
+
+<picture>
+    <source srcset="{{ $darkSrc }}" media="(prefers-color-scheme: dark)">
+    <img 
+        src="{{ $originalSrc }}" 
+        alt="{{ .Get "alt" | default "" }}"
+        {{ with .Get "class" }}class="{{ . }}"{{ end }}
+        {{ with .Get "width" }}width="{{ . }}"{{ end }}
+        {{ with .Get "height" }}height="{{ . }}"{{ end }}
+    >
+</picture>
