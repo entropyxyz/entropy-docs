@@ -123,7 +123,7 @@ To submit a support ticket:
 
 ## Contribute
 
-We appreciate contributions of any size from everyone, from fixing typos to proposing substantial rewrites to aid clarity. Simply make a PR with your edits, and a member of the Entropy devrel team will review everything.
+We appreciate contributions of any size from everyone, from fixing typos to proposing substantial rewrites to aid clarity. Take a look at the [`CONTRIBUTING.md` doc for more details](./CONTRIBUTING.md) on how to help.
 
 ### Writing docs
 
