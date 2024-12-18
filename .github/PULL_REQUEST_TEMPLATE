@@ -19,6 +19,6 @@
 
 ## Checklist:
 
-- [ ] I have read and followed the CONTRIBUTE.md guidelines.
+- [ ] I have read and followed the `CONTRIBUTING.md` guidelines.
 - [ ] I have run these changes through a grammar and spell checker.
-- [ ] I have updated the documentation (README, etc.) to reflect these changes.
+- [ ] I have updated the documentation (`README.md`, `CONTRIBUTING.md` etc.) to reflect these changes.
