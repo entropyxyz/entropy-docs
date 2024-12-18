@@ -2,24 +2,23 @@
 
 ## Description
 
-<!-- - Quickly describe the changes you made and why you made them. -->
-<!-- - Reference the issue/issues that this PR fixes. -->
+<!-- Quickly describe the changes you made and why you made them. -->
+<!-- Reference the issue/issues that this PR fixes. -->
 
-<!-- - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<!-- - ALL PRs MUST CLOSE AN ISSUE. IF AN ISSUES DOES NOT EXIST, GO MAKE ONE. -->
-<!-- - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- ALL PRs MUST CLOSE AN ISSUE. IF AN ISSUE DOES NOT EXIST, GO MAKE ONE. -->
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-## Breaking changes
+### Content updates
 
-<!-- - Does your pull request introduce any breaking changes? If so, please list them clearly and explain how they will affect users.-->
+<!-- List which pages or sections you have created/updated/deleted in this PR. -->
 
 ## Documentation updates
 
-<!-- - Reference any updates to the documentation within this repo.-->
-<!-- - Link to your PR that updates documentation in other repos, like github.com/entropyxyz/entropy-docs-->
+<!-- Have you changed how shortcodes work or how the docs site is rendered? Update the relevant info in this project's `README.md` and/or `CONTRIBUTING.md` files. -->
 
 ## Checklist:
 
-- [ ] I have added tests for my changes.
-- [ ] I have updated the documentation (README, etc.) to reflect the changes.
 - [ ] I have read and followed the CONTRIBUTE.md guidelines.
+- [ ] I have run these changes through a grammar and spell checker.
+- [ ] I have updated the documentation (README, etc.) to reflect these changes.
