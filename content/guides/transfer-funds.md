@@ -75,3 +75,50 @@ Here is the process for transfering using the Entropy CLI's interactive text-bas
 1. Enter the address that you want to transfer funds _to_.
 
 The transfer should take about 10 seconds.
+
+## Programmatic CLI
+
+Here is the process for transfering using the Entropy CLI's programmatic interface. This method can be use within script.
+
+1. Ensure that the CLI is installed properly:
+
+    ```shell
+    entropy --version
+    ```
+
+    ```output
+    v0.1.1
+    ```
+
+1. Decide which account you want to send funds _from_. If you only have one account within the Entropy CLI, the CLI will automatically use that account to send funds from.
+
+    If you have more than one account within the CLI, you must specify which account to send funds from. You can list your accounts with `entropy account list`. Adding `| jq` is optional, but will make the JSON output easier to read:
+
+    ```shell
+    entropy account list | jq
+    ```
+
+    ```output
+    [
+      {
+        "name": "Andre",
+        "address": "5D77qPQj7S346ocxgHX7XmYUqtQft4ghXBYBuv8HuznDgDm7",
+        "verifyingKeys": []
+      },
+      {
+        "name": "Yoel",
+        "address": "5EJTUTyZnffSdVc7dCVTKKkNmpXUW5MocmtspZXUk7X1CF7M",
+        "verifyingKeys": []
+      }
+    ]
+    ```
+
+1. Initiate the transfer by supplying the destination address and amount to `entropy transfer`. If you have multiple accounts and you want to send funds from a specific account, add the `--account` option, followed by the name of the outbound account:
+
+    ```shell
+    entropy transfer --account Andre 5EJTUTyZnffSdVc7dCVTKKkNmpXUW5MocmtspZXUk7X1CF7M 1
+    ```
+
+    ```output
+    TODO: Receiving an error here. Need to wait for https://github.com/entropyxyz/cli/issues/321 before fixing.
+    ```
