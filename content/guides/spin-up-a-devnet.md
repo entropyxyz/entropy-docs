@@ -13,7 +13,7 @@ A devnet is an essential tool for devs working with Entropy. It provides a safe 
 This guide will cover two primary methods for setting up a local Entropy devnet:
 
 - [Using Docker containers]({{< relref "#docker-containers" >}}): The recommended method for most users due to its ease of use and simplicity.
-- [Building from source]({{< relref "building-from-source" >}}): For developers who require more control or are unable to use Docker. 
+- [Building from source]({{< relref "#building-from-source" >}}): For developers who require more control or are unable to use Docker. 
 
 ## Docker containers
 
