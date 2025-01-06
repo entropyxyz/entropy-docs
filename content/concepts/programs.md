@@ -16,18 +16,18 @@ As a simple example, a program could be designed to check the length of a messag
 
 ```mermaid
 flowchart LR
- A[Entropy account]
- B{Length > 10}
- C[Signing nodes]
- D[Fail]
- E[Success]
-
- A --> | send message | B
- B -- true --> E
- E --> | generate signature | C
- C --> | valid signature | A
-
- B -- false --> D
+  A[Entropy account]
+  B{Length > 10}
+  C[Signing nodes]
+  D[Fail]
+  E[Success]
+ 
+  A --> | send message | B
+  B -- true --> E
+  E --> | generate signature | C
+  C --> | valid signature | A
+ 
+  B -- false --> D
 ```
 
 {{< callout "info" >}}
