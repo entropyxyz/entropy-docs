@@ -3,22 +3,31 @@ title: "Programs"
 lead: "The purpose of an Entropy program is to determine whether a group of nodes should generate a signature or not. Developers can create and deploy programs, but validator nodes are the only agents that will directly interact with the programs once deployed. Programs do not return any data other than a _success_ or _failed_ response."
 ---
 
+## Quick summary
+
+1. **What are Entropy Programs**: WebAssembly (WASM) components used by signing nodes to determine whether they should generate a signature and how to generate that signature.
+1. **Who uses them**: validator nodes are the only agents directly interacting with deployed programs. However, Entropy Program developers will create, test, and deploy them. End-users do not directly interact with Entropy programs.
+1. **What can they do**: define which accounts can generate specific signatures and the process by which those nodes generate the signatures. Programs can contain custom hashing functions to create arbitrary signatures.
+1. **What they can't do**: return any data other than success/failure responses, call external chains, access external data, or access any non-deterministic data.
+
+## Simple example
+
 As a simple example, a program could be designed to check the length of a message. If the message is more than 10 characters, then the program returns `OK`, and the signing nodes create and return a valid signature to the account that submits the message. If the message is more than 10 characters, then the program fails, and no signature is created.
 
 ```mermaid
 flowchart LR
-    A[Entropy account]
-    B{Length > 10}
-    C[Signing nodes]
-    D[Fail]
-    E[Success]
-
-    A --> | send message | B
-    B -- true --> E
-    E --> | generate signature | C
-    C --> | valid signature | A
-
-    B -- false --> D
+  A[Entropy account]
+  B{Length > 10}
+  C[Signing nodes]
+  D[Fail]
+  E[Success]
+ 
+  A --> | send message | B
+  B -- true --> E
+  E --> | generate signature | C
+  C --> | valid signature | A
+ 
+  B -- false --> D
 ```
 
 {{< callout "info" >}}
@@ -78,7 +87,7 @@ The workflow is as follows:
     - The signing key signs the transaction and becomes the deployer key
     - A reference counter gets set to 0 when uploading and is used to track how many users are using a program
 2. A program then gets stored in the Programs storage slot with the key being `H(bytecode + configuration_interface)`. The hash is used by a user to point to the programs they want applied to their key. Every time a program is referenced, the reference counter increments
-3. Since the key is a hash, there is no editing programs (since that would change the hash)
+3. Since the key is a hash, it is not possible to edit or modify programs (since that would change the hash).
 4. Programs can be removed if the ref count is zero by the deploy key
 
 ## Device-proxy
