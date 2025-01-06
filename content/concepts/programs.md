@@ -46,6 +46,46 @@ Programs can include a configuration which allows users to modify the `evaluatio
 
 Programs can require users to include auxiliary data, separate from the message, in their signature request.
 
+### Oracle Data
+
+Oracle data is information that can be grabbed by the chain and passed through to Entropy programs. The programs can then do whatever they want with this data. The data contained by the oracles comes from the `Oracle` pallet and `OracleData` storage slot `OracleData` takes in a key and outputs the value associated with that key. Since all programs must be deterministic, oracle data needs to come from the chain.
+
+#### Available oracles
+
+The following table lists the currently available oracles:
+
+| Key                     | Value                                        | Type      |
+| ----------------------- | -------------------------------------------- | --------- |
+| `block_number_entropy`  | Stores the current block number of entropy.  | `u32`     |
+
+#### Encoding and decoding
+
+All oracle data is [SCALE](https://docs.substrate.io/reference/scale-codec/) encoded. To decode oracle data use:
+
+```rust {hl_lines=[8,8],linenostart=1}
+impl Program for OracleExample {
+    fn evaluate(
+        _signature_request: SignatureRequest,
+        _config: Option<Vec<u8>>,
+        oracle_data: Option<Vec<Vec<u8>>>,
+    ) -> Result<(), Error> {
+        let data = oracle_data.ok_or(Error::Evaluation("No oracle data provided.".to_string()))?;
+        let block_number = u32::decode(&mut data[0].as_ref())
+            .map_err(|_| Error::Evaluation("Unable to decode oracle data".to_string()))?;
+        if block_number > 100 {
+            return Err(Error::Evaluation("Block Number too large".to_string()));
+        }
+        Ok(())
+    }
+
+    fn custom_hash(_data: Vec<u8>) -> Option<Vec<u8>> {
+        None
+    }
+}
+```
+
+A complete copy of the above example can be found in the [Entropy Core GitHub repository](https://github.com/entropyxyz/programs/blob/de27c61a91b716b84696f25949cbf9843920002d/examples/oracle-example/src/lib.rs).
+
 ### Custom Hashing
 
 As ECDSA schemes sign 256-bit numbers, programs can include a `custom_hash` function so users can utilize less common hashing functions. In its simplest form, the function converts a signature request (which also contains the message) into a 256-bit number.
