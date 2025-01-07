@@ -1,4 +1,4 @@
-<!-- Describe the issue you're encountering in detail. -->
+<!-- Describe the issue you're encountering. -->
 
 ## Steps to reproduce
 
@@ -12,9 +12,6 @@
 
 <!-- If you have ideas about how this might be fixed, share them here. -->
 
-## Checklist
+## Final checks
 
-I confirm that I have:
-
-- [ ] Checked to see if there are any existing issue that cover this topic.
-- [ ] Linked to any relevant issues across all [entropyxyz](https://github.com/entropyxyz/) repos.
+- [ ] I have checked to see if there are any existing issues that cover this topic, and linked any other relevant issues.

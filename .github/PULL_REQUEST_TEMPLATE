@@ -1,24 +1,15 @@
-<!-- Fill out this template to help us review your pull request. Delete any comments once you are done. -->
+## Link issues
 
-## Description
-
-<!-- Quickly describe the changes you made and why you made them. -->
-<!-- Reference the issue/issues that this PR fixes. -->
-
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<!-- ALL PRs MUST CLOSE AN ISSUE. IF AN ISSUE DOES NOT EXIST, GO MAKE ONE. -->
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- Reference the issue/issues that this PR fixes. All PRs must close an issue. If an issue does not exist, go make one and link it here. -->
 
 ### Content updates
 
 <!-- List which pages or sections you have created/updated/deleted in this PR. -->
 
-## Documentation updates
+## Meta updates
 
-<!-- Have you changed how shortcodes work or how the docs site is rendered? Update the relevant info in this project's `README.md` and/or `CONTRIBUTING.md` files. -->
+<!-- Have you changed how shortcodes work or how the docs site is rendered? Update the relevant info in this project's `README.md` and/or `CONTRIBUTING.md` files. This section can be skipped and delete if your PR doesn't contain any meta updates. -->
 
-## Checklist:
+## Final checks
 
-- [ ] I have read and followed the `CONTRIBUTING.md` guidelines.
-- [ ] I have run these changes through a grammar and spell checker.
-- [ ] I have updated the documentation (`README.md`, `CONTRIBUTING.md` etc.) to reflect these changes.
+- [ ] I have read and followed the `CONTRIBUTING.md` guidelines, and updated the documentation (`README.md`, `CONTRIBUTING.md` etc.) to reflect these changes.
