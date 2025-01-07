@@ -2,7 +2,7 @@
 
 ## Steps to reproduce
 
-<!-- Provide a step-by-step explanation of how to reproduce the issue, including the page or section URL (if relevant). -->
+<!-- Provide a step-by-step explanation of reproducing the issue, including the page or section URL (if relevant). -->
 
 ## Error messages and/or screenshots
 
@@ -10,8 +10,8 @@
 
 ## Proposed solution (optional)
 
-<!-- If you have ideas about how this might be fixed, share them here. -->
+<!-- If you have ideas about how the team could fix this issue, share them here. -->
 
 ## Final checks
 
-- [ ] I have checked to see if there are any existing issues that cover this topic, and linked any other relevant issues.
+- [ ] I have checked to see if any existing issues cover this topic and linked any other relevant issues.

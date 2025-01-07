@@ -8,8 +8,8 @@
 
 ## Meta updates
 
-<!-- Have you changed how shortcodes work or how the docs site is rendered? Update the relevant info in this project's `README.md` and/or `CONTRIBUTING.md` files. This section can be skipped and delete if your PR doesn't contain any meta updates. -->
+<!-- Have you changed how shortcodes work or how the docs site is rendered? Update the relevant info in this project's `README.md` and/or `CONTRIBUTING.md` files. This section can be skipped and deleted if your PR contains no meta updates. -->
 
 ## Final checks
 
-- [ ] I have read and followed the `CONTRIBUTING.md` guidelines, and updated the documentation (`README.md`, `CONTRIBUTING.md` etc.) to reflect these changes.
+- [ ] I have read and followed the `CONTRIBUTING.md` guidelines and updated the documentation (`README.md`, `CONTRIBUTING.md`, etc.) to reflect these changes.
