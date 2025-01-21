@@ -242,19 +242,20 @@ Main execution error: Error: 1010: Invalid Transaction: Inability to pay some fe
 
 The main thing to look out for here is the line `2025-01-21 11:51:27        RPC-CORE: submitAndWatchExtrinsic(extrinsic: Extrinsic): ExtrinsicStatus:: 1010: Invalid Transaction: Inability to pay some fees , e.g. account balance too low`. This error happens because the network has determined that the seed you have used to create your account in the script doesn't have enough funds to contrinue the registering and signing process. Take a look at the [Getting Funds]({{< relref "get-funds" >}}) guide to find out how to deal with this error.
 
-**Undefined is not iterable at verifyAndPick**
-
-You may encounter this error when running the script:
-
-```shell
-Creating signature...
-Error in signature creation/verification: TypeError: undefined is not iterable (can
-not read property Symbol(Symbol.iterator))
-    at #verifyAndPick (file:///home/johnny/Code/entropy/testing-the-sdk/node_modules/@entropyxyz/sdk/dist/index.js:440:26)
-    at SignatureRequestManager.sign (file:///home/johnny/Code/entropy/testing-the-sdk/node_modules/@entropyxyz/sdk/dist/index.js:330:48)
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-
-[...]
-```
-
-This is likely because the account you are using within the script has already been registered with the signing program we're using here. Try creating a new account, getting some test funds, and adding the seed of the new account into the script.
+<!--Commenting out this issue while SDK team figures out what the problem is.-->
+<!--**Undefined is not iterable at verifyAndPick**-->
+<!---->
+<!--You may encounter this error when running the script:-->
+<!---->
+<!--```shell-->
+<!--Creating signature...-->
+<!--Error in signature creation/verification: TypeError: undefined is not iterable (can-->
+<!--not read property Symbol(Symbol.iterator))-->
+<!--    at #verifyAndPick (file:///home/johnny/Code/entropy/testing-the-sdk/node_modules/@entropyxyz/sdk/dist/index.js:440:26)-->
+<!--    at SignatureRequestManager.sign (file:///home/johnny/Code/entropy/testing-the-sdk/node_modules/@entropyxyz/sdk/dist/index.js:330:48)-->
+<!--    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)-->
+<!---->
+<!--[...]-->
+<!--```-->
+<!---->
+<!--This is likely because the account you are using within the script has already been registered with the signing program we're using here. Try creating a new account, getting some test funds, and adding the seed of the new account into the script.-->
