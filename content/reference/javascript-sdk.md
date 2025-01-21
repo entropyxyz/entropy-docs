@@ -5,20 +5,16 @@ lead: ""
 
 ## Prerequisites
 
-Before starting this tutorial, make sure you have:
-
-1. Node.js
-1. An Entropy account (we'll cover how to create one).
+Before starting this tutorial, make sure you have Node v20.0.0 or above installed
 
 ## Setting up your project
 
-1. First, create a new directory and initialize a Node.js project:
+1. First, create a new directory and initialize a Node project:
 
     ```shell
     mkdir entropy-sdk-demo
     cd entropy-sdk-demo
     npm init -y
-    cd entropy-sdk-demo
     ```
 
 1. Install the required dependencies:
@@ -29,7 +25,7 @@ Before starting this tutorial, make sure you have:
 
 ## Creating your Entropy account
 
-Before we can use the code, you'll need to:
+Before we can use the code, you'll need to create an account.
 
 <!--TODO: explain process to create an account here.-->
 
@@ -39,13 +35,11 @@ Let's break down the implementation into smaller parts.
 
 ### Basic imports
 
-Create a new file called `entropy-demo.js` and add the following lines.
+Create a new file called `entropy-demo.mjs` and add the following lines.
 
 ```javascript
 import { Keyring } from '@entropyxyz/sdk/keys';
 import { wasmGlobalsReady, Entropy } from '@entropyxyz/sdk';
-
-// Add this at the top of your file to handle ES modules
 import { Buffer } from 'buffer';
 ```
 
@@ -53,34 +47,34 @@ These imports set up the fundamental building blocks needed to manage your crypt
 
 ### Core setup
 
-Read through and add this block of code: 
+Read through and add this block of code below the existing code in your `entropy-demo.mjs` file: 
 
 ```javascript
 async function runEntropyDemo() {
     try {
-        // Wait for WASM to be ready
+        // Wait for WASM to be ready.
         console.log('Initializing WASM...');
         await wasmGlobalsReady();
         console.log('WASM initialized successfully');
 
-        // Replace this with your actual seed from the Entropy platform
+        // Replace this with your actual seed from the Entropy platform.
         const seed = '0x786ad0e2df456fe43dd1f91ebca22e235bc162e0bb8d53c633e8c85b2af68b7a';
         
-        // Initialize the keystore with your seed
+        // Initialize the keystore with your seed.
         const keyStore = { seed };
         console.log('Keystore initialized');
 
-        // Create a new keyring instance
+        // Create a new keyring instance.
         const keyring = new Keyring(keyStore);
         console.log('Keyring created successfully');
 
-        // Configure the Entropy connection
+        // Configure the Entropy connection.
         const opts = {
-            endpoint: 'wss://testnet.entropy.xyz', // Use testnet endpoint
+            endpoint: 'wss://testnet.entropy.xyz',
             keyring
         };
 
-        // Initialize Entropy
+        // Initialize Entropy.
         console.log('Connecting to Entropy network...');
         const entropy = new Entropy(opts);
         await entropy.ready;
@@ -114,7 +108,7 @@ Finally, read through and add this function to the file:
 ```javascript
 async function createAndVerifySignature(entropy) {
     try {
-        // Create a message to sign
+        // Create a message to sign. Feel free to change this if you want.
         const message = 'Hello world: signature from entropy!';
         console.log(`Creating signature for message: ${message}`);
         
@@ -122,12 +116,12 @@ async function createAndVerifySignature(entropy) {
             msg: Buffer.from(message).toString('hex')
         };
 
-        // Register with the network
+        // Register with the network.
         console.log('Registering with network...');
         const verifyingKey = await entropy.register();
         console.log('Registration successful. Verifying key:', verifyingKey);
 
-        // Create signature
+        // Create signature.
         console.log('Creating signature...');
         const signatureData = await entropy.signWithAdaptersInOrder({
             msg: msgObject,
@@ -135,7 +129,7 @@ async function createAndVerifySignature(entropy) {
         });
         console.log('Signature created:', signatureData);
 
-        // Verify the signature
+        // Verify the signature.
         console.log('Verifying signature...');
         const isValid = await entropy.verify(signatureData);
         
@@ -170,124 +164,19 @@ This code handles the actual signature creation and verification process. Here's
 
 Like before, the entire process is wrapped in a try-catch block to handle any errors that might occur during signing or verification.
 
-### Putting It All Together
+## Running the code
 
-Here's the complete script that combines all the parts:
+1. Save all the code.
+1. Update your `package.json` to include:
 
-```javascript
-import { Keyring } from '@entropyxyz/sdk/keys';
-import { wasmGlobalsReady, Entropy } from '@entropyxyz/sdk';
-import { Buffer } from 'buffer';
-
-async function runEntropyDemo() {
-    try {
-        // Wait for WASM to be ready
-        console.log('Initializing WASM...');
-        await wasmGlobalsReady();
-        console.log('WASM initialized successfully');
-
-        // Replace this with your actual seed from the Entropy platform
-        const seed = '0x786ad0e2df456fe43dd1f91ebca22e235bc162e0bb8d53c633e8c85b2af68b7a';
-        
-        // Initialize the keystore with your seed
-        const keyStore = { seed };
-        console.log('Keystore initialized');
-
-        // Create a new keyring instance
-        const keyring = new Keyring(keyStore);
-        console.log('Keyring created successfully');
-
-        // Configure the Entropy connection
-        const opts = {
-            endpoint: 'wss://testnet.entropy.xyz', // Use testnet endpoint
-            keyring
-        };
-
-        // Initialize Entropy
-        console.log('Connecting to Entropy network...');
-        const entropy = new Entropy(opts);
-        await entropy.ready;
-        console.log('Successfully connected to Entropy network');
-
-        return entropy;
-    } catch (error) {
-        console.error('Error in setup:', error);
-        throw error;
+    ```json
+    {
+      "type": "module"
     }
-}
+    ```
 
-async function createAndVerifySignature(entropy) {
-    try {
-        // Create a message to sign
-        const message = 'Hello world: signature from entropy!';
-        console.log(`Creating signature for message: ${message}`);
-        
-        const msgObject = {
-            msg: Buffer.from(message).toString('hex')
-        };
+1. Run the script:
 
-        // Register with the network
-        console.log('Registering with network...');
-        const verifyingKey = await entropy.register();
-        console.log('Registration successful. Verifying key:', verifyingKey);
-
-        // Create signature
-        console.log('Creating signature...');
-        const signatureData = await entropy.signWithAdaptersInOrder({
-            msg: msgObject,
-            order: ['deviceKeyProxy']
-        });
-        console.log('Signature created:', signatureData);
-
-        // Verify the signature
-        console.log('Verifying signature...');
-        const isValid = await entropy.verify(signatureData);
-        
-        if (!isValid) {
-            throw new Error('Signature verification failed');
-        }
-        
-        console.log('Signature verified successfully!');
-        return signatureData;
-
-    } catch (error) {
-        console.error('Error in signature creation/verification:', error);
-        throw error;
-    } finally {
-        // Clean up by closing the connection
-        await entropy.close();
-    }
-}
-
-// Everything gets ran from here.
-async function main() {
-    try {
-        const entropy = await runEntropyDemo();
-        const signatureData = await createAndVerifySignature(entropy);
-        console.log('Complete signature data:', signatureData);
-    } catch (error) {
-        console.error('Main execution error:', error);
-    }
-}
-
-// Run the demo
-main();
-```
-
-## Running the Tutorial
-
-1. Save all the code above in a file named `entropy-demo.js`.
-2. Update your `package.json` to include:
-
-```json
-{
-  "type": "module"
-}
-```
-
-3. Replace the seed value with your actual seed from the Entropy platform.
-4. Run the script:
-
-```bash
-node entropy-demo.js
-```
+    ```shell
+    node entropy-demo.js
+    ```
