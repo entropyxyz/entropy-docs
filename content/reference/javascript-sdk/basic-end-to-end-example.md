@@ -1,6 +1,6 @@
 ---
-title: "Basic SDK Example"
-lead: ""
+title: "Basic end-to-end example"
+lead: "A straight-forward Node JS script that goes through the complete end-to-end Entropy flow."
 ---
 
 ## Prerequisites
