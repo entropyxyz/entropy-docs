@@ -45,9 +45,9 @@ Instead of throwing a giant block of code at your, let's break down the implemen
 
 2. Save the file and move onto the next section.
 
-#### Explaining the code
-
+{{< callout type="info" >}}
 These imports set up the fundamental building blocks needed to manage your cryptographic keys (`Keyring`), connect to and interact with the Entropy network (`Entropy`), ensure the cryptographic operations are ready (`wasmGlobalsReady`), and handle the necessary data conversions (`Buffer`).
+{{< /callout >}}
 
 ### Core setup
 
@@ -95,8 +95,7 @@ These imports set up the fundamental building blocks needed to manage your crypt
 1. On line 8, enter the seed of your account.
 1. Save the file and move onto the next section.
 
-#### Explaining the code
-
+{{< callout type="info" >}}
 This codeblock is setting up the core infrastructure needed to connect to the Entropy network. Here's what's happening step by step:
 
 - The function starts by initializing WebAssembly (WASM). It waits for `wasmGlobalsReady()` to complete before proceeding.
@@ -109,6 +108,7 @@ This codeblock is setting up the core infrastructure needed to connect to the En
     - `keyring`: Includes the Keyring instance we just created.
 
 Finally, this function creates an `Entropy` instance with these options and waits for the connection to be ready. This is your main interface to interact with the Entropy network. Everything is wrapped in a try-catch block to handle any errors that might occur during this setup process, and returns the configured Entropy instance for use in other parts of the application.
+{{< /callout >}}
 
 ### Creating and verifying signatures
 
@@ -158,8 +158,7 @@ Finally, this function creates an `Entropy` instance with these options and wait
 
 1. Save the file and move onto the next section.
 
-#### Explaining the code
-
+{{< callout type="info" >}}
 This code handles the actual signature creation and verification process. Here's what's happening step by step:
 
 - First, it creates a test message `"Hello world: signature from entropy!"` and converts it to hex:
@@ -176,6 +175,7 @@ This code handles the actual signature creation and verification process. Here's
 - If everything succeeds, it returns the `signatureData` object, which contains the actual signature, the verifying key, the original message, and other metadata about the signature.
 
 Like before, the entire process is wrapped in a try-catch block to handle any errors that might occur during signing or verification.
+{{< /callout >}}
 
 ## Running the code
 
