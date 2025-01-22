@@ -1,8 +1,18 @@
+// This script is a bit of a mess, so bare with me. It's
+// intended to demonstrates the main capabilities of the
+// Programs API in the Entropy SDK. To use this script:
+//
+// 1. Replace the seed with your actual seed from the Entropy platform.
+// 2. Replace the path to the WASM program with your actual program path.
+// 3. Modify the program configurations as needed for your use case.
+//
+// Happy hunting!
+
 import { wasmGlobalsReady, Entropy } from '@entropyxyz/sdk';
 import { Keyring } from '@entropyxyz/sdk/keys';
 import { readFileSync } from 'fs';
 
-// Initialize Entropy connection.
+// Handles WASM initialization and connection setup.
 async function initializeEntropy(seed) {
     console.log('Initializing WASM...');
     await wasmGlobalsReady();
@@ -21,7 +31,7 @@ async function initializeEntropy(seed) {
     return entropy;
 }
 
-// Deploy a new program.
+// Deploy a new program  and manages all that stuff.
 async function deployProgram(entropy, programPath) {
     console.log('Deploying program...');
     const programBytes = readFileSync(programPath);
@@ -30,7 +40,7 @@ async function deployProgram(entropy, programPath) {
     return programPointer;
 }
 
-// Register a program with your account.
+// Manages program registration.
 async function registerProgram(entropy, programPointer, config = {}) {
     console.log('Registering program...');
     const registerOpts = {
@@ -71,37 +81,31 @@ async function removeProgram(entropy, programPointer) {
     console.log('Program removed');
 }
 
-// Main demo function showing usage.
+// Show how to use all the above functions together.
 async function runProgramsDemo() {
     let entropy;
     try {
+        // [NOTE] Some of the variables in here get created, but
+        // not used. Don't worry about that right now though.
+
         // [ACTION] Replace with your seed.
         const seed = '0x786ad0e2df456fe43dd1f91ebca22e235bc162e0bb8d53c633e8c85b2af68b7a';
         
-        // Initialize Entropy.
         entropy = await initializeEntropy(seed);
-
-        // Deploy program.
         const programPointer = await deployProgram(entropy, './path/to/your/program.wasm');
 
-        // Register program.
         const verifyingKey = await registerProgram(entropy, programPointer, {
-            // Add optional initial config here, if you wanna.
+            // Add config here, if you wanna.
             initialSetting: 'value'
         });
 
-        // Get all programs.
         const programs = await getPrograms(entropy, verifyingKey);
 
-        // Add another instance with different config.
         await addProgramInstance(entropy, programPointer, verifyingKey, {
             differentSetting: 'newValue'
         });
 
-        // Get updated program list
         const updatedPrograms = await getPrograms(entropy, verifyingKey);
-
-        // Remove program
         await removeProgram(entropy, programPointer);
 
     } catch (error) {
@@ -115,7 +119,7 @@ async function runProgramsDemo() {
     }
 }
 
-// Example usage with error handling
+// Example usage. With error handling. Because we're fancy like that.
 async function main() {
     try {
         await runProgramsDemo();
