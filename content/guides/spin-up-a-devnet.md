@@ -1,5 +1,5 @@
 ---
-title: "Spin up a devnet for Entropy"
+title: "Spin up a devnet"
 lead: "A developer network (devnet) is a private blockchain network that mimics the mainnet but is isolated for testing and development purposes. This allows developers to make mistakes and iterate quickly without impacting real users or risking real-world assets. This guide will walk you through setting up a local devnet for the Entropy."
 ---
 
