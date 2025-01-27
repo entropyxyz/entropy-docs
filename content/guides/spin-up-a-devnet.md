@@ -27,7 +27,7 @@ This method leverages pre-built Docker images to quickly and easily spin up a lo
 
 ### Steps
 
-1. Ensure that Docker daemon is running:
+1. Ensure that the Docker daemon is running:
 
     {{< tabs items="MacOS, Linux" >}}
         {{< tab >}}
@@ -116,7 +116,7 @@ This method leverages pre-built Docker images to quickly and easily spin up a lo
    docker compose logs 
    ```
 
-   While optional, this command shows logs from running containers which can be helpful for troubleshooting.
+   While optional, this command shows logs from running containers, which can help with troubleshooting.
 
 1. Stop all running containers:
 
