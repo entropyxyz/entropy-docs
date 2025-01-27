@@ -29,19 +29,32 @@ This method leverages pre-built Docker images to quickly and easily spin up a lo
 
 1. Ensure that the Docker daemon is running:
 
-    {{< tabs items="MacOS, Linux" >}}
+    {{< tabs items="As root, Rootless" >}}
         {{< tab >}}
         ```shell
-        sudo systemctl start docker
+        sudo systemctl status docker
         ```
         {{< /tab >}}
 
         {{< tab >}}
         ```shell
-        dockerd 
+        systemctl --user status docker
         ```
         {{< /tab >}}
     {{< /tabs >}}
+
+    This should output something like:
+
+    ```plaintext
+    ● docker.service - Docker Application Container Engine (Rootless)
+        Loaded: loaded (/home/johnny/.config/systemd/user/docker.service; enabled; preset: enable>
+        Active: active (running) since Mon 2025-01-27 14:04:16 AST; 3min 27s ago
+        Invocation: b0aea9e287394e268914b54c6177370c
+        Docs: https://docs.docker.com/go/rootless/
+        Main PID: 46707 (rootlesskit)
+        Tasks: 297
+        Memory: 524.4M (peak: 622.2M)
+    ```
 
 1. Create the following Docker file and call it `four-nodes.yaml`:
 
