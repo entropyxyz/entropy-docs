@@ -1,6 +1,6 @@
 ---
-title: "Basic end-to-end example"
-lead: "A straight-forward Node JS script that goes through the complete end-to-end Entropy flow."
+title: "Hello world"
+lead: "A straight-forward Node JS script that goes through the complete end-to-end Entropy flow. It's slightly more in-depth than your standard _hello world_ tutorial, but it's totally worth it."
 ---
 
 ## Prerequisites
@@ -108,7 +108,7 @@ This codeblock is setting up the core infrastructure needed to connect to the En
 Finally, this function creates an `Entropy` instance with these options and waits for the connection to be ready. This is your main interface to interact with the Entropy network. Everything is wrapped in a try-catch block to handle any errors that might occur during this setup process, and returns the configured Entropy instance for use in other parts of the application.
 {{< /callout >}}
 
-### Creating and verifying signatures
+### Signature management
 
 1. Finally, read through and add this function to the file:
 
