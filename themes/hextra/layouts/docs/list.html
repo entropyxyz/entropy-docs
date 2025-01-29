@@ -8,8 +8,9 @@
             <div class="content">
                 <h1>{{ .Title }}</h1>
 
+                <p class="lead italic">{{ .Params.Lead | markdownify }}</p>
+
                 {{ .Content }}
-                <p class="lead italic">{{ .Params.Lead }}</p>
 
                 <div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose">
                     {{ range .Pages }}
@@ -20,9 +21,9 @@
                         </span>
                         <div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">
                             {{ if .Params.lead }}
-                                {{ .Params.lead | truncate 200 }}
+                                {{ .Params.lead | truncate 200  | markdownify }}
                             {{ else }}
-                                {{ .Summary | truncate 200 }}
+                                {{ .Summary | truncate 200 | markdownify }}
                             {{ end }}
                         </div>
                     </a>
