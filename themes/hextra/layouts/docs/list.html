@@ -8,8 +8,9 @@
             <div class="content">
                 <h1>{{ .Title }}</h1>
 
-                {{ .Content }}
                 <p class="lead italic">{{ .Params.Lead }}</p>
+
+                {{ .Content }}
 
                 <div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose">
                     {{ range .Pages }}
