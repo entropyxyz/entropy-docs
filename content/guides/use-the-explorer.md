@@ -1,21 +1,42 @@
 ---
 title: "Use the explorer"
-lead: "A blockchain explorer is a web-based tool that functions like a search engine specifically designed for blockchain data. This page explains how to connect to one for Entropy."
+lead: "A blockchain explorer is a web-based tool that functions like a search engine specifically designed for blockchain data. The act as an interface, allowing users to quickly search, retrieve, and analyze information on the blockchain. This page explains how to view information about the Entropy network through an explorer."
 ---
 
-Blockchains, like Entropy, store information in public databases called ledgers. These ledgers are transparent, meaning anyone can view them. However, the data can be complex and challenging to understand without assistance. Blockchain explorers act as an interface, allowing users to quickly search, retrieve, and analyze information on the blockchain.
+The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a popular user interface for interacting with Substrate blockchains. Since Entropy is built using Substrate, we can use this explorer to search and view chain data on the Entropy network.
 
-The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for interacting with Substrate blockchains. Since Entropy is built using Substrate, we can use this explorer to search and view chain data on the Entropy network.
+## Public interface
 
-## Prerequisites
+{{< callout type="info" >}}
+**Quick hint**: You can jump straight to the explorer with this link: [polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.entropy.xyz](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.entropy.xyz)
+{{< /callout >}}
+
+The fastest way to view information about the Entropy blockchain is to visit the public Polkadot\{.js\} interface.
+
+1. Go to [polkadot.js.org/apps](https://polkadot.js.org/apps/#/explorer)
+1. Click the network dropdown at the top left of the screen.
+
+    ![Click network dropdown.](./images/use-the-explorer-click-network-dropdown.png)
+
+1. In the sidebar, select the **Development** dropdown.
+1. Within the **custom endpoint** field, enter the address for the network you want to connect to:
+
+   ```plaintext
+   wss://testnet.entropy.xyz
+   ```
+
+1. Click the **Save** icon next to the address field.
+1. You should now be able to use the Polkadot\{.js\} interface with Entropy.
+
+## Local install
+
+If you don't want to use the public web interface, you can spin up a local copy of the Polkadot\{.js\} explorer.
+
+### Prerequisites
 
 - [Docker](https://docker.com)
 
-{{< callout type="info" >}}
-**Why Docker?** The Entropy networks use regular WebSockets `ws://...`, rather than Secure WebSockets `wss://...`. Due to this limitation, you must run the block explorer _locally_. The easiest way to do this is to use Docker.
-{{< /callout >}}
-
-## Run the explorer
+### Run the explorer
 
 1. Open a terminal window and run:
 
@@ -27,7 +48,7 @@ The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for
 
 1. Open a browser and go to `http://localhost`.
 
-## Connect to the Entropy network
+### Connect to the Entropy network
 
 1. With the explorer running, select the **Unknown** dropdown at the top left:
 
@@ -37,7 +58,6 @@ The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for
 1. Within the **custom endpoint** field, enter the address for the network you want to connect to:
 
    ```plaintext
-   # Testnet
    ws://testnet.entropy.xyz:9944
    ```
 
@@ -49,4 +69,4 @@ The [Polkadot\{.js\} Apps](https://polkadot.js.org/apps) is a user interface for
 
    ![A functioning blockchain explorer window.](./images/functioning-block-explorer.png)
 
-You should now be able to use the block explorer as usual. Check out the [wiki](https://wiki.polkadot.network/) for details on what information you can get from this blockchain explorer.
+You should now be able to use the block explorer as usual. Check out the [wiki](https://wiki.polkadot.network/) for what information you can get from this blockchain explorer.
