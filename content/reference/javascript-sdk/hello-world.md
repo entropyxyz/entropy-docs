@@ -3,9 +3,16 @@ title: "Hello world"
 lead: "A straight-forward Node JS script that goes through the complete end-to-end Entropy flow. It's slightly more in-depth than your standard _hello world_ tutorial, but it's totally worth it."
 ---
 
+{{< callout type="warning" >}}
+The Entropy SDK is currently in alpha. While we're excited about its capabilities, keep in mind that breaking changes may occur, APIs might be unstable, and features and functionality may change. Do not use this SDK in a production environment.
+{{< /callout >}}
+
 ## Prerequisites
 
-Before starting this tutorial, make sure you have Node v20.0.0 or above installed
+Before starting this tutorial, make sure you have 
+
+- Node v20 or above installed.
+- A [local devnet]({{< relref "spin-up-a-devnet" >}}) running.
 
 ## Setting up your project
 
@@ -23,9 +30,12 @@ Before starting this tutorial, make sure you have Node v20.0.0 or above installe
     npm install @entropyxyz/sdk
     ```
 
-## Creating your Entropy account
+## Managing an account
 
-Before we can use the code, you'll need to create an account.
+Since we're using a local devnet, we can use one of the available pre-funded accounts. In this tutorial, let's use the following:
+
+- `seed`: `0x29b55504652cedded9ce0ee1f5a25b328ae6c6e97827f84eee6315d0f44816d8`
+- `address`: `0xe0543c102def9f6ef0e8b8ffa31aa259167a9391566929fd718a1ccdaabdb876`
 
 ## Write the script
 
@@ -59,8 +69,8 @@ These imports set up the fundamental building blocks needed to manage your crypt
             await wasmGlobalsReady();
             console.log('WASM initialized successfully');
 
-            // Replace this with your actual seed from the Entropy platform.
-            const seed = '0x786ad0e2df456fe43dd1f91ebca22e235bc162e0bb8d53c633e8c85b2af68b7a';
+            // Replace this the seed for the account you want to use.
+            const seed = '0x29b55504652cedded9ce0ee1f5a25b328ae6c6e97827f84eee6315d0f44816d8';
             
             // Initialize the keystore with your seed.
             const keyStore = { seed };
@@ -90,7 +100,7 @@ These imports set up the fundamental building blocks needed to manage your crypt
     }
     ```
 
-1. On line 8, enter the seed of your account.
+1. On line 8, enter the seed found earlier in this tutorial.
 1. Save the file and move onto the next section.
 
 {{< callout type="info" >}}
