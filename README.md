@@ -80,7 +80,87 @@ docs
 
 ## Site features
 
-This site contains quite a few shortcodes that writers can use to add extra functionality into each page.
+This site contains quite a few shortcodes that writers can use to add extra functionality into each page. The callout content supports full Markdown syntax, including:
+
+- Links
+- Lists
+- Code blocks
+- Bold and italic text
+
+### Callout
+
+The `callout` shortcode creates distinct message boxes to highlight important information in your content. It supports multiple alert types and custom emoji icons.
+
+```markdown
+{{< callout type="info" >}}
+Your message goes here
+{{< /callout >}}
+```
+
+#### Type Parameter
+
+The `type` parameter controls the callout's appearance and default icon. Available options:
+
+- `default`
+- `info`
+- `warning`
+- `error`
+
+#### Emoji Parameter
+
+You can override the default icon with a custom emoji:
+
+```markdown
+{{< callout emoji="🌐" >}}
+Use custom emojis to make your callouts more expressive
+{{< /callout >}}
+```
+
+### Tabs
+
+The `tabs` shortcode creates interactive tabbed content sections within pages. This shortcode is particularly useful for showing alternative examples, different code formats, or organizing related content.
+
+```markdown
+{{< tabs items="Tab1,Tab2,Tab3" >}}
+  {{< tab >}}Content for Tab 1{{< /tab >}}
+  {{< tab >}}Content for Tab 2{{< /tab >}}
+  {{< tab >}}Content for Tab 3{{< /tab >}}
+{{< /tabs >}}
+```
+
+#### Setting a default active tab
+
+```markdown
+{{< tabs items="JSON,YAML,TOML" defaultIndex="1" >}}
+  {{< tab >}}**JSON**: JavaScript Object Notation content here...{{< /tab >}}
+  {{< tab >}}**YAML**: YAML content here...{{< /tab >}}
+  {{< tab >}}**TOML**: TOML content here...{{< /tab >}}
+{{< /tabs >}}
+```
+
+#### Using code blocks in tabs
+
+````markdown
+{{< tabs items="JSON,YAML,TOML" >}}
+  {{< tab >}}
+  ```json
+  {
+    "hello": "world"
+  }
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ```yaml
+  hello: world
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ```toml
+  hello = "world"
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+````
 
 ### Tooltips
 
@@ -92,7 +172,6 @@ Tooltips allow the reader to hover over a particular word or phrase, and have a 
   "account" "All information is associated with a specific program for a particular user or entity."
   "admin key" "A key that allows you to deploy programs and modify the settings of those programs. Admin keys cannot request signatures. This key must be funded to perform some actions."
   "adapter" "Plugins that provide support for different chains and program configurations. For example, an adapter can define a specific hashing function to use when signing. Different chains have different signing algorithms; this allows us to support them all."
-
 ...
 ```
 
